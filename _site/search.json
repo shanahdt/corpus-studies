@@ -1,0 +1,93 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Empirical and Critical Methods",
+    "section": "",
+    "text": "Welcome to Empirical Methods in Music Research!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Instructor: Dr. Daniel Shanahan\nContact: daniel.shanahan@northwestern.edu\nMeeting times:"
+  },
+  {
+    "objectID": "course-syllabus.html#overview",
+    "href": "course-syllabus.html#overview",
+    "title": "Syllabus",
+    "section": "Overview",
+    "text": "Overview\nEmpirical methods in music research have been used to study aspects of musical style, performance practice, authorship, musical behaviors and auditory perception, among other topics. In this class, we will explore what it means to study music with the assistance of empirical methods, including philosophical debates that surround such approaches. Additionally, it will provide a foundation and overview of empirical methods used in musicological and music-theoretic research, equipping students with the tools needed to critically engage with the literature in the field, while designing their own empirically-based music research studies and engaging with the analysis of the data of musical behavior."
+  },
+  {
+    "objectID": "course-syllabus.html#course-info",
+    "href": "course-syllabus.html#course-info",
+    "title": "Syllabus",
+    "section": "Course info",
+    "text": "Course info\n\n\n\n\n\n\n\n\n\n\nDay\nTime\nLocation\n\n\n\n\nMeeting Times:\nTue & Thu\n12:30pm - 1:50 pm\nRCMA 1-164\n\n\nOffice Hours\nMon & Weds\n10am–11am (and by appointment)\nRCMA 4-181"
+  },
+  {
+    "objectID": "course-syllabus.html#learning-objectives",
+    "href": "course-syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "Learning objectives",
+    "text": "Learning objectives\nBy the end of the quarter, you will be able to…\n\ndiscuss the basic fundamental assumptions of empirical musical research, including sampling methods, hypothesis testing, descriptive statistics, and introductory inferential statistics\ndiscuss some of the basic experimental paradigms of experimental music research\ndiscuss the basic differences between frequentist and Bayesian statistics\nanalyze data derived from corpus studies, surveys, and listening experiments\nengage critically with published empirical music research\nhave a working introductory knowledge of the R programming language"
+  },
+  {
+    "objectID": "course-syllabus.html#course-policies",
+    "href": "course-syllabus.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course Policies",
+    "text": "Course Policies\n\nAcademic Integrity\nStudents in this course are required to comply with the policies found in the booklet, “Academic Integrity at Northwestern University: A Basic Guide”. All papers submitted for credit in this course must be submitted electronically unless otherwise instructed by the professor. Your written work may be tested for plagiarized content. For details regarding academic integrity at Northwestern or to download the guide, visit this page.\n\n\nAccesibility\nNorthwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university’s established accommodation process (e: accessiblenu@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.\n\n\nCOVID-19 Classroom Expectations\nStudents, faculty and staff must comply with University expectations regarding appropriate classroom behavior, including those outlined below and in the COVID-19 Expectations for Students. With respect to classroom procedures, this includes:\nPolicies regarding masking, social distancing and other public health measures evolve as the situation changes. Students are responsible for understanding and complying with current University, state and city requirements. In some classes, masking and/or social distancing may be required as a result of an Americans with Disabilities Act (ADA) accommodation for the instructor or a student in the class even when not generally required on campus. In such cases, the instructor will notify the class.\nIf a student fails to comply with the COVID-19 Expectations for Students or other University expectations related to COVID-19, the instructor may ask the student to leave the class. The instructor is asked to report the incident to the Office of Community Standards for additional follow-up.\n\nIf you’re feeling sick…\nMaintaining the health of the community remains our priority. If you are experiencing any symptoms of COVID do not attend class. Follow the steps outlined on the NU sites for testing, isolation and reporting a positive case. Next, contact me as soon as possible to arrange to complete coursework.\nStudents who experience other personal emergencies should contact me as soon as possible to arrange to complete coursework.\nShould public health recommendations prevent in-person class from being held on a given day, I or the university will notify students.\n\n\n\nDiversity, Equity, and Inclusion\nThis course strives to be an inclusive learning community, respecting those of differing backgrounds and beliefs. As a community, we aim to be respectful to all students in this class, regardless of race, ethnicity, socio-economic status, religion, gender identity or sexual orientation."
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\nThere is no textbook for this course, and most of the materials will be available on Canvas or the course website (or both).\nHaving said that, you should sign up for a free account for Posit Cloud (formerly RStudio Cloud), where many of the class notebooks will be held.I would also recommend downloading R and RStudio onto your personal machine, if possible.\nAlthough not required, I would highly recommend having a look at:\n\nR for Data Science by Garret Grolemund and Hadley Wickham"
+  },
+  {
+    "objectID": "course-syllabus.html#support-for-wellness-and-mental-health",
+    "href": "course-syllabus.html#support-for-wellness-and-mental-health",
+    "title": "Syllabus",
+    "section": "Support for Wellness and Mental Health",
+    "text": "Support for Wellness and Mental Health\nNorthwestern University is committed to supporting the wellness of our students. Student Affairs has multiple resources to support student wellness and mental health. If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE). Additional information on all of the resources mentioned above can be found here:\nhttps://www.northwestern.edu/counseling/\nhttps://www.northwestern.edu/religious-life/\nhttps://www.northwestern.edu/care/\n\nHomework\nThere will be regular assignments in which you will be asked to respond to do one of the following:\n\nCritically engage with a study design\nAnalyze data (sometimes real, sometimes artificial)\nRespond to prompts about methodological dilemmas.\n\n\n\nMidterm Project\nThe midterm project will consist of a literature review and critical evaluation of a specific topic in the field of empirical musicology. You will discuss any methodological issues that might be present in the research questions at hand.\nAn example: We tend to exclude outliers when looking at data, but Debussy’s performances of his own pieces are statistical outliers when compared to other performances of his pieces. To what extent can we view performance data through such a lens, and how would you go about addressing the question?\n\n\nFinal Project\nThe final project will be focused on a research quetsion of your choosing, and will be broken up into several a peer-reviewed first draft, a presentation, and a final paper."
+  },
+  {
+    "objectID": "course-syllabus.html#grading",
+    "href": "course-syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nWeekly Assignments (x8)\n50%\n\n\nMidterm Topic Review Paper\n15%\n\n\nFinal Project (First Draft)\n10%\n\n\nFinal Project (Peer Review)\n5%\n\n\nPresentation\n5%\n\n\nFinal Project (Paper)\n15%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA\n>= 93\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
+  },
+  {
+    "objectID": "course-syllabus.html#calendar",
+    "href": "course-syllabus.html#calendar",
+    "title": "Syllabus",
+    "section": "Calendar",
+    "text": "Calendar\nSchedule\n\n\n\n\n\n\n\n\n\nWeek\nDate (Date)\nTopic\nImportant Dates\n\n\n\n\n1\nT (1/3)\nNo class; Monday schedule\n\n\n\n1\nTh (1/5)\nIntroductions; Types of knowledge and the rhetoric of science\n\n\n\n2\nT (1/10)\nTypes of empirical studies\n\n\n\n2\nTh (1/12)\nControls, demand characteristics and path diagrams.\nHW1 Due\n\n\n3\nT (1/17)\nSampling\n\n\n\n3\nTh (1/19)\nMeasurement scales and transforming data\nHW2 Due\n\n\n4\nT (1/24)\nDescriptive Statistics; measures of central tendency\n\n\n\n4\nTh (1/26)\nWhat does it mean to be significant?\nHW3 Due\n\n\n5\nT (1/31)\nCorrelational studies in music research\nMidterms Due\n\n\n5\nTh (2/2)\nCorrelation and regression in music research\nHW4 Due\n\n\n6\nT (2/7)\nMidterm Meetings\n\n\n\n6\nTh (2/9)\nClustering, PCAs, and MDS. (and the crazy world of attribution and authorship studies!)\nHW5 Due\n\n\n7\nT (2/14)\nModeling and simulations\n\n\n\n7\nTh (2/16)\nModeling and simulations (continued).\nHW6 Due\n\n\n8\nT (2/21)\nBayesian vs. Frequentist theories\nFirst Draft of Final Project Due\n\n\n8\nTh (2/23)\nBayesian vs. Frequentist theories\nHW7 Due\n\n\n9\nT (2/28)\nCritical Data Theory, Data Ethics\nPeer Reviews Due\n\n\n9\nTh (3/2)\nCritical Data Theory, Data Ethics\nHW8 Due\n\n\n10\nT (3/7)\nIndividual Meetings\n\n\n\n10\nTh (3/9)\nFinal Presentations\nFinal Presentations\n\n\n11\nT (3/14)\nReading Week\nFinal Paper Due\n\n\n11\nTh (3/16)\nReading Week"
+  },
+  {
+    "objectID": "course-schedule.html",
+    "href": "course-schedule.html",
+    "title": "Course Schedule",
+    "section": "",
+    "text": "Week\nDate (Date)\nTopic\nImportant Dates\n\n\n\n\n1\nT (1/3)\nNo class; Monday schedule\n\n\n\n1\nTh (1/5)\nIntroductions; Types of knowledge and the rhetoric of science\n\n\n\n2\nT (1/10)\nTypes of empirical studies\n\n\n\n2\nTh (1/12)\nControls, demand characteristics and path diagrams.\nHW1 Due\n\n\n3\nT (1/17)\nSampling\n\n\n\n3\nTh (1/19)\nMeasurement scales and transforming data\nHW2 Due\n\n\n4\nT (1/24)\nDescriptive Statistics; measures of central tendency\n\n\n\n4\nTh (1/26)\nWhat does it mean to be significant?\nHW3 Due\n\n\n5\nT (1/31)\nCorrelational studies in music research\nMidterms Due\n\n\n5\nTh (2/2)\nCorrelation and regression in music research\nHW4 Due\n\n\n6\nT (2/7)\nMidterm Meetings\n\n\n\n6\nTh (2/9)\nClustering, PCAs, and MDS. (and the crazy world of attribution and authorship studies!)\nHW5 Due\n\n\n7\nT (2/14)\nModeling and simulations\n\n\n\n7\nTh (2/16)\nModeling and simulations (continued).\nHW6 Due\n\n\n8\nT (2/21)\nBayesian vs. Frequentist theories\nFirst Draft of Final Project Due\n\n\n8\nTh (2/23)\nBayesian vs. Frequentist theories\nHW7 Due\n\n\n9\nT (2/28)\nCritical Data Theory, Data Ethics\nPeer Reviews Due\n\n\n9\nTh (3/2)\nCritical Data Theory, Data Ethics\nHW8 Due\n\n\n10\nT (3/7)\nIndividual Meetings\n\n\n\n10\nTh (3/9)\nFinal Presentations\nFinal Presentations (Final Papers due on Friday, 3/10)"
+  },
+  {
+    "objectID": "course-schedule.html#schedule",
+    "href": "course-schedule.html#schedule",
+    "title": "Empirical and Critical Methods in Musicology",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDate (Date)\nTopic\nImportant Dates\n\n\n\n\n1\nT (1/3)\nNo class; Monday schedule\n\n\n\n1\nTh (1/5)\nIntroductions; Types of knowledge and the rhetoric of science\n\n\n\n2\nT (1/10)\nTypes of empirical studies\n\n\n\n2\nTh (1/12)\nControls, demand characteristics and path diagrams.\nHW1 Due\n\n\n3\nT (1/17)\nSampling\n\n\n\n3\nTh (1/19)\nMeasurement scales and transforming data\nHW2 Due\n\n\n4\nT (1/24)\nDescriptive Statistics; measures of central tendency\n\n\n\n4\nTh (1/26)\nWhat does it mean to be significant?\nHW3 Due\n\n\n5\nT (1/31)\nCorrelational studies in music research\nMidterms Due\n\n\n5\nTh (2/2)\nCorrelation and regression in music research\nHW4 Due\n\n\n6\nT (2/7)\nMidterm Meetings\n\n\n\n6\nTh (2/9)\nClustering, PCAs, and MDS. (and the crazy world of attribution and authorship studies!)\nHW5 Due\n\n\n7\nT (2/14)\nModeling and simulations\n\n\n\n7\nTh (2/16)\nModeling and simulations (continued).\nHW6 Due\n\n\n8\nT (2/21)\nBayesian vs. Frequentist theories\nFirst Draft of Final Project Due\n\n\n8\nTh (2/23)\nBayesian vs. Frequentist theories\nHW7 Due\n\n\n9\nT (2/28)\nCritical Data Theory, Data Ethics\nPeer Reviews Due\n\n\n9\nTh (3/2)\nCritical Data Theory, Data Ethics\nHW8 Due\n\n\n10\nT (3/7)\nIndividual Meetings\n\n\n\n10\nTh (3/9)\nFinal Presentations\nFinal Presentations\n\n\n11\nT (3/14)\nReading Week\nFinal Paper Due\n\n\n11\nTh (3/16)\nReading Week"
+  }
+]

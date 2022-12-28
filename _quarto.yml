@@ -1,0 +1,55 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "Empirical and Critical Methods in Musicology"
+  description: "Homepage for MUS-THRY 345/445, Northwestern University, Winter 2023 ."
+  site-url: "https://shanahdt.github.io/emp-musicology/"
+  repo-url: https://github.com/shanahdt/emp-musicology
+  repo-actions: [edit, issue]
+  # navbar:
+  #   left:
+  #     - href: index.qmd
+  #       text: Home
+  #     - href: course-syllabus.qmd
+  #       text: Syllabus
+      
+
+  open-graph: true
+
+  twitter-card:
+    creator: "@danielshanahan"
+    image: "images/twitter-card.png"
+    
+
+  sidebar:
+    style: "docked"
+    search: true
+    title: false
+    contents:
+      - section: "Resources"
+        contents:
+          - course-syllabus.qmd
+          - course-schedule.qmd
+        collapse-level: 1
+      - section: "Presentations"
+      - section: "Research Slogans"
+        
+
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2023, Daniel Shanahan"
+    background: "#D9E3E4"
+
+
+format:
+  html:
+    theme:
+      light: [flatly, theme.scss]
+      dark: [flatly, theme-dark.scss]
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
+    toc: true

@@ -1,0 +1,28 @@
+---
+title: Course Schedule
+---
+
+## Schedule
+
+| Week | Date (Date) | Topic                                                                                   | Important Dates                  |
+|:-----------------|:-----------------|:-------------------|:-----------------|
+| 1    | T (1/3)     | No class; Monday schedule                                                               |                                  |
+| 1    | Th (1/5)    | Introductions; Types of knowledge and the rhetoric of science                           |                                  |
+| 2    | T (1/10)    | Types of empirical studies                                                              |                                  |
+| 2    | Th (1/12)   | Controls, demand characteristics and path diagrams.                                     | HW1 Due                          |
+| 3    | T (1/17)    | Sampling                                                                                |                                  |
+| 3    | Th (1/19)   | Measurement scales and transforming data                                                | HW2 Due                          |
+| 4    | T (1/24)    | Descriptive Statistics; measures of central tendency                                    |                                  |
+| 4    | Th (1/26)   | What does it mean to be significant?                                                    | HW3 Due                          |
+| 5    | T (1/31)    | Correlational studies in music research                                                 | Midterms Due                     |
+| 5    | Th (2/2)    | Correlation and regression in music research                                            | HW4 Due                          |
+| 6    | T (2/7)     | Midterm Meetings                                                                        |                                  |
+| 6    | Th (2/9)    | Clustering, PCAs, and MDS. (and the crazy world of attribution and authorship studies!) | HW5 Due                          |
+| 7    | T (2/14)    | Modeling and simulations                                                                |                                  |
+| 7    | Th (2/16)   | Modeling and simulations (continued).                                                   | HW6 Due                          |
+| 8    | T (2/21)    | Bayesian vs. Frequentist theories                                                       | First Draft of Final Project Due |
+| 8    | Th (2/23)   | Bayesian vs. Frequentist theories                                                       | HW7 Due                          |
+| 9    | T (2/28)    | Critical Data Theory, Data Ethics                                                       | Peer Reviews Due                 |
+| 9    | Th (3/2)    | Critical Data Theory, Data Ethics                                                       | HW8 Due                          |
+| 10   | T (3/7)     | Individual Meetings                                                                     |                                  |
+| 10   | Th (3/9)    | Final Presentations                                                                     | Final Presentations (Final Papers due on Friday, 3/10)              |

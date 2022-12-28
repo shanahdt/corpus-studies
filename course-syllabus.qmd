@@ -1,0 +1,140 @@
+---
+title: Syllabus
+output: html
+---
+
+## Instructor
+
+Instructor: Dr. Daniel Shanahan
+
+Contact: [daniel.shanahan\@northwestern.edu](mailto:daniel.shanahan@northwestern.edu)
+
+Meeting times:
+
+## Overview
+
+Empirical methods in music research have been used to study aspects of musical style, performance practice, authorship, musical behaviors and auditory perception, among other topics. In this class, we will explore what it means to study music with the assistance of empirical methods, including philosophical debates that surround such approaches. Additionally, it will provide a foundation and overview of empirical methods used in musicological and music-theoretic research, equipping students with the tools needed to critically engage with the literature in the field, while designing their own empirically-based music research studies and engaging with the analysis of the data of musical behavior.
+
+## Course info
+
+|                | Day        | Time                            | Location   |
+|----------------|:-----------|:--------------------------------|:-----------|
+| Meeting Times: | Tue & Thu  | 12:30pm - 1:50 pm               | RCMA 1-164 |
+| Office Hours   | Mon & Weds | 10am--11am (and by appointment) | RCMA 4-181 |
+
+## Learning objectives
+
+By the end of the quarter, you will be able to...
+
+-   discuss the basic fundamental assumptions of empirical musical research, including sampling methods, hypothesis testing, descriptive statistics, and introductory inferential statistics
+
+-   discuss some of the basic experimental paradigms of experimental music research
+
+-   discuss the basic differences between frequentist and Bayesian statistics
+
+-   analyze data derived from corpus studies, surveys, and listening experiments
+
+-   engage critically with published empirical music research
+
+-   have a working introductory knowledge of the [R programming language](https://www.r-project.org/about.html)
+
+## Course Policies
+
+### Academic Integrity
+
+Students in this course are required to comply with the policies found in the booklet, "Academic Integrity at Northwestern University: A Basic Guide". All papers submitted for credit in this course must be submitted electronically unless otherwise instructed by the professor. Your written work may be tested for plagiarized content. For details regarding academic integrity at Northwestern or to download the guide, visit [this page](https://www.northwestern.edu/provost/policies-procedures/academic-integrity/index.html).
+
+### Accesibility
+
+Northwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university's established accommodation process (e: accessiblenu\@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.
+
+### COVID-19 Classroom Expectations
+
+Students, faculty and staff must comply with University expectations regarding appropriate classroom behavior, including those outlined below and in the [COVID-19 Expectations for Students](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19.html). With respect to classroom procedures, this includes:
+
+Policies regarding masking, social distancing and other public health measures evolve as the situation changes. Students are responsible for understanding and complying with current University, state and city requirements. In some classes, masking and/or social distancing may be required as a result of an Americans with Disabilities Act (ADA) accommodation for the instructor or a student in the class even when not generally required on campus. In such cases, the instructor will notify the class.
+
+If a student fails to comply with the [COVID-19 Expectations for Students](https://www.northwestern.edu/communitystandards/about-us/northwestern-university-student-expectations-covid-19.html) or other University expectations related to COVID-19, the instructor may ask the student to leave the class. The instructor is asked to report the incident to the Office of Community Standards for additional follow-up.
+
+#### If you're feeling sick...
+
+Maintaining the health of the community remains our priority. If you are experiencing any symptoms of COVID **do not attend class**. Follow the steps outlined on the NU sites for testing, isolation and reporting a positive case. Next, contact me as soon as possible to arrange to complete coursework.
+
+Students who experience other personal emergencies should contact me as soon as possible to arrange to complete coursework.
+
+Should public health recommendations prevent in-person class from being held on a given day, I or the university will notify students.
+
+### Diversity, Equity, and Inclusion
+
+This course strives to be an inclusive learning community, respecting those of differing backgrounds and beliefs. As a community, we aim to be respectful to all students in this class, regardless of race, ethnicity, socio-economic status, religion, gender identity or sexual orientation.
+
+## Textbooks
+
+There is no textbook for this course, and most of the materials will be available on Canvas or the course website (or both).
+
+Having said that, you should sign up for a free account for [Posit Cloud (formerly RStudio Cloud)](https://posit.cloud/), where many of the class notebooks will be held.I would also recommend downloading [R](https://www.r-project.org/about.html) and [RStudio](https://posit.co/download/rstudio-desktop/) onto your personal machine, if possible.
+
+Although not required, I would highly recommend having a look at:
+
+-   [R for Data Science](https://r4ds.had.co.nz/) by Garret Grolemund and Hadley Wickham
+
+## Support for Wellness and Mental Health
+
+Northwestern University is committed to supporting the wellness of our students. Student Affairs has multiple resources to support student wellness and mental health. If you are feeling distressed or overwhelmed, please reach out for help. Students can access confidential resources through the Counseling and Psychological Services (CAPS), Religious and Spiritual Life (RSL) and the Center for Awareness, Response and Education (CARE). Additional information on all of the resources mentioned above can be found here:
+
+<https://www.northwestern.edu/counseling/>
+
+<https://www.northwestern.edu/religious-life/>
+
+<https://www.northwestern.edu/care/>
+
+### Homework
+
+There will be regular assignments in which you will be asked to respond to do one of the following:
+
+-   Critically engage with a study design
+
+-   Analyze data (sometimes real, sometimes artificial)
+
+-   Respond to prompts about methodological dilemmas.
+
+### Midterm Project
+
+The midterm project will consist of a literature review and critical evaluation of a specific topic in the field of empirical musicology. You will discuss any methodological issues that might be present in the research questions at hand.
+
+An example: We tend to exclude outliers when looking at data, but Debussy's performances of his own pieces are statistical outliers when compared to other performances of his pieces. To what extent can we view performance data through such a lens, and how would you go about addressing the question?
+
+### Final Project
+
+The final project will be focused on a research quetsion of your choosing, and will be broken up into several a peer-reviewed first draft, a presentation, and a final paper.
+
+## Grading
+
+The final course grade will be calculated as follows:
+
+| Category                    | Percentage |
+|:----------------------------|:-----------|
+| Weekly Assignments (x8)     | 50%        |
+| Midterm Topic Review Paper  | 15%        |
+| Final Project (First Draft) | 10%        |
+| Final Project (Peer Review) | 5%         |
+| Presentation                | 5%         |
+| Final Project (Paper)       | 15%        |
+
+The final letter grade will be determined based on the following thresholds:
+
+| Letter Grade | Final Course Grade |
+|:-------------|:-------------------|
+| A            | \>= 93             |
+| A-           | 90 - 92.99         |
+| B+           | 87 - 89.99         |
+| B            | 83 - 86.99         |
+| B-           | 80 - 82.99         |
+| C+           | 77 - 79.99         |
+| C            | 73 - 76.99         |
+| C-           | 70 - 72.99         |
+| D+           | 67 - 69.99         |
+| D            | 63 - 66.99         |
+| D-           | 60 - 62.99         |
+| F            | \< 60              |
+
