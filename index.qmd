@@ -4,4 +4,6 @@ title: "Empirical and Critical Methods"
 
 # Welcome! 
 
-Welcome to Empirical Methods in Music Research!
+Welcome to Empirical Methods in Music Research! This course website will serve as a central repository for examples, slides, and code. Readings will still be available on Canvas, and links to specific pages on this site can be found there, as well.
+
+
