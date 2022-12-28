@@ -33,11 +33,10 @@ website:
         contents:
           - course-syllabus.qmd
           - course-schedule.qmd
+          - huron-slogans.qmd
         collapse-level: 1
       - section: "Presentations"
-      - section: "Research Slogans"
-        
-
+          
 
   page-footer:
     right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
