@@ -109,7 +109,7 @@ participants.
     -   [(Group Task #3 Debriefing) Obvious theories: Hindsight
         bias](hindsight_task3.html)
         10. *Hindsight is 20/20.* **[1][H]**
-    -   [Grandmother research revisited](grandmother2.html)
+    -   [Grandparent research revisited](grandmother2.html)
         **[1][S]**
     -   [Two forms of reductionism](reductionism.html)
         11. *In research, reductionism is a method, not a belief.*
