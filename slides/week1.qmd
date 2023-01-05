@@ -116,6 +116,7 @@ See [Types of Knowledge](../emp_methods_workshop/empirical.html)
 
 - *In research, reductionism is a method, not a belief*
 - *We simplify problems, not because we believe problems to be simple, but because we believe problems to be complex.* 
+
 ## Operationalizing Terms
 
 *Listening to Mozart makes people smarter.*
