@@ -42,7 +42,7 @@ website:
         collapse-level: 1
       - section: "Class Notes"
         contents:
-          - class_notes/week1.qmd
+          - class_notes/week_1.qmd
         collapse-level: 1
       - section: "Workshop Materials"
         contents: 

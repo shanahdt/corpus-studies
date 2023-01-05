@@ -33,6 +33,9 @@ The goals of this week are mostly introductory. In addition to going over the pl
 
 See [../emp_methods_workshop/big_ideas.qmd](this page from Huron's workshop) for a nice description of these concepts.
 
+### Types of Studies
+
+See [../emp_methods_workshop/empirical2.qmd](this page on types of studies).
 
 ## To-Do
 
