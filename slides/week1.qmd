@@ -122,7 +122,7 @@ See [Types of Knowledge](../emp_methods_workshop/empirical.html)
 *Listening to Mozart makes people smarter.*
 
 |               |                                                                      |
-|:--------------|:-------------------------------s--------------------------------------|
+|:--------------|:---------------------------------------------------------------------|
 | ***Concept*** | ***Possible operationalization***                                    |
 | "smarter"     | will score higher on the Stanford-Binet IQ test                      |
 | "Mozart"      | all sound recordings that claim the music is composed by W.A. Mozart |
