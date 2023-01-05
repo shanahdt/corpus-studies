@@ -1,0 +1,275 @@
+![](Images/logo9.png)
+
+
+
+
+
+# Methods in Empirical Music Research A Workshop for Music Scholars
+
+
+
+------------------------------------------------------------------------
+
+**DAY 1**
+
+------------------------------------------------------------------------
+
+1.  **Welcome & Introduction**
+    -   Generals aims & Preview
+    -   Learning objectives
+2.  **Empirical Research**
+    -   Types of knowledge
+    -   Seven big ideas
+    -   A line in the sand
+    -   Refutation and confirmation
+    -   Operationalizing
+    -   Comparison
+    -   The rhetoric of science (video - 8 minutes)
+    -   Review
+    -   *Group Task #1:* What's worth knowing?
+    -   Questions, conjectures, hypotheses and theories
+    -   *Group Task #2:* Question, theory or hypothesis?
+    -   Grandmother research
+    -   The quantitative/measurement obsession
+    -   *Group Task #3:* Generating theories, Hindsight bias
+    -   Grandmother research revisited
+    -   Two forms of reductionism
+    -   Epistephobia
+    -   Types of failure
+    -   Review
+3.  **Types of Empirical Studies**
+    -   Types of empirical studies
+    -   *Group Task #4:* Types of studies
+    -   Generalizing versus universalizing (video - 10 minutes)
+    -   Exploratory studies
+    -   Reactivity
+    -   Measurement studies
+    -   Hypothesislessness
+4.  **Motivations and Theories**
+    -   *Group Task #5:* Operationalize the following hypotheses
+    -   Syncopation: From question to hypothesis
+    -   Opinions as operationalizations
+    -   Double-use data
+    -   Exploratory & Confirmatory: Contexts of discovery and
+        legitimation
+    -   Explore-then-test approach
+    -   From question ... to protocol.
+5.  **Wrap-up**
+    -   Review
+    -   Homework
+    -   Feedback Day 1
+
+------------------------------------------------------------------------
+
+**DAY 2**
+
+------------------------------------------------------------------------
+
+6.  **Review**
+    -   *Group Task #7:* From question to theory to conjecture to
+        hypothesis to protocol
+    -   Formal observation
+    -   The Experiment
+    -   The Correlational Study
+    -   Correlation and causation
+    -   The third variable problem
+7.  **Sampling**
+    -   Sampling
+    -   *Group Task #8:* Sampling approaches
+    -   WEIRD sampling
+    -   Data independence
+    -   Biased sampling
+    -   *Group Task #9:* Sampling issues
+    -   *Group Task #10:* What is random?
+    -   *Homework review:* Review questions and discussion for
+        Lancashire & Hirst (2009)
+    -   Sampling - A practical problem
+    -   Randomized controlled studies
+    -   Sample Size: Law of big numbers
+    -   Sample Size: Law of small numbers
+    -   Effect size
+    -   Regression-to-the-mean
+    -   Regression-to-the-mean in music
+    -   Review
+    -   *Group Task #11:* Are musical dynamics asymmetrical?
+8.  **Behavioral Data**
+    -   Dependent and independent measures
+    -   Implicit vs. explicit responses
+    -   Demand characteristics
+    -   Der kluge Hans
+    -   Measurement scales
+    -   *Group Task #12:* What kind of measurement scale?
+    -   Designing questionnaires
+    -   *Group Task #13:* Design a questionnaire
+    -   Types of interviews
+    -   Interviews in translation
+    -   *Group Task #14:* Constructing an interview guide
+9.  **Experimental Design**
+    -   Experimental paradigms
+    -   Reconnaissance study
+    -   Life-sample studies
+    -   Developmental Study
+    -   Longitudinal Study; Cross-sectional Study
+    -   Preferential Looking Paradigm
+    -   Pre-test, Post-test Design
+    -   Counterbalanced Design
+    -   Reaction-time Experiment
+    -   Within-Subjects Design; Between-Subjects Design
+    -   Probe-Tone Study
+    -   Implicit Association Tasks (IAT)
+    -   Two-Alternative Forced Choice (2AFC) experiment
+    -   Method of Adjustment
+    -   Telephone paradigm
+    -   Catch-Recatch Method
+    -   Two-Experiment Ploy
+    -   Physiological Study
+    -   Evoked Response Potential (ERP) study
+    -   Multiple Baseline Design
+    -   Factorial Design
+10. **Wrap-up**
+    -   Review
+    -   Feedback Day 2
+    -   Homework: Types of behaviors (video - 32 minutes)
+    -   Homework: The Exploratory Open Interview (video - 45 minutes)
+
+------------------------------------------------------------------------
+
+**DAY 3**
+
+------------------------------------------------------------------------
+
+11. **Introduction to Statistics**
+    -   Preview
+    -   Why measure? How to measure anything
+    -   Fermi questions
+    -   Descriptive statistics
+    -   Measures of central tendency
+    -   Measures of variability
+    -   *Group Task #15:* Descriptive statistics
+    -   Standardized scores
+    -   Inferential statistics
+    -   Probability, The null hypothesis, confidence and significance
+        levels, statistical tests
+    -   Confidence level and confidence interval
+    -   Calculating confidence interval from confidence level
+    -   Statistical significance
+    -   Chi-square test
+    -   *Group Task #16:* Chi-square tests
+    -   *Group Task #17:* Funeral marches in F minor: Hypothesis
+    -   Publishing practice
+    -   Statistical tests - General remarks
+    -   Interpreting *p*
+    -   Multiple tests, Bonferroni correction, file drawer effect
+    -   Demonstration of correlation
+12. **Applied Statistics**
+    -   Heroes and villains in opera
+    -   Population density and preferred musical tempo
+    -   Comparing Chinese and German folksongs
+13. **Some Advanced Analytic Techniques**
+    -   Advanced analytic techniques
+    -   Cluster analysis: Patterns of Orchestration
+        Cluster analysis: From Classical to Romantic
+    -   Factor analysis, Principal Components Analysis
+    -   Multi-dimensional scaling (MDS): Comparing medieval modes
+    -   Modeling - The case of the B-flat trumpet
+    -   Foote novelty
+    -   Data analysis
+    -   Reliability and validity
+    -   *Homework review:* Review questions and answers for
+        Perttu (2007)
+14. **Wrap-up**
+    -   Review
+    -   Homework
+    -   Feedback Day 3
+
+------------------------------------------------------------------------
+
+**DAY 4**
+
+------------------------------------------------------------------------
+
+15. **Review**
+16. **Some Useful Tools**
+    -   Outliers
+    -   Test-retest reliability
+    -   Intersubjective reliability
+    -   Tests, instruments, and batteries
+    -   Hearing screening inventory
+    -   Ollen Musical Sophistication Index (OSMI)
+    -   Goldsmiths Musical Sophistication Index (GoldMSI)
+    -   Humdrum Toolkit; Music21; Verovio
+    -   Researchmatch.com
+17. **Qualitative Methods**
+    -   Individual differences / Cultural differences
+    -   Anecdotal evidence: Uses and abuses
+    -   Hypotheses - good and bad
+    -   *Group Task #18:* Creativity exercise
+    -   Qualitative AND quantitative
+    -   Some thoughts regarding context
+    -   Participant-observation method
+    -   Diary methods
+    -   Autoethnography - Sudnow's jazz improvisation studies
+    -   Content analysis
+    -   Freelisting and pile sorting
+    -   Grounded Theory
+18. **The Experience of Research Participants**
+    -   Floor and ceiling effects
+    -   Use of distractor tasks
+    -   Primacy and recency
+    -   Debriefing participants
+19. **Reading and Writing Research Articles**
+    -   Writing an empirical paper
+    -   Citations and quotations
+    -   Critical reading of empirical articles
+    -   Writing the paper first
+    -   *Group Task #19:* Writing a draft paper
+    -   Pre-reviewing
+    -   Economics of research
+        Cheaper/faster/better dependent measures
+    -   How to review submissions
+    -   How to revise a manuscript in response to reviewers' comments
+    -   How to criticize the work of others
+20. **Potpourri**
+    -   Why experiments fail
+    -   Reserved data sets
+    -   Converging evidence
+    -   Methodology as pothole markers
+    -   *Group Task #20:* Methodological potholes quiz
+    -   *Group Task #21:* Creative thinking about doing research
+21. **Participant Presentations**
+    -   *Group Task #22:* Presentation & discussion of individual
+        participant research programs
+22. **Research Practices**
+    -   Generating stimuli
+    -   Cultivating a scholarly attitude
+    -   Research ethics
+    -   Human subjects; Institutional Review Board application advice
+    -   Debriefing participants
+    -   *Group Task #23:* *Running and debriefing participants*
+    -   *Group Task #24:* Job description for research assistant
+23. **Making Your Own Way**
+    -   Starting up: facilities, equipment, and people
+    -   Starting a subject pool
+    -   Review Group Task #24 - Job description for assistant.
+    -   The value of collaboration; admitting your ignorance
+    -   Talking to statisticians
+    -   Subject pool survey
+    -   *Group Task #25:* Assess your strengths and weaknesses
+24. **Final advice**
+    -   Some research advice (video - 12 minutes)
+    -   More research advice
+    -   Furthering your education
+25. **Wrap-up**
+    -   Final review
+    -   Feedback Day 4
+    -   Final workshop feedback
+
+
+
+------------------------------------------------------------------------
+
+
+
+
+
+

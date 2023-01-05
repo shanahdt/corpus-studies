@@ -1,0 +1,60 @@
+
+
+------------------------------------------------------------------------
+
+### Clever Hans
+
+------------------------------------------------------------------------
+
+How likely is it that a horse could read German fluently and do
+advanced mathematics? The story of *Clever Hans* provides one of the
+most illuminating lessons of what can go wrong with research.
+Interestingly, there is a musical connection in this story. The
+German government hired Carl Stumpf---one of the early famous music
+psychologists---to lead the commission of inquiry. Despite detailed
+investigation, Stumpf failed to recognize what was going on.
+
+![](Images/cleverhans1.jpg){width="250"}
+![](Images/cleverhans2.jpg){width="250"}
+
+[From Wikipedia:] "Hans was a horse owned by Wilhelm von Osten,
+who was a mathematics teacher, an amateur horse trainer,
+phrenologist, and something of a mystic. Hans was said to have been
+taught to add, subtract, multiply, divide, work with fractions, tell
+time, keep track of the calendar, differentiate musical tones, and
+read, spell, and understand German. Von Osten would ask Hans, "If
+the eighth day of the month comes on a Tuesday, what is the date of
+the following Friday?" Hans would answer by tapping his hoof.
+Questions could be asked both orally, and in written form. Von Osten
+exhibited Hans throughout Germany, and never charged admission."
+
+"Due to the large amount of public interest, the German board of
+education appointed a commission to investigate von Osten's
+scientific claims. The psychologist Carl Stumpf formed a panel of 13
+people, known as the Hans Commission. This commission consisted of a
+veterinarian, a circus manager, a Cavalry officer, a number of
+school teachers, and the director of the Berlin zoological gardens.
+This commission concluded in September 1904 that no tricks were
+involved in Hans' performance."
+
+"The commission's work was continued by Oskar Pfungst, who tested
+the basis for these claimed abilities by: Isolating horse and
+questioner from spectators, so no cues could come from them, using
+questioners other than the horse's master. By means of blinders,
+varying whether the horse could see the questioner Varying whether
+the questioner knew the answer to the question in advance. Using a
+substantial number of trials, Pfungst found that the horse could get
+the correct answer even if von Osten himself did not ask the
+questions, ruling out the possibility of fraud. However, the horse
+got the right answer only when the questioner knew what the answer
+was, and the horse could see the questioner. He observed that when
+von Osten knew the answers to the questions, Hans got 89 percent of
+the answers correct, but when von Osten did not know the answers to
+the questions, Hans only answered six percent of the questions
+correctly."
+
+![](Images/cleverhans3.jpg)
+
+**Clever Hans Effect:** An experimenter may inadvertently provide
+non-verbal (or verbal) cues as to what they hope will happen. People
+can be even more tuned-in than a horse in reading body language.

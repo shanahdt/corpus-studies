@@ -1,0 +1,61 @@
+
+
+------------------------------------------------------------------------
+
+### Confidence Level and Confidence Interval
+
+------------------------------------------------------------------------
+
+In survey reports, it is common to see results expressed in the
+following way:
+
+A survey of likely voters in Ohio indicates that 52% favor the
+democrats with 48% favoring the republicans. The margin of error
+is plus or minus 2%, 95 percent of the time.
+
+First, recall that a sample is only an estimate of the true
+population parameter. In reality, the true value could be almost
+anything. For example, it could be that only 46% of likely Ohio
+voters favor the democrats. (Statistics is never having to say your
+sure.)
+
+The report above can be interpreted as follows. We can be 95%
+"confident" that the true proportion of voters who support the
+democrats is between 50% (52 - 2) and 54% (52 + 2). In other words,
+there is a 95% chance that the margin of error contains the true
+population value.
+
+The "plus or minus 2" phrase is referred to as the *margin of error*
+or the *confidence interval*. They are both the same thing. "Margin
+of error" is commonly used in the general population, however
+"confidence interval" (abbreviated CI) is the preferred term used by
+researchers. You could imagine studies in which the confidence
+interval is smaller than ±2. As you might expect, reducing the
+margin of error typically involves increasing the sample size.
+
+The phrase "95 percent of the time" is referred to as the
+*confidence level.* Once again, you could imagine different
+confidence levels. For example, we might want to have a confidence
+level of 99 percent of the time.
+
+What does a confidence level of 95% mean? If we carried out 100
+similar surveys (each with the same sample size), we would expect 95
+of the error margins to contain the true value of the population
+parameter. We would anticipate that 5 out of 100 similar surveys
+would produce a value outside of the ±2 range. In the case of a 99%
+confidence level, this would mean that only 1 out of 100 similar
+surveys would produce a confidence interval that does not contain
+the true population mean.
+
+There are statistical tools that can tell us the size of sample
+needed to produce a given confidence interval for a given confidence
+level. For example, see http://www.surveysystem.com/sscalc.htm for
+an online calculator.
+
+Recall our earlier slogan: *We recognize failure by drawing a line
+in the sand.* In empirical research, the confidence level is that
+line.
+
+
+
+

@@ -1,0 +1,74 @@
+
+
+------------------------------------------------------------------------
+
+### Huron's Research Slogans
+
+------------------------------------------------------------------------
+
+1.  ***Motivated by truth, with no hope of Proof***
+
+    There is no inductive proof. We are *not* in the business of
+    proving something to be true. We would love to know the truth (if
+    that exists), but we understand that we could never be sure of the
+    truth, even if we had it. The best we can hope for is that what we
+    observe *is consistent with* our theories.
+
+2.  ***The best research invites failure.***
+
+    Give the world an opportunity to tell you that you're wrong. (This
+    is the essence of good research.)
+
+3.  ***We invite failure by testing predictions.***
+
+    Test an idea by making a prediction, and then determine whether
+    the observations are consistent with the prediction.
+
+4.  ***We recognize failure by drawing a line in the sand.***
+
+    In order to make failure obvious, establish a criterion in advance
+    that says, "If the evidence doesn't cross this line, then I'll
+    admit failure." In statistics, the line is referred to as the
+    *confidence level.*
+
+5.  ***Aim not to be right, but to be not not right.***
+
+    Instead of establishing *The Truth*, our more modest aim is to be
+    not obviously wrong. When our observations turn out to be
+    consistent with our hypothesis, we don't claim that we are right;
+    instead the observations suggest that our hypothesis may not be
+    wrong.
+
+6.  ***Test hypotheses by operationalizing terms.***
+
+    Translate all of the terms in a hypothesis into concrete things
+    you can measure. We can't directly measure concepts like
+    "sadness." We have no choice but to measure things using imperfect
+    rulers.
+
+7.  ***Operationalize, but don't essentialize.***
+
+    All concepts are inherently enigmatic and fuzzy. Terms like
+    "melody," "listen" or "note" can never be pinned-down. It is
+    impossible to provide comprehensive definitions or grasp the
+    essence of some concept. We are forced to approximate or estimate
+    concepts through operational definitions --- but don't confuse the
+    operational definition with the concept itself, and don't assume
+    concepts are "real."
+
+8.  ***Compare, compare, compare.***
+
+    Contrast a "treatment" condition with one or more "control"
+    conditions.
+
+9.  ***The rhetoric of science is the rhetoric of prophecy.***
+
+    People are most impressed when someone accurately foretells the
+    future. Science is a form of rhetoric whose persuasive power
+    resides in the testing of predictions. The rhetorical power of
+    science comes not from scholars assembling evidence, but from
+    scholars testing predictions.
+
+
+
+

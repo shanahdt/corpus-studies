@@ -1,0 +1,45 @@
+
+
+------------------------------------------------------------------------
+
+### The Measurement Study
+
+------------------------------------------------------------------------
+
+The measurement study is a type of exploratory study. It differs from
+the reconnaissance and descriptive studies insofar as some sort of
+measurement is involved. It differs from the exploratory correlational
+study insofar as the researcher doesn't attempt to determine whether
+there are relationships between any of the measurements.
+
+The centerpiece for a measurement study is the presentation of
+*descriptive statistics.* Typically, some graph or chart is produced.
+However, no *a priori* hypothesis is proposed, and no formal
+statistical test is performed. An example is provided in the table
+below---showing the number of musical instruments sold in the United
+States in 2012.
+
+As with all exploratory studies, the hope is that the research will
+produce interesting observations, raise good questions, and ultimately
+inspire the formation of an explanatory theory. However, any resulting
+theory is *post hoc*. The observations cannot be viewed as
+"supporting" or "testing" the theory, since the observations were the
+inspiration for the theory in the first place.
+
+  **Instrument**       **Number Sold in the U.S. in 2012**
+  ------------------- -------------------------------------
+  Acoustic guitars                  1,326,500
+  Electric guitars                  1,162,890
+  Ukuleles                          1,087,000
+  Flutes & Piccolos                  139,362
+  Trumpets                           134,357
+  Electronic pianos                  128,000
+  Clarinets                          111,160
+  Saxophones                         86,188
+  Trombones                          63,803
+  Acoustic pianos                    37,200
+  Tubas                              35,144
+  French Horns                       14,750
+  Oboes & Bassoons                    5,790
+
+(From *Music Trades*, April 2014)

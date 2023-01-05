@@ -1,0 +1,71 @@
+
+
+------------------------------------------------------------------------
+
+### The Experimental Study
+
+------------------------------------------------------------------------
+
+What distinguishes an experiment from all other kinds of studies is
+that the experimenter *manipulates* the world. Rather than being just
+a passive observer, the experimenter intentionally makes some change
+and then observes the effect of the change.
+
+Consider an experiment carried out by Céline Jacob, Nicolas Guéguen
+and Gaëlle Boulbry (2010). They wanted to know whether songs with
+kindly lyrics would tend to encourage people to behave in a more
+kindly manner. Before conducting their experiment, they first had
+listeners identify songs with kindly, empathetic, or prosocial lyrics.
+They also had listeners identify songs with comparatively neutral
+lyrics. They then matched the songs according to preference or liking.
+So the songs with the kindly lyrics weren't rated by listeners as
+more or less enjoyable than the songs with the more neutral lyrics.
+
+Over a six-week period, Jacob *et al* played the prosocial and neutral
+music in alternating sessions in a restaurant located along the Breton
+coast in France. During each session they calculated the amount of
+tips left by restaurant patrons. They found that when music with
+prosocial lyrics was played, patrons left significantly better tips
+than when music with neutral lyrics was played.
+
+The variable manipulated by the experimenter is called the
+*independent variable* (or independent measure). The variable observed
+by the experimenter is called the *dependent variable* (or dependent
+measure).
+
+In the case of the restaurant study, the manipulation was the type of
+music played. That is, the independent variable was the degree of
+prosocial content in the song lyrics. The observed variable was the
+percentage tipping. That is, dependent variable (or dependent measure)
+was tipping percentage.
+
+In the simplest experimental design, there are two values given to the
+independent variable. These values might be *music* versus *no-music*;
+*heavy-metal* versus *reggae*, *loud* versus *quiet*, *consonant*
+versus *dissonant*, *in-fashion* versus *out-of-fashion*, or, (in the
+Jacob *et al* experiment), *prosocial lyrics* versus *neutral lyrics.*
+Do kindly lyrics encourage people to behave in a more kindly manner?
+Evidently, the answer is "yes," at least when it comes to French songs
+played in a certain Breton restaurant.
+
+In a basic experiment, observations will be made for two groups: the
+"treatment" group and the "control" group. A more elaborate experiment
+might have several different "treatment" levels or treatment
+conditions.
+
+In a correlational study, we are often interested in the relationship
+between two variables, but we don't directly manipulate one of the
+variables. Instead, we simply observe the pre-existing relationship
+between the two variables. In correlational studies, there is no
+*independent variable* that we change.
+
+#### Reference
+
+Céline Jacob, Nicolas Guéguen & Gaëlle Boulbry (2010). Effects of
+songs with prosocial lyrics on tipping behavior in a restaurant.
+*International Journal of Hospitality Management,* Vol. 29, pp.
+761-763.
+
+
+
+

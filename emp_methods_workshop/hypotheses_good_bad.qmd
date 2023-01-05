@@ -1,0 +1,135 @@
+
+
+------------------------------------------------------------------------
+
+## Hypotheses - Good and Bad
+
+------------------------------------------------------------------------
+
+#### Discovery vs. Justification
+
+Traditionally, philosophers of science have made a distinction
+between the *context of discovery* and the *context of
+justification* (Popper, 1935; Reichenbach, 1938). According to this
+view, scientists shouldn't care where an idea comes from. The
+important issue is whether the idea is justifiable or not---that the
+idea survives experimental testing. A hypothesis might come from a
+careful theoretical calculation, a religious text, a drug-induced
+vision, or last night's dream. It simply doesn't matter where a
+theory, conjecture, idea, or hypothesis comes from.
+
+A classic historical example of the irrelevance of the context of
+discovery is Friedrich Kekulé's discovery of the chemical structure
+of *benzene.* Throughout the first half of the 19th century, benzene
+had thwarted chemists' best efforts to understand its structure. One
+night, Kekulé had a dream of a snake swallowing its tail. Inspired
+by his dream, he began a series of experiments that ultimately
+established that benzene is structured as a circular ring consisting
+of six carbon atoms. From the scientific perspective, it doesn't
+matter that Kekulé got the idea from a dream. He could have be
+inspired by reading his horoscope---for all scientists care. The
+important point is that he carried out a series of experiments that
+ultimately *justified* the idea.
+
+Traditionally, empiricists are taught not to care where hypotheses
+come from. Good research centers on the testing of hypotheses. In
+conventional philosophy of science, what counts is the *context of
+justification*, not the *context of discovery*.
+
+In more recent years, scholars have become aware that one shouldn't
+have such a cavalier attitude towards hypotheses.
+
+#### Better and Worse Hypotheses
+
+Recall that a *hypothesis* is a testable conjecture. It is a claim
+or prediction that can, in principle be compared to existing or
+future observations. Not all hypotheses are equally good. One might
+claim, for example, that the moon is made of green cheese. A
+multi-billion-dollar mission might be carried out, sending a remote
+vehicle to the moon in order to test this hypothesis. Clearly, this
+would be a waste of time, effort, and money. Compare the
+green-cheese hypothesis to one that geophysicists consider more
+interesting: that the moon was once part of the earth, and that it
+broke away in a catastrophic collision with another large celestial
+object. This is a hypothesis that geophysicists regard as more
+worthwhile.
+
+Since testing hypotheses is time-consuming and expensive,
+researchers ought to be picky about which hypotheses they test.
+Ideally, researchers should focus on the most important hypotheses
+first. There are at least two issues involved here. First, how do we
+*prioritize* some hypotheses over others? Second, how do we
+encourage the creative process by which researchers come up with
+good hypotheses?
+
+#### Prioritizing Hypotheses
+
+Consider first the evaluative question: How do we evaluate the
+potential worth of different hypotheses? The following list of five
+evaluative criteria is intended to be suggestive rather than
+exhaustive:
+
+*Plausible.* Good hypotheses should be plausible. There is little
+point testing hypotheses (like the green-cheese hypothesis) that we
+*a priori* consider unlikely.
+
+*Beneficial.* Good hypotheses are morally or aesthetically
+pertinent. Depending on the results of the research, the hypothesis
+may have repercussions for human health or wellbeing.
+
+*Critical.* Good hypotheses help distinguish between two or more
+competing theories. A so-called "critical experiment" is an
+experiment that pits two theories directly against each other. If
+theory A is right, then the results should be +X; if theory B is
+right, then the results should be --X.
+
+*Interesting.* Good hypotheses are compelling in some way. Depending
+on the results of the research, the hypothesis may be transformative
+in how people think about themselves and the world.
+
+*Fundamental.* In many cases, nearly everyone relies on an
+assumption that has never been tested. Depending on the results of
+the research, if a commonplace assumption is found to be wrong, this
+would potentially have major repercussions.
+
+#### Creating New Hypotheses
+
+So how might a researcher generate new hypotheses? In particular,
+how might a researcher generate new hypotheses of the highest value?
+As with all creative enterprises, discovery is an imperfect art. One
+can only offer suggestions, such as the following tips:
+
+2.  Keep abrest of contemporary research.
+3.  Converse regularly with other scholars.
+4.  Read widely. Include materials beyond your discipline. Take
+    notes.
+5.  Seek out new personal experiences, such as through travel.
+6.  Get in the habit of thinking cross-culturally and historically.
+    Try to imagine what people in other times and places would want
+    to say to you. Read old literature with an eye to possible
+    forgotten ideas.
+7.  Develop curiosity about things other people do that you don't
+    understand. Listen broadly to the experiences of others.
+8.  Keep a research diary. Maintain an intellectual life.
+
+We've left the most important advice for developing good hypotheses
+for last:
+
+1.  Make use of exploratory research methods.
+
+#### References
+
+Ernest Nagel and Morris R. Cohen (1934). *An Introduction to Logic
+and Scientific Method.* New York: Harcourt & Brace.
+
+Karl Popper (1935). *Logik der Forschung.* Vienna: Julius Springer
+Verlag. Translated as *The Logic of Scientific Discovery.* London:
+Hutchinson, 1959.
+
+Hans Reichenbach, (1938). On Probability and Induction, *Philosophy
+of Science,* Vol. 5, no. 1: 21-45. Reprinted in S. Sarkar, ed.
+*Logic, Probability and Induction.* New York: Garland, 1996.
+
+
+
+

@@ -1,0 +1,107 @@
+
+
+
+Essential Latin for Researchers
+
+  ----------------------------------- -----------------------------------
+  *a fortiori*                        In research, a phrase meaning "by
+                                      stronger logic" or "all the more
+                                      so". For example: "The participant
+                                      failed to respond to the stimulus,
+                                      *a fortiori* since the participant
+                                      had fallen asleep."
+
+  *a posteriori*                      Reasoning from fact or observation
+                                      to theory. Theory based on
+                                      experience. The opposite of *a
+                                      priori.* Compare *post hoc*.
+
+  *a priori*                          Based on a (previously) assumed
+                                      principle or fact.
+
+  *ad hoc*                            (1) improvised.
+                                      (2) a hypothesis intended to
+                                      compensate for some anomaly
+                                      (3) in science and philosophy, a
+                                      methodologically suspect effort to
+                                      "patch" a theory in order to save
+                                      it from falsification. E.g. "The
+                                      test of my theory didn't work
+                                      because the data were collected
+                                      while the planet Mercury was in
+                                      retrograde."
+
+  *ad hominem*                        criticizing or attacking a person
+                                      rather than disputing an idea
+
+  *confer (cf.)*                      compare, see also
+
+  *et alia (et al.)*                  plus other authors
+
+  *exempli gratia (e.g.)*             for example (compare with i.e.)
+
+  *id est (i.e.)*                     that is (compare with e.g.)
+
+  *incipit*                           the first few words/notes of some
+                                      text/score
+
+  *in situ*                           the original place, the appropriate
+                                      place, or natural setting
+
+  *inter alia*                        among other things
+
+  *opere citato (op. cit.)*           in the book or article just cited
+
+  *ipso facto*                        by that very fact
+
+  *per se*                            In and of itself, E.g. "It is not
+                                      the composer's fault, *per se.*"
+
+  *post hoc*                          Formulated after the fact, E.g. a
+                                      hypothesis or theory proposed after
+                                      observing the data.
+
+  *prima facie*                       at fact value
+
+  *sic*                               Just so; exactly that. Used in
+                                      quotations to indicate that the
+                                      error or phrasing is accurately
+                                      quoted.
+
+  *sui generis*                       in a class of its own
+
+  *de novo*                           once more, again
+  ----------------------------------- -----------------------------------
+
+#### Some Examples
+
+1.  Having discarded our stimuli as inadequate, Study #2 began *de
+    novo* with a different strategy for stimulus generation.
+2.  In light of the failure of the test, Smith proposed the *ad hoc*
+    hypothesis that the data were confounded by unanticipated demand
+    characteristics.
+3.  The failure to correctly calibrate the equipment for Study #3 *a
+    fortiori* argues these results should be ignored.
+4.  In light of these observations we might propose the following *a
+    posteriori* theory ...
+5.  Having collected data using the Ollen Musical Sophistication
+    Index, we conducted a further *post hoc* test to determine whether
+    musical sophistication is associated with listener performance.
+6.  Research consistent with this view can be found in Adams (2001),
+    Baker and Cohen (2002), and Dodd *et al.* (2003) (although *cf.*
+    Smith 2004).
+7.  The experiment was conducted *in situ* at Cleveland's Severance
+    Hall.
+8.  John Cage's 4'33" (silence) might be regarded as forming a *sui
+    generis* category of music.
+9.  Having failed to dislodge the argument, the author has resorted to
+    *ad hominem* criticisms.
+10. The reviewer's concerns with the manuscript relate to
+    methodological considerations, *inter alia.*
+11. The large number of statistical tests performed *ipso facto* cast
+    doubt on the results.
+12. *Prima facie,* the performers are highly skilled.
+
+
+
+

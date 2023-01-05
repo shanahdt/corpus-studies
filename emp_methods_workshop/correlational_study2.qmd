@@ -1,0 +1,100 @@
+
+
+------------------------------------------------------------------------
+
+### The Correlational Study
+
+------------------------------------------------------------------------
+
+Correlational studies aim to identify linkages or relationships
+between things. We say two things are correlated when there is some
+sort of connection or association between them. For example, music
+with a fast tempo tends to be louder than music with a slow tempo.
+Although there are exceptions to this, in general, there is a
+correlation between tempo and dynamic level.
+
+A correlational study involves collecting at least two different sets
+of measurements, and determining whether there is any relationship
+between the two sets. When we suspect that two measures are
+correlated, we should plot the measures, with one measure on the
+horizontal axis, and the other measure on the vertical axis. For
+example, we might plot the average dynamic level against the average
+tempo. Each point will represent a single musical work.
+
+![](Images/tempo_dynamics.png){width="500"}
+
+The degree of correlation can be expressed using a numerical
+*correlation coefficient.* Correlation coefficients range between -1
+and +1. A correlation of +1 means a perfect positive correlation: as
+one measure increases, the corresponding measure also increases.
+Conversely, a correlation of -1 means a perfect negative correlation:
+as one measure increases, the corresponding measure decreases.
+
+An example of a strong positive correlation would be +.89. An example
+of a moderate positive correlation would be +.65. An example of a weak
+positive correlation would be +.21. Similarly, strong, moderate, and
+weak *negative* correlations would simply reverse the sign from
+positive to negative. If there is little or no meaningful relationship
+between two sets of measures, the correlation will tend to be near
+zero---or where the correlation coefficient (of whatever value) is
+deemed not to be statistically significant. (Refer to our later
+discussion.)
+
+A common type of correlational study is the survey (although many
+surveys are descriptive or measurementive rather than correlational).
+For example, a survey might reveal that people with high incomes are
+more likely to prefer jazz than country music, or that social
+conservatives are less likely to enjoy sad music. Once again,
+correlational studies say nothing about causation: they simply suggest
+that certain relationships exist.
+
+1.  Correlational studies may or may not be hypothesis-driven. When
+    there is no *a priori* hypothesis, the study is said to be an
+    exploratory correlational study.
+2.  Correlational studies always involve at least two sets of
+    measurements.
+3.  A common type of correlational study is the survey or
+    questionnaire.
+
+#### An Example
+
+Both formal field observations and formal experiments have shown that
+males tend to prefer slower dance tempos than females. What accounts
+for this sex-related difference in preference? One possibility is that
+males and females prefer different styles of music. For example, women
+are more likely to prefer (generally fast) *dance* music, whereas men
+are more likely to prefer (slower) *rock* music. However, the
+difference in tempo preference is evident even when women and men are
+allowed to "tune" their own preferred dance tempo using a drum machine
+programmed to produce a simple *back beat* rhythm of alternating bass
+and snare drums.
+
+Sofia Dahl and David Huron (2007) considered an alternative hypothesis
+that dance tempo might be correlated with body morphology. Dancing is
+essentially stylized bouncing, and like any oscillating system, the
+optimum rate of bouncing might be expected to depend on physical
+aspects of the moving body---such as height and weight.
+
+Accordingly, Dahl and Huron had participants tune a drum machine to
+their preferred dance tempo, and then afterwards made a series of
+morphological measures, including the person's height and weight. The
+graph below shows a scatterplot for 30 participants. Each point plots
+the preferred dance tempo (in beats per minute) against the average
+length of the persons's two legs (in centimeters). As can be seen,
+there is a general trend downward: people with longer legs tend to
+prefer slower tempos. The correlation coefficient is a moderate -.67.
+
+![](Images/preferred_dance.png){width="400"}
+
+Body weight was found to produce a somewhat weaker correlation of
+-.38. That is, heavier people tend to prefer slower dance tempos.
+
+#### Reference
+
+Sofia Dahl & David Huron (2007). The influence of body morphology on
+preferred dance tempos. In: *Proceedings of the International Computer
+Music Conference.* Copenhagen, Denmark, Vol. 2, pp. 1-4.
+
+Dahl, S., Huron, D., Brod, G., & Altenmüller, E. (2014). Preferred
+dance tempo: Does sex or body morphology influence how we groove?
+*Journal of New Music Research,* pp. 1-10.

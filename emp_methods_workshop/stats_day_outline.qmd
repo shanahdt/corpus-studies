@@ -1,0 +1,90 @@
+
+
+------------------------------------------------------------------------
+
+### Outline for Our Day with Statistics
+
+------------------------------------------------------------------------
+
+1.  Today, we're going to spend the entire day talking about
+    statistics. We'll learn how to apply various statistical
+    procedures to different musical problems.
+    
+2.  We'll start off by talking about measurement. Recall that there
+    are two reasons for measuring: (1) To allow us to recognize when
+    we are wrong (i.e., "We recognize failure by drawing a line in the
+    sand.") (2) To discover new phenomena that are otherwise
+    invisible.
+    
+3.  We'll define what is meant by measurement. We'll discuss some
+    limitations of measurement and consider the main criticisms
+    against measurement. We'll see that there is broad value in
+    measuring things that at first might seem impossible, or at least
+    highly questionable.
+    
+4.  The field of statistics is broadly divided into two: (1)
+    *descriptive statistics*, and (2) *inferential statistics*. As you
+    might imagine, *descriptive statistics* allow us to describe
+    things. *Inferential statistics* is used to test hypotheses. Both
+    descriptive and inferential statistics are used in exploratory
+    research. But hypothesis testing relies exclusively on inferential
+    statistics.
+    
+5.  Inferential statistics is itself divided into two: (1)
+    *frequentist* inference, and (2) *Bayesian* inference. Frequentist
+    statistics are by far the most commonly used statistics in
+    research---and that will be our exclusive focus in this workshop.
+    However, Bayesian statistics have become increasingly important,
+    and you should at least be aware that there are other approaches
+    to statistics than what we will cover here.
+    
+6.  We'll cover the basics of descriptive statistics, including
+    familiar concepts (such as an "average"), and related concepts
+    like median and mode. Other descriptive concepts will include
+    measures of variation such as range and standard deviation.
+    
+7.  Yesterday, we saw that that there are four different kinds of
+    measurement scales --- *nominal, ordinal, interval*, and *ratio*
+    scales. Today, we'll see that, depending on the measurement scale,
+    it may be necessarily to use different statistical methods.
+    
+8.  We'll describe in detail the logic behind a statistical test.
+    
+9.  We'll define the concept of statistical *significance,* and show
+    you one way of calculating it.
+    
+10. We'll teach you how to perform a *chi-square test*, and we'll give
+    you a good number of exercises so that you can feel confident
+    doing this inferential test.
+    
+11. When you read an empirical research paper, you often see a
+    statement followed in parentheses by a string of numbers and funny
+    Greek letters: today we'll teach you the basics of how to
+    interpret the meaning of these things.
+    
+12. This afternoon, we'll hear a guest lecture by Professor Josh
+    Albrecht from Mary Hardin Baylor University in Texas. Josh will
+    lead us through some advanced statistical methods, notably
+    *multiple regression, cluster analysis, factor analysis,*
+    *multi-dimensional scaling*. and *modeling*. Josh will walk you
+    through some sample research projects in music that make use of
+    these methods. The purpose will be to show you some of the musical
+    things you can do with statistics rather than teaching you how to
+    do them.
+    
+13. Finally, we'll review the homework reading.
+    
+14. Our aim today is two-fold:
+    One is to get your feet wet and to teach you how to perform a
+    specific statistical test. The test you'll learn is one of the
+    most robust tests --- a test that can be performed in a wide
+    variety of circumstances with lots of different data. Moreover, it
+    is a test that you can calculate with pen-and-paper, without
+    having to use a computer.
+    
+    Our second aim is to give you the lay-of-the-land: to introduce
+    you to the broad sweep of what's possible with statistics.
+
+
+
+

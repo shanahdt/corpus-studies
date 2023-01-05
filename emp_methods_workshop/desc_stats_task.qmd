@@ -1,0 +1,42 @@
+
+
+
+[GROUP TASK #15:]{.small} Descriptive Statistics
+
+#### Task
+
+1.  Draw a normal distribution.
+    ![](StatsImages/empty_graph3.png){width="70%"}
+2.  Draw a continuous distribution with positive skew.
+    ![](StatsImages/empty_graph3.png){width="70%"}
+3.  Draw a histogram distribution with negative skew.
+    ![](StatsImages/empty_graph3.png){width="70%"}
+4.  Draw a continuous distribution that is platykurtic.
+    ![](StatsImages/empty_graph3.png){width="70%"}
+5.  Draw a histogram distribution that is leptokurtic.
+    ![](StatsImages/empty_graph3.png){width="70%"}
+    
+    
+6.  Draw a continuous distribution in which the mean is lower than
+    the mode.
+    ![](StatsImages/empty_graph3.png){width="70%"}
+7.  For the following set of numbers, calculate the *mean, mode,*
+    and *median*:
+    2, 4, 4, 6, 6, 10, 14, 14, 14, 18, 18, 20, 20, 30, 70.
+    
+    Mean:
+    
+    Mode:
+    
+    Median:
+    
+8.  For the above set of numbers, sketch a boxplot.
+    
+    
+    
+    ![](StatsImages/empty_graph.png){width="80%"}
+
+#### Rationale
+
+This task is intended to encourage familiarity with concepts in
+descriptive statistics.

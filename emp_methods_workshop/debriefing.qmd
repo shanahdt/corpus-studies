@@ -1,0 +1,47 @@
+
+
+# Debriefing Human Participants
+
+Debriefing is an essential part of most experiments. The goal of
+debriefing is to gather information about the experiment from the
+participant's point-of-view. "Did you have a strategy you were using
+for this experiment?" "Did you simply follow your intuitions, or did
+you follow a particular way of doing the task?" Let the subject talk
+about his/her experience. What did they think about the experiment?
+Were they able to concentrate on the task? Did they find the task easy
+or hard?
+
+In one experiment, we were looking to see if phrases played in low
+transpositions are perceived as being "heavier" than mid-register or
+high transpositions. When debriefing one subject, he mentioned that
+pitch-height was an obvious factor influencing whether the phrase
+sounds heavy or light. Consequently, he said that he explicitly
+ignored the overall pitch height and made his judgments of "heaviness"
+on other factors! In this case, the debriefing provided critical
+information that allowed us to avoid using this data in our analysis.
+
+In many experiments, it may be necessary to discard some collected
+data depending on certain criteria. For example, subjects who do not
+achieve a certain minimum performance level, or subjects who have
+certain skills. After a subject completes an experiment, do not then
+tell the subject that you are likely to throw away their data.
+Participants are understandably discouraged when they learn that their
+data is unusable.
+
+Finally, ask the subject if there was anything about their experience
+that was stressful, annoying, painful or uncomfortable.
+
+Interesting, in past debriefings of subjects we found that the most
+stressful on-site experience for our research participants is *signing
+the consent form.* Most people are naturally skeptical of signing a
+document. The fact that a signature is required tends to make them
+wary and wonder what is in store. By collecting this data, we were
+able to successful get an exemption from our IRB, so that only verbal
+consent is necessary, rather than written consent. This has made the
+experimental experience much less intimidating for our participants.
+
+
+
+
+
+

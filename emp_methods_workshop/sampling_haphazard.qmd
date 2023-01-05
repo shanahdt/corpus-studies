@@ -1,0 +1,147 @@
+
+
+
+## Biased Sampling: Listening to Edith Boyd
+
+The following historical incident offers a vivid illustration of the
+dangers of biased sampling. In this case, failing to identify a
+representative sample ultimately led to the death of thousands of
+people who were otherwise totally heathy.
+
+A second lesson from this history is how women researchers tend to
+be ignored. If people had paid attention to the research of a single
+woman scientist (Edith Boyd, way back in 1927) thousands of lives
+would have been saved. The prejudices we develop in our ordinary
+lives carry over into our research.
+
+#### Crib Death (SIDS)
+
+For nearly two centuries, pediatricians have been aware of the
+seemingly random phenomenon of crib death. A perfectly healthy baby
+is put to bed, and the next morning is tragically found to have
+died. Today, the phenomenon is know as sudden infant death syndrome
+(SIDS). Modern parents are terrified when they hear stories of these
+apparently haphazard deaths. In recent decades, some progress has
+been made in identify the cause of SIDS. In late pregnancy, a
+developing fetus may sometimes suffers an oxygen deficit that
+damages cells in the middle and lower brain stem. These cells
+regulate respiration. After birth, this preexisting brain damage
+predisposes the infant to sudden respiratory arrest, leading to
+death (Paterson, *et al.*, 2006).
+
+Until the 1990s, however, pediatricians and medical researchers had
+no idea what was causing SIDS. Parents were frantic to understand
+(and prevent) this enigmatic and horrible death.
+
+Toward the end of the nineteenth century, an Austrian pathologist
+named Richard Paltauf made a sustained effort to unravel the
+mystery. Paltauf carried out meticulous detailed autopsies of
+infants who had died from SIDS. He systematically compared these
+autopsies with autopsies of infants who had not died of SIDS. It
+didn't take him long before he discovered a smoking gun. In nearly
+every case of SIDS, Paltauf found that the thymus glands of SIDS
+infants were much larger than those for the non-SIDS infants.
+
+The thymus glands are located on either side of the trachea or
+windpipe. Paltauf theorized that the enlarged thymus glands were
+pressing against the windpipe, reducing the airflow, and endangering
+the infant's breathing. SIDS infants were dying, he proposed,
+because of suffocation induced from excessively large thymuses. A
+few years later, Escherich (n.d.) gave the proposed syndrome the
+name *status thymico-lymphaticus*.
+
+Paltauf's theory of SIDS was quickly adopted and the search was on
+for an effective treatment. If a physician detects an enlarged
+thymus, what can be done? An exciting new medical technology
+available in the early 20th century was the X-ray machine. At the
+time, it was well-known that exposure to X-rays would often cause
+tissues to shrink---and indeed, this was the case with the thymus.
+Mainstream pediatric textbooks prescribed a standard preventive
+treatment: in order to prevent SIDS, an infant's thymus should be
+shrunk by irradiating the throat with X-rays (Lucas, 1927). This
+preventive treatment became widespread and continued into the 1950s.
+
+Of course, X-rays are also dangerous. They can cause cell mutation,
+leading to cancer. The thyroid gland (also located in the throat) is
+especially sensitive to X-rays. Over the decades, what was intended
+to be a preventive treatment led to tens of thousands of cases of
+thyroid cancer, and ultimately led to thousands of premature deaths.
+In the end, the treatment proved worse than the disease.
+
+But what then of Paltauf's theory of the enlarged thymuses? Recall
+that Paltauf compared autopsies of SIDS infants with autopsies on
+infants who had died from other causes. As you might imagine, not
+all parents agree to have their infant autopsied after death.
+Throughout history, anatomists have had difficulty accessing bodies
+to study. If your infant died under mysterious circumstances, you
+might well agree to permit an autopsy. But what if your infant died
+for perfectly obvious reasons? Many parents would be much less
+likely to agree to an autopsy.
+
+An exception happens in the case of poor people. If a medical
+researcher offers to pay for the cost of a funeral (and perhaps
+other costs), poor parents are much more likely to permit an
+autopsy. This means that most of the autopsies and anatomical
+studies that are carried out are done on people from impoverished
+backgrounds. As it turns out, poor people are also likely to be less
+healthy, and to suffer more from various forms of stress.
+
+When Paltauf carried out his autopsies, he didn't realize that there
+was a confound between the SIDS infants and the non-SIDS infants.
+Non-SIDS infants were more likely to come from impoverished
+families. Most of these non-SIDS infants had died from chronic
+illnesses that had caused a certain degree of "wasting." One of the
+consequences of chronic stress is that the thymus glands tend to
+shrink. By contrast, the SIDS infants had died suddenly---rather
+than following a prolonged illness. When Paltauf examined the SIDS
+infants, he was one of the first pathologists to observe *normal*
+infant anatomy. It was *not* the case that the thymuses of SIDS
+infants were enlarged. Instead, the thymuses of non-SIDS infants
+were smaller than normal. In other words, it was not the case the
+SIDS infants had larger than normal thymuses. Rather, the stressed
+infants from impoverished backgrounds had abnormally small thymuses.
+
+This unfortunate history could have turned out differently if
+researchers had paid attention to a 1927 publication by pathologist
+Edith Boyd. Boyd had also carried out a number of autopsies of
+infants who died under a number of circumstances. Boyd found that
+infants suffering from malnutrition had small thymuses. By
+comparison, she found that infants who died due to accidents had
+large thymuses. She reasoned that the thymuses of infants who died
+due to accidents were likely to be normal in size. To Boyd, it
+didn't make sense to suppose all of the children who died in
+automobile accidents (for example) were also "suffering" from
+*status thymicolymphaticus.* She suggested that Paltauf's theory of
+SIDS was wrong, and that the difference in the sizes of the thymuses
+was an artifact of thinking that impoverished infants had normal
+thymuses. Alas, the medical community paid no attention to Boyd's
+work. It wasn't until 1945 that a pediatric textbook (Nelson, 1945)
+repudiated Paltauf's theory, and admitted that treatment by
+irradition had been a tragic mistake. Even then, X-ray treatments
+continued into the 1950s.
+
+#### References:
+
+Edith Boyd (1927). Growth of the thymus, Its relation to Status
+Thymicolymphaticus and Thymic Symptoms. *American Journal of
+Diseases of Children,* Vol. 33, pp. 867.
+
+T. Escherich (n.d.). Status thymico-lymphaticus, Berlin klin,"
+*Woeschesucher*, no. 29.
+
+W. Lucas (1927). *Modern Practise of Pediatrics*. New York:
+Macmillan.
+
+W. Nelson (1945). *Nelson's Texbook of Pediatrics*, 4th ed.
+Philadelphia: Saunders.
+
+Paterson, D.S., Trachtenberg, F.L., Thompson, E.G., *et al.* (2006).
+Multiple serotonergic brainstem abnormalities in sudden infant death
+syndrome. *Journal of the American Medical Association,* Vol. 296,
+No. 17, pp. 2124-32.
+
+A. Paltauf (n.d.). Plotzlicher Thymus Tod, Wiener klin.
+*Woeschesucher* (Berlin), nos. 46 and 9.
+
+Robert Saplosky (1997). "Poverty's Remains" Reprinted in Saplosky's
+*The Trouble with Testosterone* New York: Touchstone, 1997.

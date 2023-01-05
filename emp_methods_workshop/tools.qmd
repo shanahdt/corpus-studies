@@ -1,0 +1,167 @@
+
+
+------------------------------------------------------------------------
+
+## Some Useful Research Tools
+
+------------------------------------------------------------------------
+
+**[1][H/S]**
+
+-   **R** The most comprehensive statistical package. Open source
+    and free.
+-   **ORCID** - research name registry
+-   **Contributor Roles Taxonomy (CRediT).** A website whose aim is
+    to help resolve how to order authors in multi-authored research
+    papers. The website identifies 14 tasks and helps researchers
+    better recognize who did what, and
+-   [Tests, instruments and batteries](instruments.html)
+    Psychological instruments: Big Five Personality Inventory,
+    Interpersonal Reactivity Index (measure empathy), etc.
+-   **Hearing screen inventory.** A simple and fast 12-item
+    questionnaire that can be used to quantiatively assess the
+    hearing of a participant without having to conduct an
+    audiometric exam. Questionnaire includes questions like: Can you
+    hear the telephone ring when you are in the room next door?
+    ([*Never Seldom Occasionally Frequently Always*]{.small}) The
+    questionnaire has been validated by comparing survey responses
+    to actual hearing tests. [Hearing screening
+    inventory](hearing_screening.html)
+    [Coding the hearing screening
+    inventory](hearing_screening_coding.html)
+    (Corren & Hakstian, 1992).
+-   **Ollen Musical Sophistication Index (OSMI).** A simple and
+    quick validated ten-item questionnaire that provides a numerical
+    asssessment of "musical sophistication." Optimized for
+    adolescents and adults. Does not include any listening or
+    performance tasks.
+    [`http://marcs-survey.uws.edu.au/OMSI/`](http://marcs-survey.uws.edu.au/OMSI/)
+    [OMSI](omsi.html)
+-   **Goldsmiths Musical Sophistication Index (Gold-MSI).**
+    Goldsmiths Musical Sophistication Index (or Gold-MSI), a novel
+    instrument that measures musical sophistication in a
+    comprehensive way by explicitly considering a wide range of
+    facets of musical expertise as they occur in a Western society.
+    The instrument is designed to measure the broad range of
+    individual differences in the general population, while placing
+    less importance on the much smaller pathological groups (e.g.
+    'amusics') and highly specialist populations (professional
+    musicians).
+-   [Subject Pool Survey](pool_survey.html)
+-   **Gordon's Musical Aptitude Profile.**
+-   **Montreal Battery of Evaluation of Amusica (MBEA).** A series
+    of tests designed to measure music-related deficits (often
+    arising due to brain damage of various sorts). The Montreal
+    Battery consists of six tests examining contour, interval,
+    scale, rhythm, meter and memory tests. Sound stimuli are
+    typically 5 to 10 Compared with the Gordon;s Musical Aptitude
+    Profile, the Montreal Battery aims to identify disabilities
+    rather than identifying musical talent.
+-   Social Networks for Scholars. www.researchgate.net academia.edu
+    Most scholars prefer ResearchGate (RG) over academia.edu. RG
+    derives income from advertising. Academia.edu constantly pesters
+    users to pay to upgrade to Academia Premium.
+-   **Humdrum Toolkit.** One of two general software systems (the
+    other being Music21) for conducting corpus studies from digital
+    scores. [Humdrum
+    Toolkit](http://musiccog.ohio-state.edu/Humdrum/)
+-   **Music21.** One of two general software systems (the other
+    being the Humdrum Toolkit) for conducting corpus studies from
+    digital scores.
+-   **Researchmatch.com.** An online tool for recruiting research
+    participants. Participants pre-register providing detailed
+    demographic information. As a researcher one can recruit
+    participants who meet a variety of criteria, such as as
+    participants who live within a certain radius of some place,
+    with certain specified skills, and meet certain demographic
+    characteristics such as age, sex, race, native language,
+    education level, etc. Pre-registered participants on
+    `researchmatch.com` typically expect to be paid for their
+    participation.
+-   **Google scholar.** (scholar.google.com) A useful search engine
+    for scholarly publications.
+-   **Google scholar button.** An efficient way of identify full
+    references from abbreviated citations (e.g., Smith, Jones &
+    Brown, 2015), and for locating PDF files of the corresponding
+    works.
+-   **Zotero.** Freeware for organizing references, articles,
+    citations, etc.
+-   **Endnote.**
+-   **Word Cloud** https://wordart.com
+-   **Stackoverflow.** Useful site for answering questions about
+    programming. Helpful for trouble-shooting software that isn't
+    working.
+-   **Datathief.** A useful tool for changing graphical figures
+    (such as bar graphs) back into numbers.
+-   **Linguistic Inquiry and Word Count (LIWC).** The LIWC project
+    ... lists of positive and negative words
+-   **Google n-gram.**
+-   **Mechanical Turk (MTurk).** An Internet crowdsourcing
+    marketplace where workers from around the world (called Turkers)
+    are paid to perform tasks (such as completing a survey,
+    answering a question, or participating in an online experiment).
+    Turkers are recruited from 49 approved countries. Depending on
+    the task, payments are quite modest. Consequently, Mechanical
+    Turk is useful for recruiting participants from different
+    cultures at a reasonable cost to researchers.
+-   **Excel.** A Microsoft spreadsheet application.
+-   **Google Forms**
+-   **Qualtrics** survey software, Qualtrics is a popular software
+    app for producing online questionnaires or online experiments.
+    Qualtrics is able to display images as well as play sound
+    stimuli. It is used for collecting data from web users.
+    Qualtrics requires a subscription. Most universities pay for a
+    blanket subscription that allows use by students and faculty.
+-   **Max-MSP.**
+-   **Sibelius, Finale, Verovio/Humdrum.**
+-   RISM, RILM,
+-   **Themefinder.org.** A search tool for identifying musical
+    themes and works. Allows the user to specify a pitch sequence,
+    interval sequence, contour sequence, scale degree sequence, or
+    rhythm, and returns notated themes that match the search
+    criteria. Limited to three databases: 10,000 Western art music
+    works, Renaissance music, and Germanic folksongs.
+
+#### References:
+
+Corren, S. & Hakstian, A.R. (1992). "The development and
+cross-validation of a self-report inventory to assess pure-tone
+threshold hearing sensitivity. *Journal of Speech & Hearing
+Research*, Vol. 35, No. 4, pp. 921-928.
+
+Henry, M. J., & McAuley, J. D. (2013). Failure to apply signal
+detection theory to the Montreal Battery of Evaluation of Amusia may
+misdiagnose amusia. *Music Perception,* 30(5), 480-496.
+
+Müllensiefen, D., Gingras, B., Musil, J., & Stewart, L. (2014). The
+musicality of non-musicians: an index for assessing musical
+sophistication in the general population. *PloS One,* 9(2), e89642.
+
+Müllensiefen, D., Gingras, B., Musil, J., & Stewart, L. (2014).
+Measuring the facets of musicality: The Goldsmiths Musical
+Sophistication Index (Gold-MSI). *Personality and Individual
+Differences,* 60, S35.
+
+Müllensiefen, D., Gingras, B., Stewart, L., & Musil, J. J. (2013).
+Goldsmiths Musical Sophistication Index (Gold-MSI) v1. 0: Technical
+Report and Documentation Revision 0.3. London: Goldsmiths,
+University of London.
+
+Paraskevopoulos, E., Tsapkini, K., & Peretz, I. (2010). Cultural
+aspects of music perception: Validation of a Greek version of the
+Montreal Battery of Evaluation of Amusias.
+
+Journal of the International Neuropsychological Society," 16(4),
+695-704.
+
+Peretz, I., Champod, A. S., & Hyde, K. (2003). Varieties of musical
+disorders: the Montreal Battery of Evaluation of Amusia. *Annals of
+the New York Academy of Sciences,* 999(1), 58-75.
+
+Pfeifer, J., & Hamann, S. (2015). Revising the diagnosis of
+congenital amusia with the Montreal Battery of Evaluation of Amusia.
+*Frontiers in Human Neuroscience,* 9, 161.
+
+
+
+

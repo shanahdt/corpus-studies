@@ -1,0 +1,57 @@
+
+
+
+------------------------------------------------------------------------
+
+## Tsay (2013): Sight versus Sound --- Discussion
+
+------------------------------------------------------------------------
+
+In general, the Tsay (2013) article reports a very nice piece of
+research. In total, Tsay tested 1,164 participants. Tsay recruited
+both novice and highly expert participants, and employed several
+different experiments that addressed the question in different ways,
+and so produced *converging evidence.* Moreover, Tsay continued with
+the experiments in order to attempt to identify those visual features
+that are most influential when judging the quality of musical
+performances.
+
+As often happens in research, we can question the *generality.* Tsay
+claims that "the findings demonstrate that people actually depend
+primarily on visual information when making judgments about music
+performance." This is arguably a gross over-generalization.
+
+Suppose that we had several sound recordings representing different
+levels of musicianship. Do you think you could tell the difference
+(just from sound alone) between a person who has only played the piano
+for two weeks, versus a person who has had a year of piano lessons,
+versus a person who has had five years of piano lessons, versus a
+professional concert pianist?
+
+The quality of performances at international music competitions is
+simply extraordinarily high. That means that the range of skill (or
+variance) is very small. In short, there is a *ceiling effect.* At
+this point, it makes sense that other factors would tend to dominate.
+
+What I think is interesting is that the visual appearance of the
+performer (sex, race, age, attractiveness) proved not be to very
+predictive of the final outcome. Instead, is was the visual dynamic
+movement or gestures that proved to best predict the competition
+results.
+
+Despite the high quality of this research, Tsay made unfortunately
+failed to use the circumspect language we aim to use in empirical
+research. Tsay should have avoided using the word "demonstrate:" ---
+"the findings *demonstrate* that people actually depend primarily on
+visual information when making judgments about music performance." His
+conclusion would have been more acceptable if he had used more careful
+language: "the findings are consistent with the notion that people
+depend primarily on visual information when making judgments about
+music performance." Nevertheless, even this conclusion is over-stated.
+Without a wider variance in his stimuli, there is insufficient support
+for the broader claim that vision is more important than audition when
+judging the quality of musical performances.
+
+
+
+

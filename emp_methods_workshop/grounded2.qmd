@@ -1,0 +1,83 @@
+
+
+------------------------------------------------------------------------
+
+### Grounded Theory Revisited
+
+------------------------------------------------------------------------
+
+Earlier, we described the Grounded Theory method. Recall that
+Grounded Theory emphasizes observation, and avoids testing *a
+priori* hypotheses. The principal aim is to develop theory "from the
+ground up."
+
+Grounded Theory has existed for more than half a century. GT has a
+following in the field of sociology, especially among researchers
+influenced by so-called "social constructivism." Some postmodern
+scholars also favor Grounded Theory. However, GT has not found much
+support among mainstream empirical researchers? This raises the
+question - Why?
+
+As we've learned, a critical distinction in empirical research is
+the difference between *a priori* and *post-hoc* testing. Recall our
+group task related to *The American Soldier.* We had the experience
+of devising theories for several different "findings" from this
+study. We then learned that the purported "findings" were exactly
+backwards. We went back to the drawing board, and formulated a new
+set of theories that could account for the opposite findings. We
+made the sobering discovering that it wasn't especially difficult to
+devise several theories---theories that predict *X* and theories
+that predict the *opposite-of-X.*
+
+If we formulate our theory *after* observing the data, the data will
+inevitably be consistent with our theory. In short, the theory will
+necessarily appear to be correct. For the researcher who only
+engages in *post hoc* theorizing, all of his/her theories will look
+plausible. It is only the researcher who posits a theory *before*
+looking at the observational data who can have the experience of
+seeing that the data are inconsistent with the theory. Said another
+way, a scholar who *only* engages in *post-hoc* theorizing, will
+never have the experience of the data contradicting their theory.
+
+As we've noted, the essence of good scholarship is skepticism.
+Moreover, we've also learned that the most important form of
+skepticism is to become skeptical of ourselves. Good scholars are
+shaped by the humility that ensues from frequently being shown to be
+wrong. By contrast, the scholar who never experiences failure is
+likely to increase in confidence, and ultimately to develop an
+unwarranted high self-opinion: "All of my theories fit the data."
+
+Among mainstream empirical researchers, Grounded Theory is best
+viewed as an exploratory method. Scientists don't doubt the
+importance of collecting data in the absence of a hypothesis. Nor do
+they doubt the value of attending closely to what the observations
+might suggest. That is, not all research should be *a priori*. The
+problems arise when researchers only engage in exploratory research
+and *post hoc* theorizing. Recall our second slogan: *The best
+research invites failure.* The key is to link exploratory research
+with hypothesis testing. Once a theory has been formulated based on
+observation, the conscientious researcher should then turn around
+and posit the theory in an *a priori* form, and collect independent
+data intended to test hypotheses arising from the theory. In short,
+*explore then test.*
+
+Notice that both Grounded Theorists and those who oppose Grounded
+Theory are aiming for humility. For Grounded Theorists, the humility
+lies in not approach a study with a preconceived theory. ("Let the
+data itself speak by suggesting a theory.") For those who oppose
+Grounded Theory, the humility lies in inviting failure. ("Give the
+data an opportunity to tell you you're wrong.") Notice that a
+two-part *explore-then-test* approach permits the best of both
+worlds.
+
+### References
+
+Kathy Charmaz (2000). Grounded theory: Objectivist and
+constructivist methods. In Denzin, N.K. and Lincoln, Y.S. (eds.),
+*Handbook of Qualitative Research,* 2nd edition. Thousand Oaks, CA:
+Sage. pp. 509--535.
+
+Kathy Charmaz (2006). *Constructing Grounded Theory.* London: Sage.
+
+Barney Glaser & Anselm Strauss (1967). *Discovery of Grounded
+Theory. Strategies for Qualitative Research.* Sociology Press.

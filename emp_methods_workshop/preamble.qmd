@@ -1,0 +1,129 @@
+---
+title: "Preamble"
+author: "David Huron"
+---
+
+
+# Preamble: An Arts and Humanities Approach to Empirical Methodology
+
+Over the next several days, we're going to be conveying a lot of
+information about conducting empirical research.
+
+If this workshop were being offered through the philosophy
+department, we might be stressing the workshop content from the
+perspective of continental phenomenology or from formal logic.
+
+If this workshop were being offered through a department in the
+sciences, we might be stressing the content from the perspective of
+practical procedures and norms in scientific method.
+
+However, this workshop is being conducted through a department in
+the arts and humanities. As you might expect, our preferred approach
+to the workshop content is inspired by a more traditional humanities
+perspective.
+
+There is, of course, a long history within the arts and humanities
+of criticism of science, usually in the form of critiques of
+*positivism* and *scientism.* Most of the criticisms I think are
+justified. However, most of the criticisms also miss the mark
+because they are criticisms of ideas that were long-ago abandoned in
+the sciences. For example, humanities scholars have long been
+critical of positivism --- a scientific ideology formulated by
+August Compte in the early nineteenth century. Positivism is nearly
+two hundred years old, and its main tenets have little echo in
+today's empirical practices. Even *logical positivism* (associated
+with philosophers like Alfred Ayer) is almost a hundred years old,
+and logical positivism had only a modest influence on scientific
+practice. It's influence in music was really limited to Milton
+Babbitt and some of his students at Princeton University.
+
+The dominant approach in nearly all modern sciences relies on what's
+technically known as the *Neyman-Pearson paradigm for inductive
+research.* It bears little resemblance to positivism. And as we will
+see, it is an approach that sidesteps many of the traditional
+criticisms found in critical humanities discourse regarding science.
+
+#### Methodology as Rhetoric
+
+As I've noted, in approaching the workshop content, our aim is to
+employ a more humanities based perspective. In particular, we prefer
+viewing empirical methods from the perspective of rhetoric and
+ethics. First, rhetoric. Ultimately, research is about words: it's
+about saying something or writing something. It's about forming an
+argument or presenting an explanatory story.
+
+Different rhetorical devices or patterns have more or less
+persuasive power. People find some words more compelling than
+others, and it's helpful to understand what makes something
+persuasive. What we mean by "compelling" is utterances that are
+likely to change our opinions, attitudes, or beliefs.
+
+As humanities scholars have long recognized, many rhetorical devices
+have questionable value or questionable validity. For example, we
+know that the words spoken by a man are often perceived to have
+greater persuasive power than those same words spoken by a woman. A
+lower-pitched voice sounds more authoritative, and men benefit from
+having generally lower voices. We know that in many societies
+(including our own) statements by older speakers carry more
+persuasive weight than when spoken by younger speakers. Sadly, one's
+spoken accent or dialect conveys class information and suggests
+levels of education (whether warranted or not) that influence the
+persuasiveness of what a person says. Then there is the question of
+formal authority: the status as "Herr Doktor Professor" may lend
+gravitas to my words that may or may not be warranted. We rightly
+consider these sources of rhetorical power to rely on questionable
+legitimacy.
+
+That's not to say that all forms of rhetorical persuasion are
+illegitimate. Some rhetorical patterns have greater legitimacy than
+others. This is where I depart from certain strains in postmodernism
+and poststructuralism. There is a great deal of epistemological
+pessimism, even nihilism, that has taken hold in the arts and
+humanities because of the influence of postmodernism. What I share
+with classic postmodern views is a large degree of skepticism. Taken
+to its logical extreme, skepticism can be turned inward on itself,
+so we can become skeptical of skepticism. We might rightly be wary
+of the value of any given narrative. But we can also be wary of
+being dismissive of all narratives, since some narratives may indeed
+prove to have value. Not all narratives that cause us to change our
+opinions, attitudes, or beliefs are illegitimate forms of
+manipulation or oppression.
+
+So one way of thinking about what we'll be doing this week, is we'll
+be learning particular forms of rhetoric that have the potential to
+lead to statements that have value beyond merely the commanding of
+power by whoever produces that statement.
+
+Of course, we're not going to simply learn a particular way of
+putting words together. Research involves more than words: it's also
+about the experiences, thoughts, and observations that lead to
+particular words or statements. Our aim is to better understand how
+we transform experience and contemplation into opinions and perhaps
+convictions.
+
+#### Methodology as Ethics
+
+Statements and stories have ethical repercussions. Apart from proper
+treatment of human participants and research animals, many
+scientists unfortunately consider the goals of science to be
+independent of ethics. Specifically, for many scientists, the idea
+is to tell the truth, whatever the ethical repercussions. We will
+see that this fairly common view represents a deep misunderstanding
+of the Neyman-Pearson paradigm. Ethical considerations are built
+into the very fabric of Neyman-Pearson --- they just aren't obvious
+to most practicing scientists. They are better recognized by medical
+researchers and structural engineers whose statements or narratives
+can lead to injury or death.
+
+We will see that the technical concept of the *confidence level* is
+much more important than simply establishing whether some
+observations are deemed "statistically significant." Establishing a
+confidence level is much more important than its cavalier pro forma
+treatment in most sciences suggests. We will see that applying the
+Neyman-Pearson paradigm offers remarkable benefits to those in the
+arts and humanities who are especially sensitive to moral and
+ethical concerns. I would go so far as to suggest that, of all the
+qualitative and quantiative methods I know, the Neyman-Pearson
+paradigm offer the most rigorous approach for addressing the moral
+and ethical dimensions of knowledge-generating enterprises.
+

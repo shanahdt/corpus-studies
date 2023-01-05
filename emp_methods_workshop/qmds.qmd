@@ -1,0 +1,184 @@
+
+
+------------------------------------------------------------------------
+
+### Multi-Dimensional Scaling
+
+------------------------------------------------------------------------
+
+
+
+
+In simple terms, multi-dimensional scaling amounts to *creating a
+map from a list of distances.*
+
+Suppose we have a list of the distances between major European
+cities. The distance between London and Berlin is 933 kilometers.
+Between London and Rome it is 1,435 kilometers. Between Berlin and
+Rome it is 1,184 kilometers. And so on. A computer program can be
+used to construct a map, simply using the distances. For example,
+the program begins by arbitrarily placing one of the cities (say
+London) on a blank page. With London in the center, it then draws a
+circle with a radius of 933 kilometers; Berlin lies somewhere on
+this circle. Similarly, it draws another circle with a radius of
+1,435 kilometers; Rome lies somewhere on this circle. It then
+chooses a point on the first (Berlin) circle, so that it is 1,184
+kilometers from a point on the second (Rome) circle. It continues in
+this way until all of the cities have been plotted.
+
+The first thing to notice about this map is that the orientation of
+the map is undefined. The map could be drawn with "North" in any
+direction. Moreover, it could also draw the map inside-out. We are
+used to viewing maps from the "above" perspective --- as though the
+viewer is floating in the sky. However, our resulting map might have
+been produced as though the viewer were positioned below ground
+looking up.
+
+The second thing to notice about the map is that it will require a
+slight amount of "stretching." The distance measures are not exact,
+so the point representing a given city might be pushed or pulled a
+little bit. Technically, the amount of stretching is referred to as
+*stress.* Each multi-dimensional scaling solution (each map) will be
+accompanied by a numerical value representing the total stress.
+
+If the stress becomes too great, the MDS solution will add an
+additional dimension. Suppose for example, that our map included
+major cities of the world, not just European cities. You cannot draw
+a map of the world in two-dimensions while preserving accurate
+distances. The MDS solution will "pop" into three dimensions, and we
+will soon see that the positions of the various world cities are
+best represented using a three-dimensional sphere.
+
+What's important is that MDS constructs these "maps" from lists of
+paired distances. MDS is quite robust --- so that the distances
+don't have to be exact. Suppose, for example, that we asked you to
+*estimate* all of the distances between various major cities? What
+is the distance between London and Berlin? Perhaps you guess 1,000
+kilometers (instead of 933). What is the distance between London and
+Rome? Perhaps you guess 1,700 kilometers. (instead of 1,435). And so
+on. Based solely on these distance estimates, MDS will manage to
+create a remarkably convincing map. Once again, it will do some
+"stretching" to make things fit. But the map from estimated
+distances will typically be very close to the map for the real
+distances --- although the "stress" value will be higher.
+
+Now suppose we use this technique, not to represent physical
+distances, but psychological distances. By way of example, John Grey
+(1977) played pairs of tones to listeners (e.g., clarinet and flute,
+clarinet and trumpet, clarinet and violin, etc.), and asked
+participants to judge the similarity of the tones on a numerical
+scale. Using this approach, the average distance between clarinet
+and flute might be 3.6, whereas the distance between clarinet and
+xylophone might be 9.1. With enough paired comparisons, Grey could
+use MDS to portray the sounds in a multi-dimensional space, where
+similar timbres are close to each other.
+
+Grey's tones were mapped in a three-dimensional space. MDS does not
+"label" the dimensions. That interpretation is left to the
+researcher. By traversing through the tones along a single
+dimension, one can hear what changes along that dimension. In this
+way, Grey was able to interpret one of the dimensions as
+"brightness." Sounds at one end tended to be darker, and they got
+brighter as one moved along the dimension. Grey was able to
+interpret another dimension as the percussiveness of the sound, and
+so on. In short, MDS allows the researcher to glimpse the underlying
+factors used by listeners when judging the similarity of the tones.
+
+![](Images/timbre_mds.png){width="700"}
+
+In general, multi-dimensional scaling starts with a matrix of
+item-item similarities, and then plots the items in some space so as
+to preserve the similarity relationships. similarity values as
+input. MDS is an exploratory data analysis method that allows the
+research to view items of interest in some sort of spatial
+representation where distances are meaningful.
+
+#### Pitch
+
+Suppose we played many pairs of pitches and asked people to judge
+"the similarity" between the pitches. We might provide a scale of 1
+to 10, where 1 is very close, and 10 is very distant. A listener
+might judge the pitches D4 and D#4 to be "quite similar" and give
+them a value of "2." Conversely, the pitches C2 and F#6 miths be
+deemeds very different, and be given a value of "9."
+
+Of course, pitches can be "similar" in other ways. For example,
+listeners might judge the pitches E3 and E4 to sound "quite
+similar." As a result, the similarity ratings between E3 and E4
+might be quite close --- say "1."
+
+This state of affairs might lead to a seemingly odd arrangement. On
+the one hand E4 might be very similar to D#4; E4 might also be very
+similar to E5; however, D#4 might be heard as rather dissimilar to
+E5. Dispite this apparent paradox, multi-dimensional scaling will
+have no difficulty dealing with the situation.
+
+The figure below arises from the MDS solution based on judgments of
+pitch similarity. Notice that the MDS solution is three dimensional.
+Two dimensions (circular) relate to what musicians would call
+pitch-class --- what psychologists refer to as pitch chroma. The
+third dimension relates to the octave --- what psychologists refer
+to as pitch height. It can be seen that in this solution, the pitch
+E4 is near both D#4 and E5. That is, the two-dimensional solution
+captures both of the ways in which pitches can be similar.
+
+![](Images/pitch_helix.png){width="200"}
+
+#### Medieval Modes
+
+Huron and Veltman (2006) made use of MDS in their study of medieval
+modes. They assembled a quota sample of Gregorian chants in the
+eight classic modes: Dorian, hypodorian, phrygian, hypophrygian,
+lydian, hypolydian, mixolydian, and hypomixolydian. For each mode,
+they tallied the distributions of the various pitches. They then
+measured the similarity of the distributions between all pairs of
+modes: dorian/hypodorian, dorian/phrygian, etc. These distances were
+then used in a multidimensional scaling procedure. The resulting
+modal "map" is shown below.
+
+![](Images/modes_mds.png){width="800"}
+
+Those modes that are closest together in the MDS solution are the
+most similar in terms of their pitch distributions. For example, the
+two modes in the lower left of the graph (hypomixolydian and
+phrygian) turn out to be statistically indistinguishable.
+
+In the 11th century, a music scholar named Johannes Cotto described
+the modal system from both theoretical and applied perspectives.
+Although the theory distinguishes eight separate modes, Cotto
+suggested that there are only really four modes. These are
+illustrated in the graph by the circles. Cotto deemed hypdorian and
+mixolydian as truly separate modes. But the remaining modes group
+into two practical modes. One group consists of dorian, hypolydian,
+and hypophrygian. A second group consists of phrygian, lydian, and
+hypmixolydian. The latter modes all share the pitch C as the tenor
+tone and appear on the left side of the map. The former modes all
+share the pitch A as the tenor.
+
+Dimensions 1 and 2 are drawn to scale making it easier to see that
+Dimension 1 accounts for a greater proportion of the variance. Note
+the large empty region separating the left and right mode clusters.
+Dimension 1 suggests a nascent major/minor bifurcation. Although the
+musical practice represented in the sampled music pre-dates the
+emergence of major/minor tonality, the results suggest that the
+possibility for confusion between the modes is already evident in
+late medieval music, and that the preeminent polarity of confusion
+is consistent with the later major/minor distinction.
+
+#### References
+
+John Grey (1977). Multidimensional perceptual scaling of musical
+timbres. *Journal of the Acoustical Society of America* Vol. 61, No.
+5, pp. 1270-77.
+
+David Huron and Joshua Veltman (2006). A cognitive approach to
+Medieval mode: Evidence for an historical antecedent to the
+major/minor system. *Empirical Musicology Review,* Vol. 1, No. 1,
+pp. 35-55.
+
+Carol Krumhansl (1990). *The Cognitive Foundations of Musical
+Pitch.* Oxford: Oxford University Press.
+
+
+
+

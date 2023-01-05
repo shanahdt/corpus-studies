@@ -1,0 +1,265 @@
+
+
+------------------------------------------------------------------------
+
+### Sampling
+
+------------------------------------------------------------------------
+
+The goal of sampling is to be able to make accurate claims about
+some "population" even though you have only examined a subset of
+that population. Sampling is carried out only for practical reasons.
+If researchers had infinite resources, we would only study entire
+populations rather than samples. Some people believe that making
+generalizations from small samples is inherently untenable. However,
+statisticians have formally demonstrated that sampling can provide a
+very effective way of making inferences about a much larger group.
+This is also borne-out in practice: from a small sample of blood, a
+medical technician can often infer a great deal about the health of
+a patient. The technician doesn't need to take *all* of your blood
+in order to make such inferences.
+
+**Population:** everything (or everyone) that you're interested in.
+A population is whatever you want it to be.
+
+-   e.g. all the world's people
+-   all the world's people including living and deceased
+-   all Western-enculturated people
+-   all people who enjoy listening to music
+-   all clarinet players
+
+A "population" does not refer only to people: Other examples:
+
+-   all of the music written by Vivaldi
+-   all solo flute music (both with and without accompaniment)
+-   all music in the minor mode
+-   all of the jazz scores available in the New York Public Library
+-   all performances of Rachmaninov's 2nd piano concerto
+-   all recordings of Rachmaninov's 2nd piano concerto
+-   all commercially released recordings of Rachmaninov's 2nd piano
+    concerto
+-   all the commercial recordings of Rachmaninov's 2nd piano
+    concerto accessible via the web
+
+**Sample:** a subset of the population that you hope closely
+resembles the population as a whole.
+
+A sample is said to be **representative** when the property of
+interest is identical in both the sample and the population.
+
+A sample is said to be **biased** when the property of interest
+differs between the sample and the population.
+
+#### Defining Your Population
+
+You can't sample a population unless you have a clear idea of what
+constitutes the population of interest. It often requires careful
+thought to identify the appropriate population. Suppose, for
+example, that you are a political pollster. Your aim is to predict
+the likely election results for a national election in Denmark.
+What, precisely, is the population you are interested in?
+
+-   All Danish citizens?
+-   All people living in Denmark?
+-   All people living in Denmark eligible to vote?
+-   All people eligible to vote in Danish elections?
+-   All people likely to vote in Danish elections?
+-   ...
+
+**Sampling method:** the way you recruit or assemble your sample.
+When your population consists of people, sampling methods might
+include soliciting information by telephone (telephone sampling),
+street sampling, mail sampling, web sampling, classroom sampling,
+concert sampling, etc. You might hire a professional pollster to
+carry out a sophisticated sampling method. (Pollsters know more
+about sampling than any other group of professionals.)
+
+**Sampling bias:** when the sampling method introduces differences
+that cause the sample not to be representative. We try to avoid or
+minimize sampling bias.
+
+When conducting a telephone survey, a pollster may be tempted to ask
+to speak to a respondent's spouse. However, spouses are likely to
+share many things in common (such as political views) so the
+sampling method will introduce a bias.
+
+The only way to eliminate sampling bias is by sampling the entire
+population. This is done sometimes (as in national census research).
+It is also possible when the population is relative small. For
+example, since Brahms published only three string quartets, it may
+be possible to make fully accurate summary comments by examining all
+three quartets. In most research however, it is not practical to
+examine an entire population.
+
+In street sampling, bias can be introduced because the pollster may
+be attracted to approach certain people and not others. For example,
+a pollster may be more likely to approach someone who is smiling.
+This will potentially bias the sample toward "friendly" people.
+Also, curious people may hang around hoping that the pollster will
+ask them. This may also introduce bias. A common technique is to
+count a certain number of passers-by. For example, after someone has
+completed the survey, count ten passers-by before approaching the
+next person you encounter.
+
+The key to good sampling is to control for those forms of bias that
+would obviously skew the results, and to be aware of the how your
+sample might fail to be representative.
+
+#### Sampling Methods
+
+There are many sampling methods. Here we identify six common
+methods.
+
+1.  **Convenience Sampling.** A convenience sample simply takes
+    advantage of whatever might be available. For example, a sample
+    of organ music by Gabriel Fauré might simply consist of all of
+    the scores available in a music library. Similarly, we might
+    stand on a street corner and ask whoever passes by to answer
+    questions on a survey. In the OSU School of Music, we have a
+    (convenience) subject pool consisting of all the students in
+    second year aural skills courses. The School of Music's subject
+    pool represents Convenience samples are nearly always biased in
+    some way, but they are easy to assemble.
+
+    It is sometimes helpful to collect additional information
+    regarding convenience samples in order to help identify ways
+    that the sample is biased. For example, in the case of the OSU
+    School of Music subject pool, we have collected basic
+    demographic and other information from this pool to help us
+    understand how this group of people differs from the general
+    population.
+
+2.  **Simple Random Sampling.** Suppose we want to know about
+    musical instrument sales in the City of Nashville. We could use
+    the telephone directory (www.yellowpages.com) to identify all of
+    the shops within the city boundaries that sell musical
+    instruments. Perhaps we discover that there are 131 retailers.
+    From this list, we might randomly select 25 retailers in order
+    to carry out our survey.
+
+    Random sampling might be done by selecting slips of paper from a
+    bowl, rolling dice, using a printed random number table (often
+    provided in an Appendix of a book on statistics), or using a
+    computer-programmed random generator.
+
+    Suppose we have a video recording of an audience listening to a
+    concert. Our hypothesis is that members of the audience "figet"
+    more when listening to Schoenberg compared with Ravel. The video
+    camera allows us to see 150 audience members and the recording
+    lasts 40 minutes. Counting the figets for each audience member
+    over the entire recording would require too much work. To
+    simplify the problem, we might randomly select 25 of the 150
+    audience members. In addition, instead of coding data for the
+    entire video, we might count the number of figets during twenty
+    randomly selected 10-second segments: ten 10-second segments
+    from the Schoenberg work and ten 10-second segments from the
+    Ravel. Here we are randomly sampling from the total visible
+    audience, and also randomly sampling from the total length of
+    the video recording.
+
+3.  **Systematic Sampling.** A common alternative to simple random
+    sampling is to employ a systematic sample. For example, in a
+    study involving score-based analysis, we might sample every 50th
+    measure. Similarly, we could sample CD recordings from a large
+    library collection by using a ruler to select the CDs that occur
+    every 25 cm.
+
+    Suppose that we have a questionnaire we want to distribute to
+    people who attended a concert. There might be 500 audience
+    members, but we have only 50 surveys to distribute. One approach
+    would be to distribute the questionnaires to the first 50 people
+    leaving the concert hall. Notice, however, that this might bias
+    our sample to people who are in a hurry, or people who didn't
+    like the concert and are eager to leave. A better approach would
+    be to hand-out our survey to every tenth person as they exit
+    from the concert hall.
+
+4.  **Stratified Sampling.** Many populations exhibit
+    sub-populations. For example, in music, we can identify
+    different styles, like pop, folk, jazz and classical. We can
+    also identify different genres, like vocal, instrumental, and
+    mixed (vocal+instrumental) music. Similarly, we might expect
+    that music-related behaviors might differ for infants, children,
+    adolescents, adults and elderly. When we have reason to suspect
+    that difference in sub-populations might influence the results,
+    it is common to sample in such a way to ensure that each of the
+    main sub-populations are represented. In Post and Huron (2009)
+    for example, we were interested in common-practice era tonal
+    classical music. So we decided to use a stratified sample
+    consisting of music from three periods: Baroque, Classical and
+    Romantic. Our overall sample consisted of equivalent numbers of
+    works from each of these historical eras.
+
+5.  **Quota Sampling.** A type of stratified sampling in which
+    sub-samples are weighted according to their prevalence in the
+    population. For example, in the general population, 51% are
+    female and 49% are male. So in our sampling, we might want to
+    ensure that 51% of our sampled individuals are female. Suppose
+    that we find that 52% of instrumentalists are most accomplished
+    on guitar, 33% are most accomplished on keyboards, 12% on flute,
+    9% on trumpet, 8% on violin, etc. In quota sampling, we would
+    aim to sample the same proportions for each instrument. We might
+    use a commerical music catalogue to determine the ratios of
+    different types of music. For example, we might note that 60% of
+    the entries in a catalogue are classified as "pop," 25% of the
+    entries are deemed "rock," 10% jazz, and 5% classical. A quota
+    sample would aim to duplicate these proportions.
+
+    Collister and Huron (2008) were interested in the
+    intelligibility of vocal lyrics. We collected a sample of 78,000
+    words from lyrics. We found that 81% were monosyllabic, 16% were
+    bisyllabic, and 2% were trisyllabic. In testing the
+    intelligibility of individual words in a sung context, we
+    employed the same proportions of monosyllabic, bisyllabic, and
+    trisyllabic words.
+
+6.  **Matched Random Sampling.** A way of linking members from two
+    or more samples. For example, a study might involve matching
+    each professional musician with an amateur musician who plays
+    the same instrument. One might pair a randomly selected work in
+    the major mode with a randomly selected work by the same
+    composer in the minor mode.
+
+    Sometimes, the matching is done within each participant. For
+    example, we might compare the milk produced by each cow with the
+    milk produced by the same cow after music is introduced to a
+    dairy barn. When the results for a single individual are
+    compared across conditions, this is also referred to as a
+    "repeated measures" design.
+
+#### Western Sampling Bias
+
+Ethnomusicologists have rightly criticized music psychologists for
+assuming that experiments done with Western-enculturated
+participants necessarily apply to all the world's peoples. If
+ethnomusicologists ran the psychology journals, every article would
+begin with a warning analogous to those found on cigarette packages:
+
+"The ideas expressed in this article are those of
+Western-enculturated researchers who have studied only a handful
+of Western-enculturated subjects, and who brazenly presume (though
+they never explicitly state so) that the results of this study
+somehow generalize to people in other cultures."
+
+It is impractical to suppose that every musical study can be done
+with participants drawn from all over the world. Research can be
+done only if it is practical. It is reasonable to rely on
+convenience samples for research, but it is not reasonable to assume
+that a convenience sample is representative of the entire world. It
+is important in any study to make a clear statement of the sample,
+and to identify the limitations of any sample with regard to the
+presumed population of interest.
+
+#### References:
+
+Lauren Collister & David Huron (2008). Comparison of word
+intelligibility in spoken and sung phrases. *Empirical Musicology
+Review,* Vol. 3, No. 3, pp. 109-125.
+
+Olaf Post & David Huron (2009). Music in minor modes is slower
+(except in the Romantic Period). *Empirical Musicology Review,* Vol.
+4, No. 1, pp. 1-9.
+
+
+
+

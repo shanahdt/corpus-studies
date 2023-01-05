@@ -1,0 +1,184 @@
+
+
+------------------------------------------------------------------------
+
+### Instruments
+
+------------------------------------------------------------------------
+
+In research, it is common to make use of standardized tests or
+measures called "instruments." An instrument is often in the form of
+a questionnaire, but there are many instruments that involve tests
+of various sorts, including physical tests. Common instruments
+include the *Wechsler Adult Intelligence Scale* (WAIS), the
+*Scholastic Aptitude Test* (SAT), and the *Minnesota Multiphasic
+Personality Inventory* (MMPI).
+
+People aiming to become firefighters are typically required to pass
+a series of tests, including a *Firefighter Physical Fitness Test*
+(FPFT). For example, this test includes such tasks as carrying a 75
+pound (34 kilo) weight up five floors and using a 9-pound (4 kilo)
+sledgehammer to drive a 160-pound (73 kilo) steel beam on a Keiser
+Force Machine.
+
+There are literally hundreds of instruments which endeavor to
+measure a wide variety of concepts. These include such tests as the
+Kinsey scale of sexual orientation (KSRS), the Biddle Agility Test,
+the Authentic Happiness Inventory Questionnaire, the World Health
+Organization Quality of Life Questionnaire (WHOQOL), and many many
+more.
+
+#### Norm-referenced and Criterion-referenced
+
+Instruments are either *norm-referenced* or *criterion-referenced*.
+A norm-referenced instrument compares the candidate with the general
+population. An IQ test is an example of a norm-referenced instrument
+since an IQ score of 100 is (by definition) the average
+intelligence. A criterion-referenced instrument compares the
+candidate with some standard level of achievement. The FPFT
+instrument is criterion-referenced --- few people would be able to
+complete the physical tasks demanded for prospective firefighters.
+
+Psychologists have created a large number of instruments intended to
+measure a wide variety of attributes. For example, the *Beck
+Depression Inventory* is intended to characterize how depressed a
+person feels.
+
+#### Validity and Reliability
+
+A useful instrument must be both *reliable* and *valid*. Reliability
+relates to the consistency of the score. A test is said to be
+reliable when a person scores the same value over time in similar
+circumstances. Sometimes the reliability has to do with the
+consistency of the raters. For example, the Royal Conservatory of
+Music (in Canada) has a graded system for musical performance,
+ranging from grade 1 to 10. Performance examinations are held across
+the country twice each year. The RCM trains examiners in an effort
+to make the grading criterion as consistent as possible, so that the
+final score received doesn't depend on who the examiner is. If the
+adjudication method varies from rater to rater, then the instrument
+is said to have a low reliability.
+
+*Validity* relates to whether the instrument measures what it
+purports to measure. One might claim that an instrument measures
+"musicality" when it really measures "performance skill." Or one
+might claim that an instrument measures "feeling sad" when it really
+measures "the degree to which someone is willing to say they feel
+sad." Etc. A purported test of "intelligence" might be better
+characterized as a measure of "language facility" or "logical
+reasoning." In the case of music, the Seashore Tests of Musical
+Ability are better regarded as tests of "auditory perceptual
+acuity."
+
+Many tests are used for diagnostic purposes, such as the
+Comprehensive Aphasia Test (CAT) or the Luria-Nebraska
+Neuropsychological Battery. The first test you ever underwent was
+probably the Apgar test. All newborns are given a Apgar score
+between 0 and 10 according to color, pulse, reflex responsiveness,
+muscle tone, and breathing. Normal scores are in the range of 7 and
+above. A score of 4 to 6 is considered low, and lower scores
+indicate a critical condition. The aim of the Apgar test is to
+provide a quick index of the newborn's health, and a way of
+determining whether immediate medical care is needed. The test is
+quick and easy to do, and is highly predictive of the general
+medical health of the infant. That is, the test has a reasonably
+good validity.
+
+#### Musical "Instruments"
+
+In music cognition research, three tests have been important. One is
+the *Montreal Battery of Evaluation of Amusia* (MBEA) developed by
+Isabelle Peretz and her colleagues. This instrument includes a
+number of listening and production tasks that can be used to assess
+"tone-deafness."
+
+A second test is the *Ollen Musical Sophistication Index* (OMSI).
+This instrument consists of 10 questions that are used to estimate
+the degree of musical sophistication. A third test is the
+*Goldsmiths Musical Sophistication Index* (Gold-MSI). This is a more
+elaborate index for assessing musicality, is not limited to a
+musician population. It involves various perceptual tasks, and
+doesn't rely solely on self-report. However, the Gold-MSI index is
+much longer to administer than the OSMI index.
+
+#### Ollen Musical Sophistication Index
+
+In music-related experiments, it is common for researchers to
+distinguish "musicians" from "non-musicians." Of course, there is no
+clear dividing line between musicians and non-musicians. However, it
+is often useful to operationally define these in order to pursue the
+research. Two of the most commonly used criteria are *number of
+years of private music lessons* and *music major versus non-music
+major.* These are serviceable criteria, but Joy Ollen was eager to
+produce a more refined instrument that could be quicky administered
+in the context of typical music-related research.
+
+Ollen first carried out a literature review --- identify the kinds
+of criteria used by researchers for distinguishing the level of
+musical sophistication. She identified 743 published music studies
+and found 38 different indicators used to determine degree of
+musicality.
+
+Ollen then carried out a survey of 27 experienced musicians and
+asked them what sorts of questions they might ask to determine how
+musically sophisticated an individual might be. These musicians
+identified many of the same 38 criteria found in the published
+studies, but they also added four new criteria.
+
+Ollen distilled the 42 criteria to the most promising 29 criteria.
+She then developed a 36-item questionnaire which asked such as
+questions as the number of years of private musical instruction,
+whether the individual had taken college-level music courses, the
+number of hours per week in musical practice, and so on.
+
+She then administered this questionnaire to 633 adults who
+participated in various groups involved in music-related activities.
+This ranged from members of church choirs, to members of
+professional orchestras. The leader of each group (a musical expert)
+was then asked to rate the musical sophistication of every member of
+the group using a 10-point scale.
+
+The data were then analyzed to determine which of the 36 questions
+were most predictive of the experts' assessments of musical
+sophistication. Using a logistic regression analysis, nine
+indicators were identified that accounted for nearly 80% of the
+variability. From this, Ollen created a 10-item questionnaire that
+can be completed in under 2 minutes.
+
+Finally, Ollen administered her instrument to a large independent
+sample of people. Once again, group leaders rated the musicality of
+the group members. Although the accounted variance dropped to about
+50%, the results show that the OMSI instrument provides reasonably
+valid estimates of musical sophistication with a minimum of effort.
+
+#### References
+
+A.T. Beck, R.A. Steer, and G.K. Brown (1996). *Manual for the Beck
+Depression Inventory*, 2nd ed. San Antonio: The Psychological
+Corporation.
+
+Bert Goldman (1974, 1997, 2003, 2008). *Directory of Unpublished
+Experimental Mental Measures.* Washington, DC American Psychological
+Association.
+
+Charles S. Newmark (Ed.) (1996). *Major Psychological Assessment
+Instruments.* 2nd Edition. Hertford, UK: Allyn & Bacon.
+
+R.L. McGhee, D. Ehrler and J. Buckhalt (2008). *Manual for the Five
+Factor Personality Inventory --- Children.* Austin: Pro Ed, Inc.
+
+Müllensiefen, D., Gingras, B., Musil, J., & Stewart, L. (2014). The
+musicality of non-musicians: an index for assessing musical
+sophistication in the general population. *PLoS One,* Vol.
+26;9(2):e89642.
+
+H.A. Murray (1943). *Thematic Apperception Test Manual.* Cambridge,
+Massachusetts: Harvard University Press.
+
+Joy Ollen (2006). *A criterion-related validity test of selected
+indicators of musical sophistication using expert ratings.* PhD
+Dissertation, School of Music, Ohio State University.
+
+Isabelle Peretz, Sophie Champod, and Krista Hyde (2003). Varieties
+of Musical Disorders: The Montreal Battery of Evaluation of Amusia.
+*Annals of the New York Academy of Sciences*, Vol. 999, pp. 58-75.

@@ -1,0 +1,54 @@
+
+
+------------------------------------------------------------------------
+
+### [GROUP TASK #16:]{.small} Chi-Square Tests
+
+------------------------------------------------------------------------
+
+For each of the following statistical tests, use an
+
+a priori</95% confidence level.
+
+In a survey of orchestral works it was found that 70 percent include an
+oboe as part of the orchestration. A music scholar finds that composer A
+uses an oboe in only 10 of 22 orchestral works (just 45%). Is this a
+statistically significant difference?
+
+
+
+
+
+
+
+
+A music scholar finds that a sample of Italian baroque music shows 51
+works in major keys and 9 works in minor keys. In a diverse sample of
+baroque music from many European countries (including Italy), 480 works
+were found to be in major keys and 210 works in minor keys. Compared
+with their European colleagues, did Italian baroque composers tend to
+favor works in major keys?
+
+
+
+
+
+
+
+
+An ethnomusicologist finds that just 130 of 220 Xhosa listeners say they
+prefer *bumbuju* rhythms to *nobuju* rhythms. In one Xhosa village
+however, 15 of 19 people say they prefer bumbuju. Can we claim that the
+members of this village differ significantly from other Xhosa in their
+rhythmic preferences?
+
+
+
+
+
+
+
+
+
+
+

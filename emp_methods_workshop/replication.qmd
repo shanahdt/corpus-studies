@@ -1,0 +1,239 @@
+
+
+
+------------------------------------------------------------------------
+
+### The Replication Crisis
+
+------------------------------------------------------------------------
+
+We have discussed *positive results bias* (where journals are more
+likely to publish research whose data are statistically
+significant), and the *file drawer effect* (where researchers tend
+to ignore negative results). If these effects are real, then we
+might expect that a substantial proportion of published empirical
+articles are reporting spurious results. That is, the combination of
+these effects suggests that journals may be publishing lots of
+spurious positive results that arose simply due to chance. How
+common is this hypothetical scenario?
+
+The classic way to ferret out spurious results is through
+*replication.* Simply repeating an experiment provides Nature with
+another opportunity to tell us we're wrong. In science, replication
+is the gold standard: a discovery remains provisional or preliminary
+until it has been replicated many times under many different
+circumstances.
+
+In medicine, replication studies are common. A single study might
+suggest that a particular drug is effective in treating some
+condition. However, researchers continue with follow-up
+studies---collecting data that allows them to frequently check
+whether the drug is having the effect they expect.
+
+Unfortunately, replication is less common in other disciplines. Part
+of the reason for this is yet another form of bias: *discovery
+bias.* Scholars receive awards for new discoveries. Few scholars get
+an award for providing additional evidence supporting a previous
+discovery. Moreover, few scholars get an award for showing that an
+existing idea doesn't replicate. A researcher's professional
+reputation tends to be linked to new claims. Professional incentives
+(like promotions, tenure, and increased salaries) are more likely to
+accrue to those researchers who discover something new. Replication
+studies just don't seem as important as conducting new research.
+Consequently, scholars tend shun replication research. When a study
+replicates an existing study, it is hard for observers not to simply
+shrug their shoulders and say "We already knew that!" (In short,
+replication research looks like another form of *grandmother
+research.*) Journals are less likely to publish replication studies,
+employers are less likely to reward researchers who engage in
+replication, and the community of scholars is more likely to view
+replication research as lacking in creativity or innovation.
+
+In 2015, a major study was published in the journal *Science* that
+aimed to estimate the magnitude of the problem. With a major grant
+from the Laura and John Arnold Foundation, Brian Nosek and the Open
+Science Collaboration initiated a project to conduct a large number
+of replication studies. They identified 100 experimental and
+correlational studies that had been published in three high-ranking
+psychology journals in the year 2008. Then 266 volunteer researchers
+from around the world went to work performing the appropriate
+replication studies. The goal of the project was to estimate the
+proportion of new results that are likely to be replicated, and to
+determine the effect sizes for those studies that replicated.
+
+All of the replication studies closely followed the original
+studies. In fact, the volunteer researchers directly collaborated
+with the original authors to ensure that the designs, methods, and
+materials were the same or comparable.
+
+What were the results? Ninety-seven percent of the original
+published studies had reported significant results at the 95%
+confidence level (i.e., p<.05). However, only 36% of the
+replication studies produced similarly significant results. In
+addition, only 47% of the original effect sizes were in the 95%
+confidence interval of the replication effect size. The mean effect
+size for the original studies was r=.403. However, the mean effect
+size for the replication studies was half (r=.197). The relationship
+between the original studies and the replication studies is shown
+graphically below.
+
+Each circle plots the effect size for the original study (horizontal
+axis) versus the effect size for the replication study (vertical
+axis). Values that lie near the blue diagonal line represent studies
+that replicated very well---that is, the effect sizes for both the
+original and replication studies were very similar. Notice that many
+of the circles, however, lie considerably below the blue line. These
+represent replication studies that produced lower effect sizes.
+Green circles identify statistically significant results. The pink
+circles identify replication results that failed to achieve
+statistical significance. The dotted horizontal line represents no
+effect at all for the replication studies. Clearly, many of the
+original studies failed to replicate.
+
+![](Images/replication2.png){width="500"}
+
+Notice that the data for both an original study and a replication
+study can be combined and treated as a single experiment. When
+combining the data in this way, 68 percent of the studies produced
+statistically significant effects. This means that somewhere beween
+one-third and one-half of the original published studies are likely
+to be reporting spurious results.
+
+By way of example, here are three "findings" in the original
+publications that failed to replicate:
+
+-   People are more likely to cheat after they read a passage
+    telling them that their behaviors are biologically determined
+    and that they don't have free will.
+-   People make less severe moral judgements when they've just
+    washed their hands.
+-   A partnered woman is more likely to be attracted to a single man
+    when she is ovulating.
+
+Incidentally, the replication studies found no evidence of
+fraud---such as making up data. Instead, the high incidence of
+failures-to-replicate suggest the existence of positive results bias
+and the file-drawer effect.
+
+#### Research in the Popular Press
+
+Professional journals aren't the only venues where discoveries get
+reported. Journalists eagerly browse through recent scholarly
+publications, looking for discoveries that the general public is apt
+to find interesting. This raises another question: Are there further
+biases that are introduced due to the selection criteria introduced
+by journalists? Said another way, how trustworthy are science
+reports in the popular press?
+
+In 2017, Estelle Dumas-Mallet and her colleagues published a
+revealing study of how medical discoveries are reported in the
+popular press. They began with 306 medical "discoveries." All 306
+discoveries inspired a flurry of subsequent research, resulting in
+over 5,000 pertinent research articles. Moreover, all 306
+discoveries had been the subject of formal
+meta-analyses---statistical review studies that endeavored to
+determine the reliability and effect size for each purported
+discovery.
+
+Of the 306 purported discoveries, 156 (about half) had been
+picked-up by the popular press, resulting in 1,561 newspaper
+articles---published soon after the first (inaugural) research
+report. All of the newspaper articles focused on the initial journal
+article (and research team) who had reported the original discovery.
+Dumas-Mallet et al. were interested in two main questions: (1) What
+proportion of the initial research reports proved ultimately to be
+spurious? (2) For those "discoveries" that proved to be wrong, did
+the popular press report later negative or null results?
+
+What they discovered was that only 49% of the 156 studies reported
+by newspapers were ultimately confirmed by the corresponding
+meta-analyses. In short, slightly over half of popular press reports
+of medical discoveries simply report spurious results that
+ultimately fail to be replicated.
+
+Most medical discoveries are actually replicated. So it is curious
+that most of the medical discoveries reported in the popular press
+*fail* to be replicated. This suggests that journalists themselves
+are attracted to ideas or studies that seem surprising,
+counter-intuitive, or unusual. Readers are more apt to find some
+ideas more interesting than others. Telling a reader that chocolate
+is bad for you (because of the high sugar content) is not nearly as
+compelling as telling readers that chocolate is good for you
+(because it releases endorphins).
+
+With the advent of the Internet, it appears that things have become
+worse. Web pages are filled with so-called *click bait*---pictures
+with captions that are explicitly designed to grab our attention. It
+shouldn't be a surprise that our attention is most attracted by the
+outlandish and surprising: *pregnant man divorces wife, mouse
+attacks cat, car drives upside-down, ... listening to music makes
+you smarter* (Pietschnig, Voracek & Formann, 2010).
+
+As you might expect, Dumas-Mallet et al. also found that newspapers
+never covered any initial studies reporting null findings, and
+rarely reported null findings of subsequent studies. That is,
+newspapers exhibit a significant positive results bias---a bias that
+is even greater than the positive results bias in professional
+journals.
+
+The work of Dumas-Mallet and her colleagues suggests that there are
+at least two additional forms of reporting bias that plague the
+popular press. The first we might call the *unusualness bias*:
+publish ideas that are unusual (and so interesting) since they
+attract readers. Unfortunately, unusual "discoveries" are more apt
+to be wrong. The second bias we might call *follow-up bias.* When a
+previously published idea is shown to be wrong, journalist tend not
+to report the pertinent research reporting that it is wrong.
+
+#### Lessons
+
+These and other studies suggest that a lot of research published in
+scholarly journals are susceptible to Type I errors---making claims
+that are simply false. The results are consistent with the idea that
+both professional journals and the popular press exhibit positive
+results bias. Perhaps the most important lesson from these studies
+is that not enough replication studies are being conducted.
+
+Fortunately, since 2010, the scientific world has become much more
+aware of these problems and efforts are being made to address the
+so-called *replication crisis.* In a recent *New Yorker* article,
+researcher Gary Marcus wrote:
+
+"there is something positive that has come out of the crisis of
+replicability---something vitally important for all experimental
+sciences. For years, it was extremely difficult to publish a
+direct replication, or a failure to replicate an experiment, in a
+good journal. Throughout my career, and long before it, journals
+emphasized that new papers have to publish original results; I
+completely failed to replicate a particular study a few years ago,
+but at the time didn't bother to submit it to a journal because I
+knew few people would be interested. Now, happily, the scientific
+culture has changed."
+
+#### References
+
+Dumas-Mallet, E., Smith, A., Boraud, T., & Gonon, F. (2017). Poor
+replication validity of biomedical association studies reported by
+newspapers. *PLoS ONE* Vol. 12, No. 2, e0172650.
+https://doi.org/10.1371/journal.pone.0172650
+
+Everett, J.A.C., & Earp, Brian D. (2015). A tragedy of the
+(academic) commons: interpreting the replication crisis in
+psychology as a social dilemma for early-career researchers.
+*Frontiers in Psychology,* Vol. 6, article 1152.
+doi:10.3389/fpsyg.2015.01152.
+
+Marcus, G. (2013). The Crisis in Social Psychology That Isn't. *The
+New Yorker,* May 1, 2013.
+
+Open Science Collaboration (2015). Estimating the reproducibility of
+psychological science. *Science,* Vol. 349, Issue 6251, aac4716 DOI:
+10.1126/science.aac4716
+
+Pietschnig, J., Voracek, M., & Formann, A.K. (2010). Mozart effect
+--- Shmozart effect: A meta-analysis. *Intelligence,* Vol. 38, No.
+3, pp. 314-323. doi: 10.1016/j.intell.2010.03.001
+
+
+
+

@@ -1,0 +1,104 @@
+
+
+------------------------------------------------------------------------
+
+## Obvious Theories: Hindsight Bias
+
+------------------------------------------------------------------------
+
+
+
+
+*Anything seems commonplace, once explained.*
+- Dr. Watson to Sherlock Holmes
+
+#### Debriefing
+
+In the two previous group tasks you formulated theories for various
+findings. Notice that people are able to construct plausible
+theories which-ever way the results go.
+
+When *The American Soldier* study was completed, the general public
+complained that it was a waste of tax-payer money because the
+results were all obvious.
+
+A large volume of research in psychology has shown that people are
+prone to think that events are much more obvious *in retrospect*
+(e.g., Slovic & Fischhoff, 1977; Baratz, 1983; Powell, 1988; Bolt &
+Brink, 1991). Asked to predict the outcome of an upcoming election,
+people will be unsure of their predictions. But after the election
+is over, when asked how well they *would* have predicted the
+outcome, people are very confident that they would have correctly
+anticipated the actual results. In hindsight, we think we "knew it
+all along" (Hawkins & Hastie, 1990). In general, psychological
+research has established that we grossly overestimate our predictive
+abilities (Watts, 2011).
+
+At the University of Leicester (UK) Karl Teigen (1986) asked
+students to judge the truthfulness of both actual proverbs and their
+opposites. When given the genuine proverb "Fear is stronger than
+love," most rated it as true. But the reverse form, "Love is
+stronger than fear," was also rated by most students as true.
+Similarly, the actual proverb "He that is fallen cannot help him who
+is down" was rated by most students as true. But it's opposite was
+also judged by most to be true --- "He that is fallen can help him
+who is down." Two other proverbs that were rated as likely to be
+true were: "Wise men make proverbs and fools repeat them" and its
+opposite: "Fools make proverbs and wise men repeat them."
+
+As the Danish philosopher-theologian Søren Kierkegaard put it, "Life
+is lived forwards, but understood backwards." We over-estimate our
+ability to make sense of past events. It is common for people to
+think we "knew-it-all-along" --- when, in fact, we didn't.
+
+As Paul Lazarsfeld (1949) noted, "Obviously, there is something
+wrong with the whole argument of "obviousness."" It is essential
+for researchers to be aware of the ease with which one can generate
+plausible theories to account for any result. There is a huge
+difference between explaining something once you know the results,
+compared with formulating the theory first, before the results are
+known. We should be much more suspicious of *post hoc* theories than
+*a priori* theories.
+
+Intuition is important in life, but our intuitions about past events
+are clouded by what we know today.
+
+The ease with which researchers can explain data *after* they look
+at it is referred to as **hindsight bias.** Everything is obvious in
+retrospect.
+
+**Slogan:** *Hindsight is 20/20.*
+
+Hindsight bias contributes to the feeling that research doesn't tell
+us anything we didn't already know.
+
+There is only one sure way to avoid hindsight bias --- formulate
+your theory *before* you collect your data. (The best research
+invites failure.)
+
+#### References:
+
+Hawkins, S. A., & Hastie, R. (1990). Hindsight: biased judgements of
+past events after the outcomes are known. *Psychological Bulletin,*
+Vol. 107, pp. 311-327.
+
+Paul Lazarsfeld (1949). The American Soldier: An expository review.
+*Public Opinion Quarterly,* Vol. 13, No. 3, pp. 377-404, 380.
+
+Paul Slovic and Baruch Fischhoff (1977). On the psychology of
+experimental surprises. *Journal of Experimental Psychology,* Vol.
+3, No. 4, pp. 544-551.
+
+Daphna Baratz (1983). *How Justified is the "Obvious" Reaction?* PhD
+Dissertation, School of Eductation, Stanford University.
+
+Karl Teigen (1986). Psychological patterns in predicting disjunction
+and conjunction of clinical symptoms. *Acta Psychologica,* Vol. 61,
+pp. 183-195.
+
+Hartmut Blank, Jochen Musch & Rüdiger F. Pohl (editors) (2007).
+*Social Cognition,* Vol 25, No. 1. Special issue on the Hindsight
+Bias.
+
+Duncan J. Watts (2011). *Everything is Obvious: Once you Know the
+Answer.* New York: Crown Business.

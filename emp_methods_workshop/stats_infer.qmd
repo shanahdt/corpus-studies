@@ -1,0 +1,46 @@
+
+
+------------------------------------------------------------------------
+
+### Inferential Statistics
+
+------------------------------------------------------------------------
+
+We've learned how to use descriptive statistics to characterize or
+summarize some set of measures. For example, we can count the number
+of measures in (say) each of Beethoven's 32 piano sonatas, and
+express the average number of bars or measures.
+
+Where statistics becomes really useful is when we can expand beyond
+describing properties of a known sets of measures, and infer some
+properties about an unknown set of measures. In particular,
+*inferential statistics* is process by which the we infer properties
+of a *population* given a *sample.*
+
+For example, we might count the number of measures in only half (16)
+of Beethoven's piano sonatas. On the basis of this sample, how well
+can we infer the true average number of measures in all 32 of the
+sonatas?
+
+Some useful terminology:
+
+**External validity:** Where the sample is truly representative of
+a population and so the sample measure correctly generalizes to
+the population.
+
+**Internal validity:** Where the measures of the sample are
+correct. That is, the results generalize to the sample.
+
+**Statistic:** Some value derived from a sample.
+
+**Parameter:** A true population value.
+
+**Inferential statistics:** The process by which population
+parameters are inferred from sample statistics.
+
+We use inferential statistics to infer a population parameter based
+on a statistic which we calculate from sample measures.
+
+
+
+

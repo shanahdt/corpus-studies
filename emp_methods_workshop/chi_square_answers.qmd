@@ -1,0 +1,75 @@
+
+
+------------------------------------------------------------------------
+
+### [GROUP TASK #16:]{.small} Chi-Square Tests - ANSWERS
+
+------------------------------------------------------------------------
+
+In a survey of orchestral works it was found that 70 percent include an
+oboe as part of the orchestration. A music scholar finds that composer A
+uses an oboe in only 10 of 22 orchestral works (just 45%). Is this a
+statistically significant difference?
+
+70 percent of 22 works is 15.4 works
+30 percent of 22 works is 6.6 works
+![](StatsImages/ChiSquareFormula.jpg){width="35%"}
+![](StatsImages/chi_answer1.png){width="25%"}
+With one degree of freedom, at the 95% confidence level, the critical
+value of chi-square is 3.84. Since our calculated chi-squared value
+exceeds the critical value, we can declare that the results are not
+consistent with the null hypothesis. Instead, the results are
+consistent with the research hypothesis.
+
+Our statistical test allows us to state the following conclusion: The
+observations are consistent with the idea that, compared with other
+composers, composer A is less likely to include an oboe in the
+instrumentation of orchestral works.
+
+A music scholar finds that a sample of Italian baroque music shows 51
+works in major keys and 9 works in minor keys. In a diverse sample of
+baroque music from many European countries (including Italy), 480 works
+were found to be in major keys and 210 works in minor keys. Compared
+with their European colleagues, did Italian baroque composers tend to
+favor works in major keys?
+
+210 (minor) + 480 (major) works = 690 works in total
+210/690 = 30.4348 percent minor
+480/690 = 69.5652 percent major
+For a sample of 60 Italian baroque works, we would expect:
+30.4348 percent of 60 = 18.2609 in the minor mode
+69.5652 percent of 60 = 41.7391 in the major mode
+![](StatsImages/ChiSquareFormula.jpg){width="35%"}
+![](StatsImages/chi_answer2.png){width="25%"}
+With one degree of freedom, at the 95% confidence level, the critical
+value of chi-square is 3.84. Since our calculated chi-square value
+exceeds the critical value, we can discard the null hypothesis, and
+accept that the results are consistent with the hypothesis. The
+results are statistical significant at p<0.05.
+
+Our statistical test allows us to state the following conclusion: The
+observations are consistent with the idea that, compared with other
+European baroque composers, Italian baroque composers tend to favor
+works in major keys.
+
+An ethnomusicologist finds that just 130 of 220 Xhosa listeners say they
+prefer *bumbuju* rhythms to *nobuju* rhythms. In one Xhosa village
+however, 15 of 19 people say they prefer bumbuju. Can we claim that the
+members of this village differ significantly from other Xhosa in their
+rhythmic preferences?
+
+130/220 Xhosa prefer bumbuju = 59.0909 percent
+220-130 = 90; 90/220 Xhosa prefer nobuju = 40.9091 percent
+In the village, we would expect:
+59.0909 % of 19 = 11.2273 to prefer bumbuju
+40.9091 % of 19 = 7.77273 to prefer nobuju
+![](StatsImages/ChiSquareFormula.jpg){width="35%"}
+![](StatsImages/chi_answer3.png){width="25%"}
+With one degree of freedom, at the 95% confidence level, the critical
+value of chi-square is 3.84. Since our calculated chi-square value
+fails to reach the critical value, we cannot discard the null
+hypothesis. The results are not consistent with the hypothesis.
+
+
+
+

@@ -1,0 +1,443 @@
+
+
+------------------------------------------------------------------------
+
+### How to Revise a Manuscript in Response to Reviewers' Comments
+
+------------------------------------------------------------------------
+
+#### The Review Process
+
+For most journals, when a manuscript is received, the Editor
+examines the subject matter, and assigns the paper to one of the
+Associate Editors affiliated with the journal. At this point, the
+assigned Associate Editor becomes the *Action Editor* for that
+particular manuscript. In some cases, the Editor will assume the
+role of Action Editor for a given submission.
+
+The Action Editor is typically involved in selecting and recruiting
+reviewers to review your manuscript. Potential reviewers usually
+receive just the title and abstract of the manuscript, and are asked
+to agree/disagree to review the submission on the basis of that
+information. In some cases, potential reviewers may receive the
+entire manuscript before having to make a decision whether or not to
+participate in the reviewing process. Once the reviewers have agreed
+to work on the manuscript, the Action Editor is responsible for
+encouraging the reviewers to complete the task.
+
+Reviewing can be a time-consuming and thankless task. If a journal
+publishes 20 articles per year and has an 80% rejection rate, then
+typically 100 submissions are reviewed each year. Since most
+submissions are reviewed by two or three reviewers, that means that
+the 20 articles published in a given year represent the tip of an
+iceberg masking nearly 300 reviews. Reviewing is labor-intensive,
+and it is all done by volunteers.
+
+After receiving reports from all of the Reviewers, the Action Editor
+will then read your manuscript, consider the Reviewers' comments,
+and form his or her own assessment. The Action Editor will write a
+letter. The *action letter* and the *reviewers' reports* will then
+be sent to you. The reviewers' reports will be labeled "Reviewer
+#1," "Reviewer #2," and so on.
+
+#### The Reviews
+
+Reading through the Reviewers' comments, you'll typically find a
+range of responses. It is not uncommon for one reviewer to recommend
+publication while another reviewer recommends rejection. Reviewers
+may like or dislike the paper for different reasons. When criticisms
+are offered, the reviewers frequently choose different things to
+criticize.
+
+When reading Reviewers' comments, it is common for authors to
+experience a rollercoaster of emotion. You will celebrate (rare)
+moments of praise, lament points of (legitimate) criticism, feel
+embarrassed by (now obvious) lapses, and feel angered by points of
+(unfair) attack.
+
+After reading the Reviewers' comments, it is important to return to
+the Action Editor's letter. This letter is key.
+
+First, the Action Editor's letter will communicate a formal decision
+regarding the manuscript. Most journals allow for four possible
+conclusions: either the manuscript will be *rejected, accepted
+outright, accepted pending revisions,* or the author(s) may be
+encouraged to *revise and resubmit.*
+
+Each of the Reviewers will also have rendered a judgment, but
+formally, the Reviewers' comments are simply recommendations to the
+Action Editor. It is the Action Editor's decision that counts. Some
+journals have very specific policies, such as rejecting the paper if
+any one of the reviewers rejects it. However, there is wide
+variation in editorial policy, and it is possible that an Action
+Editor may choose to accept a paper that is rejected by one or more
+reviewers, or may reject a paper that all of the reviewers praise.
+
+If the paper has been rejected then the review process is over.
+Never attempt to argue with the editorial decision. Reviewing is an
+unpaid labor-intensive process, and the last thing an Action Editor
+wants to do is waste further time with a paper that has been deemed
+inadequate.
+
+It is possible that the reviews and action letter suggest that the
+reviewers have grossly misread your work and have rejected your
+submission because of some misunderstanding. Even in this case,
+don't contact the Action Editor or attempt to clarify the situation.
+The fact that the reviewers have formed a flawed understanding of
+your work simply means that your paper must be poorly written.
+Accept the decision and use the reviewer reports as a guide to how
+to revise your paper so as to avoid a similar misunderstanding
+should you submit the work to another journal.
+
+In no case should you contact the Action Editor and say something
+like "Your assessment was based on an incorrect interpretation of my
+work. No matter: I'll send my paper elsewhere." In the long run, you
+will need to maintain a good working relationship with the people in
+your field. Drawing attention to their apparent stupidity will not
+win any friends, especially if their assessment was based on a
+misconception whose origin is your poor writing. Once again, never
+attempt to argue with an editorial decision.
+
+Acceptance outright is not common. Depending on the prestige of the
+journal, many or most submissions will simply be rejected. That
+brings the whole process to an end; at this point, you will need to
+consider alternative journals.
+
+For good research (which is what we always aim to do), the most
+common assessment is either *accepted pending revisions* or *revise
+and resubmit.*
+
+As noted, the Action Editor will form his/her own opinion about the
+quality of your work. In addition, the Action Editor will form an
+opinion about the value of each of the reviewers' comments. Do not
+assume that the Action Editor agrees with each of the remarks made
+by the various reviewers. It is not uncommon for an Action Editor to
+think that some reviewer's remark is off-target, inconsequential, or
+wrong.
+
+In drafting the action letter, the Action Editor must navigate
+through a delicate social situation. Recall that Action Editors rely
+on the volunteer labor of reviewers, so they are usually eager to
+maintain good working relationships. This can be hard to do if the
+Action Editor sometimes disagrees with a reviewer. Reviewers become
+unhappy if their advice or assessments are routinely ignored, or
+considered inconsequential or inappropriate. Suppose, for example,
+that Reviewer #2 has voiced a "serious" objection concerning *X.*
+However, it may be the case that none of the other reviewers mention
+*X,* and the Action Editor doesn't think *X* is a serious matter.
+The Action Editor must write a letter that communicates what is
+important --- but at the same time doesn't offend Reviewer #2.
+
+Attend carefully to the specific wording in the action letter. The
+Action Editor is likely to mention several major concerns raised by
+the reviewers. All of the concerns mentioned in the action letter
+must be addressed in any revised manuscript. However, if issue *X*
+is not mentioned, then it suggests that the Action Editor may
+disagree with Reviewer #2, and does not consider this an essential
+issue.
+
+You will need to respond to every issue raised in the reviewers'
+reports. But you will need to pay particular attention to those
+issues mentioned in the action letter.
+
+#### How to Carry Out Revisions
+
+The key to revising a manuscript lies not in your manuscript but in
+your *letter of response* to the Action Editor. When you resubmit
+your manuscript, you will need a covering letter. It is this
+*letter* that will get your revised paper accepted, not the *revised
+manuscript* itself.
+
+First, no one wants to read your paper again. Worse yet, no one want
+to have to read your revised paper while simultaneously referring to
+your original submission, while also looking at their original
+written critique.
+
+Getting your paper accepted depends on making life easy for the
+Action Editor and the reviewers. Your covering letter should take
+the editor and reviewers step-by-step through the revisions,
+chronicling the specific changes you have made. The aim is to have
+the editor and reviewers read your letter and conclude that your
+revisions are acceptable, and that there is no need for them to read
+the entire manuscript again. (Each time someone reads your
+manuscript, there is the possibility that they will discover further
+things to criticize.)
+
+Once again, focus on the letter of response, not the manuscript.
+Your letter of response will typically be more than twice the length
+of the action letter plus the reviews. If the action letter plus
+reviews is 6 pages, then your letter of response will likely be at
+least 12 pages in length.
+
+1.  Begin your revision by copying the action letter and reviews
+    into your draft letter of response. Put all of this material in
+    italics so you can distinguish your writing from the action
+    letter and reviewer reports.
+
+2.  Address your letter to the Action Editor:
+
+    Dear ______
+    
+    Thank you for your letter of July 28th concerning my
+    manuscript entitled ________. Enclosed you will find a
+    revised manuscript whose changes follow closely the comments
+    in the action letter, as well as the individual detailed
+    comments in the reviewers' reports. The revisions are
+    chronicled in detail below. For convenience, I have
+    interspersed each comment with a description of the associated
+    changes to the manuscript.
+
+3.  Respond to each of the concerns raised by the reviewers in turn.
+    For example, write along the following lines:
+
+    Figure 2 (now Figure 3) has been fully revised in accordance
+    with the comments of Reviewer #3. Specifically, the horizontal
+    axis is now labeled "pitch distance (in semitones)" and the
+    vertical axis includes a zero marking.
+
+    As suggested by Reviewer #1, I have provided more detail
+    regarding the manuscript sources. Specifically, the following
+    passage has been added on page 8, lines 38-40:
+    
+    "The Vivaldi opus 8 concertos survive in four sources: the
+    Turin autograph, the Dresden manuscript, the Amsterdam print,
+    and the Manchester part-books. Although most of the
+    discrepancies are minor, there are some major deviations,
+    including through-composed sections of up to 24 measures, and
+    other differences that have analytic repercussions."
+
+4.  Use page and line numbers to identify each change:
+
+    Formerly pg.7/lines 10-11/Now pg.7/lines 23-24
+    "Our results establish that ..." now reads:
+    "Our results are consistent with the view that ..."
+
+5.  Thank the reviewers for good ideas.
+
+    The results from Experiment #2 have been re-analysed using a
+    MANOVA procedure as suggested by Reviewer #1. I am pleased to
+    report that the main effect remains statistically significant.
+    However, the interaction between intraversion and preference
+    ratings is no longer significant. The discussion has been
+    revised accordingly (formerly page 13; now page 14).
+    
+    My thanks to Reviewer #1 for recommending the MANOVA analysis.
+
+6.  A good reviewer's report will begin with a paragraph that
+    summarizes your work. Sometimes a reviewer will misunderstand
+    the purpose or nature of your work, and that will be evident in
+    the summary or other points in the review. Since the reviewer is
+    likely to be a respected scholar in the field, if the reviewer
+    is confused, then it is very likely that many readers will find
+    your work confusing. Take this as your cue to improve the paper.
+    Say something like the following:
+
+    In light of the summary provided by Reviewer #2, it is
+    apparent that the manuscript has led to confusion regarding
+    the motivation for this study. Accordingly, I have revised the
+    Introduction (pages 1-4) in order to better clarify the
+    background and aims. Specifically, ...
+
+7.  You don't need to necessarily chronicle each of the minor
+    changes recommended by a reviewer. In your letter of response,
+    you may say something like:
+
+    Regarding the "Minor Issues" section in the report by Reviewer
+    #1, all of the recommended changes have been made.
+
+    Otherwise, chronicle each of the changes you make to the
+    manuscript in your letter of response.
+
+In general, use your letter of response as your guide for making
+revisions. Write the letter of response *first* in order to clarify
+precisely the changes that need to be made in order to satisfy the
+Action Editor and reviewers. *Don't revise the paper and then later
+chronicle the changes in the letter.* The key to successful revision
+is the letter of response.
+
+#### Pick Your Fights
+
+Inevitably, there will be criticisms made by one or more reviewers
+with which you disagree. In responding to the Action Editor, there
+is room to take issue with certain criticisms.
+
+First, avoid beginning your letter by disputing some issue. Use the
+bulk of your letter to show that you take the reviewers' comments
+seriously, and have made a sincere effort to address all of the
+concerns. If you show that you have accepted and dealt with 90% of
+the criticisms, then the reviewers and Action Editor are more likely
+to give ground on the two or three items that you dispute.
+
+Since the reviewer's reports often begin with "Major Concerns," you
+might want to delay disputing one of these concerns. Say something
+like the following:
+
+Regarding Reviewer #2's Major Concern #1, I will address this
+later in the letter (page 8).
+
+Second, pick your fights. You might disagree with a dozen points
+made by the reviewers. However, you shouldn't fight all of these at
+once. If you write several pages describing (in effect) how idiotic
+the reviewers' comments are, it will make you look defensive and
+intransigent. Choose two or three major points of disagreement, and
+address those. Explain why you consider the criticisms misplaced.
+
+It is not uncommon for a manuscript to generate two or three rounds
+of correspondence with the Action Editor and reviewers. Having
+resolved certain issues, you may have additional opportunities in
+subsequent correspondence to take issue with other critical points.
+However, each letter should demonstrate your sincere efforts to
+modify your manuscript in accordance with the reviewers' concerns.
+
+Third, avoid intemperate language. Sometimes a reviewer will make a
+criticism using harsh language, and you may find the criticism
+hurtful or even anger-provoking. In your response, always tone-down
+the language. No matter how inflammatory the criticism, use calm and
+measured words in your response. Avoid any hint of sarcasm. You will
+win-over critics by always behaving in a professional manner (even
+when others fail to do so).
+
+For empirically-oriented research, a common point of disagreement
+relates to the request for more work. It is not uncommon for a
+reviewer to ask for another follow-up experiment or corpus study. If
+you agree that an additional study is warranted, and if you have the
+resources and inclination, by all means, endeavor to fulfill the
+request. However, it is often the case that requests for additional
+research are impractical or excessive.
+
+Requests for addition research can usually be ignored if the request
+is not mentioned by the Action Editor in the action letter.
+
+You may need to remind the reviewer(s) that no research is
+definitive. In analytic and empirical research there is no such
+thing as proof. Even if you do a follow-up study, there are surely
+other studies that could also follow. Your intention is not to bring
+"closure" to the subject, and you anticipate that other researchers
+will undoubtedly revisit the issue in the future.
+
+Moreover, you may have difficulty complying with the request for
+additional work. You may no longer have access to an essential
+manuscript or piece of equipment. A collaborator may have moved and
+it is no longer practical to continue with the collaboration.
+
+It may be helpful to mention that you agree with the sentiment that
+more research is warranted and that the proposed additional study is
+a good idea. Nevertheless, practical considerations make it
+difficult to comply with the request. You would encourage the Action
+Editor to consider whether the work as it stands makes a
+contribution to knowledge, even without an additional study.
+
+#### Thanks
+
+End your letter by thanking the Action Editor and Reviewers for
+their hard work. Say something like:
+
+I would like to thank the Reviewers for their many helpful
+comments and suggestions. I feel that the revised manuscript has
+greatly benefitted from the Reviewers' input.
+
+#### Subsequent Rounds
+
+When a paper is revised and resubmitted, the revised paper is almost
+always reassigned to the original Action Editor. Moreover, the
+original reviewers will be invited to participate in the subsequent
+rounds of reviewing. At each stage, the reviewers will have access
+to each others' comments as well as the Action Editor's
+correspondence with you.
+
+It is not uncommon for reviewers to change their minds when they
+read the assessments of other reviewers. For example, a single
+negative review might alert the other reviewers to problems they
+hadn't thought about. Less commonly, an initially negative reviewer
+might soften his/her position in light of positive comments by the
+other reviewers. At the same time, a single negative reviewer is
+more likely to decline the invitiation to repeatedly review a paper.
+
+Ultimately, take your cue from the Action Editor. If the Action
+Editor continues to write in a positive or encouraging way, then it
+may be worthwhile persevering with subsequent rounds of revisions
+even though one of the reviewers continues to resist approving the
+paper. Scholars have genuine disagreements about what constitutes
+quality work. There are famous historical examples of seminal
+research studies that were repeatedly rejected. Good Action Editors
+will defend work they think holds merit, even in the face of
+disagreement. On the other hand, if the Action Editor is not on your
+side, then it is time to move on.
+
+#### Opting Out
+
+In light of an action letter, you might conclude that the requested
+modifications are simply too burdensome. Accordingly, you might
+decide to submit your manuscript to a different journal.
+Nevertheless, take advantage of the feedback to make revisions to
+your manuscript. Especially if an issue is raised by more than one
+reviewer, there is a strong likelihood that reviewers for another
+journal will raise similar concerns. There is no need to notify the
+first journal of your decision not to resubmit.
+
+This scenario highlights the fact that there are actually *two*
+reasons for submitting a manuscript to a journal. Of course, the
+principal reason is that you hope that the journal will elect to
+publish your work. However, sometimes authors submit manuscripts to
+journals in the full knowledge that the journal will almost
+certainly reject the submission. The logic goes as follows:
+
+For research that you know is controversial, it is helpful to be
+aware of the arguments opponents have against your work. You might
+consider sending a copy of your manuscript to someone you know is a
+severe critic of the sort of research you are doing. However, the
+likelihood is that the critic simply won't read or respond to your
+unsolicited manuscript.
+
+When you submit your work to a journal, the journal makes a
+commitment to engaging reviewers who will be required to produce a
+written assessment and critique.
+
+Suppose you have decided that journal *X* is the most likely journal
+to publish your controversial work. Before submitting it to journal
+*X*, you might choose instead to submit to journal *Y*. You know
+that journal *Y* will almost certainly reject the work. However, the
+reviewers' reports from journal *Y* may prove useful in revising
+your manuscript to address the concerns and arguments of your
+critics. By doing this, you will increase the likelihood that when
+you finally submit your work to journal *X*, you will have a better
+chance of acceptance.
+
+#### Calling It Quits
+
+Consistent negative reviews may be telling you something. Don't be
+afraid to abandon a project. Economists speak of "opportunity cost."
+When you choose to do something, there is a cost incurred by virtue
+of your inability to do something else instead. You will never
+invest so much in a project that it may not be worthwhile to move on
+to something else.
+
+The most common mistake made by young scholars is to pursue
+excessively ambitious projects early in their careers. Grow your
+projects. Start with modest research ventures, and ramp up the
+ambition as you gain experience.
+
+Every scholar writes more papers than get published. Who knows: with
+the passage of time, you may ultimately return to an abandoned early
+project, and know just how to polish the rough edges.
+
+#### Summary
+
+In a nutshell, there are five essentials to bear in mind when
+revising a manuscript.
+
+1.  Pay attention to nuanced wording in the action letter.
+2.  Use the action letter and reviewer reports as the structure for
+    writing a detailed letter of response.
+3.  The letter of response provides the action-plan for revising the
+    manuscript. Write the letter first, and then revise your
+    manuscript in accordance with the letter.
+4.  Pick your fights.
+5.  Your aim should be that your letter of response is sufficiently
+    detailed that the Action Editor and Reviewers will be satisfied
+    by your reported revisions, and will decide not to read the
+    entire revised manuscript.
+
+
+
+

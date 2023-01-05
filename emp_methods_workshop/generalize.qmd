@@ -1,0 +1,159 @@
+
+
+------------------------------------------------------------------------
+
+## Generalizing versus Universalizing
+
+------------------------------------------------------------------------
+
+Suppose an acquaintance relayed the following incident to you. They
+were driving to work yesterday when they ran out of fuel. They knew
+the tank was nearly empty, but they were late for work and didn't
+want to stop. However, running out of fuel turned out to be a huge
+nuisance. They walked for 20 minutes to the nearest gas station,
+where they discovered that they had to have a government approved
+container in order to purchase gas. They ended up having to take a
+taxi to a hardware store, purchase a gas container, take the cab
+back to the filling station, purchase the gas, and then take the
+taxi back to their car. The whole episode took more than an hour,
+turned out to be expensive, and they were even more late for work
+than they had planned.
+
+You might feel sympathy for your friend. You might find the story
+entertaining or humorous. You might think that listening to your
+friend's story was a waste of your time. Whatever your response,
+there is a strong likelihood that you might register a lesson:
+*Note-to-self: Try to avoid running out of fuel.* Even if you don't
+have a car or drive, you might conclude that running out of fuel is
+a big inconvenience to be avoided.
+
+In drawing a lesson from your friend's story, notice that you are
+forming a *generalization.* You are taking a single incident, a
+unique event, and somehow conclude that what another person
+experienced might have some relevance for you as well.
+
+One could well imagine that this story might be useful for some
+people. People who drive regularly (especially those who have a
+cavalier regard for the fuel gauge) might benefit from hearing this
+story. It is possible that hearing this story might actually save
+them from making a similar mistake in the future. One could also
+imagine that this story might have no utility for many other people.
+Most people in the world don't own vehicles and may never experience
+the opportunity to ride in an autombile, let alone drive one. For
+these people, this story has little or no cautionary value (although
+they might find it entertaining).
+
+Research involves chronicling a finite series of events or
+observations. In some research, we expect that the result will
+pertain to just a single event. For example, a historian might
+establish that a particular musical work was composed in 1680. No
+one expects that this research will generalize beyond this
+particular case.
+
+In most research, however, the researcher anticipates that the
+result will produce some general lesson. At times, this assumption
+holds merit. Unfortunately, this presumption can lead to onerous
+mistakes. Fifty years ago, it was common to test new drugs using
+"convenience samples." Drugs were often tested exclusively using
+white males. The presumption was that there were no significant
+physiological differences between men and women, or between whites
+and non-whites. However, drugs that were found to be effective for
+white men did not always prove effective for women or for
+non-whites. Today, the U.S. Food and Drug Administration (FDA)
+refuses to accept the results for drug trials that do not employ a
+more representative sample of participants.
+
+To be fair, it is often difficult or impossible to recruit
+representative samples of people. Pharmaceutical companies can
+afford to recruit a wide range of people to participate in a drug
+trial. However, music researchers tend to have little research
+funding. Most psychological research relies on Western undergraduate
+students for the simple reason of cost. Problems arise when the
+researcher presumes that the results automatically apply to people
+of different ages, ethnicities, and backgrounds. Serious problems
+can arise when the researcher assumes that the results are
+"universal."
+
+Aware of the dangers of over-generalization, some researchers have
+come to believe that generalization is a bad thing. In the
+qualitiative research community in particular, one finds strong
+statements against generalization. Certain scholars have suggested
+that researchers should never imply that the findings generalize
+beyond the individual case. However, this view is highly
+problematic.
+
+By way of illustration, consider a recent study, where a historian
+established that a harpist for the Amsterdam Concertgebouw orchestra
+in the late 1940s was discriminated against because she was a woman.
+If we hold the view that generalization is wrong, then the effect of
+this history is miniscule. Most people would conclude that this
+single historical event is consistent with a general pattern of
+discrimination against women musicians. If one makes the strong
+claim that generalization is forbidden, then this story has no
+broader meaning. If we accept the injunction against generalization,
+then all history becomes nothing more than a set of entirely
+disconnected "facts" that offer no general lessons. If
+generalization is wrong, then there is nothing to learn from history
+apart from a bunch of individual stories.
+
+Notice that the claim that generalization should be avoided in
+research is itself a generalization. Scholars who claim not to
+generalize are simply deceiving themselves.
+
+Once again, we must navigate between two types of errors. A Type I
+error would falsely claim that a result is universal, when in fact,
+the phenomenon pertains only to some smaller subset. A Type II error
+would falsely claim that there is no general lesson to be drawn,
+when in fact, the phenomenon does indeed apply more broadly. It is
+important to understand that the degree to which a result applies
+broadly or narrowly is an empirical question. We might well expect
+that some phenomenon apply universally, others are entirely unique,
+while many other phenomenon belong somewhere in the middle.
+
+Historically, music psychologists tend to assume universality,
+whereas ethnomusicologists tend to assume particularity. This means
+that music psychologists are susceptible to making lots of Type I
+errors while ethnomusicologists are susceptible to making lots of
+Type II errors. Both groups make generalizations. For example, an
+ethnomusicologist cannot make a claim regarding some culture without
+generalizing beyond the immediate observations made with a handful
+of informants. When Catherine Lutz famously concluded that the
+Ifaluk of Micronesia don't experience anger the same way other
+people do, she was generalizing from her limited field experience
+with a small group of people (Lutz, 1988).
+
+When reporting the results for any study, use circumspect language
+when reporting your conclusions. Instead of saying "people hear X as
+Y," say "At least in the case of Western-enculturated listeners, the
+results are consistent with undergraduate music students as hearing
+X as Y." For any given study, we have no idea how broadly the
+results generalize. The degree of generalizability cannot be
+presumed unless the study has explicitly compared different
+populations.
+
+Our slogan reminds us that generalization is inevitable, but we have
+no idea of the breadth of applicability:
+
+**Slogan:** *Generalize, but don't universalize.*
+
+When presenting your result, frame them narrowly rather than
+broadly. Let the reader form his/her own impression about the degree
+to which a result might generalize (Lincoln & Guba, 1985).
+
+**References:**
+
+David Huron (2009). Why some ethnomusicologists don't like music
+cognition: Finding common ground in the study of musical minds.
+Keynote address, *European Society for the Cognitive Sciences of
+Music (ESCOM) Conference.* Jyväskylä, Finland.
+
+Yvonna Lincoln & Egon Guba (1985). *Naturalistic Inquiry.* New York:
+SAGE Publications.
+
+Catherine Lutz (1988). *Unnatural Emotions: Everyday Sentiments on a
+Micronesian Atoll and their Challenge to Western Theory.* Chicago:
+University of Chicago Press.
+
+
+
+

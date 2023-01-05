@@ -1,0 +1,97 @@
+
+
+------------------------------------------------------------------------
+
+## The Size of Samples
+
+------------------------------------------------------------------------
+
+The purpose of sampling is to allow us to infer some property of a
+population without having to examine every member of the population.
+This raises the question of how big the sample should be.
+
+Suppose we were interested in identifying the average height of
+people in developed countries. Roughly a billion people live in
+developed countries, so measuring everyone's height would be
+impractical. How many people would we need to include in our sample
+in order to produce a good estimate of the true average for this
+large population?
+
+In general, people get taller with age until around 20 years of age.
+With old age, people begin to shrink. With improved nutrition, in
+most developed countries people have been getting taller over time.
+Measurements made between 2003 and 2006 indicate that the average
+height of females (twenty years of age and older) is 1.622 meters
+(around 5 ft, 4 inches). The average height of males is is 1.763
+meters (around 5 ft 9.5 inches).
+
+There is no guarantee that every random sample will be
+representative of the population. Even if we sample a thousand
+people, we might, simply by chance, have sampled people who are
+shorter than average, and so our estimate will be biased. This is
+highly improbably, but nevertheless possible.
+
+Roughly 95% of all people will be with plus or minus 10 cm of the
+average height. For women (with a mean of 1.622 meters) this means
+that 95% of all women will be between 1.522 and 1.722 cm in height.
+Statisticians are able to determine the likely error for any given
+sample size. The graph below shows the effect of sample size for
+estimates of average height. For a sample consisting of just one
+person, 95% of the time, that person will be within about 10 cm of
+the true average. If your sample consists of two randomly selected
+individuals, 95% of the time, the average of these two individuals
+will be within about 6.6 centimeters of the true average. With a
+sample of five individuals, 95% of the time, the average of this
+sample will be within about 2.5 centimeters of the population
+average. With a sample of twenty people, 95% of the time, the sample
+average will be within about half a centimeter of the population
+mean. With a sample of 100 people, 95% of the time, the sample
+average will be less than 25 millimeters of the population mean.
+
+![](Images/big_numbers_graph_cm.png){width="450"}
+
+Note that these values assume that the sampling is truly random. It
+assumes that any given person in the world is as likely to be
+sampled as any other person.
+
+#### The Law of Large Numbers
+
+The *law of large numbers* simply states that as the sample size
+increases, the sample is more likely to provide a more accurate
+estimate of the true population value.
+
+A fair coin should be equally likely to appear heads or tails. That
+is, it should appear heads 50% of the time. If you flip a fair coin
+just once, it will either come up heads 100% of the time or 0% of
+the time. If you flip a fair coin twice, it will either come up
+heads 100% of the time, 0% of the time, or 50% of the time. In fact,
+it will come up heads 50% twice as often as either 100% or 0%. The
+greater the number of times you flip a coin, the greater the
+likelihood that the number of times it appears heads will approach
+the fair value of 50%. That is, the more times you sample the coin's
+behavior, the greater the likelihood that the sample value will
+approach the true population value.
+
+At this point, we can introduce some useful terminology.
+
+The average (or mean) for the population is represented by the
+lower-case Greek letter *mu* (μ).
+
+The average or mean for the sample is represented by the value x
+with a horizontal bar placed on top (x̄). When spoken, this symbol is
+referred to as "x-bar." Sometimes the population mean is represented
+by the uppercase letter "M."
+
+The number of items in a sample is typically represented by the
+italicized uppercase letter *N*. The italicized lowercase letter *n*
+is sometimes used to identify the number of cases in some sample.
+For example, twenty-five people were recruited for an experiment
+(*N*=25); each participant responded to 10 musical works resulting
+in 250 data points (*n*=250).
+
+In statistical calculations, we are always interested in the number
+of ways that values are free to vary. This concept is referred to as
+the *degrees of freedom* (abbreviated *df*). Typically, the degrees
+of freedom are related to the number of observations made. So as the
+sample size increases, normally the degrees of freedom also
+increase.

@@ -1,0 +1,754 @@
+
+
+------------------------------------------------------------------------
+
+### The Exploratory Open Interview
+
+------------------------------------------------------------------------
+
+The open interview is one of the very best exploratory research
+methods. Open interviews are commonly used by social workers,
+detectives, clinical psychologists, psychiatrists, sociologists,
+historians, investigative journalists, as well as anthropologists
+and ethnomusicologists. The open interview is also known by other
+names, including *qualitative interview, unstructured interview,
+free interview, narrative interview, depth interview* and
+*nondirective interview*.
+
+Different disciplines have different names for the person being
+interviewed. A detective interviews *witnesses* and *suspects.*
+Social workers interview *clients.* Clinical psychologists interview
+*patients.* Sociologists interview *subjects, participants* or
+*respondents.* Anthropologists and ethnomusicologists interview
+*informants, experts* or *research collaborators.* In our
+discussion, we'll refer to people being interviewed as either
+*interviewees* or *respondents.*
+
+Open interviews are valuable for at least three reasons. First, open
+interviews invite observations that are unanticipated by the
+researcher. Interviewees provide access to first-person "facts" that
+are otherwise inaccessible. Interviews can draw attention to unique
+experiences that are beyond the personal experience of the
+researcher. The interview can draw attention to novel phenomena, and
+different forms of human experience.
+
+Second, interviews can introduce the researcher to different ways of
+thinking about a question or phenomenon. Interviewees are apt to
+offer different perspectives or unique interpretations. The ideas
+offerred by interviewees inevitably expand the horizons of the
+researcher. Interviews often provide inspiring new conjectures and
+theories that stimulate the researcher's imagination. As Robert
+Weiss has noted, "those who do qualitative interview studies
+invariably wind up knowing a lot about the topic of their study"
+(Weiss, 1995).
+
+Third, interviews can provide vivid first-person anecdotes.
+Charities have long recognized the value of personalizing tragic
+situations. One might make a charity appeal by distributing
+statistics, such as evidence that 2.2 million people in a particular
+region of the world are starving. However, charity appeals are much
+more effective if one tells the story of a single individual: Maria,
+an 8-year-old child, who, with her mother, is starving in a modest
+hut. Although the starvation of millions of people is clearly a more
+serious problem than the starvation of one or two people, the
+concrete personalized story is far more compelling to human minds.
+
+A similar phenomenon occurs in research. People often find research
+results dry and uninteresting. Researchers can make the results of
+research much more compelling to readers by illustrating various
+findings through personal anecdotes --- the sorts of anecdotes that
+arise from personal interviews rather than through formal
+experiments or through impersonal questionnaires. Interviews give
+the researcher access to potentially evocative narratives ---
+stories that can illustrate a phenomena in concrete, human terms.
+Lifeless theoretical accounts can be brought alive through the
+judicious relaying of narrative examples.
+
+By way of summary, open interviews can lead to (i) new facts, (ii)
+new theories, and (iii) vivid illustrations. Open interviews give us
+access to the experiences of others. Interviews offer new insights.
+
+"Quantitative studies pay a price for their standardized precision.
+Because they ask the same questions in the same order of every
+respondent, they do not obtain full reports. Instead, the
+information they obtain from any one person is fragmentary, made up
+of bits and pieces of attitudes and observations and appraisals."
+[l. 142]
+
+Interviews also suffer from a number of problems. The information
+collected is anecdotal, often impressionistic, and conveyed in a
+social situation in which the respondent is strongly motivated to be
+viewed with sympathy or admiration. The "presentation of self"
+typically looms larger in inter-personal situations (such as
+interviews) compared with the more impersonal or anonymous
+questionnaire or experiment. We will address the advantages and
+disadvantages of interviews in more detail at the end of our
+discussion.
+
+#### Recruiting Respondents
+
+Because interviews are labor-intensive, sample sizes are commonly
+small. It is common, therefore, for researchers to abandon the goal
+of recruiting a representative sample. Instead, it is common to
+recruit people who have special knowledge or extensive experience
+related to some phenomenon. Highly experienced or knowledgeable
+respondents are commonly referred to as *informants, witnesses,
+experts* or *research collaborators*. Alternatively, the researcher
+might aim to recruit a heterogeneous group of participants ---
+people who are apt to represent a range of contrasting experiences
+or perspectives. As an exploratory research method, the main aim of
+open interviewing is to collect new ideas. Consequently, a
+representative sample may be less valuable than a heterogeneous
+sample.
+
+By way of example, a study examining "the concert experience" might
+focus on interviewing audience members attending classical and
+popular concerts. However, depending on the aims of the study, a
+researcher might wish to expand the list of interviewees to
+including concert promoters, artist managers, publicists, house
+managers, ticket sellers, scalpers, conductors, musicians, and
+ushers. Once again, the aim of the sample is not to be
+representative of average or typical experience, but to be
+representative of the *range* or *variability* of experience.
+
+In ethnographic work, it is common for the researcher to seek out an
+expert, sometimes called a "key informant." This is someone with an
+unusually high level of expertise or advanced knowledge related to
+the researcher's subject of interest. Commonly, this is a master
+musician or master teacher in some musical tradition. Once again, it
+is hoped that what is lost in representativeness is made up for by
+the wealth of nuanced detail and the opportunities to glimpse
+unanticipated experiences.
+
+In some studies, representativeness may be an important goal.
+Especially if the interview duration is short, it may be possible to
+assemble a representative sample. From time-to-time there are some
+well-funded projects that may hire a number of people to carry out
+the interviewing. A big project might have 30 interviewers. If each
+interviewer conducts 35 interviews, then the project will be able to
+draw on information from over a thousand participants. In these
+projects, it may be possible to assemble a good representative
+sample.
+
+Even for non-representative samples, a researcher needs to know when
+they have interviewed a "sufficient" number of people. A general
+rule of thumb is to stop interviewing new people when the interviews
+keep covering the same ground with little new information. Robert
+Weiss offers an unusual criterion for knowing when to stop an
+interview study:
+
+"A colleague of mine once offered as a general rule that if your
+report on a group you have studied has truly gotten to the inner
+dynamics of the group, you can never again visit that group with
+safety. His idea was that every group has secrets kept from
+outsiders that the group would be loath to have revealed and still
+other secrets, even more fundamental, kept from itself, whose
+surfacing would enrage it." (Weiss, 1995, l.3701)
+
+In recruiting interviewees, it is important to consider a control
+group. For example, Ehrensaft (1990) carried out a study of married
+couples who share parenting. However, Ehrensaft only interviewed
+couples who share parenting duties without interviewing a comparison
+group of couples who do not sharing parenting. This makes it nearly
+impossible to claim that any observation is characteristic of
+couples who share parenting. Unfortunately, it is common for
+interview-based researchers to overlook the need for a control
+group.[1] (See also Weiss, 1995).
+
+##### Snowball Sampling
+
+In the case of recruiting experts, one must often rely on the
+experts themselves to help you contact and recruit other experts for
+interviews. This is referred to as *snowball sampling.* As you might
+expect, snowball sampling is likely to introduce bias, since there
+is a strong likelihood of interviewing individuals who are similar.
+In order to reduce this bias, the researcher should aim to follow
+lines of referral that lead to people who are unfamiliar with
+earlier interviewees. For example, suppose that Alice recommends
+Bill, and you interview them both. Then Bill recommends Carol and
+Daniel. If Alice knows Daniel but not Carol, then it is preferrable
+to interview Carol over Daniel. By following this strategy, it is
+less likely that the researcher will interview only individuals
+within a single social network. In ethnographic fieldwork, it is
+common for the researcher to switch to a different village or locale
+in order to avoid undue emphasis on a single social group. Snowball
+sampling is a sort of *convenience sampling* --- one that helps in
+recruiting people with special knowledge or expertise.
+
+Notice that snowball sampling is biased against those who have
+smaller social networks. Experts who are less sociable are less
+likely to be known by other experts, and so are less likely to be
+interviewed.
+
+##### Duration
+
+All research requires a time commitment from those who participate
+in the study. The duration of the commitment can be quite variable.
+A questionnaire might take only 5 minutes to complete. An experiment
+might be finished in 30 minutes. Interviews, by contrast, are
+frequently the most demanding in terms of time commitment. In most
+interview research, 90 minutes is a common time period for an
+interview, and many studies interview participants several times. As
+a result, interviews often place considerable time demands on
+participants.
+
+The time committment for an interview can lead to sampling problems.
+Some people are more cooperative in interviews than others. People
+who are retired, unemployed, or eager for company are most welcoming
+to interviewers. People who are busy simply cannot afford the time.
+Consequently, interview methods tend to be biased toward people who
+have leisure time. This sampling bias can sometimes be alleviated by
+choosing places where even busy people have time to spare. Busy
+people may find themselves with free time when in waiting rooms, in
+airports, or at hotels in the evening. Some interviewers choose to
+recruit interviewees at leisure or vacation destinations, like
+beaches, pools, union halls, church socials, sporting events, yacht
+clubs, etc.
+
+Potential respondents are often suspicious of anyone requesting an
+interview. It helps to identify an institutional affiliation, such
+as a university, or a source of government funding, such as the NSF.
+Respondents are less likely to participate if the research has a
+corporate sponsor, and even less likely to participate if there is
+no apparent institutional affiliation. It helps to provide a
+business card, with contact information. This will reassure possible
+interviewees. It helps to have an institutional position
+(professor), or to cite a principal investigator when recruiting.
+Recruiting can be done via fliers, email, web announcements,
+telephone solicitation, personal approach, through local newspaper,
+media advertising or news stories.
+
+For some topics, the researcher might employ a form of *quota
+sampling,* in which a fixed number of interviews are conducted with
+people representing several roles: e.g. interview 3 composers, 3
+conductors, 3 performers, and 3 listeners.
+
+#### The Interview Guide
+
+Although open interviews may have few predefined questions, they are
+normally shaped by an *Interview Guide*. The interview guide is a
+written document that identifies the goals of the interviews, lists
+the topics of interest, and provides some suggested questions. The
+guide may or may not be consulted during the interview itself,
+although it is common toward the end of the interview for the
+interviewer to refer to the guide to ensure that all of the
+pertinent topics have been covered.
+
+As with other research approaches, it is important to test the
+interview guide by conducting some pilot interviews. It may be
+impossible to employ an appropriate expert for the pilot interview.
+Nevertheless, even a non-expert interviewee in a pilot interview may
+help you recognize ways to refine and improve the interview guide.
+
+When the research topic relates to specific activities, like
+composing or practising, the guide may follow a diachronic sequence.
+For example, a guide related to the experience of attending a
+concert might include the following:
+
+-   Becoming aware of an up-coming concert.
+-   The decision to attend.
+-   Inviting friends, securing tickets.
+-   Travel to the concert.
+-   Pre-concert activities (e.g., dinner).
+-   In the hall before the start.
+-   The concert experience.
+-   Intermission activities.
+-   Post-concert activities.
+-   The next day: discussion with friends. Monday-morning
+    quarter-backing.
+-   Concert memories, reminiscence, assessment.
+
+The guide is intended to help the interviewer organize questions, or
+to ensure that the respondent has thoroughly addressed the various
+components in a concert experience.
+
+#### Conducting the Interview
+
+Enter the interview prepared. Confirm the interview appointment in
+advance and show up a little early. Make sure you are fully familiar
+with the Interview Guide, that you have two copies of the consent
+form, and that your recording gear is operating propertly.
+
+The first order of business is to establish a positive and
+professional rapport with the respondent. This begins with an
+explanation of the aims of the research, a conversation about the
+formal consent form, and a discussion about the use of the
+recording. By clearly stating what is expected, respondents are more
+likely to focus on the research topic and less likely to digress
+into unrelated topics
+
+Explicitly solicit the interviewee's *partnership*. Tell them that
+you need their help. If there is a significant difference in social
+status, it is sometimes helpful to adopt the personna of the student
+or apprentice in a "teacher-student" or "master-apprentice"
+relationship. By demonstrating your respect and admiration, you may
+benefit by more detailed narratives and explanations. By contrast,
+at other times, an interview may produce the best results by being
+confrontational --- pushing an interviewee to go into greater depth,
+or showing that you are not willing to accept self-serving glosses.
+
+Ask only one question at a time. Give the respondent time to collect
+his/her thoughts before answering. Show patience. Don't ask
+questions simply because you are curious. All of the questions
+should relate to the research aims. Questions motivated by personal
+interest immediately mark the interview as unprofessional. Without a
+professional manner, respondents will begin to doubt that the
+contents of an interview will remain confidential, and so will
+resist providing details they might find embarrassing.
+
+In questionnaire research, it is common to ask simple questions near
+the beginning of the questionnaire; Such questions might include
+questions of age, musical training, etc. However, in open
+interviews, it is best to leave these questions to the end of the
+interview. Beginning an interview with a series of simple factual
+questions sets the wrong tone. The interviewee is likely to respond
+to all of the subsequent questions in a perfunctory, factual manner
+rather than using a conversational or narrative approach.
+
+Discourage respondents from talking in generalities. You want to
+hear about their specific experiences. Also, discourage respondents
+from talking about the experiences of others --- like friends or
+partners. This is second-hand information, and the main attraction
+of interviews is collecting detailed first-hand accounts. Discourage
+respondents from offering or discussing theories --- unless this is
+part of the aim of the research. Keep the discussion concrete. For
+example, instead of asking about their concert-going experiences in
+general, have them recall their most recent concert-going
+experience. Phrase your questions to help the respondent focus on
+specific events: "Can you tell me about your most recent ...?" "Can
+you walk me through that event ...?"
+
+If the respondent recounts a story that is especially pertinent to
+the aims of study, don't hesitate to press for more detail. One of
+the main advantages of open interviews is the opportunity to obtain
+such detailed accounts.
+
+Provide "back-channel" feedback with frequent "un-huh," "yeah," etc.
+This demonstrates interest and tells the interviewee that you are
+not bored. Maintain a respectful and serious demeanor.
+
+In general, let the respondent talk. People are usually more
+interested in talking about things that are important to them than
+things that are unimportant. So letting the respondent talk about
+matters they deem important is apt to be revealing. Moreover, people
+rarely have the chance to talk at length about their experiences;
+interviewees will appreciate the opportunity to tell the whole
+story.
+
+Avoid prompting the respondent with your own words. For example,
+suppose you ask a question: "Was your argument with the stage
+manager a clash of personalities?" Don't be surprised if the
+respondent then characterizes the argument as resulting from "a
+clash of personalities." The words are your's, not the respondent's,
+and so it would be inappropriate to quote the respondent as saying
+"a clash of personalities." The final narrative should be in their
+words, not in your words.
+
+Never judge someone's behavior. Your purpose is to gather
+information, even if you find the relayed behavior obnoxious or
+immoral. If you are recording the interview, sometimes the recording
+gear may become an impediment: the interviewee may be uncomfortable
+talking about certain topics or people. At times you may need to
+turn off the recorder. If so, do your best to retain exactly what is
+said, and then make notes immediately following the interview. Your
+personal notes don't have the same legal status as a recording or a
+transcript of a recording. So this may allow you to gather
+information about activities that might be considered illegal or
+socially unacceptible.
+
+You are not the respondent's friend or therapist. Don't offer advice
+or criticize or judge a person's actions. Avoid interpreting the
+respondent's narrative. If an interviewee becomes emotional, don't
+abandon your role as a professional. Be compassionate and
+sympathetic but maintain a professional image. Offer quiet sympathy,
+but don't offer advice, don't pass judgment, and don't respond with
+your own confession. Encourage a sense of collaborative partnership
+in creating a productive and informative interview.
+
+The cardinal sin of interviewing is to talk about yourself. Resist
+the temptation to recount your own experiences. You may have your
+own story that reinforces a story just told by the respondent. In
+ordinary conversation, it would be appropriate to take turns, and
+tell you story. However, this is not the purpose of a research
+interview. Don't talk about yourself. Don't tell your own stories.
+Leave the story-telling to your respondent. The principal role of
+the interviewer is to listen sympathetically, and to encourage the
+respondent to speak. Aim to be unobtrusive.
+
+As the interview winds-down, ask the respondent for leads or
+recommendations about other possible respondents you might recruit
+for the project. That is, solicit information for *snowball
+sampling.* Ask whether the respondent knows other people you have
+interviewed. This will help you determine the heterogeneity of your
+sample of interviewees. End the interview by expressing your
+gratitude. Tell the respondent that you might have some follow-up
+questions in the future, and ask whether it would be okay to contact
+them again later.
+
+For informants with considerable knowledge, more than one interview
+may be appropriate. When a respondent is especially informative,
+don't be afraid to ask for more additional meetings. Try to avoid
+cramming everything into a single interview, unless you know that
+further interviews are impossible. With more interviews, the
+respondent is apt to become more comfortable with you. Experienced
+interviewers know that with more interviews, more is revealled. For
+example, a person is more likely to admit to illegal activities, or
+to portray themselves in a less-than-ideal light.
+
+#### Markers
+
+Robert Weiss, an expert on open interviews, talks about "markers." A
+marker is "a passing reference made by a respondent to an important
+event or feeling state." (Weiss, 1995, l.1469] For example, the
+respondent might mention the break-up of their band, or make passing
+reference to an argument with a conductor. In normal conversation,
+markers are invitations for the conversation partner to pursue the
+matter further. Markers usually indicate the the respondent is eager
+to talk about the matter (otherwise it wouldn't be mentioned).
+
+In ordinary conversation, it is always appropriate to follow up on
+markers. However, in a research interview, a marker topic may take
+the interview in a direction that is irrelevant to the aims of the
+researcher. Here, the interviewer needs to exercise some judgment.
+If the marker is germane to the research goals, then ask the
+respondent to expand: "You mentioned the break-up of your band;
+could you say more about that?" If the subject of the marker is not
+relevant, then the interviewer should simply let the marker pass.
+Or, if the interviewer is eager to establish a closer relationship
+with the respondent, pick-up on the marker, even if the subject is a
+distraction from the research goals.
+
+#### Interview Advice
+
+We might summarize the above advice as follows:
+
+1.  Prepare and use an *Interview Guide.* Update the guide as you
+    continue doing interviews.
+2.  Explain the aims of the research to the respondent.
+3.  Only ask one question at a time.
+4.  Don't ask questions out of idle curiosity, or questions that are
+    irrelevant to the research goals. Such questions will make you
+    appear less professional.
+5.  Discourage respondents from talking in generalities. Tell the
+    respondent you are interested in specific experiences.
+6.  Provide "back-channel" feedback with frequent "un-huh," "yeah,"
+    etc. This demonstrates interest and encourages the respondent to
+    speak.
+7.  Be vigilant for markers that signal topics that are pertinent to
+    the research goals. Don't pick-up on markers that are irrelevant
+    to the research goals.
+8.  Avoid "seeding" the respondent with certain words or phrases.
+    Ensure that the narrative is in *their* words rather than *your*
+    words.
+9.  Never judge someone's behavior. Your purpose is to gather
+    information, even if you find the relayed behavior obnoxious or
+    immoral.
+10. Don't offer advice. You are not the respondent's therapist or
+    friend. Simply listen, and offer a sympathetic ear.
+11. Don't talk about yourself. A major attraction for respondents is
+    the personal attention paid by the interviewer. People feel
+    validated when they receive someone's uninterrupted attention.
+12. Aim to be unobtrusive.
+13. Ask the respondent for leads or recommendations about other
+    possible respondents you might recruit for the project. That is,
+    solicit information for *snowball sampling.*
+14. End the interview by expressing your gratitude, and asking the
+    respondent whether it would be possible to follow-up with
+    further questions in the future.
+
+#### Analyzing Interviews
+
+The aim of analysis depends on the goals of the interviews. For
+investigative journalists, detectives and historians, the goal will
+be to uncover the sequence of events, and to draw attention to the
+ways in which different informants interpret the events differently.
+For the clinical psychologist or psychiatrist, the aim of interview
+analysis might be to formulate a diagnosis and to assess the
+conditions that might lead to a helpful intervention. For
+sociologists and political scientists, the aim of analysis might be
+to chronicle the effects of particular policies. For anthropologists
+and ethnomusicologists, the aim of analysis might be to glimpse the
+cultural factors that shape thought and behavior.
+
+The analysis of interviews may be highly structured (such as
+following the DSM procedures for diagnosing mental disorders), or
+may be highly informal. Just listening to (or reading transcripts
+of) the interviews may be highly informative without any analysis.
+For example, a series of vignettes of people describing their
+experiences of a hurricane may stand on their own, without the need
+to interpret or analyze them. An interviewer might choose to tell a
+story simply based on the overall impressions arising from the
+interviews.
+
+There are few formal methods for analyzing interviews. However, most
+formal analyses include the following elements:
+
+1.  transcribe the recordings
+2.  proofing the transcripts
+3.  breaking up the transcripts into topic-units or vignettes
+4.  sorting the comments into topic categories
+5.  coding the comments within each topic
+6.  collating and summarizing the coded material in each topic
+
+We expand on these analysis elements below.
+
+After transcribing and proofing the transcripts, it is common to
+mark-up the transcript by labelling topics of conversation. For
+example, a researcher might label a transcript segment "dressing
+before going to a concert." Most topic labels will emerge in a
+straightforward manner from the transcript. However, in light of the
+goals of the research, certain topics will be regarded as important
+even before you begin your analysis. Many of these topics will
+already be evident from the interview guide. For example, a series
+of interviews related to *the concert experience* might include
+becoming aware of an up-coming concert, the decision to attend,
+inviting friends, securing tickets, travel to the concert,
+pre-concert activities, etc. Label interview segments according to
+these topics.
+
+As you label the topics of conversation, new topics will emerge from
+the interviews themselves. For example, *concert memorabilia*
+(T-shirts, buttons, posters, etc.) may emerge as a pertinent topic
+--- even though it was not anticipated in the interview guide. In
+general, be vigiliant to allow the emergence of new topic from the
+interviews themselves.
+
+Having labelled the topics, the researcher typically extracts
+similar topic materials from various interview transcripts and
+copies them into topical folders. For example, all of the
+discussions regarding *intermission activities* may be collated
+together.
+
+Once the materials are collated, they may be *coded* according to
+some criterion or criteria. These criteria may be *a priori* ideas,
+or they may emerge from the transcripts themselves. For example, the
+researcher may become aware that it is common for people to change
+their concert plans for various reasons. The researcher might then
+elect to code the material according to the reason for the change.
+For example, you might code comments as "Decided to pursue an
+alternative activity because the concert was deemed too expensive."
+Or "Decided to purse an alternative activity because transportation
+to the concert venue would be difficult." Or "Decided to pursue an
+alternative activity because of the failure to find a companion."
+etc.
+
+In some cases, the coding may be uncontroversial. However, in other
+cases, the researcher may be "reading between lines" --- infering
+something that is not explicit. In order to enhance coding validity,
+it may be appropriate to recruit an assistant or collaborator who
+independently codes the transcripts according to the same criteria.
+The researcher might then only rely on codings that agree between
+the two coders.
+
+Analysis of interviews is not guarranteed to lead to any coherent
+conclusions. Sometimes, the researcher can summarize the interviews
+by simply relaying various anecdotes, without offering any
+interpretation. At the other extreme, an obvious over-arching
+pattern may be evident in the interviews. In this case, the
+researcher may be able to summarize the interviews by proposing or
+describing a broad theory. More likely, only some aspects of the
+interviews will admit a generalized interpretation. Coded data might
+contribute to the plausibility of certain interpretations. For
+example, a researcher might conclude (on the basis of coded
+transcripts) that the most common reason for deciding against
+attending a concert is the failure to interest a companion.
+
+In dealing with descriptions of events, both detectives and
+historians will hope to be able to use the interviews to assemble a
+coherent descriptive narrative. If all of the interviews converge on
+a coherent story, then the task of weaving together the various
+perspectives offered by different informants should be
+straightforward. However, if there are discrepancies between
+informants, then both the historian and the detective will need to
+draw attention to the different interpretations of what is nominally
+the same event.
+
+#### Advantages and Disadvantages of Interviews
+
+In general, empirical researchers have tended to *underestimate* the
+value of exploratory interviews. Open interviews provide quick
+access to rich ideas and interpretations of a range of human
+experiences. Interviews immerse the researcher in a dense world,
+full of relationships, contexts, nuanced distinctions, competing
+interpretations, and (sometimes) fascinating anecdotes. It would
+take many decades for hypothesis-driven research to achieve the sort
+of complex picture that emerges from open interviewing. Interviews
+are apt to generate a lot of ideas with relatively little effort.
+
+Interviews are especially valuable when investigating something new.
+When an anthropologist visits a novel culture, it is important to be
+open to whatever it is that is distinctive, unique or surprising
+about that culture. Of course anthropologists have their own
+agendas. An anthropologist might be interested in child-rearing
+practices or religious observances. However, a good anthropologist
+will be alert to other possibilities. For example, the child-rearing
+or religious practices might be very similar to those found in other
+cultures, while the medicinal practices or decorative arts might be
+extraordinary. A researcher doesn't know what is important until
+they are exposed to lots of possibilities. There are times when the
+research agenda should not be set by the researcher in advance. This
+is the whole purpose of exploratory research. Open interviews
+provide one of the very best methods for exposing the researcher to
+unexpected phenomena.
+
+At the same time, qualitative researchers have tended to
+*overestimate* the value of open interviews. First, interviewers
+rarely question the accuracy of the information provided by an
+interviewee or informant. Although qualitative researchers
+acknowledge the problems of validity, they rarely (if ever) verify
+specific claims by examining independent sources. Interviews are
+only as good as the accuracy of introspection and memory. Validity
+is not simply an issue of respondents telling the whole truth.
+Research on eyewitness testimony is sobering. For example, research
+by Elizabeth Loftus and her colleagues has established the
+extraordinary fallibility (and suggestibility) of human memory
+(Loftus, 1979, Loftus, et al. 2008). Moreover, validity involves
+more than just avoiding conscious lying. Dozens of psychological
+experiments have shown that people often have very limited
+self-knowledge. We often have no insight into our own motivations.
+We all engage in unconscious self-justification, and freely
+confabulate spurious explanations for things we don't understand
+(e.g., Wilson, 2002; Ariely, 2009; Kahneman, 2012).
+
+Research in social psychology suggests that parallel problems plague
+the interviewer. For example, research on hiring practices has shown
+that unstructured interviews with job candidates actually leads to
+*worse* hiring decisions than if no interview occurs (Ross &
+Nisbett, 2011). As interviewers, we grossly over-estimate our
+ability to judge character. Past experience (as documented in the
+resumé), the ability to write (as documented in an application
+letter), and confidential letters of recommendation are much more
+predictive of the future success of a candidate than the impressions
+gained from an open interview (Ross & Nisbett, 2011).
+
+Traditionally, marketing researchers have made the greatest use of
+interviews in their work. Because of the large amounts of money
+involved, consumer researchers have been most motivated to "get it
+right." Yet in recent years, marketing researchers have become
+highly suspicious of consumer interviews and focus groups precisely
+because of the inability of people to accurately introspect (Graves,
+2010). People are mostly unaware of their own motivations, and will
+confidently confabulate answers to any question a researcher may
+pose.
+
+In his otherwise fine book on interviewing methodology, Robert Weiss
+offers the following regarding the crucial issue of validity:
+
+"Sometimes, we can check on the validity of a respondent's account
+by interviewing other respondents. Occasionally, there are records
+we can look to for corroboration. But for the most part we must
+rely on the quality of our interviewing for the validity of our
+material. Ultimately, our best guarantee of the validity of
+interview material is careful, concrete level, interviewing within
+the context of a good interviewing partnership." (Weiss, 1995)
+
+In short, qualitative researchers don't have good ways to address
+the problem of validity. There is a notable tendency among
+qualitative researchers to avoid discussions about validity.
+
+Because of the close face-to-face interaction, a second problem is
+that interviews are highly susceptible to investigator bias as well
+as demand characteristics. Interviews are the virtual antithesis of
+the double-blind procedure. As a result, confirmation bias is
+especially problematic. The open interview method has proved
+especially attractive to those researchers who are motivated by a
+particular social cause. The more strongly held the political
+beliefs, the greater the likelihood that the researcher will rely
+solely on interview methods. Again, qualitative researchers are
+generally aware of these difficulties, however, little work has been
+carried out to either measure the magnitude of this bias, or to
+develop techniques to minimize these confounds.
+
+As Robert Weiss has noted, interviews are more likely to be used by
+practitioners (social workers, consumer marketers, clinical
+personnel, political activitists) than by academics, because
+practitioners are less picky about the quality of their evidence.
+(See Weiss, 1995; l.3420).
+
+As noted earlier, people find personal stories more compelling than
+raw statistics. News stories and documentaries are often more
+effective when they begin or end with a concrete personal example.
+Interviews can provide vivid case examples whose influence far
+exceeds the reporting of representative statistics. A danger is that
+examples can typically be found that seem to illustrate opposite
+cases. One can find stories of human heroics as well as human
+cowardice. One can find stories where seat-belts save lives and
+stories where wearing a seat-belt causes a person's death. Good
+research is needed to resolve which account is the more common or
+representative. Readers and viewers tend to interpret case studies
+as typical, and regard them as holding important general lessons.
+Empirical work using representative samples can benefit by
+recounting an anecdote that illustrates or exemplifies what is
+found. However, relaying anecdotes that are contrary to the common
+or typical experience can amount to propaganda. Ideally, exceptional
+cases will lead to careful thought about how to promote more good
+results, or minimize bad results. However, policy based on
+exceptional cases can sometimes make matters worse.
+
+A third and more onerous problem is that qualitative researchers
+tend to view open interviews as confirmatory research rather than
+exploratory research. Ideas that arise from interviews are rarely
+*tested.* Recall the problem of *double-use data* where the same
+data should not be used to both inspire a hypothesis, and as
+independent evidence in support of that hypothesis. However, it has
+been common for qualitative researchers to use narrative anecdotes
+in precisely this way. Said another way, the researcher who relies
+exclusively on open interviewing is a researcher who never invites
+failure. Interviews are important starting points for research. But,
+for the conscientious researcher, interviews cannot be the end
+point. Open interviews belong as one part in an *explore-then-test*
+research program.
+
+#### References:
+
+Dan Ariely (2009). *Predictably Irrational: The Hidden Forces That
+Shape Our Decisions.* Revised and expanded edition. New York: Harper
+Collins.
+
+Bob Blauner (1987). Problems of editing 'first person' sociology.
+*Qualitative Sociology,* Vol. 10, No. 1, pp. 46-64.
+
+Robert Emerson, Rachel Fretz and Linda Shaw (1995). *Writing
+Ethnographic Fieldnotes.* Chicago: University of Chicago Press.
+
+Diane Ehrensaft (1990). *Parenting Together: Men and Women Sharing
+the Care of Their Children.* University of Illinois Press.
+
+Philip Graves (2010). *Consumerology: The Market Research Myth, the
+Truth about Consumers and the Psychology of Shopping.* London:
+Nicholas Brealey.
+
+Daniel Kahneman (2012). *Thinking, Fast and Slow.* New York: Farrar,
+Straus and Giroux.
+
+Mirra Komarovsky (1987). *Blue-Collar Marriage.* 2nd edition. New
+Haven: Yale University Press.
+
+Elizabeth Loftus (1979, 1996). *Eyewitness Testimony.* Cambridge,
+MA: Harvard University Press. Reissued with new Preface in 1996.
+
+Elizabeth Loftus, J.M. Doyle, & J. Dysert (2008). *Eyewitness
+Testimony: Civil and Criminal.* 4th edition. Charlottesville, Va:
+Lexis Law Publishing.
+
+Lee Ross and Robert Nisbett (2011). *The Person and the Situation:
+Perspectives of Social Psychology.* 2nd edition. London: Pinter &
+Martin Limited.
+
+Robert S. Weiss (1995). *Learning From Strangers: The Arts and
+Method of Qualitative Interview Studies.* New York: The Free Press.
+
+Timothy D. Wilson (2002). *Strangers to Ourselves: Discovering the
+Adaptive Unconscious.* Cambridge, MA: Harvard University Press.
+
+#### Footnote
+
+[1] Another example is found in Mirra Komarovsky's study of
+blue-collar families (Komarovksy, 1987). Komarovsky interviewed 58
+blue-collar couples without interviewing any non-blue-collar
+couples. Once again, this makes it difficult to offer
+generalizations about what makes a blue-collar couple distinctive.
+
+
+
+

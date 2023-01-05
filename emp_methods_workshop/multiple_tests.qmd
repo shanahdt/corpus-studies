@@ -1,0 +1,346 @@
+
+
+------------------------------------------------------------------------
+
+### Multiple Tests, File Drawer Effect, & Positive Results Bias
+
+------------------------------------------------------------------------
+
+#### Multiple Tests
+
+In empirical research it's very common for researchers to use the
+95% confidence level---that is, where the significance level (alpha)
+is .05. If our statistical test produces a *p* value of .05 or
+lower, then we can reject the null hypothesis and conclude that the
+results are consistent with our research hypothesis.
+
+Notice that a significance level of .05 means that the researcher
+accepts a 1 in 20 chance of making a Type I error---of claiming
+something to be true or useful or knowable, when it is in fact
+false, or useless or unknowable. Now suppose you are browsing
+through a printed issue of a scholarly journal. The journal contains
+20 empirical research articles. Each article reports positive
+results in testing a single hypothesis. Moreover, suppose that each
+article reports a *p* value of .05, and that all of the researchers
+used a 95% confidence level.
+
+There are twenty significance results published in this issue. Since
+each of the 20 researchers accepted a 1 in 20 chance of making a
+Type I error, and since there are 20 statistical tests, on average
+(just by chance), we would expect one of the articles in the issue
+to contain spurious results. Just because a study is published,
+doesn't make it believable!
+
+Now suppose you were reading a single published article. The article
+reports statistical tests for 20 hypotheses: the researcher reports
+that 4 of the hypotheses are statistically significant at the 95%
+confidence level. Once again, on average, we would expect 1 in 20
+tests to reach statistical significance, merely by chance. In other
+words, the likelihood is that 1 of the 4 positive results reported
+in the article is spurious.
+
+Now suppose that I run an experiment, whose results turn out to be
+negative. I know that negative results might arise for all sorts of
+reasons. Perhaps the reason why it didn't work is because of poor
+equipment calibration. I carefully re-calibrate the machine and
+repeat the experiment. Still, it doesn't work. The participants
+report that they find my experiment very boring, and I begin to
+suspect that my data are less than ideal because the participants
+are not fully motivated. I decide to cut the number of stimuli in
+half and compensate for the loss of data by doubling the number of
+participants. Once again, I re-run the experiment, and once again I
+end up with negative results. At this point I am suspicious about
+the quality of my participants. I would like to use better
+musicians, so I administer a preselection test that allows me to
+gather data from the subjects who are the most musical. Once again
+the results turn out to be negative.
+
+With much hard work over several months, I continue to refine my
+experiment, removing sources of error, aiming for greater
+reliability in responses, and so on. Finally, after the 20th
+attempt, I get positive results at the .05 significance level.
+Hurray! My hard work has finally paid off!
+
+Of course, repeating any experiment 20 times means that, on average,
+you are likely to get a spurious positive result if your confidence
+level is 95%. My efforts to "improve" the quality of my experiment
+may, or may not, have done anything. Just running the experiment
+multiple times increases the likelihood of producing a spurious
+positive result.
+
+In all of the above cases, we encounter a problem known as *multiple
+tests*: each time you carry out a test, you increase the likelihood
+of generating a spurious result.
+
+Multiple tests may arise simply by repeating an experiment, or by
+running several versions of an experiment, or by "tinkering" with
+various criteria (such as excluding outlier data points) when
+analyzing your data.
+
+#### Controlling Multiple Tests
+
+There are four ways to control for multiple tests:
+
+1.  limiting the number of tests
+2.  increasing the confidence level
+3.  correcting for the number of tests, and
+4.  converging evidence
+
+The first way control for multiple tests is to limit the number of
+tests you perform. Resist the temptation to test many hypotheses.
+Focus on the most important hypothesis. In general, one should
+regard one's data as a *finite* resource rather than an *infinite*
+resource. A data set is much like a battery or a basket of food:
+each time you use it, you effectively "consume" some of it. A single
+data set can effectively "wear out" due to multiple tests.
+
+A second approach for dealing with multiple tests is to increase the
+confidence level. If you choose the 99% confidence level, then, on
+average, only 1 of 100 tests will produce a spurious result. If you
+predefine you significance level at .001, then, on average, only 1
+of 1,000 tests will be spurious. Notice that if you raise the
+confidence level, then you will probably have to collect much more
+data---or you will only find positive results for phenomena that
+exhibit very large effect sizes.
+
+A third approach allows you to carry out more than one test without
+having to collect additional data and without having to change the
+confidence level. In this case, you carry out a mathematical
+correction for multiple tests. There are several correction methods
+but the simplest to use is known as the *Bonferroni correction.*
+Suppose we want to carry out five tests. Moreover, we want each of
+the five tests to be done using the 95% confidence level. For a
+single test, we would look for *p* values of .05 or less. Suppose
+that our five hypotheses produce *p* values of (1) .05, (2) .005,
+(3) .2, (4) .10, and (5) .01. Without correcting for multiple tests
+we might conclude that hypotheses 1, 2, and 5 can be accepted. Since
+we have carried out five tests, the Bonferroni correction would
+require that we multiply each of the *p* values by 5. This results
+in the following "corrected" values: (1) .25, (2) .025, (3) 1.0 (4)
+.50, and (5) .05. Having corrected for multiple tests, we would
+conclude that only hypotheses 2 and 5 could be accepted at the 95%
+confidence level.
+
+In summary, the Bonferroni correction involves multiplying each of
+the *p* values by the number of tests you perform. If you perform 10
+tests, then multiply your *p* values by 10 before you determine
+whether they are smaller than your *a priori* *α* level.
+
+The fourth approach to dealing with multiple tests is to collect
+additional data, preferrably using data from independent research.
+In short, we aim for *converging evidence* through replication
+studies. (Refer to the course document on converging evidence.)
+
+Our slogan simply reminds us to be vigilant for the problem of
+multiple test, and if present, to correct for the problem:
+
+**Slogan:** *Correct for multiple tests.*
+
+#### Invisible Multiple Tests
+
+Multiple tests are not always immediately apparent. Sometimes we
+need to be vigilant to recognize situations where multiple tests are
+occurring.
+
+Research reporting positive results is 2-3 times more likely to get
+published than research reporting negative results. Moreover,
+research indicates that researchers are less likely to submit
+negative reports for publication. This phenomenon is referred to as
+*positive results bias*.
+
+Suppose that there is a popular theory---let's call it *Theory A.*
+Researchers in the field think Theory A has a lot of merit: it is
+conceptually beautiful and makes intuitive sense. A young scholar
+named Alice is interested in Theory A. She does a literature search
+and is surprised to find that no experiment has been published
+testing Theory A. Alice decides to carry out a pertinent experiment.
+She designs and carries out an experiment, but is disappointed when
+she gets negative results. She wonders about her design. There are a
+number of improvements that she might make, but she is discouraged
+from continuing. Alice abandons the project, takes her data and
+places it in the bottom drawer of her filing cabinet.
+
+Another scholar, Bill, has been thinking about Theory A. Bill's
+dissertation research had assumed that Theory A was true and he's
+always been a little uneasy about this assumption. Everyone thinks
+Theory A is uncontroversial, but Bill's literature search fails to
+find any experiment testing Theory A. Bill decides to carry out an
+experiment with the hope that he can find evidence consistent with
+Theory A. He designs and carries out an experiment, but is
+disappointed when he gets negative results. He submits a manuscript
+to a professional journal, but the reviewers are skeptical. Theory A
+is conceptually beautiful and makes intuitive sense. There are
+several ways in which Bill's experimental method could be improved.
+The editor of the journal requests a "revise and resubmit." Bill
+makes some changes to his method and runs the experiment again.
+Still, he gets negative results. He knows the journal reviewers will
+be unhappy that he didn't implement all of the (sometimes
+impractical) changes they suggested. Discouraged, he places his
+manuscript in the bottom drawer of his filing cabinet and goes on to
+other projects.
+
+Alice and Bill are not alone. Over the years, several scholars
+attempt to test Theory A without success. There is a good reason why
+all of these experiments end in failure: Theory A is, in fact,
+wrong. All of the negative results are telling us something, but
+because of a positive results bias, the results are hidden from
+view. This is the *file drawer effect.*
+
+While the file drawer effect is pernicious, the situation can
+sometimes get even worse. Consider how the story might continue ...
+
+Many years later, Zack decides to test Theory A. Zack is not aware
+of the many other tests that have been done that all ended in
+failure. Zack carries out the experiment and is thrilled to get
+positive results at the .05 significance level. Zack immediately
+submits the results to a prestigious journal. The journal reviewers
+are delighted to see a study that "confirms" a widely loved Theory
+A, and the journal Editor is thrilled to publish an article what
+will surely become frequently cited. There is only one problem. In
+reality, Theory A is wrong, and Zack has had the misfortune of
+getting spurious results. Repeat an experiment enough times, and one
+is bound to get spurious statistically significant results. Dozens
+of previous experiments resulted in negative results. Zack's
+experiment is really part of a pattern of multiple testing: the *p*
+value in Zack's experiment ought to be corrected for the many
+earlier tests of Theory A. But Zack (and everyone else) is unaware
+of all of the other tests that have been carried out by other
+researchers. The *file drawer effect* has become a version of the
+*multiple tests* problem---one that is aggrevated by *positive
+results bias.*
+
+In the bad old days, pharmaceutical companies would sometimes engage
+in clandestine multiple tests. When a company develops a drug, they
+need to carry out clinical trials in order to establish whether or
+not the drug is *safe* and *effective.* The data they collect is
+then sent to the Food and Drug Administration who will approve (or
+deny) the sale of the drug. So-called "Phase 1" trials are carried
+out simply to determine whether the drug is safe and doesn't have
+onerous side-effects. There is no incentive for drug companies to
+cheat on Phase 1 trials because an unsafe drug will ultimately lead
+to expensive lawsuits. The temptation to cheat happens in later
+phases, where the aim is to establish whether the drug is
+*effective*---that is, whether the drug has any beneficial effects.
+If the drug is safe, but ineffective, the company can still make
+considerable profit because people want to believe it is useful. In
+several historical cases, the pharmaceutical company would
+commission multiple clinical trials. For example, perhaps 10
+clinical trials would be started. After the trials were completed,
+however, the pharmacetical company would inform the FDA about the
+results of only 3 or 4 trials. They would simply fail to report
+results suggesting that the drug was ineffective.
+
+These sorts of deceptions are now impossible because the various
+regulatory agencies (like the European Medicines Agency and the U.S.
+Food and Drug Administration) do not accept any clinical data unless
+the clinical trial is first registered. That is, pharmacetical
+researchers must report their intention to start a clinical trial
+before they start. The various drug and medicines agencies follow up
+each experiment in order to determine whether the results are
+negative or positive.
+
+Sometimes multiple tests are not recognized by a researcher.
+Suppose, for example, you have a set of sound stimuli in which you
+are interested in the effect of a certain manipulation on perceived
+emotional content. You ask listeners to judge a number of different
+affective states: happy, ecstatic, sad, grief, tender, aggressive,
+dramatic, relaxing, inspiring, contemplative, etc. If you test each
+affect separately, then you will have to correct for multiple tests.
+
+Inexperienced researchers will sometimes go on a "fishing
+expedition" in which they test many different hypotheses against the
+data they have collected. For example, the researcher may test 30 or
+40 hypotheses. However, only two or three hypotheses produce
+significant results. They then craft a paper "testing" these two or
+three hypotheses without ever mentioning that they tested a large
+number of other hypotheses. We might call these *unreported tests*.
+
+Incidentally, it is okay for researchers to engage in such "fishing
+expeditions" if the activity is reported as *exploratory* research
+rather than *hypothesis testing* research. For example, you might
+carry out 30 tests on a set of data, and find two (seemingly)
+statistically significant results. Given the number of tests carried
+out, there is a good chance that either one or both of these results
+are spurious. However, you might be sufficiently intrigued to carry
+out a separate study whose purpose is explicitly to *test* one or
+both of these hypotheses. In other words, we can "mine" a data set
+for new ideas, that are then independently tested (i.e.,
+explore-then-test).
+
+#### Community Fears
+
+Consider the hypothetical town of Kleinburg (population 2,000).
+Kleinburg is a happy place until one day, an administrator in the
+local hospital notices that there seems to have been an unusually
+large number of cases of liver cancer. Looking up statistics at the
+National Institutes for Health, the administator is shocked to
+discover that Kleinburg has an incidence of liver cancer *eight
+times* higher than the national average and has the highest rate in
+the state. Soon the whole town is alive with gossip and suspicion.
+Attention soon gravitates to the natural gas plant on the edge of
+town.
+
+There may be reason for concern. Or there may not be. In any room
+full of people, someone has to be the tallest person. Someone will
+have the longest hair, the darkest eyes, and the biggest feet.
+Similarly, in any country, by definition there will be some town or
+municipality that has the highest rate of heart disease. Another
+town will have the highest rate of gall stones, and another will
+have the highest incidence of ingrown toe-nails. Different places
+will have the highest rate of insurance fraud, bank imbezzlement,
+copper wire theft, color blindness, and jaywalking. There are
+thousands of bad things that can happen, and the fact that one town
+is the worst of many is to be expected. What then, do we make of the
+fact that the incidence of liver cancer in Kleinburg is eight times
+the national average?
+
+In a group of ten people, one may well find a person who weighs
+three times as much as the lightest person. But if we expand the
+sample to 1,000 people, then one is likely to find a person who
+weighs eight times as much as the lightest person. There are 2,155
+towns and cities in Germany, with many thousands more small villages
+and hamlets. Simply by natural chance variation, one may expect to
+find a municipality that has a liver cancer rate that is eight times
+the national average. The probability of this increases as the size
+of the town gets smaller. In a hamlet consisting of 50 people, a
+single case of liver cancer represents a stunning 2% rate.
+
+In effect, statistics for towns and villages amount to multiple
+tests. With enough places in a country, natural variation is bound
+to result in some (seemingly) highly suspicious coincidences. The
+greater the number of observations, the greater the likelihood of
+finding something that might imply that something truly bad is going
+on. If we know that something has a probability of only occuring
+once in 10,000, then that something has probably happened in one of
+the 10,000 villages in Germany.
+
+So what are we to make of the liver cancer incidence in Kleinburg?
+Statisticians know to look at other factors. If the natural gas
+plant is releasing carcinogens, then one would expect to see other
+cancers, not just liver cancers. What is the incidence of stomach
+cancer, bone cancer, leukemia, and other cancers in Kleinburg? If
+the incidence of other cancers are similarly elevated then there is
+a greater likelihood that something bad is indeed going on. However,
+if the incidence of liver cancer is the only elevated observation,
+then it is mostly likely a simple consequence of a small sample of
+people in a large number of villages.
+
+It rarely occurs to people that some town will contain people with
+bigger feet than any other town in the country. The reasons for
+these differences may be quite uninteresting. Big numbers increase
+the likelihood of observing something bizarre. Small numbers
+increase the likelihood of observing large differences between
+samples.
+
+#### References
+
+N.B. For a musical example of the file drawer effect, see Keith
+Mashinter (2006). Calculating sensory dissonance: Some discrepancies
+arising from the models of Kameoka & Kuriyagawa, and Hutchinson &
+Knopoff. *Empirical Musicology Review,* Vol. 1, No. 2, pp. 65-84.
+
+![](Images/multitests.png)
+
+
+
+

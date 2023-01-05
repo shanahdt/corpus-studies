@@ -1,0 +1,445 @@
+
+
+------------------------------------------------------------------------
+
+### Designing Questionnaires
+
+------------------------------------------------------------------------
+
+A common approach to survey research is the *questionnaire*.
+Questionnaires are more formal than interviews, but less formal than
+experiments. At the formal end, questionnaires can morph into
+experiments. At the informal end, questionnaires can morph into open
+interviews.
+
+Surveys may be conducted using printed documents, web-based
+questionnaires, or oral surveys conducted in person or via
+telephone. When the responses are hand-written or typed (on a
+computer), the survey is usually referred to as a *questionnaire.*
+
+#### Questionnaire Advice
+
+The most common problems with questionnaires: (1) lack of clarity
+about the purpose, (2) unrepresentative sampling, (3) leading
+questions, and (4) uncontrolled demand characteristics.
+
+1.  *Establish the type of study.* Before beginning a
+    survey/questionnaire, decide what kind of study you are
+    proposing. Is this an exploratory study, a descriptive study, or
+    a correlational study? Though rare, it is possible to conduct a
+    bona fide *experiment* using a survey/questionnaire method in
+    which the experimenter manipulates some variable.[1] In
+    general, surveys are exploratory or correlational.
+
+    Are you testing an *a priori* hypothesis? For example, you might
+    have the hypothesis that people who enjoy non-Western music
+    exhibit greater "openness" as a personality trait. In this case
+    you will need to include questions from a personality inventory
+    that assess "openness" as well as questions that determine
+    musical tastes and listening habits. Your questionnaire would
+    therefore be a correlational study testing an *a priori*
+    hypothesis.
+
+    Do not begin designing the survey or questionnaire until you
+    have a clear idea about the goals. Do not distribute a
+    questionnaire before you have a clear plan for how you plan to
+    analyze the data.
+
+2.  *Limit the number of questions.* Don't squander the patience of
+    your respondents by asking too many questions.
+
+    If the questionnaire is intended to test one or more hypotheses
+    then include only those questions necessary for testing. Avoid
+    the temptation to add questions for vague or nebulous reasons.
+
+    In the case of exploratory studies there is more latitude to ask
+    questions. Since the purpose of an exploratory study is to
+    invite new ideas and unanticipated observations, it is
+    appropriate to "go fishing"---asking questions simply to see
+    what happens. Nevertheless, avoid squandering the patience of
+    your respondents.
+
+3.  *Use lure questions to reduce demand characteristics.* In some
+    cases, the researcher may be concerned that respondents will
+    infer the purpose of the questionnaire---introducing unwanted
+    demand characteristics. It is sometimes useful to add "lure
+    questions" whose role is to prevent respondents from guessing
+    the true purpose of the study. A lure question is a question
+    that is utterly irrelevant to the purpose of the study --- a
+    question that is intended to make respondents think that the
+    purpose of the study is something else. For example, you might
+    be interested in differences in listening behaviors between
+    males and females. The structure of the questionnaire might make
+    it easy for people to see that that is the purpose.
+    Consequently, you might consider asking questions about pets, or
+    travel experiences, or some other irrelevant topic in order to
+    reduce the likelihood that participants will guess the true goal
+    of the study. Lure questions are a form of mild deception.
+
+4.  *Start with easy questions.* Respondents can become frustrated
+    with a questionnaire or survey, and this may cause them to
+    abandon the task before completion. A helpful strategy is to
+    place easy questions at the beginning of the questionnaire. For
+    example, asking a person's age, sex, native language, country of
+    birth, etc. As respondents answer more questions, they will tend
+    to feel committed to the task, and so feel a greater sense of
+    obligation to finish the questionnaire.
+
+5.  *Give feedback about the length.* Respondents can become
+    frustrated if a questionnaire goes on and on. It helps for
+    respondents to feel a sense of progress. In the case of printed
+    questionnaires, respondents can see how many pages/questions
+    remain. With web-based surveys, it is helpful to include an
+    indicator of progress. This might be expressed in words (e.g.
+    "Page 3 of 6") or as a horizontal bar-graph showing how much has
+    been completed and how much remains. In the case of live or
+    telephone surveys, this may be expressed verbally by the
+    interviewer: E.g. "Just four more questions to go ..."
+
+6.  *Leave difficult questions toward the end.* Respondents are more
+    likely to complete a survey if the difficult questions are posed
+    at a time when they feel the questionnaire is nearly complete.
+
+7.  *Avoid leading questions.* Formulate questions in a neutral way
+    that doesn't favor particular answers.
+
+8.  *Pretest and pilot the questionnaire.* First, pretest the
+    questionnaire by soliciting feedback from friends and
+    colleagues. Ask them what they think the purpose is? This will
+    help alert you to any unwanted demand characteristics. Note that
+    demand characteristics can cause problems, even for exploratory
+    and descriptive studies that aren't motivated by an *a priori*
+    hypothesis. After soliciting this initial feedback, *pilot* the
+    questionnaire using a small subset of the intended population.
+    This will help you identify possible problems before
+    distributing the questionnaire to the entire sample of interest.
+
+9.  *Closed and open questions.* Closed questions provide a limited
+    set of response options whereas open questions invite narrative
+    comments. Closed questions are easier to code and analyze, but
+    they reduce the possibilities for more nuanced answers. Open
+    questions invite new and unanticipated information. Open
+    questions are especially appropriate in reconnaissance,
+    exploratory, and descriptive studies.
+
+    Respondents tend to prefer closed questions since they are
+    (typically) faster to respond to. However, if closed questions
+    are poorly formulated, respondents are likely to be confused
+    about how to answer (see below). When a participant is stumped
+    by a closed question they are likely to wonder about the purpose
+    of the questionnaire; some understanding of the purpose will
+    help them resolve how to answer the question. Notice, however,
+    that this sort of thinking will encourage demand
+    characteristics. In short, when closed questions are confusing,
+    they tend to increase demand characteristics.
+
+    A useful way of reducing confusion about closed questions is to
+    offer an "Other" response, with an opportunity for the
+    respondent to provide further explanation. E.g.
+
+    ▢ Option #1
+    ▢ Option #2
+    ▢ Other (please explain:)
+    ______________________________
+
+10. *Scrutinize each question.* After assembling a questionnaire,
+    get in the habit of "question scrutinizing." For each question
+    provide a written answer to the following questions: "1. Who
+    would have trouble answering this question?" In the case of
+    closed questions, also ask: "2. For whom would *all* of the
+    choices be inappropriate?" For example, you may have a question
+    about marital status with two choices: *married* or *single.*
+    Ask yourself "Who would have trouble with this question?"
+    Suppose a person was technically married, but had lived as a
+    single person for the past decade. How should they answer this
+    question? You might consider adding a third category: *married*,
+    *single,* or *divorced/separated* Once again, ask yourself the
+    question:Wwho would have trouble answering this question? For
+    example, a divorced-and-remarried person might wonder whether to
+    answer divorced/separated or married.
+
+    After scrutinizing each question, you may nevertheless decide to
+    keep the question as it is. For example, you may conclude that
+    although the question has some ambiguity, a less ambiguous form
+    would be too complicated. Nevertheless, question-scrutinizing is
+    a useful exercise in alerting you to possible problems. Writing
+    down your answers is important because this task will slow you
+    down and help you think carefully about each question.
+
+11. *Use ordinary language.* Avoid fancy vocabulary and complex
+    grammar. Aim for an everyday conversational style. Try to avoid
+    questions that make especially refined distinctions: these may
+    be confusing for many respondents.
+
+12. *Avoid answer inertia.* Respondents often exhibit "answer
+    inertia" in which they tend to answer "yes" to every question or
+    "no" to every question. For example, an impatient respondent may
+    simply feel in a *"no" mood*. In order to avoid this, modify the
+    questions so that most respondents are likely to answer with a
+    mixture of affirmative and negative responses. Mixing questions
+    in this way will also tend to reduce *acquiescence bias*.
+
+13. *Use converging multiple questions for important measures.* For
+    important measures, aim to include several slightly different
+    operationalizations that ultimately produce converging results.
+
+    Suppose, for example, that a researcher wants a measure of *the
+    degree of musical interest* for each respondent. One question
+    might be:
+
+    Identify the phrase that best describes your level of musical
+    enjoyment:
+    ▢ experience relatively little enjoyment from music
+    ▢ find music mildly enjoyable
+    ▢ get quite a bit of enjoyment from music
+    ▢ am a music lover
+    ▢ am a passionate music nut
+
+    A later question might address the level of musical interest
+    differently:
+
+    Compared with most people, how would you compare your musical
+    interest?
+    ▢ I am much less interested in music than most people.
+    ▢ I am a little less interested in music than most people.
+    ▢ I have about the same interest in music as most people.
+    ▢ I am a little more interested in music than most people.
+    ▢ I am much more interested in music than most people.
+
+    Yet another question might address the level of musical interest
+    using a different approach:
+
+    How important is music?
+    ▢ music is absolutely essential
+    ▢ music is important, but not essential
+    ▢ music is one of the many good things in life
+    ▢ music is over-rated
+
+    The three questions address slightly different things. The first
+    question relates to musical *enjoyment*; the second question
+    relates to musical *interest*; and the third question relates to
+    the *importance* of music. Notice that a person might cogently
+    respond by claiming to find music intensely enjoyable ("a
+    passionate music nut"), have only moderate interest in music ("I
+    have about the same interest in music as most people"), and
+    regard music as ultimately unimportant ("music is over-rated").
+    This is a theoretically tenable view. Nevertheless, we would
+    predict that the answers to these three questions will tend to
+    correlate: someone who regards him/herself as a music lover,
+    will be more likely to believe he/she enjoy music more than
+    most, and to believe that music is relatively important.
+    Conversely, someone who regards him/herself as having little
+    interest in music, is also apt to believe that he/she is less
+    interested in music than most people and that music is
+    over-rated in importance.
+
+    As with all operationalizations, the researcher has not captured
+    the essence of the intended theoretical term. All are
+    approximations of the true concept. In the analysis, we would
+    check to see that the various operationalizations correlate
+    positively. If so, we might then combine the results from the
+    pertinent questions into a single measure that we hope captures
+    well the theoretical concept of interest.
+
+14. *Avoid conceptually mixed labels.* Do not label response scale
+    using different concepts for the endpoints. In general, avoid
+    inexact *antonyms*. The following are bad uses:
+
+      ------------ ------- --- --- --- --- -----------
+      **Bitter**   **◉**   ◉   ◉   ◉   ◉   **Sweet**
+      **Sad**      ◉       ◉   ◉   ◉   ◉   **Happy**
+      ------------ ------- --- --- --- --- -----------
+
+    *Sweet* is not the opposite the *bitter*: we can have
+    experiences that are simultaneously bitter and sweet. Similarly,
+    *happy* is not the opposite of *sad*. A person may be unhappy
+    (as, for example, when feeling angry), but that doesn't mean the
+    person feels sad. In music, it is not entirely clear that
+    *consonant* is the opposite of *dissonant*. It is much safer to
+    label bipolar scales with a single term, modified by
+    negatives---such as *un-, dis-, no, low* or *less* or amplifier
+    ---*more, greater, increasing*. For example:
+
+      -------------------- --- --- --- --- --- -----------------------
+      **Happy**            ◉   ◉   ◉   ◉   ◉   **Unhappy**
+      **Less Dissonant**   ◉   ◉   ◉   ◉   ◉   **More Dissonant**
+      **No Syncopation**   ◉   ◉   ◉   ◉   ◉   **Highly Syncopated**
+      -------------------- --- --- --- --- --- -----------------------
+
+    Some bipolar terms may be okay if they are especially clear,
+    such as dark/light (rather than more-dark/less-dark), and
+    warm/cool (rather than cool/less cool).
+
+15. *Labelled and unlabelled scales.* Suppose that our question asks
+    "How often do you listen to music?" Compare the following
+    response modes:
+      -------------- -------------- -------------- -------------- --------------
+      **always**     frequently     sometimes      rarely         never
+
+      **always**     ◉              ◉              ◉              never
+      -------------- -------------- -------------- -------------- --------------
+
+    In statistical terms, the first scale is clearly *ordinal*: we
+    can't say that the difference between "always" and "frequently"
+    is the same as the difference between "sometimes" and "rarely."
+    However, the second scale may be arguably treated as an
+    *interval* scale. In short, the second scale is likely to
+    provide more statistical power.
+
+16. *Odd and Even Response Categories.* For most questions involving
+    a rating scale, an *odd* number of response categories is
+    preferred since this allows the respondent to select a middle or
+    neutral response. This is the reason why most response scales
+    involve 3, 5, or 7 positions:
+
+      -------------- -------------- -------------- -------------- --------------
+      **always**     ◉              ◉              ◉              never
+
+      -------------- -------------- -------------- -------------- --------------
+
+    There are times, however, when the researcher would prefer to
+    force the respondent not to sit on the fence. A good example is
+    found in political polling. A given voter may be genuinely
+    conflicted about which candidate to vote for. However, if this
+    person votes, then they will ultimately be forced to make a
+    choice. A political pollster will be interested in forcing the
+    respondent not to sit of the fence. Using an even number of
+    response points will force the respondent to tip his/her hand,
+    and show which direction they are leaning:
+
+      ------------- ----------- ----------- ----------- ----------- ------------
+      **Prefer      ◉           ◉           ◉           ◉           Prefer
+      Democratic                                                    Republican
+      candidate**                                                   candidate
+
+      ------------- ----------- ----------- ----------- ----------- ------------
+
+17. *Order effects.* The order of questions can influence how people
+    respond. Consider how changing the order of questions might lead
+    respondents to think in different ways.
+
+18. *Partition Dependence.* In multiple-choice questions, the number
+    of categories is known to influence how participants respond.
+    Suppose, for example, that your survey asks musicians how long
+    they practice each day. Consider two different versions, a
+    3-choice version:
+
+    ▢ Less than 30 minutes per day
+    ▢ Between 30 and 60 minutes
+    ▢ Over 1 hour
+
+    ... and a 5-choice version:
+
+    ▢ Less than 30 minutes per day
+    ▢ Between 30 and 60 minutes
+    ▢ Between 1 and 2 hours
+    ▢ Between 3 and 4 hours
+    ▢ Over 4 hours
+
+    You might think that how you frame the question won't change the
+    answers. Surely, just as many people will choose the first and
+    second choices whether you use the 3-choice version or the
+    5-choice version. However, research has established that
+    increasing the number of choices changes the behavior of
+    respondents. More people will select the first and second
+    choices in the 3-choice version than in the 5-choice version
+    (See, Fox & Rottenstreich, 2006). That is, offering more choices
+    will tend to spread out the responses, even when some of the
+    categories are logically identical. This phenomenon is referred
+    to as *partition dependence.* One way to reduce partition
+    dependence is to ask respondents to provide their own number:
+
+    How long do you typically practice each day?
+    ____________
+
+19. *Avoid Anchoring Effects.* People tend to be unduly influenced
+    by any number or quantity they encounter. For example,
+    participants in an experiment by Tversky and Kahneman observed a
+    roulette wheel that stopped at either a low number (like 10) or
+    a high number (like 65). They were then asked to guess the
+    proportion of nations that are located in Africa. Those who had
+    observed a high roulette number guessed almost twice the
+    proportion of African nations compared with those who had
+    observed a low roulette number. Many other experiments have
+    demonstrated this anchoring effect. Mention a single number or
+    range, and that will unduly influence participants responses.
+
+    Consider once again a survey that asks musicians how long they
+    practice each day. If we ask: *How many hours per day do you
+    practice?* we are apt to get longer responses than if we ask:
+    *How many minutes per day do you practice?* In short, the
+    "range" words 'minutes' and 'hours' act as anchors that will
+    influence the responses.
+
+20. *Consider using more than one survey.* Rather than putting
+    everything in a single survey, consider using multiple surveys.
+    For example, a between-subjects design may prove better than a
+    within-subjects design, especially in reducing possible demand
+    characteristics. This can also be done with surveys by
+    distributing different surveys to two or more groups of
+    respondents. As in the case of other areas of research, it is
+    often helpful to pursue an *explore-then-test* approach. An
+    initial survey can be used to alert the researcher to particular
+    relationships. Conjectures and hypotheses inspired by the first
+    survey can then be explicitly tested in a second follow-up
+    survey.
+
+21. *Solicit general comments.* It is typically the case that
+    completion of a survey is voluntary. It is important to ask
+    yourself why someone would have taken the time to fill-out your
+    questionnaire. Some people are simply more altruistic and
+    cooperative; they may complete a questionnaire out of feelings
+    of good citizenship. Other people may have an axe to grind. They
+    have their own agenda in completing the survey. They may be
+    unhappy about the high prices for concert tickets, or want to
+    encourage more music-making in the schools. It is helpful to
+    include a "general comments" section at the end of the survey
+    and to make it clear at the beginning of the survey that general
+    comments will be invited at the end of the survey.
+
+    The inclusion of an open-ended "general comments" section serves
+    three purposes. First, knowing that there is a general comments
+    section may encourage a respondent to complete the survey---even
+    if they regard the closed questions ill-conceived or irrelevant.
+    Second, the general comments can alert you to unanticipated
+    demand characteristics. Third, the general comments can be a
+    source of ideas for further research.
+
+    Make sure you alert respondents at the beginning that general
+    comments will be welcome at the end. For example, you might
+    include the following statement in your instructions:
+
+    "This questionnaire consists of 20 questions, and will take an
+    estimated 8 minutes to complete. General comments are invited
+    at the end of the questionnaire."
+
+22. *Use green for printed questionnaires.* Oddly, research has
+    shown that people are more likely to respond to a questionnaire
+    if the paper is green in color.
+
+23. *Craft an appropriate title.* Give your questionnaire a title
+    that helps in recruiting participants from the target
+    population, while avoiding creating demand characteristics that
+    confound the intended purpose.
+
+#### References:
+
+Jean Converse and Stanley Presser (1986), *Survey Questions:
+Handcrafting the Standardized Questionnaire.* Sage Publishing:
+Beverly Hills, California.
+
+Kelly See, Craig Fox, and Yuval Rottenstreich (2006). Between
+ignorance and truth: Partition dependence and learning in judgment
+under uncertainty. *Journal of Experimental Psychology: Learning,
+Memory and Cognition,* Vol. 32, pp. 1385-1402.
+
+#### Footnote:
+
+[1] For example, the questionnaire might begin with a printed
+story in which different groups of respondents receive different
+versions of the story. Subsequent questions can test a hypothesis
+about the influence of different ways of presenting the story.
+
+
+
+

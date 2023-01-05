@@ -1,0 +1,358 @@
+---
+title: "Seven Big Ideas"
+author: "David Huron"
+---
+
+# Empirical Research: Seven Big Ideas
+
+## No Proof
+
+#### Big Idea #1: We Never Prove Anything
+
+Only logicians and mathematicians can talk about "proof." Truth
+cannot be established by observing the world. Any set of
+observations can be interpreted in more than one way (Duhem, 1906).
+
+In empirical work, conclusions should be expressed as follows:
+
+The results *are consistent with* the view that ...
+The observations *are consistent with* the theory that ...
+
+Words like "establish," "confirm" or "prove" are to be avoided. Even
+the word "supports" is deceptive. If necessary, use words like
+"suggest" or "imply."
+
+Our study *suggests* that ...
+The result of our experiment *implies* that ...
+
+In general, the empirical researcher's most useful phrase is:
+"consistent with." Get in the habit of regularly saying "consistent
+with."
+
+Just because we can't prove anything doesn't mean we aren't
+interested in truth. In fact, the pursuit of truth is one of the
+main *motivations* for people who engage in research.
+
+We are not in the business of proving something to be true. We would
+love to know the Truth (if that exists). But even if we had access
+to the Truth, we could never be sure that it was indeed true.
+
+Our first slogan reminds us of the motivation, and simultaneously
+tells us that the Truth is not accessible to us:
+
+**Slogan:** *Motivated by truth, with no hope of proof.*
+
+## Inviting Failure
+
+#### Big Idea #2: Research Invites Failure
+
+In research, we invite the world to speak to us. If the purpose of
+research is to *learn*, then we must be prepared to learn that we
+are wrong. The purpose of research is not to confirm what we already
+believe (although this is an understandable motivation for why some
+people might engage in research).
+
+Since scholarship is a rhetorical enterprise, it is appropriate to
+consider what will convince other people that an idea has merit. If
+we ourselves are unwilling or reluctant to entertain the idea that
+we are wrong, then others will be resistant to our ideas.
+
+Any set of observations is consistent with innumerable theories. So
+showing that the evidence is consistent with some theory isn't a
+very compelling argument. In formal empiricism, researchers follow a
+different rhetorical strategy: Instead of trying to "prove" your
+theory, *try to make your theory fail.* Good research chronicles
+sustained efforts to refute your own ideas. If you tempt failure,
+your audience will be more impressed.
+
+Research is often motivated by our intuitions, hopes, and
+(sometimes) secret beliefs. Without these motivations, we wouldn't
+have the energy to do all the work involved in research. Even if you
+have no ulterior motive, other researchers may *think* that you have
+an ulterior motive. You will convince your most ardent critic by
+displaying a readiness to allow your ideas to fail.
+
+**Slogan:** *The best research invites failure.*
+
+##Testing Predictions
+
+#### Big Idea #3: Make a Prediction
+
+So how do we invite failure? If a theory is good, then we should be
+able to make a prediction about the future. Instead of explaining or
+interpreting what *has been* observed, we predict what *will be*
+observed. In making a prediction, we stick our neck out. The
+prediction can fail. *An empirical test is a prediction.*
+
+Biblical Adage: You can recognize a false prophet by his/her false
+prophecies.
+Empirical Test: You can recognize a false theory by its false
+predictions.
+
+As noted earlier, science is a form of rhetoric --- a form of
+argument or persuasion. Audiences seem most persuaded when someone
+makes an improbable prediction about the future that is then
+borne-out. That is, people are impressed by accurate prophecy. The
+rhetorical power of science comes not from scholars assembling
+evidence, but from scholars testing predictions.
+
+**Slogan:** *We invite failure by testing predictions.*
+
+## Line in the Sand (Recognizing Failure)
+
+#### Big Idea #4: Recognizing Failure - A Line in the Sand
+
+We've already learned that good research invites failure: good
+research gives the world a voice, and allows the world to tell us
+that we're wrong. But how do we know when the accumulated evidence
+is sufficient to admit defeat? At what point do we recognize
+failure?
+
+One observation may be contrary to our prediction, but is that
+sufficient to reject the idea? How about one contrary observation
+out of 100 observations? One out of fifty observations? What
+proportion of our observations must be contrary to our prediction
+before we accept that the world is inconsistent with it?
+
+Human psychology is the principal obstacle here. Our natural
+tendency is to want our predictions to work. We might suppose (say)
+that 15-20 contrary observations would be bad for our idea. So what
+if we make 16 contrary observations? You might well think that,
+really, 16 is on the low side of our 15-20 range, so we shouldn't
+necessarily discard our idea. In the face of contradicting evidence,
+research shows that people attempt to discredit the evidence, and
+rationalize and defend their views (Ariely, 2010; Kahneman, 2012).
+*Psychologically, we're just not built to easily admit when we're
+wrong.*
+
+The way to overcome our natural disposition to avoid admitting
+failure is to establish a criterion before we begin our work. We
+need to draw a line in the sand. We need to say something like "15
+or more contrary observations and I'll admit defeat." Such a strict
+line will inevitably seem arbitrary. ("Is 16 really so different
+from 15?") In fact, the line [***IS***]{.ul} arbitrary. But if we
+don't set some unambiguous criterion then we will leave ourselves
+open to all sorts of rationalizations and defenses. If we are to
+invite failure, we must be clear to define what failure means. By
+drawing a line, we allow the world to force us to recognize
+defeat.[1] If we don't draw a line, we won't simply waffle: we
+will assume that we are right --- but that the evidence is weak. We
+need to give the world an opportunity to change our minds.
+
+In empirical research, this line in the sand is called the
+*confidence level.* The confidence level is expressed as a
+percentage. We might choose a confidence level of 80%, or a more
+stringent confidence level of (say) 99%. In empirical research the
+most commonly chosen confidence level is 95%. However, it's
+important to recognize that this level is chosen by the researcher.
+As we will see later, the choice of confidence level is determined
+by the moral implications of making a mistake. If the consequences
+of being wrong are especially bad (as in some medical research),
+then we may want to choose an especially high confidence level (like
+99.999%).
+
+The "confidence level" is a technical concept that we'll define in
+greater detail later. (It's not simply the percentage of correct
+predictions.) For now, it is important to understand four things
+about confidence levels: (1) The confidence level defines when the
+researcher recognizes defeat. (2) The confidence level is an
+arbitrary line drawn by the researcher. (3) Since the researcher
+gets to draw the line, it is essential that the line is drawn
+*before* the work begins. (Of course, it is cheating to draw the
+line after the observations are made!)
+
+Notice that drawing a line means that we must have some way of
+determining on which side of the line the observations lie. In order
+to do this, we have to *measure* or *count* things. Because of this,
+empirical research is often called *quantitative* research. As we'll
+emphasize later, the foremost reason for making measurements is to
+let the world tell us that our idea is wrong. So the fourth thing to
+note about confidence levels: (4) Having establishing a confidence
+level, the researcher must use quantitative measures in order to
+determine whether the observations satisfy the confidence level
+criterion.
+
+Our slogan doesn't mention confidence level, but that's what it
+refers to:
+
+**Slogan:** *We recognize failure by drawing a line in the sand.*
+
+[1] Actually, even when the research "fails" --- researchers will
+commonly still *believe* the idea (or variation of it) is right. By
+establishing a prior criterion, the researcher will at least
+*publicly* admit that the prediction failed, even if the researcher
+is still not convinced.
+
+[]{#Refutation}
+
+#### Big Idea #5: Refutation is Easier than Confirmation
+
+The statement "All swans are white" can never be confirmed because
+you could never be sure that you have observed all swans (David
+Hume, 1748). However, the statement "All swans are white" can *fail*
+by observing a single non-white swan. Refutation is easier than
+confirmation (Karl Popper, 1934).
+
+Modern science in a nutshell: Tempt failure by trying to show that a
+set of observations is *not* consistent with predictions arising
+from your hypothesis. If this test fails, then you can say that "the
+observations are consistent with the hypothesis."
+
+In short, our aim is not to be right; instead, our aim is more
+modest --- not to be *wrong.* Or, expressed as our slogan:
+
+**Slogan:** *Aim not to be right, but to be not not right.*
+
+## Operationalizing
+
+#### Big Idea #6: Abstractions can be Tested only by Making them Concrete
+
+If an abstract idea correctly describes the world, then we should be
+able to see evidence of the idea in the concrete organization of the
+world.
+
+Theories are abstract ideas. They can be tested only by making
+predictions that have observable consequences. If a theory only
+predicts things that can't be observed, then the theory can't be
+tested. In order to test a theory, we need to predict things that
+can be observed. Transforming abstract ideas into concrete
+observations is called *operationalizing.*
+
+For example, a theory might predict that listening to a certain
+musical work will make listeners feel *embarrassed.* But how can we
+observe embarrassment? Some people blush when embarrassed, but
+people can feel embarrassed without blushing. Similarly, a person
+might become redfaced simply because he/she is feeling hot. One
+simple approach is to ask listeners whether they feel embarrassed.
+That is, we might operationalize "embarrassment" as "any
+introspective report in which the listener claims to feel
+embarrassed." Notice that operationalizations are imperfect
+approximations of theoretical concepts.
+
+**Slogan:** *Test hypotheses by operationalizing terms.*
+
+
+All concepts are inherently enigmatic and fuzzy. Terms like
+"romanticism" or "jazz" can never be pinned down. Moreover, even
+terms we think of as more basic --- such as "guitar" or "melody" or
+"listen" or "note" --- prove elusive. It is impossible to provide
+comprehensive definitions or grasp the essence of some concept.
+
+The belief that there is some true essence of things is referred to
+as *essentialism.* The dangers of essentialism are most evident when
+applied to people (Fuss, 1989). At different times and places,
+different definitions have been offered as to what it means to be
+"human," or "civilized," or "feminine," or even "musician." No list
+of properties will capture the concept, and the definitions are
+frequently formulated with self-serving political motiviations.
+
+In practical terms, we cannot avoid speaking without using terms in
+ways that imply some kind of essentialism. That is, we regularly
+talk about things we ultimately cannot grasp. As we've seen, when
+carrying out empirical research, we must operationalize terms so as
+to allow us to make clear observations.
+
+In empirical research, we are forced to approximate or estimate
+concepts through operational definitions --- but don't confuse the
+operational definition with the concept itself. For example, for the
+purposes of some study we might operationally define a melody to be
+"a continuous sequence of successive pitches." No matter how
+successful the research, do not then turn things around and claim
+that the definition of melody ***IS*** "a continuous sequence of
+successive pitches." Concepts will always remain fuzzy and
+questionable --- "contested" (Gallie, 1956). Although research
+forces use to operationalize concepts, we must not *believe* that
+the operationalization has captured the essence or truly *defined*
+the concept. In operationalizing concepts, we must take care to
+avoid essentializing them.
+
+**Slogan:** *Operationalize, but don't essentialize.*
+
+By way of illustration, consider a study contrasting music for
+xylophone and marimba carried out by Michael Schutz and his
+colleagues (2008). Organologists (people who study musical
+instruments) will tell you that there is no clear dividing line
+between a *xylophone* and a *marimba.* Both instruments involve
+wooden bars struck by mallets. In order to carry out their research,
+Schutz and his colleagues needed some way to distinguish the
+repertoires for the "two" instruments. How do you know that a piece
+of music is truly "marimba music?" Their solution was simply to call
+"marimba music" any piece listed on the Percussion Arts Society's
+website that classified the work as "marimba music" (and similarly
+for "xylophone music"). In short, they sidestepped the question of
+what is "truly" the difference between a marimba and a xylophone by
+relying on an independent source for a useful (though imperfect)
+distinction. No one should believe that the Percussion Arts Society
+has some ideal and flawless knowledge that distinguishes between the
+two instruments. By using the Percussion Arts Society listings,
+Schutz *et al.* *operationalized* the terms marimba and xylophone
+without *essentializing* them.
+
+##Control
+
+#### Big Idea #7: Compare Actual Observations with Control Observations
+
+Most people who catch a cold feel better in three or four days.
+Suppose you catch a cold and take a drug. You feel better in three
+or four days. Did the drug contribute to your recovery?
+
+If you always took this drug whenever you caught a cold, how would
+you ever know whether it was useful or useless?
+
+When making observations, ask yourself "What would one normally see
+without this change or intervention?"
+
+In order to determine whether a drug helps you recover from a cold,
+you must compare the effect of taking the drug with what would
+happen if you didn't take the drug.
+
+Each time you get a cold, count the number of days before you
+recover. Take the drug only every second illness. If the drug is
+effective for you, then it should, on average, shorten the duration
+of the colds when you took the drug compared with the colds when you
+didn't take the drug. In this research, you will compare the results
+for the *treatment condition* against the *control condition*.
+
+We learn things only by comparison. All empirical research involves
+comparing two or more situations, measurements, or *conditions*. In
+your research, ask yourself what you are comparing? If you're not
+comparing something, then you need to rethinking your project.
+
+**Slogan:** *Compare, compare, compare.*
+
+#### References:
+
+Dan Ariely (2010). *Predictably Irrational: The Hidden Forces That
+Shape Our Decisions.* New York: Harper Collins.
+
+Pierre Duhem (1906). *La Théorie Physique: Son Objet, Sa Structure.*
+Paris: Chevalier & Riviére. Translated as: *The Aim and Structure of
+Physical Theory.* Princeton: Princeton University Press. [Duhem was
+a French physicist. This book is the classic statement that
+scientists never prove anything, and that in empirical research we
+never know the Truth. His claim that science never establishes
+truths was accepted by philosophers of science long before the
+advent of Postmodernism.]
+
+Diana Fuss (1989). *Essentially Speaking: Feminism, Nature, and
+Difference.* New York: Routledge.
+
+Walter Gallie (1956). Essentially contested concepts. *Proceedings
+of the Aristotelian Society,* Vol. 56, pp. 167-198.
+
+David Hume (1748). *An Enquiry Concerning Human Understanding.*
+London: A. Millar.
+
+Daniel Kahneman (2012). *Thinking, Fast and Slow.* New York: Farrar,
+Straus and Giroux.
+
+Karl Popper (1934). *Logik der Forschung.* Vienna: Springer.
+Translated as: *The Logic of Scientific Discovery.* (1959).
+
+Schutz, M., Huron, D., Keeton, K. & Loewer, G. (2008). The happy
+xylophone: Acoustic affordances restrict an emotional palate.
+*Empirical Musicology Review,* Vol. 3, No. 3, pp. 126-135.
+
+
+
+

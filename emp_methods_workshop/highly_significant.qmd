@@ -1,0 +1,164 @@
+
+
+
+Interpreting *p*
+
+It is easy for researchers to misinterpret the meaning of *p*.
+Almost everyone gets confused about *p*, including some professional
+statisticians. Let's approach it's meaning through a series of
+steps. Ideally, we'd like *p* to be:
+
+The probability that the null hypothesis is true. (The smaller the
+value, the better!)
+
+But that's not quite right. We calculate the value of *p* from the
+data we have collected, and data always contains some random
+variation due to the vagaries of sampling and measurement. So *p* is
+affected by both the truthfulness of the hypothesis and the random
+error which exists in the data. A perhaps more refined definition of
+*p* would be:
+
+The probability that the null hypothesis is true---as estimated
+using the imperfect data we have.
+
+Now we can't actually predict the probability of the truthfulness of
+either the research hypothesis or the null hypothesis. All we can
+predict is the likelihood of *data.* So instead of saying "What's
+the probability of the null hypothesis being true, given the data
+we've collected?" We ask "What's the probability of getting the data
+we got, assuming that the null hypothesis is true?" So we can turn
+around the above description in a way that statisticians would
+prefer: *p* is:
+
+The probability that you would have made the observations you
+did---were the null hypothesis true.
+
+We're almost there.
+
+Let's use a computer to pick a random number between zero and
+infinity. What do you suppose is the probability that you'd be able
+to successfully guess that number? It would be vanishingly
+small---basically zero. Now what is the probability that you'd
+collect the specific numerical data that you happened to collect in
+your study? Once again, that probability is going to be a very small
+number. In fact, *any* reasonably-sized set of numerical data is
+going to have a vanishingly small probability of occurrence. So
+we're not actually interested in the probability of the specific
+data you collected. Instead, we're interested in the probability
+that you would have collected data *as extreme* as the data you
+collected.
+
+With this in mind, we can now provide a more accurate
+characterization of *p*:
+
+*p* is the probability that you would make observations at least
+as extreme as the specific observations you made---were the null
+hypothesis true.
+
+With this background we can now recognize some common *incorrect*
+interpretations of *p*: *p* is not the probability that the null
+hypothesis is true. Similarly, if you subtract *p* from 1, you don't
+end up with the probability of the research hypothesis being true.
+Nor is *p* the probability of observing the data you observed, or
+the probability that the data occurred by chance. Finally, *p* is
+not the probability of making a Type 1 Error. Once again:
+
+*p* is the probability that you would make observations at least
+as extreme as the specific observations you made---were the null
+hypothesis true.
+
+#### Statistical Significance
+
+Let's return to consider the relationship between *p* and
+statistical significance. In the "Funeral March" problem we
+calculated a chi-square value of 113.05. With one degree of freedom,
+at the 99% confidence level, the critical value of chi-square is
+6.635. In this case our calculated chi-square value is very much
+higher than needed in order to achieve statistical significance. In
+fact, this chi-square value is so large, that it would still have
+been statistically significant even if we had chosen a 99.999%
+confidence level.
+
+First, it bears reminding ourselves that in empirical research we
+never prove anything. At best, all we can do is show that the
+observations are consistent with a particular hypothesis. If we have
+statistically significant results, that doesn't mean that the
+hypothesis is true. Similarly, if we fail to achieve statistically
+significant results, that doesn't mean that the hypothesis is false.
+
+Because the situation is necessarily "wishy-washy," it is possible
+for a researcher to believe that his/her hypothesis is true---no
+matter what observations are made. Intellectually, we are disabled
+by a pervasive disposition to believe that we are right. It is for
+this reason that empirical researchers have established formal
+procedures for testing hypotheses.
+
+Recall the purpose of a *confidence level*: When we establish a
+confidence level, we are "drawing a line in the sand." The purpose
+of this line is to make it clear when the world is telling us that
+our hypothesis is problematic. By drawing this line, we are sticking
+out necks out to invite failure. If our data lies on one side of the
+line, we conclude that the data are consistent with the research
+hypothesis; if our data lies on the other side of the line, we
+conclude that the data could well have arisen by chance.
+
+Notice that this is a binary proposition: our statistical test will
+give us a *yes* or *no* answer.
+
+#### "Highly" significant
+
+It is a frequent occurrence that a statistical test will lead to a
+very small *p* value. That is, if the null hypothesis were true,
+there is a very small probability of seeing the data we collected.
+The temptation is for researchers to report this as "highly
+significant." Good researchers never say this. Saying that a result
+is highly significant is like saying someone is highly pregnant: a
+person is either pregnant or not. The same applies to the concept of
+statistical significance. As researchers, we might be reassured that
+our data "is quite far inside the line we have drawn in the sand."
+But the purpose of a *p* value is not to lend greater or lesser
+credence. It simply says "significant" or "not significant."
+
+#### "Approaching" Significance
+
+Sometimes a *p* value will be close to the significance level but
+not be significant. For example, with a confidence level of 95%, the
+signficance level will be *p*=0.05. What if your *p* value is
+*p*=0.06 or even *p*=0.051? It is common in empirical research to
+report such values as "marginally significant." Once again, this is
+something of a subterfuge. The whole point of the statistical
+exercise is to produce a "thumbs-up" or "thumbs-down" judgment. In
+our eagerness to belive we are right, it is hard not to grasp onto a
+"nearly" significant result.
+
+Actually, there is some merit to the phrase "marginally
+significant." It is frequently (though by no means "mostly") the
+case, that with further data collection, a "marginally significant"
+result will reach statistical significance. This happens frequently
+enough that there is merit to drawing attention to readers that a
+given statistical test is very close to being statistically
+significant. This is best reported as suggesting that further
+research may be warranted, or that the idea may continue to be of
+interest, even though the existing study failed to achieve
+significance.
+
+A bad habit to avoid is to describe a result as "*approaching*
+significance." The implication is that if we collect more data, then
+the *p* value will necessarily get smaller and so will reach
+significance. In many cases, collecting more data will indeed result
+in a smaller value for *p*. But this is by no means guaranteed. In
+many studies, collecting more data has caused *p* to become
+*bigger.* So we should not describe *p* as "approaching"
+significance. Also, the word *approaching* implies a kind of agency,
+effort, or goal-directed behavior. Numbers don't approach (or run
+away); they just *are.*
+
+#### Some Advice
+
+Avoid phrases like "highly significant," and "approaching
+significance." Instead, use the phrase "marginally significant" ---
+even then, use this phrase sparingly. Point out that the data are
+not consistent with the hypothesis at the stated confidence level.
+Don't imply that more data would surely have produced significant
+results. However, it is appropropriate to point out that further
+data collection might be warranted.

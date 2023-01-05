@@ -1,0 +1,103 @@
+
+
+------------------------------------------------------------------------
+
+### Correlation and Causality
+
+------------------------------------------------------------------------
+
+
+
+In 1994, executives of the seven largest US tobacco companies gave
+sworn testimony before a congressional inquiry. Despite decades of
+research, they testified (under oath) that there is no scientific
+evidence whatsoever that smoking causes lung cancer in humans. This
+event was widely regarded as a low point in business ethics---CEOs of
+major corporations willing to make bald-face lies under oath in order
+to preserve their businesses.
+
+It may be that the tobacco executives behaved extremely badly. But
+what was missed was the opportunity for the public to better
+understand how empirical research works. Let's go into some detail.
+
+**The Third Variable Problem.**
+
+There is a strong positive correlation between *death by drowning* and
+*consumption of ice cream:* whenever ice cream consumption increases,
+more people die by drowning and vice versa. It's hard to imagine how
+one might cause the other. So what is responsible for this
+correlation?
+
+The likely origin of this relationship is *warm summer days.* When the
+weather is nice, people tend to go to the beach. Lots of people go
+swimming, and regretably, some of those people are likely to drown. At
+the same time, warm summer days are also likely to encourage people to
+eat ice cream. So it is not that news of a drowning causes mourners to
+drown their sorrows by eating ice cream, or that eating large amounts
+of ice cream before swimming causes cramps and so leads to drowning.
+Instead, both ice cream consumption and swimming are caused by a
+*third variable*---warm summer days.
+
+Now consider the case of cigarette smoking and lung cancer. There is,
+in fact, a strong positive correlation between the two. The question
+is: *Is this relationship causal, or just correlational?*
+
+Suppose that there exists a gene: some people have this gene, and
+others don't. The gene predisposes people who carry it to get lung
+cancer. At the same time, this gene also predisposes people to enjoy
+the experience of smoking. In short, there exists a third variable
+that is responsible *both* for smoking and for lung cancer. Notice
+that, in this scenario, smoking is not the *cause* of lung cancer, in
+the same way that consumption of ice cream is not the cause of
+drowning.
+
+Whenever we have a correlation between two phenomena, we cannot claim
+that one causes the other. There could always be some third variable
+(also called a hidden variable) that is responsible for both.
+
+There is, of course, a method for testing whether a relationship is
+causal---namely, the true experiment. In the experiment, we manipulate
+one of the variables and observe the result. Let's apply this to the
+case of tobacco. What kind of experiment would we need to perform in
+order to test the hypothesis that smoking causes lung cancer?
+
+Let us assemble a large sample of people for the experiment. We
+randomly divide our volunteers into two groups. One group we force to
+engage in smoking (whether they like it or not). The second group we
+force to never smoke (whether they like it or not). If there is a
+third variable (like a gene), this should be randomly distributed
+between the two groups, and so the group forced to smoke should be no
+more likely to get lung cancer.
+
+Of course, the problem with this experiment is that it would be
+impractical and immoral. We would never be able to enforce human
+behavior like this for a prolonged period of time. As you might
+expect, the proper controlled experiment needed to test the idea that
+smoking causes lung cancer in humans has never been carried out. The
+relationship is correlational, and so we cannot discount the
+possibility of causation through a third variable---unrelated to
+smoking. It is for this reason, that the tobacco company executive
+were able (under oath) to claim that "there is no evidence whatsoever
+that cigarette smoking causes lung cancer in humans."
+
+Now here's what they left out. Although the appropriate experiment has
+never been carried out with humans, these experiments *have* been
+carried out with mice, rats, and monkeys. Researchers have randomly
+divided animals into treatment and control groups, forcing some
+animals to regularly breath cigarette smoke. Sure enough, there is an
+association consistent with the hypothesis that smoking causes lung
+cancer. In addition, histological tests (tests with tissue samples)
+have shown that when tobacco chemicals are added to colonies of human
+lung tissue, the cells are more likely to become abnormal, and some
+cells become cancerous much beyond the normal rate of mutation. All of
+this was known at the time the tobacco company CEOs made their
+testimonies.
+
+The third variable problem reminds us of the importance of true
+experiments in order to test causality.
+
+**Slogan:** No causation without manipulation.
+
+
+
+

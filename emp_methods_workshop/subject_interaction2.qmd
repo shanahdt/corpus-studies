@@ -1,0 +1,366 @@
+
+
+# Interacting with Human Participants
+
+Interacting with human subjects involves a combination of *legal*,
+*moral*, *experimental*, and *educational* considerations. Four goals
+shape the experimenter's interaction with a participant:
+
+1.  ensuring the physical and psychological well-being of the
+    participants
+2.  collecting high quality experimental data with a minimum of
+    confounds
+3.  providing a learning opportunity for participants
+4.  providing a learning opportunity for the experimenter about
+    possible unanticipated confounds and insights pertinent to the
+    research.
+
+[]{#Experience}
+
+## Participant's Experience
+
+Whether the participant is paid or unpaid, a student or non-student,
+it is important that the participant have a meaningful and
+informative experience. Not all experiments are inherently
+interesting, but it is possible for a participant to understand how
+participating in an otherwise boring task might produce research
+results of great interest and value.
+
+If a participant has a negative experience, this indicates a failure
+of the experiment. Moreover, if a participant has a negative
+experience, it reflects poorly on our research program, and may make
+it difficult to recruit participants for future studies.
+
+One of the most egregious assumptions experimenters make is to
+assume that other people are just like us (i.e., [egocentric
+bias](http://csml.som.ohio-state.edu/Music829C/methodological.potholes.html#egocentric%20bias)).
+Experimental research has established that not all people experience
+the world the same way. It is important not to assume that the
+participant is having the experience you think they are.
+
+Consider the following extreme case. The population of university
+undergraduate students corresponds demographically with the age
+group showing the greatest susceptibility to schitzophrenia. Roughly
+1 in 200 students is likely to exhibit schitzophrenic symptoms. If
+you run enough subjects, you are likely to encounter a person who is
+schitzophrenic. YOU may think that the experiment is innocent and
+innocuous, but a schitzophrenic may experience the experiment as
+threatening and sinister.
+
+Throughout the experiment be vigilant for any signs that your
+participant is having a negative experience. The physical and mental
+welfare of the participant is your most important responsibility. If
+you deem that the participant is at mental or physical risk, or if
+the participant reports any negative feelings or concerns, stop the
+experiment (if it is safe to do so). If you inadvertently cause harm
+to your subject, do not attempt to cover up the problem or make
+light of it. Covering up a mistake will result in more onerous
+disciplinary actions than reporting an honest error. Should any
+untoward episode occur, contact Dr. Huron immediately in order to
+fill out an [*Adverse Event
+Form*](http://www.orrp.ohio-state.edu/forms/aeforms.doc) for the
+Institutional Review Board. Reporting such events is mandatory.
+
+[]{#Procedure}
+
+## Procedure
+
+1.  **Prepare**. Before running an experiment be sure you are fully
+    acquainted with the equipment, instructions, and procedures for
+    the experiment. Unless the experiment is a minor variant of a
+    previous experiment, you should practice running the experiment on
+    a friend, colleague, or assistant. Check the technical set-up.
+
+2.  **Blind**. In some experiments, different participants will
+    receive different treatments (i.e. "between-subjects design"). If
+    possible, organize the experiment so that you do not know which
+    treatment the subject will receive. Remaining "blind" to the
+    experimental treatment will help ensure that your interaction with
+    the participant doesn't bias the results. If more than one person
+    is involved in running participant for a between-subjects design,
+    avoid the possibility that one experimenter tends to run subjects
+    in one condition, while a different experimenter tends to run
+    subjects in another condition.
+
+3.  **Introduce**. Introduce yourself. Tell the person your name and
+    indicate your position or status. For example, you might say "Hi,
+    my name is _____; I'm a /student/graduate student/visiting
+    scholar/post-doctoral fellow/ working here in the music
+    department."
+
+4.  **Interact**. Endeavor to make the participant feel at ease. They
+    are entering what they perceive as "your space", and may feel that
+    they are merely cogs in some impersonal research machine. Interact
+    with your participant. Address them by name.
+
+5.  **Assess**. Use your interaction to get a sense of whether the
+    participant is nervous, or in a hurry, excited, depressed, or
+    out-of-breath. Ask the participant how their day is going; ask
+    whether they feel "up" for an experiment. If the participant has a
+    cold or is otherwise ill, they are not likely to enjoy the
+    experience; and they are not likely to provide good data.
+
+6.  **Inform**. Tell the participant about the experiment in
+    accordance with the approved Human Subjects protocol. Describe the
+    stimuli they will hear, the nature of the task, and remind them of
+    the duration of the experiment. Ask them whether they have any
+    questions. If the subject asks about the specific goal of the
+    experiment, respond by (1) telling him or her about the broad
+    goals of this field of research, (2) indicate that you prefer not
+    to reveal the specific theory or hypothesis you are testing, but
+    that (3) you will tell them exactly what you are doing following
+    the end of the experiment.
+
+7.  **Written Consent**. When a consent form is required, hand the
+    participant a clip-board with the consent form. Do not read the
+    consent form aloud, since this will interfere with the subject's
+    own reading speed. Sit down. Use your body language to signal that
+    you are not in a hurry, and that taking time to read the consent
+    form is what is expected. Many people will not actually read the
+    form; some will sign it immediately without reading. In either
+    case, tell them that the form says they are free to terminate the
+    experiment at any time without prejudice. Also tell them that you
+    can provide them with a copy of the form if they wish. Nearly all
+    Institutional Review Boards will require these two instructions.
+    In addition, tell the participant that the resulting data from
+    this experiment will be stored in an anonymous format, and that no
+    one will know that the data came from them. Tell them that you may
+    make the data available to other scholars for further study.
+
+    N.B. Debriefings of past subjects indicates that in our music
+    experiments, the most stressful on-site experience for
+    participants is *signing the consent form.* Most people are
+    naturally skeptical of signing a document. The fact that a
+    signature is required tends to make them wary and wonder what is
+    in store. Resist the temptation to tell them that there are no
+    appreciable physical or psychological risks. If they seem
+    concerned, it is better to end the experiment --- provided you
+    think it is safe to stop.
+
+8.  **Verbal Consent**. If the IRB-approved experimental protocol does
+    not require a written consent form, you must still obtain *verbal
+    consent* from your participant before proceding with the
+    experiment. When no consent form is involved, you are still
+    required to convey two pieces of information: (1) Tell the
+    participant your name, and that you are representing the Principal
+    Investigator who is a lecturer/professor/member-of-staff employed
+    at your instution. (You should have already done this when you
+    introduced yourself; see above.) (2) Tell the participant that
+    they are free to terminate the experiment at any time without
+    prejudice or penalty. In addition, tell the participant that the
+    resulting data from this experiment will be stored in an anonymous
+    format, and that no one will know that the data came from them.
+    Tell them that we may make the data available to other scholars
+    for further study.
+
+9.  **Check**. Ensure that they have signed the consent form before
+    proceeding with the experiment. Also ensure that they have printed
+    their name on the form. Signatures are often unreadable, and we
+    need to know the subject's name in order to maintain a complete
+    consent record. For student's participating in the Music Research
+    Program, a clear name is need in order to ensure that they receive
+    credit. Add the correct date if the participant hasn't already
+    written this on the form. The form also requires a witness ---
+    your signature. It is often convenient to wait until after the
+    experiment is underway before you add your signature to the form.
+    Since you have observed the participant sign the form, there is
+    nothing wrong with witnessing the signature some minutes later.
+
+10. **Situate**. Seat the participant in the appropriate place. Make
+    sure they are comfortable. Especially tall or short people may
+    require some adjustment of the apparatus, such as keyboard height.
+    Ensure that there are no potentially dangerous impediments such as
+    scissors, electrical cables, etc.
+
+11. **Instruct**. Read the formal instructions for the experiment.
+    Often, these instructions will appear on a computer screen. Since
+    participants often "skim" over any printed instructions, it is
+    prudent to read the instructions aloud from the screen while the
+    subject follows the written script. You might begin by saying
+    "Let's just go over the instructions here ..." Aim to read the
+    instructions in a consistent voice for all subjects. If you find
+    it useful to embellish the instructions, use the same language for
+    each participant and record in your lab book the exact words you
+    use.
+
+12. **Practice**. For most experiments, there will be an initial set
+    of practice trials. Don't hover over the participant while they do
+    the practice trials. Go away and let the subject continue on their
+    own. With experience, you'll have a good idea of how long to wait
+    before you return. When the practice trials are completed, ask the
+    subject whether they have any questions.
+
+13. **Query**. Most participants won't have any questions to ask at
+    this point. If the subject asks a question, make a mental note of
+    the question. Later, include the question in your experimental
+    notes. Such questions can help identify ways to improve the
+    experimental set-up. Subjects' questions may also alert you to
+    possible misinterpretations of the instructions. For example, you
+    may be unaware that there is some ambiguity in the instructions,
+    and that some subjects may be responding in a way you hadn't
+    anticipated. Finally, such questions may later prove helpful in
+    identifying data that should be excluded from the final analysis.
+
+14. **Respond**. When answering subject's questions, try to avoid
+    giving them extra insights into the experimental hypothesis. Be
+    careful in your choice of words. Say as much as needed in order
+    for the subject to feel they understand.
+
+    If you re-explain the instructions, be wary if the subject says
+    s/he now understands. After repeating an explanation, it is common
+    for a confused subject to claim s/he understands in order not to
+    be perceived as stupid.
+
+    Make a mental note of the exact words you used to clarify the
+    instructions. Include your response in your experimental notes. Be
+    accurate. If you said something you shouldn't have, be honest in
+    reporting.
+
+15. **Privacy**. Try to avoid "hovering" nearby during an experiment.
+    Unless the experiment explicitly requires you to observe or
+    interact with the subject, you should leave the room or leave the
+    subject alone.
+
+16. **Remind**. Just before the main experiment starts, remind the
+    subject about the approximate length of the experiment.
+
+17. **Stay**. Don't go too far away. Occasionally, a subject will stop
+    the experiment before the end. Sometimes this is for a good reason
+    --- such as an equipment failure, or the decision of the subject
+    to leave. In rare cases, a subject will stop to get a drink of
+    water or ask you a question. If the subject wants to continue with
+    the experiment, use your judgment in determining whether the
+    experiment should resume.
+
+18. **Wrap-up**. Following the end of the experiment, six tasks remain
+    that involve interacting with the subject: (1) debriefing, (2)
+    confessing, (3) educating, (4) paying, (5) thanking, and (6)
+    soliciting.
+
+19. **Debrief**. Debriefing is an essential part of the experiment.
+    The goal of debriefing is to gather information about the
+    experiment from the subject's point-of-view. "Did you have a
+    strategy you were using for this experiment?" "Did you simply
+    follow your intuitions, or did you follow a particular way of
+    doing the task?" Let the subject talk about his/her experience.
+    What did they think about the experiment? Were they able to
+    concentrate on the task? Did they find the task easy or hard?
+
+    In one experiment, we were looking to see if phrases played in low
+    transpositions are perceived as being "heavier" than mid-register
+    or high transpositions. When debriefing one subject, he mentioned
+    that pitch-height was an obvious factor influencing whether the
+    phrase sounds heavy or light. Consequently, he said that he
+    explicitly ignored the overall pitch height and made his judgments
+    of "heaviness" on other factors! In this case, the debriefing
+    provided critical information that allowed us to avoid using this
+    data in our analysis.
+
+    In many experiments, it may be necessary to discard some collected
+    data depending on certain criteria. For example, subjects who do
+    not achieve a certain minimum performance level, or subjects who
+    have certain skills. After a subject completes an experiment, do
+    not then tell the subject that you are likely to throw away their
+    data. Participants are understandably discouraged when they learn
+    that their data is unusable.
+
+    Finally, ask the subject if there was anything about their
+    experience that was stressful, annoying, painful or uncomfortable.
+    Immediately inform Dr. Huron if the subject reports any negative
+    experience.
+
+20. **Confess.** Occasionally an experiment will involve deception.
+    Deception cannot occur without explicit approval by the
+    Institutional Review Board. When deception is used, an approved
+    *Debriefing Script* is usually mandated. Read the script
+    explaining the nature and purpose of the deception. Ask them if
+    they have any questions about why the deception was necessary. If
+    a subject is upset by the deception, do not attempt to make light
+    of the situation. If the subject expresses any negative feelings
+    about the deception, inform that subject that they are free to
+    file a complaint with the Institutional Review Board.
+
+21. **Educate**. If your participants do not receive payment, or if
+    research participation is a requirement for some class, then it is
+    usually appropriate to reciprocate by doing something useful for
+    the participant. In educational settings, we interpret this as a
+    goal to educate music students (and other participants) regarding
+    experimental approaches to music scholarship. Simply participating
+    in an experiment will convey some idea of what's involved.
+    However, apart from this, it is valuable to explain more about an
+    experiment. You can explain the purpose of the experiment and say
+    something about what you expect to find. You might describe the
+    different types of stimuli used or describe the method used in the
+    experiment (e.g. method of adjustment, 2AFC, etc.). Identify the
+    independent and dependent variables. Give the participant an
+    opportunity to ask questions about the purpose and methods of the
+    experiment. Some participants will be in a hurry to leave. Tell
+    them that it is okay for them to leave, but that part of our goal
+    is to educate students about experimental research in music.
+    Indicate that you are prepared to converse.
+
+22. **Pay**. If the subject is receiving payment, deliver the
+    appropriate cash, and have them sign a receipt. If there is
+    reimbursement for parking, this needs to be indicated on the
+    receipt.
+
+23. **Thank**. Thank your participant. Tell your subject how important
+    s/he is in the research program, and that you are genuinely
+    grateful for their participation.
+
+24. **Solicit**. Solicit the cooperation of the subject not to
+    disclose any information about the experiment to their friends or
+    class mates. Explain why this is important.
+
+25. **Clean-up**. After the subject has left, six tasks remain: (1)
+    recording, (2) crediting, (3) restoring, (4) securing, (5) backing
+    up, and (6) reporting.
+
+26. **Record**. When the participant has left, take time to record
+    pertinent points made during the subject debriefing. Record any
+    strategies, complications, or other subject comments. Also record
+    any observations you may have made about the participant: Was the
+    subject excited, sleepy, unattentive, etc.?
+
+27. **Credit**. For participants who are part of a subject pool, be
+    sure to record their participation so they can receive proper
+    credit. Remember that credit is earned whether or not the student
+    completes the experiment.
+
+28. **Restore**. Return furniture, equipment and computer systems to
+    their original state. Ensure that other people can use the lab and
+    that other experiments can be run.
+
+29. **Secure**. Secure all data and personal information. File the
+    consent form in the appropriate place. Make sure there is no
+    personal information lying around (such as names, telephone
+    numbers, e-mail addresses) that might be accessed by unauthorized
+    individuals. Remove subject contact information from your schedule
+    or smart-phone. Remove identifying information from data files
+    according to the IRB-approved Protocol for the experiment. When
+    throwing out pieces of paper consider whether the paper should be
+    shredded. Log-out from the computer so that data can't be accessed
+    when you aren't around.
+
+30. **Backup**. Make backup copies of important data in accordance
+    with the IRB-approved Protocol for the experiment.
+
+31. **Report**. Report any failures to comply with the IRB-approved
+    Protocol for the experiment.
+
+One of the most difficult issues in interacting with experimental
+subjects is striking the right balance between formality and
+informality. From an experimental standpoint, the ideal would be to
+follow a written script for everything you say. This would ensure that
+each participant is treated in an identical way and reduces
+unconscious experimenter bias. However, it is not good for a
+participant to feel they are interacting with a machine rather than a
+human being. With practice, an experimenter can convey a sense of
+friendly informality while behaving in a nearly identical manner with
+each participant.
+
+
+
+
+
+

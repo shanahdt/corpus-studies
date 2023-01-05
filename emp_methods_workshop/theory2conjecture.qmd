@@ -1,0 +1,95 @@
+
+
+
+[TASK #7:]{.small} From Theory to Conjecture
+
+#### Introduction
+
+Recall that theories posit some sort of causality: such-and-such is
+the case *because* of ...
+
+Theories are, in effect, stories of a certain sort. As researchers,
+we're interested in assessing the persuasiveness of different
+theories. We test theories by determining how well observations
+conform (or are consistent with) the theory.
+
+Theories are not always clearly stated. Moreover, whole theories are
+often difficult to test. However, theories typically make a number
+of assumptions:
+
+*given assumption X, and given assumption Y, and given assumption
+Z, the theory suggests that W is the case.*
+
+Rather than testing the entire theory, we might then focus on
+testing parts of the story---that is, testing one or more of the
+assumptions on which the theory relies. Consequently, in assessing a
+theory, an appropriate place to begin is by identifying as many of
+the underlying assumptions as possible.
+
+#### Example
+
+Consider the following theory:
+
+Very little sad music is played on commercial radio because
+advertisers don't want their products associated with a sad mood.
+
+Notice that this theory implies several things.
+
+-   The theory assumes that there is such a thing as "sad" music.
+-   The theory also assumes that sad music can evoke sad mood in at
+    least some listeners.
+-   The theory assumes that feelings of sadness evoked by music can
+    be indiscriminately associated with products that have no
+    relationship to the music apart from a close juxtaposition.
+-   The theory assumes that products associated with sad feelings
+    are less likely to be appealing.
+-   The theory assumes that advertisers are consciously concerned
+    about the negative potential of sad music on product appeal.
+-   The theory proposes that commercial radio stations play little
+    sad music (presumaby compared with non-commercial radio
+    stations).
+
+Notice that any one of the assumptions or presuppositions can be
+used to generate a conjecture that might ultimately be shaped into a
+testable hypothesis. For example, one might test whether: Playing of
+nominally "sad" music has a tendency to put listeners into a sad or
+negative mood state.
+
+As we've noted, most theories are difficult to test as a whole. So
+instead, we typically aim to test various critical components of the
+theory.
+
+Having identified the various assumptions, we can then evaluate
+them. Some assumptions will seem quite reasonable (grandmother
+research), so we might give the theory the benefit of the doubt.
+Other assumptions might be more contentious or questionable. Which
+assumptions are essential to the theory? If assumption *X* **must**
+be true in order for the theory to be true, and if assumption *X* is
+not entirely obvious, then we might focus on testing that
+assumption.
+
+#### Task
+
+For each of the following theories, identify as many assumptions as
+you can that must be true in order for the theory to be true.
+
+1.  Musicians who play the piano, violin or cello are more likely to
+    win open concerto competitions partly because those instruments
+    afford better opportunities for dramatic performer gestures than
+    other instruments like the bassoon or the French horn.
+    
+2.  In Western culture, women composers are at a disadvantage
+    because women are less likely to conform to the image of the
+    creative genius.
+
+Having identified a set of assumptions, identify which assumptions
+are most critical. Then restate the assumption in the form of a
+conjecture. Once again, recall that conjectures do not need to be
+formulated in ways that are easily tested. Our hope is that, having
+stated a conjecture, we might then consider how it might ultimately
+lead to forming a (testable) hypothesis.
+
+#### Rationale
+
+The purpose of this exercise is to help develop skills in
+identifying potentially testable consequences implied in any theory.

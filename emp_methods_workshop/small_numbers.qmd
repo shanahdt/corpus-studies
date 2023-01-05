@@ -1,0 +1,137 @@
+
+
+------------------------------------------------------------------------
+
+## The Law of Small Numbers
+
+------------------------------------------------------------------------
+
+There are 3,141 counties in the United States. Some of these
+counties have higher rates of cancer than others. The lowest cancer
+rates are evident in sparsely populated rural areas, especially in
+the West, Midwest, the South, and Alaska. These counties also tend
+to be politically Republican. Why do you suppose these counties have
+lower cancer rates?
+
+One possibility is that these counties have less air and water
+pollution, and that people in rural areas are more likely to engage
+in regular physical activity. It is also possible that people in
+rural areas eat a healthier diet with fewer food additives. Another
+possibility is that strong religious convictions lead to cleaner
+living with less drug or alcohol abuse. Perhaps the closer
+friendships and community values found in rural areas tend to lower
+stress. What do you think? Are these plausible explanations for the
+lower cancer rates?
+
+We might find it helpful to contrast these counties with those U.S.
+counties that have the *highest* rates of cancer. The highest cancer
+rates are evident in sparsely populated rural areas, especially in
+the West, Midwest, the South, and Alaska. These counties also tend
+to be politically Republican.
+
+What's wrong here?
+
+Suppose that the true normal incidence of cancer is 0.1% of the
+population per year. If we have a small sample of people, our
+estimates will be more variable. Small samples are likely to exhibit
+rates that are potentially somewhat higher or somewhat lower, simply
+because the sample size is smaller. Urban counties have more people;
+in effect, they are larger sample sizes, and so the cancer rates are
+more likely to approach the true population mean of 0.1% per year.
+It follows that highly populated counties will have less extreme
+(high or lower than normal) rates of cancer.
+
+#### Small Samples are More Variable:
+
+Daniel Kahneman (2012) summarizes the problem in the following way:
+"you must exert some mental effort to see that the following two
+statements mean exactly the same thing:
+
+-   Large samples are more precise than small samples.
+-   Small samples yield extreme results more often than large
+    samples do.
+
+The first statement has a clear ring of truth, but until the second
+version makes intuitive sense, you have not truly understood the
+first." (Kahneman, 2012; p.111)
+
+People have difficulty recognizing that smaller samples are less
+likely to be representative. Small samples will exhibit greater
+variability, for exactly the same reason that large samples exhibit
+less variability. Unfortunately, there is a tendency for people to
+place too much faith in small samples.
+
+Is a coin fair? Suppose we flipped the coin 50 times. We find that
+the coin turns up heads 26 times out of 50 (i.e. 52%). But randomly
+selected smaller samples of the same sequence exhibit considerably
+greater variability:
+
+![](Images/small_numbers.png){width="600"}
+
+This leads to our next slogan:
+
+**Slogan:** *The law of large numbers does not apply to small
+numbers.*
+
+Expect small samples to be poorer estimates of the population
+values. In particular, be careful when comparing large samples with
+small samples.
+
+#### Melodic Peaks:
+
+Do music scholars fall prey to the "law of small numbers?"
+
+Consider the book *HighPoints: A Study of Melodic Peaks* by the
+music theorist, Zohar Eitan. Eitan's book deals with melodic peaks
+or climax pitches. He analyzed the melodic high-points in a sample
+of 100 musical works. On the basis of his analyses, he was able to
+offer a number of general observations about peak melodic pitches.
+Most of Eitan's generalizations are methodologically solid and
+musically interesting. For example, peak melodic pitches are more
+likely to occur toward the end of a work, are more likely to
+correspond with points of harmonic tension, and tend to coincide
+with the culmination of a crescendo. However, one of Eitan's
+observations is problematic.
+
+Eitan noticed that melodic peaks tend to appear uniquely (only once)
+in a segment. Especially, when compared with other pitches in the
+melody, the highest pitch tends to appear more rarely.
+
+It turns out that most of the pitches in a given melody tend to
+cluster in the center of the range for that melody. As you move
+farther away from the average pitch, those pitches tend to occur
+less frequently. Suppose we asked a group of undergraduate juniors
+to state their ages. We might find that most students are 20 and 21
+years old, somewhat fewer are 19 and 22 years old, and fewer yet are
+18 and 23 years of age. If the oldest person in the class is 24,
+what's the likelihood that someone else in the class is the same
+age? We would "discover" that the oldest person in the class is
+likely to be the only person of that age. Similarly, the youngest
+person in the class is also more likely to hold a unique age in
+comparison to the rest of the group.
+
+The same thing happens with pitches in melodies. Both the lowest and
+highest pitches are less likely to be repeated within a phrase than
+pitches closer to the center of the melodic range. In order to make
+the claim that high-pitches tend to be unique, one must compensate
+for the relatively rarity of extreme values --- which Eitan did not
+do. [1]
+
+#### References:
+
+Zohar Eitan (1997). *Highpoints: A Study of Melodic Peaks.*
+Philadelphia: University of Pennsylvania Press.
+
+David Huron (1999). Zohar Eitan: Highpoints: A study of melodic
+peaks [book review]. *Music Perception,* Vol. 16, No. 2, pp.
+257-264.
+
+Daniel Kahneman (2012). *Thinking, Fast and Slow.* New York: Farrar,
+Straus and Giroux.
+
+[1] The pertinent statistical analysis was carried out by Huron
+(1999).
+
+
+
+

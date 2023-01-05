@@ -1,0 +1,45 @@
+---
+title: "Week 1"
+author: Daniel Shanahan
+---
+
+# Week 1
+
+Here we will have a brief weekly document that summarizes the goals, main points and upcoming due-dates and tasks for the class. 
+
+## Goals
+
+The goals of this week are mostly introductory. In addition to going over the plan for the quarter, we discussed what we mean by "empirical", how Popper would define "science" and the broader goals of scientific inquiry.
+
+## Sumary
+
+### What is Science?
+
+### What do we mean by "empirical"?
+
+### How to we test theories?
+
+
+### Testing Hypotheses
+
+
+
+#### A Priori
+
+#### Operationalizing Terms
+
+#### Compare, Compare, Compare
+
+
+See [../emp_methods_workshop/big_ideas.qmd](this page from Huron's workshop) for a nice description of these concepts.
+
+
+## To-Do
+
+For next week, it would be good to read the Introduction to *Empirical Musicology*, edited by Nicholas Cook and Eric Clarke (the introduction is written by them). Although it was published a while ago, it still holds up quite well.
+
+
+
+## Files and Links and Things
+
+- [../slides/week1.qmd](Thursday Presentation)

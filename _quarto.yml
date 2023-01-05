@@ -28,14 +28,30 @@ website:
     style: "docked"
     search: true
     title: false
+    pinned: false
+    collapse-level: 0
     contents:
       - section: "Resources"
         contents:
           - course-syllabus.qmd
           - course-schedule.qmd
-          - huron-slogans.qmd
         collapse-level: 1
       - section: "Presentations"
+        contents: 
+          - slides/week1.qmd
+        collapse-level: 1
+      - section: "Class Notes"
+        contents:
+          - class_notes/week1.qmd
+        collapse-level: 1
+      - section: "Workshop Materials"
+        contents: 
+          - emp_methods_workshop/slogans.qmd
+          - emp_methods_workshop/day1.qmd
+        collapse-level: 1
+  
+         
+
           
 
   page-footer:

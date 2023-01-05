@@ -1,0 +1,403 @@
+
+
+------------------------------------------------------------------------
+
+### Demand Characteristics
+
+------------------------------------------------------------------------
+
+"It is to the highest degree probable that the subject['s]
+... general attitude of mind is that of ready complacency and
+cheerful willingness to assist the investigator in every
+possible way by reporting to him those very things which he is
+most eager to find, and that the very questions of the
+experimenter ... suggest the shade of reply expected" (Pierce,
+1908).
+
+Earlier, we considered the general problem of *reactivity* where the
+presence of an observer changes the behavior of the person observed.
+When carrying out an experiment with human participants,
+participants will tend to form their own ideas about the purpose of
+the experiment. In some cases, the participant will correctly infer
+the aim, but in many cases, the participant's idea will be wrong.
+Right or wrong, what a participant thinks about an experiment can
+often (though not always) shape their behaviors in ways that may
+confound the experiment. This type of reactivity is referred to in
+experimental research as *demand characteristics*.
+
+A *demand characteristic* is any aspect of the experiment (apart
+from the experimental manipulation) that causes a change in the
+participant's behavior. Demand characteristics often add undesirable
+confounds to a study, so it is important to be able to identify and
+minimize possible demand characteristics.
+
+Demand characteristics do not merely arise because a participant
+*thinks* about the experiment. Demand characteristics can also be
+entirely unconscious. One of the most powerful examples of a demand
+characteristic is the *placebo effect*. The simple expectation that
+the placebo will improve one's situation that leads to the placebo
+actually improving one's situation.
+
+#### Cooperation Bias
+
+In many experiments, participants are often eager to please the
+experimenter. It is human nature to want to be cooperative. Even if
+you don't tell the participant what you are *hoping* to observe,
+they may still form an opinion about what answers you might find
+pleasing.
+
+Related to social desirability bias is *cooperation bias*. Here, the
+participant is eager to be perceived by the researcher as
+cooperative (Orne, 1962). In this case, the participant is apt to
+respond according to what they believe the experimenter wants to
+hear. Research suggests that cooperation bias differs between
+cultures. For example, research suggests that people from Asian
+cultures tend to behave in a more cooperative manner than people
+from American culture (Nisbett, 2003).
+
+#### Contrarian Bias
+
+Not every participant is susceptible to cooperation bias.
+Participants can also become suspicious of the experimenter's aim.
+The participant may form an opinion (either accurate or not) about
+the nature of the hypothesis being tested, and feel that the
+hypothesis is wrong or wrong-headed. Accordingly, participants may
+also behave in a manner *contrary* what they think you are doing.
+
+#### Acquiescence Bias
+
+Apart from attempting to please the experimenter, people often
+respond in ways that favor *positive* rather than *negative*
+responses. This reactivity problem commonly occurs in interviews and
+surveys and is referred to as *acquiescence bias*. When asked
+whether they agree or disagree with various statements some
+respondents will favor the "yes" response over the "no" response ---
+even if it is causes them to behave in a contradictory fashion. For
+example, at different points in a long questionnaire, a person may
+agree with both of the following statements: *I prefer a cup of
+coffee to a glass of water.* *I prefer a glass of water to a cup of
+coffee.* (Messick & Jackson, 1961).
+
+Acquiescence bias is frequently observed when people don't
+understand what they are being asked. Travelers in a foreign culture
+often encounter this. A monolingual English speaker traveling in
+Egypt might ask a local person: "To get to the pyramids, do I turn
+left or right?" To which a local person might well answer "Yes."
+
+#### Social Desirability Bias
+
+Another problem is *social desirabiliy bias*. Research shows that we
+commonly answer questions in a way that makes us appear to be better
+persons. We exaggerate charitable and altruistic traits, and
+minimize negative self-portrayals (Crowne & Marlowe, 1960).
+
+We aren't simply interested in making others view us favorably. We
+are also eager to view ourselves positively. Once again, research
+shows that we hide from ourselves our bad behaviors and attitudes,
+and perpetually interpret our thoughts and behaviors from the most
+positive perspective.
+
+#### A Story
+
+In 1990 I carried out an experiment to test whether listeners are
+prejudice against women composers. I expected that people will tend
+to view women composers less favorably than male composers. I had
+student participants listen to excerpts of recordings of relatively
+obscure modernist works. For each work, I had reproduced old program
+notes that described aspects of the pieces. I had made slight
+changes to the program notes so that they would subtley indicate
+whether the composer was male, female, or of indeterminate gender. I
+was concerned about demand characteristics, so I made special
+efforts to ensure that the gender indicators were quite subtle. For
+example, consistent with typical concerts, most of the excerpts were
+assigned to male genders.
+
+The experiment was a between-subjects design in which one group
+heard certain passages assigned to certain genders, whereas the
+other group was led to the impression that the composers of the same
+passages were of the opposite gender. Would listeners rate a musical
+passage as being of less quality because the composer was a woman?
+Were men more likely than women to exhibit such a bias?
+
+The results were quite clear. The implied sex of the composer made
+no difference whatsoever on the assessed quality of the music. I was
+frankly surprised by the results. A couple of weeks after the end of
+the experiment, I happened to interact with one of my students in
+the hallway. Our discussion turned to the experiment. I asked him
+what he thought was the purpose of the experiment. Subsequent
+conversations with other student participants confirmed what the
+first student had told me: "It seemed pretty obvious that you were
+trying to determine whether we were prejudiced against women
+composers." All of the students I talked to had correctly inferred
+what I was up to.
+
+#### Minimizing Demand Characteristics
+
+Broadly speaking, there are eight ways to minimizing or eliminate
+demand characteristics: (1) field observation, (2) blind procedure,
+(3) deception, (4) double-blind procedure, (5) confidence building,
+(6) between subjects design, (7) implicit measures, and (8)
+debriefing.
+
+1.  **Field Observation.** Anthropologists commonly rely on
+    ethnographic fieldwork, however they typically interact or
+    participate in social and interpersonal activities in which
+    their presence as researchers is not hidden or disguised. By
+    field observation, we mean clandestine observation in
+    naturalistic situations where people are observed without their
+    awareness.
+
+    A classic example of such an approach is found in Simha Arom's
+    experiments with scales in the Central African Republic. Arom
+    was interested to learn which tuning system was preferred by his
+    African xylophone musicians. He constructed a xylophone-like
+    instrument that was actually a MIDI synthesizer with several
+    different tuning systems. Arom was eager to know what the
+    musicians preferred, without them being influenced by his
+    presence. So he set up a video camera near the instrument and
+    left the musicians to play with the instruments without them
+    being aware that they were being recorded. On the video, two
+    musicians are recorded as saying "It's all the same." "There's
+    no difference [between the different tuning systems]."
+
+    Another example of field observation is Olaf Post's (2011) study
+    of audience behaviors at the Concertgebouw concert hall in
+    Amsterdam. Using archived video recordings of concerts, Post was
+    able to examine the figetting behaviors (scratching noses,
+    cross-legs, etc.) of audience members. He then related the
+    amount of figetting to the type of music being played --- and to
+    structural features of the music. In this case, the members of
+    the audience were clearly unaware that they were being videoed
+    In thise case, even if the members of the audience were aware of
+    the presence of the video camera, they were surely unaware that
+    their figetting behavior was being monitored.
+
+2.  **Blind procedure.** An experiment is said to use a blind
+    procedure either (1) when the participant is not told about the
+    purpose of the experiment, or (2) when the participant is not
+    aware whether they are in a control or experimental group. In
+    drug research, for example, participants are commonly divided
+    into two groups: the experimental group and the control group.
+    The *experimental group* receives the actual drug being tested.
+    The *control group* is given a placebo --- an inert "sugar"
+    pill. If participants are randomly assigned to the control and
+    experimental conditions, then it is likely that both groups will
+    show equivalent cooperation or contrarian bias --- and so
+    observed differences between the experimental and control
+    conditions are less likely to be artifacts of demand
+    characteristics.
+
+3.  **Deception.** Since participants may sometimes infer the true
+    purpose of the study (even without being told), it is sometimes
+    useful to lead the participant to conclude that the experiment
+    is about something else. The researcher may explicitly lie about
+    the purpose, or implicitly lead the participant to infer that
+    the experiment has a different purpose.
+
+4.  **Double Blind Procedure.** When both the experimenter and the
+    participant are unaware of the purpose of the experiment, the
+    experiment is said to be double blind. Double blind experiments
+    are especially useful when the experimenter is required to make
+    some subjective interpretation. For example, in music-education
+    research, an experimenter may be required to assess whether or
+    not a musician has improved. If the experimenter knows whether
+    the musician is in the experimental-curriculum or control group,
+    this is likely to lead to experimenter bias. It is better if
+    both the musician-participant and the experimenter don't know
+    whether the participant is in the intervention condition or in
+    the control condition.
+
+5.  **Confidence Building.** Especially when participants are
+    disposed to behave in a cooperative fashion, participants are
+    less likely to be influenced by demand characteristics if you
+    boost their self-confidence. If they are confident, then they
+    are more likely to feel comfortable with their own
+    opinions/judgments, rather than attempting to respond in a way
+    that they think will please the experimenter.
+
+    Confidence-building can be done in five basic ways.
+
+    (i) Employing tasks that are relatively easy for the
+    participant. (This might be purposely done toward the beginning
+    of the experiment, where subsequent tasks become more
+    difficult.) The simplicity of the task raises the
+    self-confidence of the participant by making them aware of their
+    own mastery.
+
+    (ii) Encouraging self-confidence through verbal feedback: "You
+    seem to be really good at this task." "You were selected for
+    this experiment because of your background and expertise." Such
+    feedback may be honest or deceptive. That is, even if a
+    participant is not especially good at the task, such positive
+    feedback will still boost their self-confidence and reduce the
+    likelihood of them looking to echo what they think the
+    experimenter wants.
+
+    (iii) Emphasizing that there is no "right" or "wrong" answer,
+    etc. and that we are genuinely interested in the participant's
+    unique view, opinion, or experience. Task instructions can be
+    worded to reinforce this. For example, instead of asking "Which
+    musical passage sounds better?" Ask "Which musical passage do
+    you think sounds better?"
+
+    (iv) Behaving in a deferential way toward the participant, or
+    reducing the appearance of being an authority figure. A
+    participant who feels they are socially equal to, or superior to
+    the experimenter is more likely to respond honestly. For many
+    participants, if the experimenter is an older male professor
+    dressed in a white lab coat using formal language with a deep
+    confident voice, then participants may be more likely to respond
+    in a way that conforms to what the participant thinks the
+    experimenter wants. Conversely, for many participants, if the
+    experimenter is a younger female student dressed casually using
+    colloquial language with a tentative insecure voice, then
+    participants may be more likely to respond honestly. Along with
+    dress, attitude, language, age and sex, physical setting also
+    plays a role: people will feel more self-confident at home than
+    in a laboratory environment.
+
+    (v) Employing tasks that are not socially or politically
+    charged. For example, asking "Which of these two tones has a
+    longer duration?" is likely to incur fewer demand
+    characteristics than asking "Which of these musical styles is
+    better?"
+
+6.  **Within- and Between-Subjects Designs.** Recall dependent and
+    independent variables. The *independent variable* (the one the
+    experimenter manipulates) was whether the composer for a
+    selection was deemed male or female. *Within-Subjects Design.*
+    (what I used in my composer prejudice study). When the dependent
+    variable is manipulated across its range for each each subject.
+    *Between-Subjects Design.* when the dependent variable is fixed
+    for each subject, but varies between subjects. E.g. Here are
+    some excerpts of contemporary music, all written by women
+    composers. Rate how good they are.
+
+7.  **Implicit Measures.** Some kinds of dependent measures are less
+    susceptible than others to demand characteristics. In
+    particular, *self-reports* are often easiest to collect, but
+    they are the easiest to be confounded by demand characteristics.
+    There are several types of implicit measures, but one of the
+    best is *reaction-time* (speed of response), since participants
+    have no time to "think.".
+
+    Are you prejudiced against women or blacks? Virtually no one
+    admits that they are prejudiced --- even if their behaviors
+    indicate that there are underlying predilections and biases. A
+    useful technique for identifying a person's preconceptions is
+    the *implicit association test* (IAT).
+
+    Suppose that you are interested whether people think that Native
+    Americans are viewed as less "American" than white Americans.
+    The implicit association test allows you to glimpse such
+    prejudices. First, you begin with a series of photographs of
+    people. Half of the photographs are of people who are obviously
+    white and half are of people who are obviously native Americans.
+    The task is simply to respond as quickly as possible to whether
+    the faces are white or native-American. Next, we give you a task
+    consisting of place names. Here the participant is asked to
+    respond as quickly as possible to whether the place names are
+    foreign or American. Again, the task is straightforward with
+    places such as Seattle, France, Ohio, Russia, Miami, and Oslo.
+    These tasks establish a person's baseline reaction-times for
+    identifying "white," "native," "foreign," and "American."
+
+    Now same tasks joined together. Press one key if image is either
+    a white person or an American placename; press a different key
+    if the image is either a native-American person or a foreign
+    placename. Finally, the reverse pairings are made: press one key
+    if the image is either of a white person or a foreign placename;
+    press a different key if the image is either a native-American
+    or an American placename.
+
+    In this task, if a person tends to unconsciously think of Native
+    Americans as less American than a white person, then they will
+    tend to exhibit faster responses when Native+foreign are linked,
+    and slower responses when Native+American are linked. Similarly,
+    they will tend to exhibit faster responses when white+American
+    are linked, and slower responses when white+foreign are linked.
+
+    Do people tend to associate blacks with crime? Arabs with
+    terrorism? Reggae music with drugs? The *implicit association
+    test* has been widely used to investigate a wide range of
+    associations and unconscious prejudices. You can take some of
+    these tests yourself at
+    https://implicit.harvard.edu/implicit/demo/
+
+8.  **Debriefing.** The best method for becoming aware of demand
+    characteristics is through the post-experiment interview. After
+    an experiment, sit down with the participant and ask them to
+    describe their experience. Begin with the most general
+    questions: "How did it go?" "Did you find it easy or difficult?"
+    "Did you have a strategy for doing this task?" The idea is
+    simply to get the participant to talk about their experience.
+    Try to avoid asking leading questions. Simply be vigilant for
+    comments that suggests that the participant misunderstood the
+    instructions, or was using a strategy you hadn't imagined. If
+    necessary, begin to ask them more direct questions: "What do you
+    think of the experiment?" "What do you think the purpose of the
+    experiment is?" These sorts of questions might alert you to some
+    unanticipated demand characteristics.
+
+    The value of debriefing is evident in a study by Huron, Kinney &
+    Precoda (2006). The study was intended to test the conjecture
+    that low transpositions of melodies are hear as more aggressive
+    than high transpositions of the same melodies. One participant
+    was asked to judge how aggressive each melody sounded. In the
+    debriefing, one participant remarked:
+
+    "Some of the melodies were quite low, and I thought it was
+    obvious that lower melodies would sound more aggressive, so I
+    discounted that and tried to focus on the melody itself, and
+    what would make it sound aggressive."
+
+    Although the participant hadn't inferred the purpose of the
+    experiment, she nevertheless regarded the main effect as
+    obvious, and so answered in a way in which she thought
+    controlled for the very effect we were anticipating. In this
+    case, we used the results of the post-experiment interview to
+    eliminate that person's data from the analysis. Moreover, this
+    was done *before looking at any of the data.*
+
+    Notice that debriefing does not reduce demand characteristics.
+    Instead, debriefing alerts you to the possible existence of
+    demand characteristics. Debriefing is cheap and easy to do.
+
+**Slogan:** *Always debrief.*
+
+#### References:
+
+Douglas Crowne and David Marlowe, (1960). A new scale of social
+desirability independent of psychopathology. *Journal of
+Consulting Psychology,* Vol. 24, pp. 349-354.
+
+David Huron, Daryl Kinney, and Kristin Precoda (2006). Influence
+of pitch height on the perception of submissiveness and threat in
+musical passages. *Empirical Musicology Review,* Vol. 1, No. 3,
+pp. 170-177.
+
+Samuel Messick and Douglas Jackson (1961). Acquiescence and the
+factorial interpretation of the MMPI. *Psychological Bulletin,*
+Vol. 58, No. 4, pp. 299-304.
+
+Richard E. Nisbett (2003). *The Geography of Thought: How Asians
+and Westerners Think Differently ... and Why.* New York: The Free
+Press.
+
+Martin Orne (1962). On the social psychology of the psychological
+experiment: With particular reference to demand characteristics
+and their implications. *American Psychologist,* Vol. 17, pp.
+776-783.
+
+A.H. Pierce (1908). The subconscious again. *Journal of
+Philosophy, Psychology, and Scientific Methods,* Vol. 5, pp.
+264-271.
+
+Olaf Post (2011). *"The way these people can just listen!":
+Inquiries about the Mahler tradition in the Concertgebouw.* PhD
+Dissertation, Columbia University Department of Music.
+
+Frank Ragozzine (2011). Cross-modal affective priming with musical
+stimuli: Effect of major and minor triads on word-valence
+categorization *Journal of ITC Sangeet Research Academy,* Vol. 25,
+pp. 8-24.

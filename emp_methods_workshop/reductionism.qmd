@@ -1,0 +1,287 @@
+---
+title: "Reductionism"
+author: "David Huron"
+---
+
+# Two Forms of Reductionism
+
+There are at least two ways of interpreting the term *reductionism.*
+One interpretation of reductionism is the "nothing but" mode of
+explanation. The second is the "divide and study" method of
+research. These two different notions of reductionism are described
+below.
+
+## 1. Philosophical Reductionism: A Belief about the World
+
+The more contentious notion of reductionism may be called the
+"nothing but" mode of explanation. According to this view, one
+attempts to explain complex phenomena as merely the interaction of
+simpler underlying phenomena; explanation proceeds by accounting for
+complex wholes in terms of simpler components. In this form of
+reductionism, the researcher aims to make statements of the form "*X
+is nothing but Y*."
+
+Used in this sense, reductionism can be contrasted with what is
+sometimes called *holism.* A `holist' expects to explain phenomena
+as being greater than the sum of its parts (a process famously
+dubbed *synergism* by architect Buckminster Fuller). Frequently,
+synergism leads to "emergent properties" where complex phenomena
+cannot be predicted even when a thorough understanding exists of the
+underlying constituent phenomena. A simple example of an emergent
+property is the mixing of oxygen and hydrogen to form water: it
+would be difficult to predict in advance that combining two
+explosive gases might lead to a non-flammable colorless liquid.
+
+In contrast to holism, the "nothing but" form of reductionism seeks
+to explain all complex phenomena as convoluted manifestations of a
+smaller number of fundamental causes or interactions. In its most
+sweeping formulation: culture is just sociology, sociology is just
+psychology, psychology is just biology, biology is just chemistry,
+and chemistry is just physics.
+
+Not everyone is comfortable with this way of interpreting the world.
+If such a scientific reductive synthesis is true, it might represent
+one of the pinnacle achievements of human inquiry. If it is false,
+it might represent one of the preeminent intellectual blunders in
+human history.
+
+Many humanities scholars of have derided this reductionist project.
+Much of the objection originates in the unsavory esthetic
+repercussions of `nothing but' reductionism. It is argued that the
+purpose of explanation should be to enrich a phenomenon, not to
+trivialize it. The word "explanation" itself is suspect --- deriving
+from the Latin *ex planum*, meaning to smooth-out or make flat. The
+aim of scholarship should not be to "flatten" phenomenon. When a
+scholar claims that *X is nothing but Y*, the world as a rich
+enchanting place is transformed into a prosaic, colorless, and
+seemingly senseless enterprise. Among humanities scholars, musicians
+and musicologists have been among the most vocal critics of
+`nothing but' reductionism. Many music scholars explicitly embrace
+complexity and scorn simplicity. Composer John Cage cautioned
+strongly against such "logical minimizations."
+
+## 2. Methodological Reductionism: A Strategy for Discovery
+
+There is another way of interpreting "reductionism" --- namely, as
+*a potentially useful strategy for discovery* rather than *a belief
+about how the world is*. This alternative interpretation might be
+described as the "divide and study" method of inquiry --- where the
+researcher examines one factor with the hope that manipulating this
+single factor will help shed light on a complex phenomena by
+isolating constituent relationships. For example, a psychologist
+might *use* the assumption of a recessive gene as a technique to
+help analyze a personality trait. The scholar need not *believe*
+that the theory is the reality, only that the theory is a useful
+tool for understanding.
+
+Classically, the principal research tool for "divide and study"
+reductionism is the concept of "control." It is commonly thought
+that control entails holding one or more factors constant while the
+"independent variable" is manipulated and the "dependent variable"
+is observed. However, control more commonly entails randomizing the
+potentially confounding variables. In taking a political poll, for
+example, pollsters expect that the number of variables influencing
+people's opinions is very large. It is hopeless to assume that one
+can hold constant such a large number of factors. Consequently,
+researchers seek a random sample with the hope that unknown
+influences will tend to cancel each other out. The formal
+statistical argument in support of random sampling is
+(mathematically) quite compelling, so there is considerable merit to
+this method of control.
+
+Using such methods of control, it becomes possible for a researcher
+to investigate the effect of a given factor on some complex
+phenomenon. By investigating one factor at a time, it is often
+possible to build a sophisticated model or theory of the phenomenon
+in question. When the number of factors is more than five or six,
+the divide and study strategy often becomes intractable due to the
+explosion of possible interactions between purported factors.
+Nevertheless, the approach can still help identify important
+relationships in real-world phenomena.
+
+## A Story About Farming
+
+Throughout the nineteenth century, the British government maintained
+a number experimental farms scattered throughout various parts of
+the country. The goal was to better understand how to increase crop
+yields and provide appropriate research-based advice to farmers.
+Which crops grow better in which regions? Which varieties grow
+better at different altitudes, with different amounts of sunlight,
+rainfall, and fertilizers. What combination of soil-type, moisture,
+etc. are most productive?
+
+Throughout the century, employees kept detailed records for each
+field they planted. They measured the amount of sunlight, the
+average temperature, and the amount of rainfall, They recorded when
+the crop was planted, when they applied fertilizer, when it was
+harvested, and the total amount harvested. After nearly a century of
+collecting data, they had leger after leger of information. But they
+didn't know how to analyze the data. One year, they would plant
+variety A of wheat and harvested 2,900 bushels. The following year
+they planted variety B of wheat and produced a slightly lower
+harvest. However, the second year received more rainfall, but had
+less sunlight and a lower average temperature. Was variety A better
+than variety B? Or would variety A also have done worse if the
+amount of sunlight was less and the temperature lower?
+
+In order to try to make sense of this data, the British government
+hired statistician Ronald Fisher in 1919. Fisher took a long look at
+the records and concluded that no conclusion was possible in many
+cases. Each year, too many things had varied at the same time so it
+was impossible to figure out what factor or combination of factors
+was responsible for higher or lower harvests. Fisher changed the way
+in which the experimental plots were used. Instead of planting a
+single crop in each field, the government farmers planted two crops.
+The first row would be variety A, the second row would be variety B
+... and so on, alternating across the field. In this way, both
+variety A and variety B would receive the same rainfall, the same
+amount of sunlight, the same soil, etc. Fisher understood that if
+you want to understand the effects of many factors, you need to
+manipulate only one factor at a time.
+
+Much of the data that had been collected over the course of a
+century was useless because too many variables changed at the same
+time. Within a few years after Fisher was hired, the experimental
+farms produced highly useful data --- establishing, for example,
+that variety A was better than variety B, except in areas that
+receive high levels of rainfall, etc.
+
+Fisher demonstrated that if you want to understand a complex system,
+manipulate only one variable at a time and observe what happens.
+After observing the effect of one variable, move on to another
+variable (like the amount of fertilizer). As you gain more
+knowledge, you can increase the number of simultaneously manipulated
+variables. But if you want to make progress, researchers must start
+by manipulating just one variable at a time.
+
+## What We Learned from Crop Researchers
+
+The naturalist John Muir famously noted "When we try to pick out
+anything by itself, we find it hitched to everything else in the
+universe." The whole world is interconnected. In explaining the
+world, we must ultimately account for all of the interconnections.
+However, we can't start by trying to explain the whole world at
+once. We simply don't have enough knowledge.
+
+Instead, we must begin by examining a small part, using a small
+theory. Theory must begin with unreasonable simplifications.
+Everything may be interconnected, but it is impossible to begin with
+a rich theory.
+
+Starting with a simple theory doesn't mean you should *believe* the
+world is simple. In knowledge-related enterprises, the philosopher
+Alfred North Whitehead offered the following apt advice: "Seek
+simplicity and distrust it." As the anthropologist Clifford Geertz
+wrote: "Scientific advancement commonly consists in a progressive
+complication of what once seemed a beautifully simple set of notions
+but now seems an unbearably simplistic one." (*The Interpretation of
+Cultures*, p. 33.)
+
+The heart of *methodological reductionism* is the "divide and study"
+approach to problem-solving. Take a problem and divide it into
+manageable pieces. Simplifying a problem does not mean we believe
+the problem is simple. In fact, we simplify problems because we
+believe them to be complex. Simplifying a problem is not a statement
+about how the world is, it is merely *a strategy for discovery.*
+There is no guarantee that a complex whole is merely the sum of its
+parts --- or even that a complex whole is *primarily* the sum of its
+parts. But the divide-and-study strategy gives us a place to start.
+
+Methodological reductionism attempts to form good theory by
+progressively refining simplistic theories. Do not be afraid to
+start with a theory that is unreasonably simplistic. In fact, we
+*must* begin with unreasonably simplistic theories if we have any
+hope of understanding a phenomenon in its full richness.
+
+**Slogan:** *In research, reductionism is a method, not a belief.*
+
+## First Things First
+
+When simplifying a problem, there are many possible simplifications.
+How do you know which simplification to begin with? The experience
+of researchers provides clear advice on this: start with what you
+think is the most important factor.
+
+Consider, for example, the phenomenon of musical taste. Why does a
+person prefer the music he/she likes? We might suppose that age,
+sex, personality, nationality and socio-economic background all play
+a role in determining taste. If you think that the most important
+factor influencing musical taste is teenage peer influence, then
+begin there.
+
+Similarly, consider the question: In orchestration, why do composers
+selected the instruments they do? Again, we might identify lots of
+factors that could influence a composer's choice of instrumental
+combinations. These might include the ability of instruments to
+"blend" with each other; the distinctiveness or novelty of different
+instrumental colors; the suitability of some instruments to be more
+noticeable than others; or the availability of especially talented
+performers on a given instrument. However, if you think that the
+most important factor influencing a composer's choice of instruments
+is simply the *loudness* of the instrument, then start with
+loudness.
+
+Before you begin any study, you will know that many factors
+influence a phenomenon. Do not start by trying to deal with all
+factors simultaneously. This will lead you to large volumes of
+uninterpretable results. Instead, start with what you think is the
+most important factor first. First things first. Then move on to
+what you think might be the next most important factor.
+
+## Avoiding Complex Theories
+
+There is another reason why we should avoid beginning with complex
+theories. Complex theories are commonly difficult to test. Because
+of the proliferation of variables in a complex theory, and because
+the relationships between the variables are usually not fixed, most
+complex theories can be used to account for any set of observations.
+
+By way of illustration, imagine two nineteenth-century British
+agronomists talking about crop varieties A and B. The first
+agronomist advocates a complex theory that variety A is superior to
+variety B, but only when there is high sunshine, low rainfall, and
+low soil acidity. So why, asks the second agronomist, did variety B
+in field #3 in 1893 do better than variety A in field #18 in 1887?
+Ah, that's because field #18 has a higher elevation and too much
+fertilizer was applied. The second agronomist then recalls another
+case: If variety A is sensitive to too much fertilizer, how do you
+explain the high yield in field #18 in 1883 when the same amount of
+fertilizer was applied? Ah, that's because the crop was planted
+earlier in the season and the fertilizer was administered twice
+rather than all-at-once. In short, the first agronomist advocates a
+theory that variety A is superior to variety B, but only when there
+is high sunshine, low rainfall, low soil acidity, and moderate
+fertilizer applied in multiple applications planted early in the
+season at lower elevations.
+
+As a theory becomes more complex, it allows more "weasel room."
+Nearly any set of observations can be seemingly explained using a
+suitably complex theory. Despite the appearance of usefulness, such
+theories are actually useless. Only by narrowing the theory, adding
+restrictive conditions, and limiting interactions, do we allow the
+world to tell us that we're wrong.
+
+Occasionally you'll hear someone praise a theory because it can't
+fail: the theory accounts for all possibilities. Remember, it's not
+good research if you don't invite failure. When we have an
+unfalsifiable theory, we are no longer inviting the world to tell us
+that our theory is wrong. That is, once we have an unfalsifiable
+theory, we have stopped doing research.
+
+Simple theories are dangerous because people might erroneously
+believe them to be true --- even though they don't tell the whole
+story. Complex theories are dangerous because they are difficult to
+test, and so it is hard to shake people's erroneous belief in them
+when they are wrong. Complex theories are best built through
+piece-wise additions to a simpler theory. Each addition component to
+the theory is tested along the way. Later, we will talk about how to
+formulate complex theories in a way that allows the world to tell us
+that the theory is wrong.
+
+Our slogan reminds us to avoid undue complexity:
+
+**Slogan:** *Don't try to explain the whole world at once.*
+
+
+
+

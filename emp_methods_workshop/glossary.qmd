@@ -1,0 +1,285 @@
+
+
+------------------------------------------------------------------------
+
+## Glossary of Terms for ASL Interpreters
+
+------------------------------------------------------------------------
+
+DAY 1
+
+types of knowledge: empirical knowledge (knowledge from
+observation), inductive knowledge (knowledge from experience),
+deductive knowledge (knowledge from logic or rational thought),
+intuitive knowledge
+
+a line in the sand
+
+refutation, confirmation
+
+"not-not-right" (as opposed to "right" or "wrong")
+
+operationalization (an estimate measurement)
+
+operationalize (creating an estimate measurement)
+
+essentialize (the mistake of treating an operational definition as
+though it is real)
+
+control (in experiments, the group that doesn't receive any
+treatment)
+
+microfinance
+
+distinguish: question, conjecture, hypothesis, theory
+
+grandmother research (research whose result is obvious)
+
+reductionism (2 types: philosophical reductionism, methodological
+reductionism)
+
+epistephobia (fear of knowledge)
+
+seven types of empirical studies: reconnaissance study, descriptive
+study, measurement study, correlational study, experimental study,
+meta-study (a study of studies), and modeling study
+
+exploratory studies
+
+hypothesislessness (the state of being without a hypothesis)
+
+double-use data (data that is used both to inspire the hypothesis
+and then as evidence in support of the hypothesis)
+
+confirmatory studies (studies that test a hypothesis)
+
+context of discovery (how we came across some knowledge)
+
+context of legitimation (how we defend or rationalize some knowledge
+claim)
+
+explore-then-test approach
+
+DAY 2
+
+multiple operationalizations
+
+formal observation
+
+experiment
+
+correlation; correlational study
+
+causation
+
+third variable problem
+
+sampling
+
+WEIRD sampling (Western, Educated, Industrialized, Rich, Democratic)
+
+data independence
+
+biased sampling
+
+random
+
+sample size
+
+law of big numbers; law of small numbers
+
+effect size
+
+regression-to-the-mean (the tendency for extreme values to be
+followed by moderate values)
+
+behavioral data
+
+dependent measure
+
+independent measure
+
+implicit responses
+
+explicit responses
+
+reactivity
+
+demand characteristics (when an experiment becomes invalid because
+of what participants *believe* is the purpose of the experiment,
+right or wrong)
+
+Clever Hans (the name of a smart German horse)
+
+debriefing
+
+measurement scales (four types:) Nominal scale, Ordinal scale,
+Interval scale, Ratio scale, (We use the acronym "NOIR" as a
+reminder of the four types.)
+
+questionnaire
+
+DAY 3
+
+measurement
+
+Fermi question (names after physicist Enrico Fermi)
+
+descriptive statistics (statistics used to describe some phenomenon)
+
+inferential statistics (statistics used to test some hypothesis)
+
+central tendency
+
+mean, median, mode (mean=average, median=middle value, mode=most
+common value)
+
+variance
+
+probability
+
+null hypothesis
+
+confidence level (as distinct from:) confidence interval
+
+significance level
+
+statistical test
+
+statistical significance
+
+Chi-square test
+
+critical value
+
+Pearson's r
+
+spurioius correlation
+
+p
+
+multiple tests (when many statistical tests are conducted - a bad
+idea)
+
+Bonferroni correction (a way of correcting for multiple tests)
+
+file drawer effect (when research results remain unpublished)
+
+positive results bias (tendency for journals to only publish
+positive results)
+
+research registry (a public online registry where research declare
+their intentions and methods in advance of conducting the research)
+
+applied statistics
+
+population density
+
+regression analysis
+
+cluster analysis
+
+multi-dimensional scaling (abbreviated MDS)
+
+modeling (
+
+B-flat trumpet
+
+Foote Novelty (a method for characterizing novelty)
+
+DAY 4
+
+test-retest reliability
+
+intersubjective reliability (a measure of the degree to which
+research participants behave in a similar way)
+
+between-subject (a research design in which different participants
+received different treatments)
+
+within-subject (a research design in which individual participants
+receive all of the different treatments)
+
+outliers (extreme data values)
+
+experimental design (how an experiment is set up)
+
+experimental paradigm (different types of experiments)
+
+qualitative methods
+
+participant-observation
+
+interviews
+
+exploratory open interview
+
+Grounded Theory
+
+anecdotal evidence
+
+freelisting (task involving making lists)
+
+pile sorting (task involving sorting items into groups or
+categories)
+
+qualitative research, quantitative research
+
+floor effect (happens when a task is too difficult),
+
+ceiling effect (happens when a task is too easy)
+
+distractor task (intended to reduce the likelihood that a research
+participant figures out the purpose of an experiment)
+
+primacy (first thing encountered)
+
+recency (last thing encountered)
+
+citations (references)
+
+quotations
+
+reviewer (someone who reviews submitted journal manuscripts)
+
+pre-reviewing (when journals review submitted manuscripts whose
+research results are withheld from the reviewers; journals decide to
+accept or reject manuscripts solely on the basic of methodology, and
+without knowledge of the results)
+
+reserved data set (portion of data that is set aside and not
+examined)
+
+converging evidence (when different methods all produce the same
+results)
+
+replication crisis (recent recognition that many classic
+experimental results are wrong)
+
+Institutional Review Boards (IRB)
+
+subject pool (captive group of people used in experiments)
+
+research assistant
+
+collaboration
+
+Some Musical Terms:
+
+syncopation (a disrupted rhythm)
+
+tempo (musical speed from fast to slow)
+
+orchestration (the choice of concurrent combinations of various
+instruments)
+
+Classical period (European art music from roughly 1730-1820)
+
+Romantic period (European art music from roughly 1780-1910)
+
+dynamics (in musical: the variability of loudness from quiet
+(pianissimo) to loud (fortissimo))
+
+
+
+

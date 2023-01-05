@@ -1,0 +1,96 @@
+
+
+------------------------------------------------------------------------
+
+### Furthering Your Education
+
+------------------------------------------------------------------------
+
+#### Further Study
+
+Recommended studies:
+
+-   Take an introductory course in statistics. (Avoid courses
+    offered by your Statistics Department; instead take statistics
+    in an applied area such as psychology, education, or
+    linguistics.)
+-   Take a course in experimental design.
+-   Learn a statistical package like SPSS, SAS, or R.
+-   Courses in qualitative research methods are taught in
+    departments of anthropology, education, sociology, and also by
+    ethnomusicologists.
+-   Computer skills are typically very useful in doing research. It
+    is very helpful to know tools related to digital sound editing
+    (e.g. Audacity) and sound generation (e.g., Max-MSP, various
+    MIDI apps). These can help in preparing experimental stimuli.
+    Knowledge of a scripting (programming) language, like Perl,
+    Python, Awk, or Kornshell is often very helpful. These can help
+    in running an experiment or data post-processing. Also, tools
+    like Praat, Excel, Humdrum, and Matlab can help in sound and
+    music analysis.
+-   Attend conferences that attract other scholars who do empirical
+    research in music --- such as the Society for Music Perception
+    and Cognition, or the International Society for Music
+    Information Retrieval.
+
+#### Further Reading
+
+Recommended reading:
+
+-   Paul C. Cozby, *Methods in Behavioral Research.* Mountain View,
+    CA: Mayfield Publishing Co. (any edition - purchase it
+    second-hand).
+-   Alan F. Chalmers, *What is This Thing Called Science?* St.
+    Lucia, Australia: University of Queensland Press. (any edition -
+    purchase it second-hand).
+-   David Huron (1999), *The new empiricism: Systematic musicology
+    in a postmodern age.* The 1999 Ernst Bloch Lectures. University
+    of California, Berkeley (available free on the web).
+-   Edward Slingerland (2008). *What Science Offers the Humanities:
+    Integrating Body and Culture.* Cambridge: Cambridge University
+    Press. Slingerland is a scholar of ancient Chinese history who
+    discovered the value of cognitive science in his work.
+-   For help in assembling surveys, I recommend Jean Converse &
+    Stanley Presser (1986), *Survey questions: Handcrafting the
+    Standardized Questionnaire.* Sage Publishing: Beverly Hills,
+    California.
+-   Read articles in *Empirical Musicology Review* (free on the
+    web).
+-   Other suitable journals include: *Empirical Studies in the
+    Arts,* *Music Perception,* *Journal of New Music Research,*
+    *Musicae Scientiae,* and *Psychomusicology.*
+-   Always read beyond your discipline. If you are interested in
+    music history, consider reading works in historical linguistics,
+    human geography, or archeology. If you are interested in
+    performance research, consider reading general books on motor
+    skills, or social psychology. If you are interested in music
+    theory and analysis, consider reading works in statistics,
+    machine learning, or artificial intelligence. If you are
+    interested in music perception, consider reading books in animal
+    behavior, speech and hearing sciences, or anthropology. Read
+    general books in music, musicology, music theory, aesthetics and
+    philosophy as a way to spur your creative thinking, and as a
+    source of research ideas.
+
+#### Further Actions
+
+The very best way to learn how to do empirical research is to
+collaborate or hang around other people who do it. However,
+recognize that potential research collaborators may not be so eager
+to work with you. Collaboration is a lot like forming a musical
+ensemble: everyone wants to play with the best musicians and no one
+wants to play with musicians less good than themselves. The same
+thing happens with research collaborations. If you have only modest
+research skills, you will offer little attraction to other
+researchers. (Also, some researchers prefer to work alone.) Consider
+offering to volunteer. I recommend volunteering in a psychology,
+sociology, or speech & hearing laboratory as a way of gaining
+experience.
+
+The next best way to learn how to do empirical research is to do it
+yourself. If you can't find a collaborator, then take the plunge and
+*just do it.*
+
+
+
+

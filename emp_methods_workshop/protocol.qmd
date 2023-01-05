@@ -1,0 +1,113 @@
+---
+title: The Protocol
+author: David Huron
+---
+## Formal Observation - The Protocol
+
+
+What distinguishes *formal* observation from *informal* observation
+is that formal observation is guided by a *protocol.* A *protocol*
+is a written procedure for doing something, such as gathering
+information.
+
+#### Sample Problem
+
+Consider the following question. I'm curious about sad music. It
+seems odd that people would willing listen to music that apparently
+makes them sad. Among my friends, most people say they enjoy
+listening to sad music, but not everyone agrees. So here is my
+question: *What proportion of the general population enjoys
+listening to sad music?*
+
+Unfortunately, I can't afford to pay a pollster to carry out a
+worldwide survey, and I don't have the resources to do it myself. I
+could carry out a survey among students in the School of Music, but
+they are all musicians. I could simply ask my friends or students,
+but many of my friends are professional musicians and the majority
+of my friends are academics---hardly representative of the general
+population. I spend most of my time in Ohio, California, and Canada.
+It would be nice to sample from a wider range of people.
+
+**Question:** *When* (I asked myself) do I most frequently encounter
+people who are *not like me*---people from other regions of the
+world who are not academics?
+**Answer:** Taxi drivers! Almost all taxi drivers I meet are
+foreigners. Moreover, I am paying the driver. Why not engage the
+driver as, in effect, a paid research informant?
+
+#### The Protocol
+
+So here is my observational protocol. It only works for taxi rides
+of about 10 minutes or longer---and only if the traffic and noise
+conditions permit a safe conversation.
+
+-   Every time I enter a cab, I start up a conversation with the
+    driver. Where are you from? How long have you lived in this
+    country? When was the last time you visited your home country?
+    Do you have family here? Do you have any children? How old are
+    they?
+    
+    (The aim is to establish a rapport with the driver and to
+    determine his/her cultural background. Also, I want to know if
+    the driver is married---see below.)
+    
+-   What do you miss from home? Food? Family? Climate? What about
+    music from your home country? Who is a musician you like?
+    
+    (The aim is to shift the conversation toward music.)
+    
+-   I like music: can you recommend someone from your culture I
+    could listen to?
+    
+    (The aim here is provide me with an opportunity to pull out a
+    pen and paper. I write down the names of recommended musicians
+    and also record the driver's cultural background. I keep my pen
+    ready.)
+    
+-   I often ask about dancing, wedding traditions, whether the local
+    community sponsors concerts of visiting musicians, etc.
+    
+    (The aim is to keep the discussion centered on music and
+    music-related matters.)
+    
+-   Having laid the groundwork, now comes the critical research
+    question. I use the same exact wording each time: "Some people
+    like listening to sad music, and some people don't like
+    listening to sad music. Which are you?" I ask.
+    
+    (With pen in hand, I unobtrusively record the exact words spoken
+    by the driver.)
+    
+-   If the driver is married, I then follow up with the same
+    question about his/her spouse.
+    
+    (The aim is to expand the sample beyond (typically) male drivers
+    to include females.)
+
+Over past eight years, I've collected the responses from thirty taxi
+drivers, including drivers from Denmark, Ecuador, England, Estonia,
+Ethiopia, Germany, Haiti, Israel, Kashmir, Morocco, Netherlands,
+Mali, Pakistan, Peru, Punjab, Somalia, Tunisia, and Turkey. This is
+hardly a random sample. The majority are Moslems from north Africa
+or the Indian subcontinent. They are all men between 25 and 50 years
+of age. They tend to be ambitious (most emigrated from their home
+countries) and they all enjoy driving cars. Nevertheless, this is a
+*convenience sample* that gets me out of the English-speaking
+academic world in which I am normally stuck.
+
+The results so far? Like sad music (13), don't like sad music (15),
+sometimes like sad music (2). (I just added the spouse question, and
+so don't yet have pertinent results for spouses.) The responses have
+ranged from one driver who said "I never listen to sad music; it
+makes we want to commit suicide," to the New York cabbie from Mali
+who said "Sad music touches my soul."
+
+Incidentally, on a trip to Peru, the driver didn't speak English,
+but fortunately, we had a translator in the vehicle. When I asked
+the question, the translator responded "Oh, all Peruvians love sad
+music." She didn't think it was necessary to ask the driver.
+Nevertheless, I politely asked her to ask the question of the
+driver. His answer was that he didn't like sad music.
+
+
+*Your research opportunity awaits.*

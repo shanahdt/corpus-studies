@@ -1,0 +1,117 @@
+
+
+------------------------------------------------------------------------
+
+### Writing a Conclusion
+
+------------------------------------------------------------------------
+
+Let's return to consider the study by Goldin and Rouse (2000) about
+the effect of blind auditions on the hiring of female orchestral
+musicians. Recall that they found that the switch to blind auditions
+acounts for 30% of the increase in the proportion of female
+musicians hired.
+
+Goldin and Rouse are economists, not music researchers. We might
+expect that their motivation for conducting the study was to
+empirically chronicle general examples in inequality in the hiring,
+compensation, and promotion of women in the workplace. It is
+difficult to find overt evidence of prejudice. Blind and non-blind
+orchestral auditions provide one of relatively few situations in
+which it might be easy to identify the effects of prejudice.
+
+In their paper, Goldin and Rouse never use the word "prejudice" or
+"misogyny." Once again, their main conclusion is that the switch to
+blind auditions acounts for 30% of the increase in the proportion of
+female musicians hired.
+
+Recall that this is a correlational study. The researchers did
+manipulate anything. Many studies of prejudice are true experiments
+involving some type of manipulation. For example, studies have
+submitted identical resumes to employers, changing only the name of
+the applicant, manipulating the name so it sounds more black
+(Latitia Brown) or more white (Lindsay Wheatley). In other studies,
+the name remains the same, but an accompanying photograph suggests a
+black or white applicant. In especially controlled experiments the
+photograph is of a single person#&151;modified using photoshop to
+darken or lighten the skin. In such cases, you can infer that the
+manipulation is the cause of the different behavioral responses.
+
+How do you report the conclusion?
+
+1.  [just the facts?] The use of blind auditions is positively
+    correlated with an increase in the hiring of female musicians
+    for eight major U.S. orchestras between 1940 and 1995.
+2.  [evidence of prejudice in a particular time and place?] The
+    effect of blind auditions indicates the existence of a broad
+    prejudice against women musicians in eight major U.S. orchestras
+    between 1940 and 1995.
+3.  [evidence of prejudice - broaden the time and place?] The
+    effect of blind auditions indicates the existence of a broad
+    prejudice against women musicians in the U.S.
+4.  The effect of blind auditions shows a broad pattern of prejudice
+    against women.
+5.  The use of screens is consistent with the notion that broad
+    pattern of prejudice against women.
+
+Recall that this is a correlational study. This means we can't infer
+causality. In correlational studies, we can never dismiss the
+possibility of a third variable. The correlation may be spurious.
+Goldin and Rouse themselves identify other possible effects of
+screens apart from whether a player can be identified as male or
+female. For example, the absence of a screen can allow judges to
+identify particuar people. "That's George Irving---he's got a fine
+reputation." Or the effect may be one of recognizing lineage.
+"That's George Irving: he studied with Marc Garrett at Julliard (a
+fabulous teacher). Irving has an impecable lineage." Alternatively,
+perhaps there is prejudice that favors older (more experienced)
+players. If the women candidates are generally younger than the male
+candidates, they may have suffered because of reverse agism.
+
+Finally, consider the unexplained variance. If 30% of the increase
+in the proportion of female musicians hired is attributed to the
+switch to blind auditions, what accounts for the remaining 70%
+increase in the proportion of female musicians? Most of the increase
+in female musicians is unrelated to the structure of the audition.
+Why else would more women be hired? There are several possibilities.
+First, there are proportional more female musicians who have
+undertaken advanced training compared with male musicians. This
+probably the main cause---although this would warrant it's own
+study. Second, relative to men, women musicians may now be better
+musicians than women musicians were in the past. A third possibility
+is that women musicians have benefitted from affirmative action
+programs. These may be conscious or unconscious efforts to create a
+more gender-balanced ensemble. Notice that neither of these accounts
+is consistent with rampant prejudice against women.
+
+One could imagine other (less plausible) scenarios that might be
+motivated by prejudice and that might account for the increased
+hiring of women. For example, an orchestra might have a policy to
+pay women less than men. Consequently, hiring more women would lower
+costs. Or hiring more women may make it easier for fund raisers to
+successfully approach affluent women benefactors.
+
+Slogan: *Over-deliver and under-conclude.*
+
+Aim for modesty and competence: over-deliver on evidence while
+understating your conclusions. Offer more evidence than your readers
+think necessary, and express your conclusions in a more tentative or
+circumspect manner than your readers expect.
+
+What most displeases critics of empirical research is the smug,
+gloating, self-satisfied, triumphalism of science. Aim for modesty,
+even as you make your points. Remind critics that most of the
+unguarded and triumphalism language is the product of journalists,
+populists, and other non-researchers. The strength of empirical
+methodology is precisely that its practitioners choose methods that
+enforce intellectual humility.
+
+#### References
+
+Claudia Goldin & Cecilia Rouse (2000). Orchestrating impartiality:
+The impact of "blind" auditions on female musicians. *American
+Economic Review,* Vol. 90, pp. 715-741.
+
+
+
+

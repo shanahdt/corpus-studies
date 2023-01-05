@@ -1,0 +1,132 @@
+
+
+------------------------------------------------------------------------
+
+## Effect Size
+
+------------------------------------------------------------------------
+
+A common question in empirical research is "How big should my sample
+be?"
+
+Sometimes you see research publications in which just five or six
+people are tested. How can one possibly generalize from just five or
+six people?
+
+Consider the following scenario. Our experimental task is to test
+the toxicity of a new drug. The drug is called cyanide. We have
+recruited a number of volunteers to help us try out the drug. We
+give a 100 mg of cyanide to our first volunteer, who promptly drops
+dead. Hmm, "A coincidence" we might think. We reassure our second
+volunteer that "the person must have had a bad heart." Our second
+volunteer then consumes the cyanide, and also drops over dead.
+Already, all of the remaining volunteers have left---claiming that
+they forgot about other pressing business. We are disappointed
+because we had hoped to test at least 100 participants. How can we
+draw any conclusion from just two participants?
+
+Of course, there is no need for any more testing. The likelihood
+that a given person would spontaneously drop dead is very small. Do
+we have any doubt that cyanide is deadly?
+
+The reason why we are justified in concluding that a single
+participant provides an adequate sample size is what's called the
+*effect size*. The effect size is a measure of the strength of a
+relationship between two variables. If we administer 100 mg of
+mercury to someone, they may or many not die. But if we administer
+100 mg of cyanide, they will most certainly drop dead. In other
+words, the effect size is greater for cyanide than for mercury.
+
+Consider two weight-loss programs. After participating in the first
+program, 80% of the participants have lost weight, whereas only 40%
+of the participants in the second program have lost weight. Which is
+the better program?
+
+Before concluding that the first program is better, we should look
+at the effect size. In the first program, the average weight-loss
+for those who lost weight was 1 kilo. In the second program, the
+average weight-loss for those who lost weight was 9 kilos. In first
+program, we may justifiably claim that *the majority of participants
+lost weight*. However, the second program has a much bigger effect
+size.
+
+In matters of health and safety, people very often ignore effect
+sizes. People worry about terrorist bombs, fear that aircraft will
+crash, and are concerned about non-organic foods. But the
+probability that these will bring about your demise is extremely
+small. Wear your seatbelt, don't smoke, maintain a moderate weight,
+get regular exercise, and take an antibiotic whenever you have an
+infection. The effect sizes for these latter behaviors are gigantic
+by comparison.
+
+Incidentally, in the case of cyanide, the effect size is not only
+very large, the *generality* is also large. We don't need to perform
+separate tests of men and women, or test children and the elderly.
+In fact, chimpanzees, cows, snakes, penguins, catfish, and (most)
+bacteria will all die when exposed to cyanide.
+
+So back to our original question: "How big should my sample be?" The
+answer depends on the effect size. When effects are big, you will
+get statistically significant results with only a small sample. For
+truly huge effect sizes, just one or two cases may be sufficient.
+However, if the effect size is small, you may need thousands of
+samples.
+
+#### Power Calculation
+
+There is something called a *power calculation* in statistics. A
+power calculation will allow you to estimate the number of
+observations (or participants) you will need in an experiment in
+order to test your hypothesis. Unfortunately, as part of the power
+calculation, you will need to *estimate* the effect size. Is this
+drug likely to cure every patient who takes it? 1 in 10 patients? 1
+in 100 patients? After you estimate the effect size, the power
+calculation will then tell you how many observations (or people) you
+will need to recruit for your experiment. For a low effect size, the
+power calculation may tell you that you will need 10,000
+participants in order to determine whether the drug is having some a
+beneficial effect. In cases like this, a power calculation may help
+us realize that a proposed study is impractical.
+
+Institutional Review Boards (IRBs) will sometimes require a power
+calculation before a researcher is given permission to carry out a
+medical study with human subjects. The power calculation may show
+that 200 participants will be needed in order to establish
+statistical signficiance. If the researcher is only able to recruit
+50 participants with the specific medical condition, then the
+research will most likely fail. Even if the drug is helpful, 50
+participants may be too few to reach statistical significance.
+Consequently, the IRB may argue that there is no moral value in
+subjecting these patients to the planned research since there is
+little likelihood of learning anything.
+
+In any field of research, one wants to discover the most important
+things first. It doesn't make much sense to concentrate most of our
+research efforts on disease X if the vast majority of people are
+dying from disease Y. Similarly in music. In pursuing our research,
+we should prefer to address the biggest phenomenon first. We should
+aim for phenomena that have big effect sizes, and then, over time,
+turn our attention to the smaller effect sizes.
+
+In much music research, researchers choose to study just a handful
+of people---perhaps only 10 or 20 people. For many questions, 10 or
+20 participants will be too small. However, if the effect size is
+big, then we should have little difficulty seeing the effect with
+such small numbers. Some researchers intentionally keep to small
+number of participants because if forces the researcher to focus on
+phenomena that have large effect sizes. That is, using small numbers
+of observations forces the researcher to focus on the big stuff,
+rather than the subtle stuff. Using small samples means that we are
+likely to get statistically significant results only for phenomena
+that have large effect sizes.
+
+In any field of research, we aim to learn the "big" things first. As
+the field matures, we aim to address more subtle considerations. So
+over time, most research starts by examining phenomena that have
+large effect sizes, and progresses to phenomena with progressively
+smaller effect sizes. Consequently, as a field of inquiry advances,
+empirical studies often require increasing numbers of observations.
+
+
+
+

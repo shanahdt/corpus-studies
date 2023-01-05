@@ -1,0 +1,64 @@
+
+
+------------------------------------------------------------------------
+
+### Final Advice
+
+------------------------------------------------------------------------
+
+You've learned about all sorts of problems that can plague research.
+At this point, you may be so sensitive to the innumerable ways in
+which research can go astray that you might feel intimidated from
+doing any research. How is it possible to do good research when there
+are so many ways in which things can go awry?
+
+Ultimately, we are saved by *effect size.* Consider, once again, the
+example we discussed earlier about testing the toxicity of cyanide.
+You give cyanide to a volunteer, and they drop dead. In light of this
+single observation, it doesn't seem at all farfetched to conclude that
+*cyanide is highly toxic.* It doesn't matter that the sample size is
+miniscule. It doesn't matter that the sample is unrepresentative. It
+doesn't matter that the treatment isn't double blind. It doesn't
+matter what demand characteristics are present. It doesn't matter that
+the participant exhibited acquiescence bias, cooperation bias, or
+contrarian bias. It doesn't matter that you can't perform a
+post-experiment debriefing. Regression-to-the-mean doesn't matter. It
+doesn't matter that there is a ceiling effect. We might even be
+justified in concluding that a control condition isn't needed!
+
+In this case, the effect size is so great that it simply drowns-out
+any plausible confounds. The probability of any person dropping dead
+by chance is very small, so it's hard not to want to attribute our
+volunteer's death to the toxicity of cyanide.
+
+Fortunately, it turns out that many of things we are interested in
+have large effect sizes. Of course, not all phenomena are as
+knock-you-over-the-head as the toxicity of cyanide. But most people
+find loud music to be more energizing than quiet music; few would
+claim that a minor second is more consonant than a major third; and
+dancing to a random beat sequence isn't as easy as dancing to a
+regular beat. It is only as effect sizes grow smaller that we need to
+pay increasing attention to the various possible research confounds.
+If the effect size is small, then the chaos due to confounds becomes
+proportionally larger. Notice that the most important things to know
+in life are precisely those phenomena that have the biggest effect
+sizes. When some factor has a tiny effect, then by definition, it
+isn't as important.
+
+It is certainly important to *know* about the different ways in which
+research can go wrong. It is also important to minimize the potential
+confounds to the extent we can. Often it is simply impractical to
+carry out research the way we'd like to. But don't let fear prevent
+you from going ahead and doing research. There's no such thing as a
+perfect study. Once again, we're not in the business of proving
+things: we're in the business of telling plausible stories.
+
+The history of research is full of false starts, missteps, and
+screw-ups (sometimes, some truly momentous screw-ups). However, the
+history of research is also an inspiring tale of many extraordinary
+successes. These successes occurred despite the fact that researchers
+were largely muddling through.
+
+The study of research methods is ultimately a failure if it causes
+aspiring scholars to be intimidated or paralyzed. All we can do is do
+our best with the resources available to us. So go ahead and do it.

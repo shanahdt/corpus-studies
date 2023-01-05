@@ -1,0 +1,124 @@
+
+
+
+[GROUP TASK #4:]{.small} Types of Empirical Studies - [ANSWERS /
+DISCUSSION]{.small}
+
+Identify whether the following studies are best regarded as
+*reconnaissance, descriptive, measurement, correlational,* or
+*experimental*. If *correlational* or *experimental*, further indicate
+whether it is *exploratory correlational* or *exploratory
+experimental*.
+
+1.  A researcher publishes an article describing a newly discovered
+    box containing composition sketches written by Bartók.
+
+    The description suggests that no explanatory theory is offered.
+    No hypothesis is proposed. No manipulation is carried out. The
+    description suggests that no measurements or counts are
+    reported. So the best answer would be that it is an
+    *reconnaissance* study.
+
+2.  While a musician takes a break, an ethnomusicologist clandestinely
+    mistunes one of the strings on the instrument by 1/3 of a
+    semitone. The ethnomusicologist suspects that the musician will
+    notice the mistuning and so retune the instrument.
+
+    Notice that the final sentence is very close to "The
+    ethnomusicologist predicts that ..." Even if it is not stated,
+    there is a clear test going on: if the musician recognizes the
+    pitch change, then he/she is likely to retune the instrument.
+    Notice that the ethnomusicologist has made a *manipulation* by
+    mis-tuning the instrument. Consequently, the study is best
+    regarded as an *experiment.*
+
+3.  A researcher at *Billboard* magazine assembles and publishes music
+    sales by genre for 85 countries.
+
+    No prediction or test is reported. However, numbers (counts) are
+    reported. This suggests that the best characterization is as an
+    *measurement* study.
+
+4.  A researcher analyses facial expressions in commercial videos of
+    concert pianists. It is found that pianists tend to raise their
+    eyebrows when the music is high in overall pitch.
+
+    In this case the researcher is relating two measures --- the
+    eyebrow placement and the average musical pitch. This is some
+    sort of *correlational* study. It appears that there was no *a
+    priori* hypothesis related to this finding. Consequently, it is
+    perhaps best characterized as an *exploratory correlational
+    study* rather than a *correlational study*.
+
+5.  A researcher commissions ten composers to create "happy" and "sad"
+    melodies. The researcher predicts that the happy melodies will
+    exhibit larger melodic intervals than the sad melodies.
+
+    The researcher has made a prediction. At the same time, the
+    researcher has "manipulated" the world, by asking composers to
+    create two melodies: a "happy" melody and a "sad" melody. The
+    hypothesis is that happy melodies will involve larger melodic
+    interval sizes. This makes the study a bone fide *experiment.*
+
+6.  The manager of an orchestra is interested in identifying which
+    repertoire attracts bigger audiences. She gathers audience
+    statistics for a number of concerts from several orchestras. She
+    classifies each program according to whether the music is
+    predominantly Baroque, predominantly Classical, predominantly
+    Romantic, predominantly Modern, or predominantly Pops. She finds
+    that the largest audiences occur for Pops concerts.
+
+    There is no hypothesis in this study. The researcher does not
+    manipulate the world. She classifies the concerts and relates
+    (correlates) these to measurements of audience size. The study
+    is best described as *exploratory correlational.*
+
+7.  A researcher interviews twenty young mothers about singing to
+    their newborn infants. He finds most mothers report singing to
+    their babies, but that they are more likely to sing when no other
+    adult is observing them. The researcher concludes that many young
+    mothers are self-conscious about their own singing and prefer not
+    to have an audience other than their baby.
+
+    No hypothesis reported, and no measurements are made. An
+    interpretation is made to account for the reluctance of mothers
+    to sing in the presence of other adults. The study is best
+    described as *descriptive.*
+
+8.  A researcher is interested in the phenomenon of globalization and
+    collects data from different islands in the Kingdom of Tonga. For
+    each island, she counts the number of Internet-connected
+    computers, and also interviews people in order to determine their
+    favorite music. She predicts that islands where people most prefer
+    Western pop music will be the islands that are most
+    Internet-connected.
+
+    There is a hypothesis here, but no manipulation. So it is a
+    *correlational* study.
+
+9.  A school board is interested in the effect of introducing
+    non-Western music into the middle school band program. Of eight
+    middle schools in the district, four randomly selected middle
+    schools include non-Western works in the band repertoire. At the
+    end of the year, a sample of music students are interviewed from
+    all eight schools in order collect feedback.
+
+    The research involves a manipulation that changes things.
+    However, there is no explicit *a priori* hypothesis, and the
+    interviews seem rather informal in structure. It is probably
+    best to characterize this study as an *exploratory experimental*
+    study.
+
+10. A music theorist carries out analyses of most of the serial works
+    by Schoenberg, Webern and Berg. After analyzing the works, the
+    theorist publishes a general article comparing and contrasting the
+    serial techniques of the three composers. In particular, the
+    theorist observes that, compared with the other composers, Webern
+    is more likely to compose works structured as extended palindromes
+    --- with the material in the second half of the work inverted.
+
+    There is no *a priori* hypothesis. Although the analysis is
+    formal, there are no explicit measurements made. This suggests
+    that the study is not a *measurement study*. An interpretation
+    of the music is offered, so it is probably best to classify the
+    study as *descriptive*.

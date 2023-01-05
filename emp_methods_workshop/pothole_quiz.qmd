@@ -1,0 +1,195 @@
+
+
+
+## [GROUP TASK #19:]{.small} Identifying Methodological Problems: A Practice Quiz
+
+*Circle and identify each of the methodological transgressions in the
+following description.*
+
+*N.B. Some events may be regarded as transgressing more than one
+methodological principle.*
+
+### Big People, Big Music
+
+For a number of decades now, considerable controversy has surrounded
+a well-known theory of melody developed by Dr. Hoch of the Music
+Department at Poxford College. The theory relates people's heights
+to music.
+
+[]{#double-use data}
+
+Dr. Hoch formed the theory while doing research in the Congo. Hoch
+discovered that Pygmys sing melodies containing predominantly small
+intervals, whereas Bantu's sing melodies containing much larger
+intervals. In Hoch's first book, *Pitch Reduction in Congolese Pygmy
+Melody*, Hoch noted "This is evidence for my new theory that
+interval size is proportional to the heights of the people who make
+the music." [[1](#1)]
+
+[]{#discovery fallacy}
+
+Hoch's arch rival, Dr. Klein, has noted that Hoch's theory is
+suspect because the theory originates in the *Egyptian Book of the
+Dead*, where an obscure verse is often translated: "Big people make
+big music." [[2](#2)]
+
+[]{#ad hominen argument}
+
+Professor Ruse, one of Hoch's defenders, has countered that Dr.
+Klein's own views are suspect since Klein has admitted to having
+taken illegal drugs in the 1960s and holds a degree from Golly
+College (which is not even rated by the Pricetown Review).
+[[3](#3)]
+
+[]{#research hoarding} []{#data neglect}
+
+Klein notes that, if only Hoch and Ruse could see Klein's
+as-yet-unpublished data from Belize, they would see the error of
+their ways. [[4](#4)] Dr. Wise points out that considerable
+pertinent data is available at the Smithsonian, if only Hoch and
+Klein would care to examine it. [[5](#5)]
+
+[]{#naturalist fallacy}
+
+As might be expected, Hoch's theory has attracted considerable
+popular attention. An editorial writer for the *Lower Arlington
+Snob* has started a crusade:
+
+"Given that the national anthem contains so many large leaps, it
+is obvious that the [short] children in our kindergartens should
+not be singing it." [[6](#6)]
+
+[]{#third variable problem}
+
+On the contrary, the OSU basketball Buckeyes coach has realized that
+the correlation between large melodic intervals and size is the
+perfect way to increase players' heights. This year, Swiss yodeling
+has become a standard part of team practice. [[7](#7)]
+
+[]{#cohort bias}
+
+In order to resolve the question of whether yodeling causes
+increased height, Dr. Dee Velop decided to compare the melodies sung
+by people at different ages. Dr. Velop randomly sampled 900 people
+--- 150 each at the ages of 2, 5, 8, 10, 16, and 25. Dr. Velop found
+that it is indeed the case that the older (taller) people sing
+melodies with wider intervals. However, many of the older
+participants in the study noted that yodeling was especially popular
+10 years ago. [[8](#8)]
+
+[]{#control failure}
+
+In Hoch's second book, *Swedish Swing*, Hoch reported on a
+replication study carried out in Sweden (where people are typically
+tall). Hoch found that the average interval size for Swedish
+melodies was 240 cents --- which, he says, "only goes to prove my
+point." [[9](#9)]
+
+[]{#multiple tests} []{#post-hoc hypothesis}
+
+The ever-suspicious Dr. Klein decided to study the Inuit of
+Greenland (who are somewhat short). Klein didn't find that Inuit
+melodies had smaller intervals compared with Bantus. Nor did Dr.
+Klein find evidence in support of another 31 popular hypotheses
+about melodic organization. But Klein did find a statistically
+significant (p<0.05) result that Inuit melodies have slighly more
+notes per phrase than for Bantu melodies. [[10](#10)] After
+spending time carefully examining the data, Klein also thought there
+was some evidence suggesting that Inuit singers take slightly longer
+to inhale while singing. A formal test of this hypothesis using
+Klein's existing data showed that indeed, on average, Inuit singers
+took 15 milliseconds longer to inhale than Bantu singers and this
+was significant at p<0.05. [[11](#11)] [[12](#12)]
+
+Motivated by the controversy, Prof. Long carried out a 30-year
+experiment in rural Bolivia. Dr. Long recruited 1,255 children in 28
+orphanages. Each orphanage was randomly assigned to either a "small
+interval" or "large interval" group. The children in the "small
+interval" orphanages were taught folk melodies with predominantly
+small intervals while children in the "large interval" orphanages
+were taught folk melodies with predominantly large intervals.
+Children had no access to radio or television. Keeping detailed
+records of the children's heights, Dr. Long found that there was no
+systematic difference in the rates of growth and no difference in
+the absolute heights between the two groups.
+
+[]{#ad-hoc hypothesis}
+
+Dr. Hoch was naturally displeased by the study, and has suggested
+that the reason why Dr. Long failed to find the effect was because
+of possible differences in diets between the various orphanages.
+Hoch pointed out that some of the orphanages in Long's study are
+known to be located in mountainous areas where diets are less
+nutritious. [[13](#13)]
+
+[]{#instrument decay}
+
+A more serious problem with Dr. Long's study was that mid-way
+through the study, Bolivia changed to the metric system, so the
+numerical records are an indecipherable mixture of inches and
+centimeters. [[14](#14)]
+
+[]{#anti-operationalizing problem}
+
+Dr. Bliss has questioned the use of either inches or centimeters for
+measuring height:
+
+"We all know what height is, and it is only crudely related to
+such reductionistic measures as "yards" or "meters"."
+
+Given the origin of the theory in the *Egyptian Book of the Dead*,
+Bliss thinks *cubits* would be a more appropriate (though not
+infallible) measure of height. But Bliss thinks even this is
+impossible since no one can be sure how long a *cubit* is.
+[[15](#15)]
+
+[]{#mortality problem}
+
+One group that was pleased with Long's study was the orphanage
+operators --- since the researchers brought funds to support the
+children's education. This income was a welcome supplement to
+selling the shorter orphans to the North Korean submarine program
+and the taller orphans to OSU basketball Buckeyes. [[16](#16)]
+
+[]{#positive results bias} []{#bottom-drawer effect}
+
+The *Journal of Musicological Musings* decided not to publish Dr.
+Long's study because the results didn't support any widely accepted
+theory of melody. [[17](#17)] As it turns out, a number of other
+scholars have independently produced negative results. But each of
+these scholars has been reluctant to even submit the results of
+their research. [[18](#18)]
+
+[]{#head-in-the-sand syndrome} []{#confirmation bias}
+
+Dr. Hoch thinks there is enough research already, and there is no
+need for further testing of this well-established and obvious
+theory. [[19](#19)] Hoch notes that Stravinsky once said of Ravel
+"Il est trés petit, non?" --- and does anyone doubt that Stravinsky
+uses wider intervals than Ravel? [[20](#20)]
+
+[]{#ipse dixit} []{#universalist phobia}
+
+Dr. Hoch has also noted that no less a musicologist than Sir Percy
+Smart has stated that the matter is now resolved. [[21](#21)]
+However, Prof. Bliss remains skeptical. Says Bliss, "It is pure
+folley to expect such a simple theory to apply to all of the world's
+cultures." [[22](#22)]
+
+[]{#presumptive representation}
+
+By contrast, Dr. Pomo has argued that this whole business is part of
+an upper-class conspiracy to denigrate short people. Yodeling has
+become an entrenched canon whereas chanting is now widely desparaged
+as "music for little people." Paid programing on cable TV frequently
+shows vertically-challenged people engaged in IQ-demeaning
+activities while Gregorian chant plays in the background. Short
+people find that everyone expects them to like "The Monks of Saint
+Bede." [[23](#23)]
+
+[]{#relativist fallacy}
+
+Dr. Pomo says that no music is any better or worse than any other
+music. "We all know that no theory can be conclusively shown to be
+better than any other theory. It simply doesn't matter whether the
+height/melodic-interval theory is true or false." [[24](#24)]

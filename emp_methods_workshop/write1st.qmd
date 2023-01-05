@@ -1,0 +1,263 @@
+
+
+------------------------------------------------------------------------
+
+### Write the Paper First
+
+------------------------------------------------------------------------
+
+People who are inexperienced with research imagine that research is
+about poking around through dusty archives, doing fieldwork in a
+remote culture, running experiments, or analyzing data. The sad truth
+is that research is mostly about *writing.* As a researcher, you will
+need to write research articles, dissertations, reviews, and perhaps
+even books or book chapters. Active researchers spend a lot of time
+writing grant proposals, writing human subjects (IRB) applications,
+writing to editors regarding papers, revising manuscripts, responding
+to reviewers' comments, communicating with collaborators, e-mailing
+prospective participants, and many other writing tasks.
+
+Some people don't like writing. If you don't enjoy writing, then
+research may not be a good career choice. Writing can be tiresome. But
+like practicing a musical instrument, writing gets much easier with
+experience. In research, writing is essential.
+
+Over the decades, I have learned one truly important key to doing
+research well. Most researchers don't follow this advice, but it is
+the single most important lesson I've learned. It dramatically
+improves the quality of one's research, accelerates your productivity,
+enhances your enthusiasm, and reduces the total amount of work:
+
+**Slogan:** *Write the paper first.*
+
+By "write the paper first," I mean the *whole* paper --- not simply an
+outline, or a literature review, or the "Methods" section. Before you
+do anything else, you should write the paper --- all the way from
+title to conclusion. Write the paper as though you have already
+completed the study. The paper should include figures (that you make
+up) as well as the statistical analyses (again, entirely made up). Use
+the capital letter X to mark everything that you've make up, including
+claims about results. Here is a sample:
+
+*A study was carried out in which 8X music teachers judged the
+intonation of 60X recorded amateur performances. The amateur
+musicians included 38X female and 22X male instrumentalists with an
+average age of 14.6X years. ...*
+
+Six reasons why you should write the paper first:
+
+1.  **Doing things right.** In order for a research article to get
+    published, it must be vetted by expert (peer) reviewers in the
+    discipline. As any experienced researcher can tell you, journal
+    reviewers can be quite picky. Reviewers will not approve a
+    submission that does not meet a very high standard of quality.
+    Reviewers read every submission with considerable skepticism. They
+    will question whether your research question is appropriately
+    framed. They will consider whether your literature review is
+    adequate or whether you failed to cite other pertinent prior
+    research. They will question whether your conjecture follows
+    logically from your theory. They will ask whether the conjecture
+    is also consistent with other theories. Most of all, they will
+    critically examine your Method. Are the conceptual terms in the
+    hypothesis appropriately operationalized? What alternative
+    operationalizations would have been better? Should a second or
+    third study have been carried out in which the concepts were
+    operationalized in other (contrasting) ways. Was the sample biased
+    in some way? Are there better sampling methods that should have
+    been used? Should other participants have been recruited? Were the
+    instructions to participants carefully phrased? Were there
+    appropriate control conditions? What variables were left
+    uncontrolled that should have been controlled? Should the design
+    have been *with-subjects* or *between-subjects*? Were the stimuli
+    appropriately generated and presented in random order for each
+    participant? Did you use the correct statistical test? Are your
+    statistics reported using the proper format? Did you correct for
+    multiple tests? Have you carefully distinguished *a priori* from
+    *post hoc* analyses? Were potential demand characteristics
+    identified and efforts made to minimize them? Was the conclusion
+    expressed using appropriately circumspect language?
+
+    The sad truth is that most submissions to professional journals
+    are rejected because there is some flaw in the design. In many
+    cases, the Reviewers ask the researcher to "Revise and Resubmit."
+    This can involve re-doing the research with an additional control,
+    or adding another test of the hypothesis. Research articles can
+    sometimes take years before a submission is finally approved by
+    the journal's reviewers.[1]
+
+    Fortunately, if the research is done carefully, reviewers will
+    frequently accept the paper with only minor revisions, or
+    sometimes accept the paper outright without any modifications.
+    Experienced researchers learn that they will save themselves a
+    great deal of frustration if they do the research carefully *right
+    from the beginning.* If you do the research properly, you will
+    only need to do it once.
+
+    Unfortunately, problems can easily pass unrecognized. You've
+    probably had the experience of thinking that you have a clear idea
+    of what you are doing, and only later realized that your idea was
+    not nearly as clear as you thought it was. A procedure is not
+    clear until you write it down and think carefully about the logic.
+
+    In writing the paper first, you already imagine that you are
+    addressing a skeptical audience of expert reviewers. Think of them
+    as looking over your shoulder while you write. Imagine them asking
+    the skeptical questions: Why are you doing it that way? Have you
+    considered some alternative ways of addressing the same question?
+    There is nothing like writing the Method out completely to make it
+    clear what it is that you are planning to do. Above all, *writing
+    is a process of clarification.* If you begin the research before
+    you have a clear idea of how you will defend the method to
+    skeptical experts, then you are tempting an ill fate.
+
+2.  **Channeling your enthusiasm.** Successful researchers are
+    passionate about what they are doing. If you are passionate, then
+    you will find plenty of motivation to do your work. Passion, in
+    turn, is fed by interest. If you are not interested in what you
+    are doing, then the work will become drudgery. It is very common
+    to be passionate about a project when the project first begins.
+    But if the project drags on for a long time, you will inevitably
+    lose some of your original passion. It is important that you don't
+    squander your passion.
+
+    In particular, it is important not to leave "hard" tasks to the
+    end of a project. It is disheartening to have to face difficult
+    tasks when your enthusiasm is waning. The hardest thing to do in
+    research is writing-up the final report.
+
+    In general, aim to do the hardest tasks when your enthusiasm is
+    greatest. In empirical research projects, there are two points in
+    the project where the researcher is most excited. The first point
+    is when you first dream-up your project. Take advantage of this
+    burst of excitement: sit down and begin writing the paper as
+    though the research is already finished. In particular, aim to
+    write-out (and defend in prose) the complete Method section. Do
+    your homework by doing a thorough literature review (if someone
+    else has already done a pertinent study, you want to know that
+    *before* you begin your data collection, not after you have
+    already started your research). In addition, you must write the
+    Results section. This may sound impossible and even unethical, but
+    recall that the Results section consists principally of your
+    statistical analysis. It is important for you to have a good plan
+    of how you will analyze the data you collect.
+
+    The second point of high enthusiasm in research occurs when you
+    have finally got your data. As you carry out your data analysis,
+    return to the paper and revise all of the passages marked "X".
+    Instead of 38 female instrumentalists, you had 29: change 38 to 29
+    and remove the X. Instead of 60 recorded performances, you used
+    50: change 60 to 50 and remove the X. This second burst of
+    enthusiasm will carry you through the final revision of your
+    paper, which will then quickly find its way to submission for
+    publication.
+
+3.  **Increasing the likelihood of publishing negative results.**
+    Research often fails. You may have a nice theory, a good clear
+    method, collect very clean data, do careful statistics, and
+    discover that you have negative results: the collected data are
+    *not* consistent with your hypothesis. You stuck your neck out,
+    and it got chopped off. Negative results are often disappointing,
+    but they are important nonetheless.
+
+    Negative results are not just disappointing for the researcher:
+    they are also often disappointing for the journal reviewers. If
+    reviewers (like you) favor your hypothesis, they will be unhappy
+    that the results turned out to be negative. As a result, they may
+    become hyper-critical of your method. They may seize on one or
+    another methodological detail and reject your article because it
+    could have been done more carefully. Negative results *should* be
+    published more frequently. If you have written the paper before
+    doing the research, then you will have a stronger method, and
+    reviewers will be more likely to accept your paper for
+    publication, even though they are disappointed by the results.
+    Remember, *The best research invites failure.* And failures are
+    important ways in which we allow the world to tell us that our
+    ideas are problematic.
+
+4.  **Clarifying the distinction between *a priori* and *post hoc*
+    tests.** Recall that *the rhetoric of science is the rhetoric of
+    prophecy.* That is, we present a hypothesis in the form of a
+    prediction, and then collect data to test this prediction. Of
+    course, when you already know what the data look like, it's easy
+    to formulate a hypothesis that appears to "predict" what the data
+    will look like (*hindsight is 20/20*). When researchers don't
+    write the paper first, they may inadvertently come to believe that
+    a *post hoc* hypothesis was an *a priori* hypothesis. Writing the
+    paper first makes it clear what you were predicting before the
+    data were collected. In short, writing the paper first helps keep
+    researchers honest. Notice that this is contrary to our initial
+    intuition that writing the paper first amounts to some form of
+    "cheating."
+
+5.  **Anticipating the statistical analysis.** Many people collect
+    data and then have trouble figuring out what sort of statistical
+    analysis should be done. At this point, they commonly seek out a
+    statistical consultant who might try to help them resolve the
+    problem. It is possible to collect data that simply cannot be
+    analyzed using common statistical procedures. Statistical
+    consultants may wrestle for months, trying to help resolve a
+    difficult situation. Statistical consultants are delighted when
+    researchers approach them *first* and ask for advice. A
+    statistician can help you determine the best way to collect your
+    data so that the statistical analysis will be straightforward. Do
+    not collect data without a clear idea of how you plan to analyze
+    it. Writing the paper first will help you see the big picture and
+    will ensure that you collect data that can be analyzed.
+
+    Ronald Fisher, one of the greatest statisticians in history,
+    described the situation as follows:
+
+    "To call in the statistician after the experiment is done may be
+    no more than asking him to perform a post-mortem examination: he
+    may be able to say what the experiment died of."
+
+6.  **Avoiding repeated IRB applications.** In carrying out research
+    with human participants, it will be necessary to get Institutional
+    Review Board (IRB) approval. The application process is commonly
+    fairly tedious, and it can take several weeks or months to get
+    approval. You will want to start the IRB application process as
+    soon as possible in order to allow you to begin collecting your
+    data.
+
+    In the IRB application, you will need to get approval for each
+    aspect of your interaction with human participants, including
+    recruitment, advertising, instructions to participants, data
+    collection procedure, debriefing, storage of data, and so on. If
+    you make any change to your procedure (for example, re-wording the
+    instructions to participants), you will need to go back to the IRB
+    in order for them to approve the modification. This is tedious and
+    time-consuming. You don't want to submit your IRB application
+    until you are fully convinced that you have a fully refined
+    method. By writing the paper first, you will have a detailed
+    procedure which you have argued carefully: the written-out
+    procedure can simply be imported to the IRB application, and you
+    can feel confident that you won't have to return with a later
+    request to modify your application.
+    
+
+For most of us, we start many more things in life than we complete.
+(It is typically easier to start things than to complete things.) One
+of the best reasons for writing the paper first is that pushes most of
+the work to the beginning. Consequently, it becomes easier to finish
+projects than to start them. This dramatically improves the quality of
+one's research, reduces the number of abandoned projects, accelerates
+your productivity, enhances your enthusiasm, and reduces the total
+amount of work. As I noted at the beginning, *write the paper first*
+is the single most important lesson I've learned as a researcher.
+
+#### Footnote
+
+[1] By way of example, my 2001 article "Tone and voice: A derivation
+of the rules of voice leading from perceptual principles" was under
+review for eight years. The manuscript was first submitted in 1993.
+There were several "revise and resubmits" involved before the paper
+was finally accepted. In fact, I carried out two additional
+experiments in order to convince a skeptical reviewer of my
+interpretation of one point. (The experiments were never published:
+they were simply done to convince a reviewer about something.) This
+experience is an outlier. It is rare that it takes so long for a paper
+to be accepted. But it can happen. See footnote #15 in the published
+article.
+
+
+

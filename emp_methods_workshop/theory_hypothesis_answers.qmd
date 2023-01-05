@@ -1,0 +1,110 @@
+
+
+
+
+[GROUP TASK #2:]{.small} Question, Theory, Conjecture or Hypothesis
+
+[ANSWERS / DISCUSSION]{.small}
+
+Identify whether the following statements are *questions, theories,
+conjectures, hypotheses* or *none.*
+
+1.  Why do performers tend to slow down at the ends of phrases?
+
+    This is a question.
+
+2.  Beethoven's metronome markings are too fast because his metronome
+    was broken.
+
+    This is a theory: it proposes a causal explanation. Note the use
+    of the word "because." (A common mistake is to think that
+    "theories" make big or sweeping generalizations; theories can be
+    small and focus on minor phenomena.)
+
+3.  Much of the popularity of World Music is due to commercial
+    exploitation.
+
+    This is a theory: it proposes a causal explanation --- although
+    the mechanism of influence ("commercial exploitation") may be a
+    bit vague. Note the use of the phrase "due to".
+
+4.  How is it that listening to music can sometimes cause shivers to
+    run up-and-down your spine?
+
+    This is a question.
+
+5.  The language we use shapes the way we think.
+
+    Note that the word "shapes" could be replaced by synonyms such
+    as "affects" or "influences." In effect, the claim is that
+    language "causes" us to think differently. Consequently, it is
+    appropriate to regard this as a theory.
+
+6.  Brahms uses a lot of hemiolas in his music.
+
+    This is a hypothesis. It is easily tested.
+
+7.  Brahms liked hemiolas.
+
+    Unless Brahms wrote a letter or otherwise communicated that he
+    "likes" (or dislikes) hemiolas, it would be difficult or
+    impossible to determine what he "likes." Consequently, it is
+    better to call this a *conjecture* rather than a *hypothesis*.
+
+8.  Africans have a better sense of rhythm than Europeans.
+
+    If you think "sense of rhythm" is not possible to measure, then
+    this is a conjecture. Otherwise it is a hypothesis.
+
+9.  The music of Carl Nielsen echoes the spirit of the Danish people.
+
+    As written, this statement admits several different
+    interpretations. It is often helpful to try re-writing a
+    statement in order to gain some clarity. For example, we might
+    re-write this statement as follows: "The Danish spirit is echoed
+    in the music of Carl Nielsen." This suggests that *being Danish
+    influenced Nielsen's music*. Formulated this way, the statement
+    would be regarded as a theory.
+
+10. "Music hath charms to soothe the savage breast."
+
+    (Quote from William Congreve, 1697). This is a conjecture or
+    hypothesis.
+
+11. Raag Shree sounds sad to experienced Indian listeners.
+
+    This is a hypothesis. In principle, this claim could be easily
+    tested.
+
+12. The music of the Lakota has been influential primarily because of
+    frequent portrayals of Plains Indians in Hollywood films.
+
+    This is a theory: it proposes a causal explanation for the
+    widespread influence of Lakota music. Note the use of the word
+    "because."
+
+13. The purpose of our research is to study the relationship between
+    music and ritual.
+
+    This is not a question.
+    
+    It is not a theory since no *cause* is proposed.
+    
+    It could be construed as a conjecture or hypothesis if there
+    were some doubt about the purpose of the research (say, if two
+    collaborators were arguing about what they are doing). E.g.
+    
+    Researcher 1: The purpose of our research is ... music and
+    ritual.
+    Researcher 2: No, no, the purpose of our research is ...
+    music and dance.
+    
+    But this is a stretch.
+    
+    The best answer is "none."
+    
+    Notice that, as a research *goal*, it would be much better to
+    say "The purpose of our research is to *understand* the
+    relationship between music and ritual." The "study" of something
+    may be a reasonable goal for a student, but not for a
+    researcher.

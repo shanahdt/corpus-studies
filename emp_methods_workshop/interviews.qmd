@@ -1,0 +1,124 @@
+
+
+------------------------------------------------------------------------
+
+### Types of Interviews
+
+------------------------------------------------------------------------
+
+One of the most powerful ways in which we can demonstrate respect
+for someone is simply by listening to what they have to say.
+Listening can occur in both informal and formal contexts. Informal
+non-directed conversation can be remarkably insightful. However,
+researchers often have specific interests (and limited time), so the
+researcher might wish to steer the conversation toward particular
+topics.
+
+The interview is a type of formal conversation that takes place
+between an interviewer and one or more interviewees. Three types of
+interviews are commonly distinguished according to whether the
+questions are all established in advance, and according to whether
+respondents answer by selecting one of several predefined responses,
+or by answering in a free-form narrative. The three types of
+interviews are identified in the table below.
+
+  ---------------------- ---------------------------------------------------------- ------------------------------------------------------------------------------
+                         **Fixed Questions**                                        **Open Questions**
+  **Closed Responses**   ***Predefined questions with multiple choice answers.***   
+  **Open Responses**     ***Predefined questions inviting open answers.***          ***Mixture of predefined and spontaneous questions inviting open answers.***
+  ---------------------- ---------------------------------------------------------- ------------------------------------------------------------------------------
+
+*Fixed-question interviews* are really a sort of "oral
+questionnaire." As with questionnaires, questions may be "closed"
+(with fixed answer categories that are chosen by the respondent), or
+"open" (where the respondent is expected to answer in a narrative
+fashion). These can be referred to as
+*fixed-question-closed-response* and *fixed-question-open-response*
+interviews respectively. Interviews that rely on an open question
+format necessarily involve an open response format. It is commonly
+to refer to these interviews as *open interviews*.
+
+Interviews may be conducted in person or via telephone. Interviews
+may take place in the interviewee's home, place of work, city
+street, a neutral space, or a special locale --- such as in a retail
+environment, at a concert hall, green room, in a recording studio,
+etc.
+
+#### Fixed-Question-Closed-Response Interviews
+
+As mentioned, the *fixed-question-closed-response interview* is
+essentially an orally-administered questionnaire. This approach is
+essential when members of the target population are illiterate. For
+this reason, it is common in many countries to use the
+fixed-question-closed-response interview when conducting a national
+census. In addition, face-to-face contact can reduce large-scale
+fraud --- which may occur when using written questionnaires. For
+example, enterprising people will sometimes fill-out multiple copies
+of a questionnaire in order to try to bias the research results in a
+particular direction.
+
+The fixed-question-closed-response interview is often convenient to
+administer in busy settings such as shopping malls and airports
+where people may be reluctant to sit-down and complete a written
+questionnaire.
+
+A final advantage of the fixed-question-closed-response interview is
+that the interviewer can ensure compliance. First, the interviewer
+can ensure that each question is answered (no missing data!). More
+importantly, there is no paper distributed to a respondent, who
+might then forget to return the questionnaire. This is especially
+helpful for studies involving quota sampling. For example, the
+research might require certain numbers of several types of
+individuals (e.g., students, etc.). By first identifying whether a
+prospective interviewee conforms to a particular target group, the
+interviewer can ensure that the quota goals are achieved.
+
+These advantages notwithstanding, orally-administered questionnaires
+also introduce problems. When the response categories are fixed,
+most people prefer the anonymity of a written questionnaire rather
+than talking with someone. They are more likely to respond honestly
+with fewer demand characteristics when they are not interacting with
+another person.
+
+#### Fixed-Question-Open-Response Interviews
+
+The principal advantage of the *fixed-question-open-response
+interview* is that the respondent is free to talk at length in
+response to a particular question. Typically, the responses are
+recorded by the interviewer (with the prior approval of the
+respondent). All respondents are asked the same questions, but are
+free to answer in their own way.
+
+Inviting open responses can also be done through a written
+questionnaire, however, people are much less likely to write at
+length about their experiences or views --- and much more likely to
+talk at length. In short, the open-response interview invites more
+detailed responses. Especially when the interview has been arranged
+in advance and is conducted in a comfortable place, the open
+response format becomes a sort of guided conversation that
+encourages the interviewee to say whatever they feel is important.
+
+Compared with the *open interview* (see below), one of the
+disadvantages of fixed-question interviews is the tendency to create
+a situation in which the respondent is not free to "tell their
+story." The danger is that each question is answered in a
+perfunctory fashion, and the respondent simply waits for the next
+question, rather than launching into a detailed description of their
+experiences, impressions, or views.
+
+#### The Open Interview
+
+The open interview is one of the very best exploratory research
+methods. Open interviews are widely used in consumer research, in
+criminal investigations (such as eyewitness testimony), in clinical
+psychology and psychiatry, in social work, by historians,
+investigative journals, as well as sociologists, anthropologists,
+and ethnomusicologists.
+
+Open interviews can lead to new facts, new theories, and vivid
+illustrations. Open interviews give us access to the experiences of
+others. Open interviews often lead to new insights.
+
+
+
+
