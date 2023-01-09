@@ -13,15 +13,16 @@ The goals of this week are mostly introductory. In addition to going over the pl
 
 ## Sumary
 
-### What is Science?
+In Week 1, we covered a few basic questions:
 
-### What do we mean by "empirical"?
+- What is science?
+- What is meant by "Empirical"?
+- How do we test theories?
 
-### How to we test theories?
+The definitions we used in week 1 were largely drawn from Popper, and will be looking at other alternatives as we move forward. For Popper science is the progress of knowledge, and 
+theories are meant to be tested, refuted, and built upon. This led us some of [slogans](../emp_methods_workshop/slogans.qmd) from David Huron's workshops, such as "Our aim is not to be right, but to be not *not* right."
 
-
-### Testing Hypotheses
-
+In terms of what we mean by empirical, the definitions ranged from "observable knowledge", to dealing with data when one can be "data rich". The first definition can be quite broad, and the second almost too specific. We are mainly focusing on studies that test hypotheses, but even that isn't always true (exploratory studies, by their very nature are without hypotheses, for example).
 
 See [this page from Huron's workshop](../emp_methods_workshop/big_ideas.qmd) for a nice description of these concepts.
 
@@ -32,6 +33,8 @@ See [this page on types of studies](../emp_methods_workshop/empirical2.qmd)
 ## To-Do
 
 For next week, it would be good to read the Introduction to *Empirical Musicology*, edited by Nicholas Cook and Eric Clarke (the introduction is written by them). Although it was published a while ago, it still holds up quite well.
+
+It might be helpful to go through this exercise about conjectures, theories, and hypotheses before moving forward:
 
 ## Conjectures, Theories, and Hypotheses Quiz
 
