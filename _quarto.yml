@@ -39,6 +39,7 @@ website:
       - section: "Presentations"
         contents: 
           - slides/week1.qmd
+          - slides/week2.qmd
         collapse-level: 1
       - section: "Class Notes"
         contents:
