@@ -1,10 +1,11 @@
-
-
-------------------------------------------------------------------------
+---
+title: The Experimental Study
+author: David Huron
+---
 
 ### The Experimental Study
 
-------------------------------------------------------------------------
+
 
 What distinguishes an experiment from all other kinds of studies is
 that the experimenter *manipulates* the world. Rather than being just

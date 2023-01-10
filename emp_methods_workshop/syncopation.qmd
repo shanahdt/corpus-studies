@@ -1,10 +1,9 @@
-
-
-------------------------------------------------------------------------
+---
+title: Syncopation
+author: David Huron
+---
 
 ## Syncopation
-
-------------------------------------------------------------------------
 
 Recall that a *measurement* study involves no testing of a hypothesis.
 It simply involves making and reporting some measurements. An example

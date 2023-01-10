@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "class_notes/week_2.html",
+    "href": "class_notes/week_2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "In this week, we will be discussing the various types of studies in empirical work, and spending time talking about controls and demand characteristics."
+  },
+  {
     "objectID": "class_notes/week_1.html",
     "href": "class_notes/week_1.html",
     "title": "Week 1",
@@ -399,11 +406,11 @@
     "text": "Introduction\nThere are two ways to formulate theories. One approach is to examine some evidence or research results and then try to explain the evidence by creating a plausible story (using the word because). This is what we did in our earlier exercise regarding findings from The American Soldier study. This approach is known as post hoc theorizing.\nA second approach to theory formation begins with a question. We ask a question (which may arise from intuition or past informal experience), and then invent a plausible answer. This approach is known as a priori theorizing.\n\n\nTask\nFormulate a musically-pertinent question. It may be one of the big “God” questions you discussed earlier. Better yet, consider choosing a much more modest question that you think is interesting. Consider two or three theories pertinent to the question. The theories don’t need to explain every aspect of the question, (or even the main part of the question). It is better if your theories address one aspect or component of the question (i.e., Don’t try to explain the whole world at once.).\nHaving considered different possibilities, decide on a single theory that you think would warrant empirical exploration. (You don’t necessarily have to think it is a good or even adequate theory.)\nWrite a two- or three-sentence description of your theory. Be sure to use the word because in your theory.\nIf we have time within the workshop, share your question and theory with your participant group. If you can, would you describe your theory as post hoc or a priori?\n\n\nRationale\nThe purpose of this exercise is to develop skills in theory formation."
   },
   {
-    "objectID": "emp_methods_workshop/syncopation.html#syncopation",
-    "href": "emp_methods_workshop/syncopation.html#syncopation",
-    "title": "Empirical and Critical Methods in Musicology",
-    "section": "Syncopation",
-    "text": "Syncopation\n\nRecall that a measurement study involves no testing of a hypothesis. It simply involves making and reporting some measurements. An example of a measurement study is Huron & Ommen (2006) which looked at the historical changes in syncopation in American popular music. The study took advantage of newly released digital re-issues of early wax cylinder recordings, as well as 78-RPM and 45-RPM recordings of popular music from the early twentieth century. We limited our study to the first 50 years of commercial recording—namely the period from 1890 to the beginning of World War II (1939). The recorded sample of music included 437 musical works. For each work, we randomly selected a single moment (a particular second on the time counter) and transcribed the bar or measure in which the second appeared. From the transcribed notation of the rhythm we determined whether any syncopation was present, and if so, we categorized the type of syncopation.\n\nHow We Measured Syncopation\nIn order to measure syncopation, we had to make an operational definition. In metrically organized music, each moment can be regarded as occupying a particular point in the metric hierarchy. The highest point (labelled “1”) might be defined as coinciding with the downbeat. The second highest point (“2”) coincides with the third beat in 4/4 meter. Other points in the metric hierarchy can be similarly labelled as shown in Figure 1.\nFigure 1\n Numerical representation of the metrical hierarchy for 4/4 meter. The value “1” designates the highest value in the hierarchy.\nUsing these “metric hierarchy numbers” we can see an interesting pattern emerge for syncopated moments. For example, in Figure 2a (below), a syncopation occurs because the first note is tied to the second note. With each syncopated event, a note onset occurs at a relatively low metrical level (i.e., a higher number), and is sustained through a moment in the metrical hierarchy that has a higher metrical level (i.e., a lower number) and that does not manifest a corresponding event onset. In other words, there is a kind of metrical “hole” in the rhythm, which we dubbed a lacuna. The lacuna became our operational definition of a syncopated moment.\nFigure 2\n Examples of syncopation. As in Figure 1, numerical values represent positions in the metrical hierarchy.\n\n\nWhat We Found\nFor each of our sampled musical moments, we counted the number of lacunae, and categorized the type of lacunae pattern. The results of our study are summarized in Figures 3 and 4.\nFigure 3\n The average number of lacunae (our operationalization of syncopations) per sampled passage. The graph is consistent with the (post hoc) notion that the density of syncopation increased over five decades.\nFigure 4\n The percentage of irregular syncopations by decade.\nThere are two conclusions from this study. The first conclusion is entirely expected—grandmother research: it appears that over the 50-year period, the amount of syncopation per unit of time nearly doubled, from just over one syncopation to nearly two syncopations per unit of time. The second conclusion was unexpected. The variety of patterns of syncopations appears to peak in the 1910s. In other words, musicians in the 1910s seemed to have tried all sorts of rhythmic syncopations, and then reduced the variety in the 1920s and 1930s. Until about 1920, there appears to have been an increase in both the quantity and variety of syncopations; after 1920, the variety seems to have dropped, but the density of syncopations continued to increase.\nNow recall that empirical studies never prove anything. This is also the case here. It could be that our sample of 437 recordings does not adequately refect the music of the time. It could be that our random sampling of musical moments led to unrepresentative results. Or our rhythmic transcription of these passages might have been inaccurate. So we can’t conclude that “the density of syncopation increased over the 50-year period.” Instead, we should say, “the results are consistent with the idea that the density of syncopation increased over the 50-year period.” Similarly, we should say that “our study implies that the variety of syncopation patterns peaked in the 1910s.” Notice the use of the words “appears” and “seems” in the previous paragraph.\n\n\nMethodological Observations\nNotice that the study was not motivated by any theory. We did not use some theory to generate a conjecture, and then refine the conjecture into a testable hypothesis. The study was, however, motivated by a question: How did the use of syncopation change in American popular music over the first 50 years of sound recording? More specifically, how did the density of syncopation change? And what happened to the various syncopation patterns?\nIf you read the actual published article, you’ll see that we took care to avoid defining “syncopation.” Instead, we operationally defined a “lacuna.” Many people might be tempted to say that a lacuna is a pretty good way of defining a syncopation, however, we try to avoid essentializing the concept syncopation. Because we gave a precise definition of “lacuna” we could unambiguously count them: “this rhythm has a lacuna right there,” “this passage contains no lacunae at all.” Notice that Figure 3 (above) plots the number of lacunae (not the number of syncopations—whatever that might be).\nIn Figure 4, we plotted the “percentage of irregular syncopations.” Once again, in the published article, we operationally defined something we called “irregular syncopations.” Once again, we don’t believe that rhythms divide into regular syncopations and irregular syncopations (as though these are “natural kinds” of some sort). This was simply a provisional way of distinguishing commonplace syncopated patterns from less common ones, and then seeing how often the less common patterns occurred in different decades.\nNotice that our study tells us nothing about causality. It has no story to tell about why something might have happened. Also notice that the study did not invite failure; we did not test an a priori hypothesis or theory. Having presented our observations, the study might inspire other researchers to form theories regarding why this happened.\n\n\nReference:\nDavid Huron & Ann Ommen (2006). An empirical study of syncopation in American popular music, 1890-1939. Music Theory Spectrum, Vol. 28, No. 2, pp. 211-231."
+    "objectID": "emp_methods_workshop/syncopation.html",
+    "href": "emp_methods_workshop/syncopation.html",
+    "title": "Syncopation",
+    "section": "",
+    "text": "Recall that a measurement study involves no testing of a hypothesis. It simply involves making and reporting some measurements. An example of a measurement study is Huron & Ommen (2006) which looked at the historical changes in syncopation in American popular music. The study took advantage of newly released digital re-issues of early wax cylinder recordings, as well as 78-RPM and 45-RPM recordings of popular music from the early twentieth century. We limited our study to the first 50 years of commercial recording—namely the period from 1890 to the beginning of World War II (1939). The recorded sample of music included 437 musical works. For each work, we randomly selected a single moment (a particular second on the time counter) and transcribed the bar or measure in which the second appeared. From the transcribed notation of the rhythm we determined whether any syncopation was present, and if so, we categorized the type of syncopation.\n\n\nIn order to measure syncopation, we had to make an operational definition. In metrically organized music, each moment can be regarded as occupying a particular point in the metric hierarchy. The highest point (labelled “1”) might be defined as coinciding with the downbeat. The second highest point (“2”) coincides with the third beat in 4/4 meter. Other points in the metric hierarchy can be similarly labelled as shown in Figure 1.\nFigure 1\n Numerical representation of the metrical hierarchy for 4/4 meter. The value “1” designates the highest value in the hierarchy.\nUsing these “metric hierarchy numbers” we can see an interesting pattern emerge for syncopated moments. For example, in Figure 2a (below), a syncopation occurs because the first note is tied to the second note. With each syncopated event, a note onset occurs at a relatively low metrical level (i.e., a higher number), and is sustained through a moment in the metrical hierarchy that has a higher metrical level (i.e., a lower number) and that does not manifest a corresponding event onset. In other words, there is a kind of metrical “hole” in the rhythm, which we dubbed a lacuna. The lacuna became our operational definition of a syncopated moment.\nFigure 2\n Examples of syncopation. As in Figure 1, numerical values represent positions in the metrical hierarchy.\n\n\n\nFor each of our sampled musical moments, we counted the number of lacunae, and categorized the type of lacunae pattern. The results of our study are summarized in Figures 3 and 4.\nFigure 3\n The average number of lacunae (our operationalization of syncopations) per sampled passage. The graph is consistent with the (post hoc) notion that the density of syncopation increased over five decades.\nFigure 4\n The percentage of irregular syncopations by decade.\nThere are two conclusions from this study. The first conclusion is entirely expected—grandmother research: it appears that over the 50-year period, the amount of syncopation per unit of time nearly doubled, from just over one syncopation to nearly two syncopations per unit of time. The second conclusion was unexpected. The variety of patterns of syncopations appears to peak in the 1910s. In other words, musicians in the 1910s seemed to have tried all sorts of rhythmic syncopations, and then reduced the variety in the 1920s and 1930s. Until about 1920, there appears to have been an increase in both the quantity and variety of syncopations; after 1920, the variety seems to have dropped, but the density of syncopations continued to increase.\nNow recall that empirical studies never prove anything. This is also the case here. It could be that our sample of 437 recordings does not adequately refect the music of the time. It could be that our random sampling of musical moments led to unrepresentative results. Or our rhythmic transcription of these passages might have been inaccurate. So we can’t conclude that “the density of syncopation increased over the 50-year period.” Instead, we should say, “the results are consistent with the idea that the density of syncopation increased over the 50-year period.” Similarly, we should say that “our study implies that the variety of syncopation patterns peaked in the 1910s.” Notice the use of the words “appears” and “seems” in the previous paragraph.\n\n\n\nNotice that the study was not motivated by any theory. We did not use some theory to generate a conjecture, and then refine the conjecture into a testable hypothesis. The study was, however, motivated by a question: How did the use of syncopation change in American popular music over the first 50 years of sound recording? More specifically, how did the density of syncopation change? And what happened to the various syncopation patterns?\nIf you read the actual published article, you’ll see that we took care to avoid defining “syncopation.” Instead, we operationally defined a “lacuna.” Many people might be tempted to say that a lacuna is a pretty good way of defining a syncopation, however, we try to avoid essentializing the concept syncopation. Because we gave a precise definition of “lacuna” we could unambiguously count them: “this rhythm has a lacuna right there,” “this passage contains no lacunae at all.” Notice that Figure 3 (above) plots the number of lacunae (not the number of syncopations—whatever that might be).\nIn Figure 4, we plotted the “percentage of irregular syncopations.” Once again, in the published article, we operationally defined something we called “irregular syncopations.” Once again, we don’t believe that rhythms divide into regular syncopations and irregular syncopations (as though these are “natural kinds” of some sort). This was simply a provisional way of distinguishing commonplace syncopated patterns from less common ones, and then seeing how often the less common patterns occurred in different decades.\nNotice that our study tells us nothing about causality. It has no story to tell about why something might have happened. Also notice that the study did not invite failure; we did not test an a priori hypothesis or theory. Having presented our observations, the study might inspire other researchers to form theories regarding why this happened.\n\n\n\nDavid Huron & Ann Ommen (2006). An empirical study of syncopation in American popular music, 1890-1939. Music Theory Spectrum, Vol. 28, No. 2, pp. 211-231."
   },
   {
     "objectID": "emp_methods_workshop/paper.html#writing-an-empirical-paper",
@@ -597,9 +604,9 @@
   {
     "objectID": "emp_methods_workshop/correlational_study2.html",
     "href": "emp_methods_workshop/correlational_study2.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "The Correlational",
     "section": "",
-    "text": "The Correlational Study\n\nCorrelational studies aim to identify linkages or relationships between things. We say two things are correlated when there is some sort of connection or association between them. For example, music with a fast tempo tends to be louder than music with a slow tempo. Although there are exceptions to this, in general, there is a correlation between tempo and dynamic level.\nA correlational study involves collecting at least two different sets of measurements, and determining whether there is any relationship between the two sets. When we suspect that two measures are correlated, we should plot the measures, with one measure on the horizontal axis, and the other measure on the vertical axis. For example, we might plot the average dynamic level against the average tempo. Each point will represent a single musical work.\n\nThe degree of correlation can be expressed using a numerical correlation coefficient. Correlation coefficients range between -1 and +1. A correlation of +1 means a perfect positive correlation: as one measure increases, the corresponding measure also increases. Conversely, a correlation of -1 means a perfect negative correlation: as one measure increases, the corresponding measure decreases.\nAn example of a strong positive correlation would be +.89. An example of a moderate positive correlation would be +.65. An example of a weak positive correlation would be +.21. Similarly, strong, moderate, and weak negative correlations would simply reverse the sign from positive to negative. If there is little or no meaningful relationship between two sets of measures, the correlation will tend to be near zero—or where the correlation coefficient (of whatever value) is deemed not to be statistically significant. (Refer to our later discussion.)\nA common type of correlational study is the survey (although many surveys are descriptive or measurementive rather than correlational). For example, a survey might reveal that people with high incomes are more likely to prefer jazz than country music, or that social conservatives are less likely to enjoy sad music. Once again, correlational studies say nothing about causation: they simply suggest that certain relationships exist.\n\nCorrelational studies may or may not be hypothesis-driven. When there is no a priori hypothesis, the study is said to be an exploratory correlational study.\nCorrelational studies always involve at least two sets of measurements.\nA common type of correlational study is the survey or questionnaire.\n\n\nAn Example\nBoth formal field observations and formal experiments have shown that males tend to prefer slower dance tempos than females. What accounts for this sex-related difference in preference? One possibility is that males and females prefer different styles of music. For example, women are more likely to prefer (generally fast) dance music, whereas men are more likely to prefer (slower) rock music. However, the difference in tempo preference is evident even when women and men are allowed to “tune” their own preferred dance tempo using a drum machine programmed to produce a simple back beat rhythm of alternating bass and snare drums.\nSofia Dahl and David Huron (2007) considered an alternative hypothesis that dance tempo might be correlated with body morphology. Dancing is essentially stylized bouncing, and like any oscillating system, the optimum rate of bouncing might be expected to depend on physical aspects of the moving body—such as height and weight.\nAccordingly, Dahl and Huron had participants tune a drum machine to their preferred dance tempo, and then afterwards made a series of morphological measures, including the person’s height and weight. The graph below shows a scatterplot for 30 participants. Each point plots the preferred dance tempo (in beats per minute) against the average length of the persons’s two legs (in centimeters). As can be seen, there is a general trend downward: people with longer legs tend to prefer slower tempos. The correlation coefficient is a moderate -.67.\n\nBody weight was found to produce a somewhat weaker correlation of -.38. That is, heavier people tend to prefer slower dance tempos.\n\n\nReference\nSofia Dahl & David Huron (2007). The influence of body morphology on preferred dance tempos. In: Proceedings of the International Computer Music Conference. Copenhagen, Denmark, Vol. 2, pp. 1-4.\nDahl, S., Huron, D., Brod, G., & Altenmüller, E. (2014). Preferred dance tempo: Does sex or body morphology influence how we groove? Journal of New Music Research, pp. 1-10."
+    "text": "Correlational studies aim to identify linkages or relationships between things. We say two things are correlated when there is some sort of connection or association between them. For example, music with a fast tempo tends to be louder than music with a slow tempo. Although there are exceptions to this, in general, there is a correlation between tempo and dynamic level.\nA correlational study involves collecting at least two different sets of measurements, and determining whether there is any relationship between the two sets. When we suspect that two measures are correlated, we should plot the measures, with one measure on the horizontal axis, and the other measure on the vertical axis. For example, we might plot the average dynamic level against the average tempo. Each point will represent a single musical work.\n\nThe degree of correlation can be expressed using a numerical correlation coefficient. Correlation coefficients range between -1 and +1. A correlation of +1 means a perfect positive correlation: as one measure increases, the corresponding measure also increases. Conversely, a correlation of -1 means a perfect negative correlation: as one measure increases, the corresponding measure decreases.\nAn example of a strong positive correlation would be +.89. An example of a moderate positive correlation would be +.65. An example of a weak positive correlation would be +.21. Similarly, strong, moderate, and weak negative correlations would simply reverse the sign from positive to negative. If there is little or no meaningful relationship between two sets of measures, the correlation will tend to be near zero—or where the correlation coefficient (of whatever value) is deemed not to be statistically significant. (Refer to our later discussion.)\nA common type of correlational study is the survey (although many surveys are descriptive or measurementive rather than correlational). For example, a survey might reveal that people with high incomes are more likely to prefer jazz than country music, or that social conservatives are less likely to enjoy sad music. Once again, correlational studies say nothing about causation: they simply suggest that certain relationships exist.\n\nCorrelational studies may or may not be hypothesis-driven. When there is no a priori hypothesis, the study is said to be an exploratory correlational study.\nCorrelational studies always involve at least two sets of measurements.\nA common type of correlational study is the survey or questionnaire.\n\n\n\nBoth formal field observations and formal experiments have shown that males tend to prefer slower dance tempos than females. What accounts for this sex-related difference in preference? One possibility is that males and females prefer different styles of music. For example, women are more likely to prefer (generally fast) dance music, whereas men are more likely to prefer (slower) rock music. However, the difference in tempo preference is evident even when women and men are allowed to “tune” their own preferred dance tempo using a drum machine programmed to produce a simple back beat rhythm of alternating bass and snare drums.\nSofia Dahl and David Huron (2007) considered an alternative hypothesis that dance tempo might be correlated with body morphology. Dancing is essentially stylized bouncing, and like any oscillating system, the optimum rate of bouncing might be expected to depend on physical aspects of the moving body—such as height and weight.\nAccordingly, Dahl and Huron had participants tune a drum machine to their preferred dance tempo, and then afterwards made a series of morphological measures, including the person’s height and weight. The graph below shows a scatterplot for 30 participants. Each point plots the preferred dance tempo (in beats per minute) against the average length of the persons’s two legs (in centimeters). As can be seen, there is a general trend downward: people with longer legs tend to prefer slower tempos. The correlation coefficient is a moderate -.67.\n\nBody weight was found to produce a somewhat weaker correlation of -.38. That is, heavier people tend to prefer slower dance tempos.\n\n\n\nSofia Dahl & David Huron (2007). The influence of body morphology on preferred dance tempos. In: Proceedings of the International Computer Music Conference. Copenhagen, Denmark, Vol. 2, pp. 1-4.\nDahl, S., Huron, D., Brod, G., & Altenmüller, E. (2014). Preferred dance tempo: Does sex or body morphology influence how we groove? Journal of New Music Research, pp. 1-10."
   },
   {
     "objectID": "emp_methods_workshop/index.html",
@@ -730,9 +737,9 @@
   {
     "objectID": "emp_methods_workshop/experiment.html",
     "href": "emp_methods_workshop/experiment.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "The Experimental Study",
     "section": "",
-    "text": "The Experimental Study\n\nWhat distinguishes an experiment from all other kinds of studies is that the experimenter manipulates the world. Rather than being just a passive observer, the experimenter intentionally makes some change and then observes the effect of the change.\nConsider an experiment carried out by Céline Jacob, Nicolas Guéguen and Gaëlle Boulbry (2010). They wanted to know whether songs with kindly lyrics would tend to encourage people to behave in a more kindly manner. Before conducting their experiment, they first had listeners identify songs with kindly, empathetic, or prosocial lyrics. They also had listeners identify songs with comparatively neutral lyrics. They then matched the songs according to preference or liking. So the songs with the kindly lyrics weren’t rated by listeners as more or less enjoyable than the songs with the more neutral lyrics.\nOver a six-week period, Jacob et al played the prosocial and neutral music in alternating sessions in a restaurant located along the Breton coast in France. During each session they calculated the amount of tips left by restaurant patrons. They found that when music with prosocial lyrics was played, patrons left significantly better tips than when music with neutral lyrics was played.\nThe variable manipulated by the experimenter is called the independent variable (or independent measure). The variable observed by the experimenter is called the dependent variable (or dependent measure).\nIn the case of the restaurant study, the manipulation was the type of music played. That is, the independent variable was the degree of prosocial content in the song lyrics. The observed variable was the percentage tipping. That is, dependent variable (or dependent measure) was tipping percentage.\nIn the simplest experimental design, there are two values given to the independent variable. These values might be music versus no-music; heavy-metal versus reggae, loud versus quiet, consonant versus dissonant, in-fashion versus out-of-fashion, or, (in the Jacob et al experiment), prosocial lyrics versus neutral lyrics. Do kindly lyrics encourage people to behave in a more kindly manner? Evidently, the answer is “yes,” at least when it comes to French songs played in a certain Breton restaurant.\nIn a basic experiment, observations will be made for two groups: the “treatment” group and the “control” group. A more elaborate experiment might have several different “treatment” levels or treatment conditions.\nIn a correlational study, we are often interested in the relationship between two variables, but we don’t directly manipulate one of the variables. Instead, we simply observe the pre-existing relationship between the two variables. In correlational studies, there is no independent variable that we change.\n\nReference\nCéline Jacob, Nicolas Guéguen & Gaëlle Boulbry (2010). Effects of songs with prosocial lyrics on tipping behavior in a restaurant. International Journal of Hospitality Management, Vol. 29, pp. 761-763."
+    "text": "What distinguishes an experiment from all other kinds of studies is that the experimenter manipulates the world. Rather than being just a passive observer, the experimenter intentionally makes some change and then observes the effect of the change.\nConsider an experiment carried out by Céline Jacob, Nicolas Guéguen and Gaëlle Boulbry (2010). They wanted to know whether songs with kindly lyrics would tend to encourage people to behave in a more kindly manner. Before conducting their experiment, they first had listeners identify songs with kindly, empathetic, or prosocial lyrics. They also had listeners identify songs with comparatively neutral lyrics. They then matched the songs according to preference or liking. So the songs with the kindly lyrics weren’t rated by listeners as more or less enjoyable than the songs with the more neutral lyrics.\nOver a six-week period, Jacob et al played the prosocial and neutral music in alternating sessions in a restaurant located along the Breton coast in France. During each session they calculated the amount of tips left by restaurant patrons. They found that when music with prosocial lyrics was played, patrons left significantly better tips than when music with neutral lyrics was played.\nThe variable manipulated by the experimenter is called the independent variable (or independent measure). The variable observed by the experimenter is called the dependent variable (or dependent measure).\nIn the case of the restaurant study, the manipulation was the type of music played. That is, the independent variable was the degree of prosocial content in the song lyrics. The observed variable was the percentage tipping. That is, dependent variable (or dependent measure) was tipping percentage.\nIn the simplest experimental design, there are two values given to the independent variable. These values might be music versus no-music; heavy-metal versus reggae, loud versus quiet, consonant versus dissonant, in-fashion versus out-of-fashion, or, (in the Jacob et al experiment), prosocial lyrics versus neutral lyrics. Do kindly lyrics encourage people to behave in a more kindly manner? Evidently, the answer is “yes,” at least when it comes to French songs played in a certain Breton restaurant.\nIn a basic experiment, observations will be made for two groups: the “treatment” group and the “control” group. A more elaborate experiment might have several different “treatment” levels or treatment conditions.\nIn a correlational study, we are often interested in the relationship between two variables, but we don’t directly manipulate one of the variables. Instead, we simply observe the pre-existing relationship between the two variables. In correlational studies, there is no independent variable that we change.\n\n\nCéline Jacob, Nicolas Guéguen & Gaëlle Boulbry (2010). Effects of songs with prosocial lyrics on tipping behavior in a restaurant. International Journal of Hospitality Management, Vol. 29, pp. 761-763."
   },
   {
     "objectID": "emp_methods_workshop/program.html",
@@ -1192,7 +1199,7 @@
   {
     "objectID": "emp_methods_workshop/measurement.html",
     "href": "emp_methods_workshop/measurement.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "The Measurement Study",
     "section": "",
     "text": "The Measurement Study\n\nThe measurement study is a type of exploratory study. It differs from the reconnaissance and descriptive studies insofar as some sort of measurement is involved. It differs from the exploratory correlational study insofar as the researcher doesn’t attempt to determine whether there are relationships between any of the measurements.\nThe centerpiece for a measurement study is the presentation of descriptive statistics. Typically, some graph or chart is produced. However, no a priori hypothesis is proposed, and no formal statistical test is performed. An example is provided in the table below—showing the number of musical instruments sold in the United States in 2012.\nAs with all exploratory studies, the hope is that the research will produce interesting observations, raise good questions, and ultimately inspire the formation of an explanatory theory. However, any resulting theory is post hoc. The observations cannot be viewed as “supporting” or “testing” the theory, since the observations were the inspiration for the theory in the first place.\n\n\n\nInstrument\nNumber Sold in the U.S. in 2012\n\n\n\n\nAcoustic guitars\n1,326,500\n\n\nElectric guitars\n1,162,890\n\n\nUkuleles\n1,087,000\n\n\nFlutes & Piccolos\n139,362\n\n\nTrumpets\n134,357\n\n\nElectronic pianos\n128,000\n\n\nClarinets\n111,160\n\n\nSaxophones\n86,188\n\n\nTrombones\n63,803\n\n\nAcoustic pianos\n37,200\n\n\nTubas\n35,144\n\n\nFrench Horns\n14,750\n\n\nOboes & Bassoons\n5,790\n\n\n\n(From Music Trades, April 2014)"
   },
@@ -1419,6 +1426,174 @@
     "title": "Welcome!",
     "section": "Types of Studies",
     "text": "Types of Studies\nSee this page on types of studies"
+  },
+  {
+    "objectID": "slides/week2.html#types-of-studies-continued-from-last-week",
+    "href": "slides/week2.html#types-of-studies-continued-from-last-week",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Types of Studies (continued from last week)",
+    "text": "Types of Studies (continued from last week)\nIn general, it is helpful to classify studies according to four criteria:\n\nDoes the researcher simply describe and observe? Or does the researcher offer an interpretation or explanation? (That is, does the study offer an explanatory theory?)\nDoes the researcher make a prediction? (That is, does the method invite failure?)\nDoes the researcher manipulate the world? (That is, does the method allow the researcher to infer causality?) And\nDoes the researcher count or measure something? (That is, is the research qualitative or quantitative?)"
+  },
+  {
+    "objectID": "slides/week2.html#a-table",
+    "href": "slides/week2.html#a-table",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "A Table",
+    "text": "A Table\n\n\n\n\nExplanatory Theory\nHypothesis Tested\nInfer Causality\nQuantitative\n\n\n\n\nReconnaisance\n\n\n\n\n\n\nDescriptive\npost hoc\n\n\n\n\n\nMeasurement\n\n\n\n✓\n\n\nCorrelational\na priori\n✓\n\n✓\n\n\nExploratory Correlational\npost hoc\n\n\n✓\n\n\nExploratory Experimental\npost hoc\n\n✓\n✓\n\n\n(True) Experimental\na priori\n✓\n✓\n✓\n\n\nMeta-Study\na priori\n(✓)\n(✓)\n✓"
+  },
+  {
+    "objectID": "slides/week2.html#measurement-studies",
+    "href": "slides/week2.html#measurement-studies",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Measurement Studies",
+    "text": "Measurement Studies\n\nThe measurement study is a type of exploratory study.\nIt differs from the reconnaissance and descriptive studies insofar as some sort of measurement is involved.\nIt differs from the exploratory correlational study insofar as the researcher doesn’t attempt to determine whether there are relationships between any of the measurements."
+  },
+  {
+    "objectID": "slides/week2.html#measuring-syncopation",
+    "href": "slides/week2.html#measuring-syncopation",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Measuring Syncopation",
+    "text": "Measuring Syncopation\n\nIn order to measure syncopation, we had to make an operational definition. In metrically organized music, each moment can be regarded as occupying a particular point in the metric hierarchy. The highest point (labelled “1”) might be defined as coinciding with the downbeat. The second highest point (“2”) coincides with the third beat in 4/4 meter. Other points in the metric hierarchy can be similarly labelled as shown in Figure 1.\n\nSee this Huron and Ommen study: (emp_methods_workshop)"
+  },
+  {
+    "objectID": "slides/week2.html#correlational-study",
+    "href": "slides/week2.html#correlational-study",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Correlational Study",
+    "text": "Correlational Study\n\nCorrelational studies aim to identify linkages or relationships between things. We say two things are correlated when there is some sort of connection or association between them.\nFor example, music with a fast tempo tends to be louder than music with a slow tempo. Although there are exceptions to this, in general, there is a correlation between tempo and dynamic level."
+  },
+  {
+    "objectID": "slides/week2.html#correlational-study-1",
+    "href": "slides/week2.html#correlational-study-1",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Correlational Study",
+    "text": "Correlational Study\n\nCorrelational studies may or may not be hypothesis-driven. When there is no a priori hypothesis, the study is said to be an exploratory correlational study.\nCorrelational studies always involve at least two sets of measurements.\nA common type of correlational study is the survey or questionnaire."
+  },
+  {
+    "objectID": "slides/week2.html#experimental-study",
+    "href": "slides/week2.html#experimental-study",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Experimental Study",
+    "text": "Experimental Study\n\nWhat distinguishes an experiment from all other kinds of studies is that the experimenter manipulates the world. Rather than being just a passive observer, the experimenter intentionally makes some change and then observes the effect of the change."
+  },
+  {
+    "objectID": "slides/week2.html#experimental-study-1",
+    "href": "slides/week2.html#experimental-study-1",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Experimental Study",
+    "text": "Experimental Study\n\nThe variable manipulated by the experimenter is called the independent variable (or independent measure). The variable observed by the experimenter is called the dependent variable (or dependent measure)."
+  },
+  {
+    "objectID": "slides/week2.html#exploratory-experiment",
+    "href": "slides/week2.html#exploratory-experiment",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Exploratory Experiment",
+    "text": "Exploratory Experiment\n\nAn Exploratory Experiment involves manipulation and measurement, but the manipulation is not motivated by some prior theory, hypothesis or conjecture.\n\nFor example, a researcher might play traditional Japanese and Andean pop music to naive Western listeners while making a series of measurements, such as heart-rate, respiration, body temperature, and observable behavior, etc. The researcher may have no idea what to expect. That is, no prediction was made."
+  },
+  {
+    "objectID": "slides/week2.html#meta-study",
+    "href": "slides/week2.html#meta-study",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Meta-Study",
+    "text": "Meta-Study\n\nA meta-study is a “study of studies.”\n\nIt is typically done when a large number of studies have been carried out related to some problem."
+  },
+  {
+    "objectID": "slides/week2.html#modeling-study",
+    "href": "slides/week2.html#modeling-study",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Modeling Study",
+    "text": "Modeling Study\n\nTheories can often be implemented as models. An example of a physical model is a large model of San Francisco Bay built by the U.S. Army Corps of Engineers (see photo).\n\n\nSF Bay"
+  },
+  {
+    "objectID": "slides/week2.html#pilot-study",
+    "href": "slides/week2.html#pilot-study",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Pilot Study",
+    "text": "Pilot Study\n\nA pilot study is carried out simply as a way of testing the research procedure. Pilot studies usually involve relatively small numbers of participants or small sample sizes."
+  },
+  {
+    "objectID": "slides/week2.html#mixed-methods",
+    "href": "slides/week2.html#mixed-methods",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Mixed Methods",
+    "text": "Mixed Methods\n\nThe research might begin by reporting a descriptive study. The results from the descripive study may inspire the authors to formulate a theory, from which a hypothesis is generated. The article might then go on to report a correlational study or an experiment whose purpose is to explicitly test the hypothesis."
+  },
+  {
+    "objectID": "slides/week2.html#natural-experiments",
+    "href": "slides/week2.html#natural-experiments",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Natural Experiments",
+    "text": "Natural Experiments\n\nA special kind of experiment is the so-called natural experiment. A natural experiment relies on a manipulation of the real world that occurs without the intervention of the researcher.\n\nIn March of 2020, climate scientists studied the lessening of air pollution during lockdown.\nThere is a manipulation being made of sorts and a control condition, but it really is only possible at a grand scale because of an uncontrollable global event."
+  },
+  {
+    "objectID": "slides/week2.html#clever-hans",
+    "href": "slides/week2.html#clever-hans",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Clever Hans",
+    "text": "Clever Hans\n\nClever Hans"
+  },
+  {
+    "objectID": "slides/week2.html#clever-hans-1",
+    "href": "slides/week2.html#clever-hans-1",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Clever Hans",
+    "text": "Clever Hans\n\nClever Hans"
+  },
+  {
+    "objectID": "slides/week2.html#clever-hans-2",
+    "href": "slides/week2.html#clever-hans-2",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Clever Hans",
+    "text": "Clever Hans\n\n[From Wikipedia:] “Hans was a horse owned by Wilhelm von Osten, who was a mathematics teacher, an amateur horse trainer, phrenologist, and something of a mystic. Hans was said to have been taught to add, subtract, multiply, divide, work with fractions, tell time, keep track of the calendar, differentiate musical tones, and read, spell, and understand German. Von Osten would ask Hans,”If the eighth day of the month comes on a Tuesday, what is the date of the following Friday?” Hans would answer by tapping his hoof. Questions could be asked both orally, and in written form. Von Osten exhibited Hans throughout Germany, and never charged admission.”"
+  },
+  {
+    "objectID": "slides/week2.html#clever-hans-3",
+    "href": "slides/week2.html#clever-hans-3",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Clever Hans",
+    "text": "Clever Hans\nClever Hans Effect: An experimenter may inadvertently provide non-verbal (or verbal) cues as to what they hope will happen. People can be even more tuned-in than a horse in reading body language."
+  },
+  {
+    "objectID": "slides/week2.html#demand-characteristics",
+    "href": "slides/week2.html#demand-characteristics",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Demand Characteristics",
+    "text": "Demand Characteristics\n\nDemand Characteristics: when an experiment becomes invalid because of what participants believe is the purpose of the experiment, right or wrong"
+  },
+  {
+    "objectID": "slides/week2.html#controls",
+    "href": "slides/week2.html#controls",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Controls",
+    "text": "Controls"
+  },
+  {
+    "objectID": "slides/week2.html#confounding",
+    "href": "slides/week2.html#confounding",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Confounding",
+    "text": "Confounding\n\n\n\n\nflowchart TD\n  X --> Y\n  Z --> X \n  Z --> Y"
+  },
+  {
+    "objectID": "slides/week2.html#third-variables",
+    "href": "slides/week2.html#third-variables",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Third Variables",
+    "text": "Third Variables\n\n\n\n\nflowchart TD\n  A{Smoking Gene} --> B[Cancer]\n  A --> C[Smoking]"
+  },
+  {
+    "objectID": "slides/week2.html#front-door-and-causality",
+    "href": "slides/week2.html#front-door-and-causality",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Front Door and Causality",
+    "text": "Front Door and Causality\np(cancer|smoking)\n\n\n\n\nflowchart LR\n  A{Smoking Gene} --> B[Cancer]\n  A --> C[Smoking]\n  C --> D[Tar] --> B"
+  },
+  {
+    "objectID": "slides/week2.html#front-door-and-causality-1",
+    "href": "slides/week2.html#front-door-and-causality-1",
+    "title": "Types of Studies, Controls, Demand Characteristics",
+    "section": "Front Door and Causality",
+    "text": "Front Door and Causality\n\n\n\n\nflowchart LR\n\n  C[Smoking] --> D[Tar] --> B[Cancer]"
   },
   {
     "objectID": "about.html",

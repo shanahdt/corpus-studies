@@ -1,10 +1,11 @@
-
-
-------------------------------------------------------------------------
+---
+title: The Correlational
+author: David Huron
+---
 
 ### The Correlational Study
 
-------------------------------------------------------------------------
+
 
 Correlational studies aim to identify linkages or relationships
 between things. We say two things are correlated when there is some
