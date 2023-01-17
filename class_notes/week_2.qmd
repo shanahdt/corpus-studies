@@ -41,9 +41,6 @@ The following table looks at some of the types of studies, whether or not they c
   **(True) Experimental**              ***a priori***               **✓**                  **✓**               **✓**
   **Meta-Study**                       ***a priori***               **(✓)**                 **(✓)**              **✓**
 
-Judea Pearl provides a nice visualization of the types of explanatory power that different studies might be able to make use of. Notice that causation requires intervention.
-
-![Confounding](../emp_methods_workshop/images/pearl_ladder_of_causality.jpeg)
 
 
 
