@@ -46,7 +46,7 @@
     "href": "class_notes/week_2.html#thursday",
     "title": "Week 2",
     "section": "Thursday",
-    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-40.873  -9.952  -0.857   9.556  43.268 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  117.252      3.628   32.32   <2e-16 ***\naccuracy       5.644      7.051    0.80    0.424    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 14.78 on 498 degrees of freedom\nMultiple R-squared:  0.001285,  Adjusted R-squared:  -0.0007204 \nF-statistic: 0.6408 on 1 and 498 DF,  p-value: 0.4238\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 109.05, df = 197.85, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.44850 30.53314\nsample estimates:\nmean of x mean of y \n119.99065  89.99983 \n\nmean(cortot_tempi)\n\n[1] 119.9906\n\nmedian(cortot_tempi)\n\n[1] 120.1622\n\nsd(cortot_tempi)\n\n[1] 1.971528\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
+    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-49.763  -9.052   0.076   9.862  42.533 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  127.318      3.239  39.303   <2e-16 ***\naccuracy     -13.457      6.281  -2.142   0.0326 *  \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 14.36 on 498 degrees of freedom\nMultiple R-squared:  0.009133,  Adjusted R-squared:  0.007143 \nF-statistic:  4.59 on 1 and 498 DF,  p-value: 0.03264\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 98.301, df = 192.25, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.45903 30.66542\nsample estimates:\nmean of x mean of y \n119.96950  89.90728 \n\nmean(cortot_tempi)\n\n[1] 119.9695\n\nmedian(cortot_tempi)\n\n[1] 119.7554\n\nsd(cortot_tempi)\n\n[1] 1.966596\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
   },
   {
     "objectID": "class_notes/week_1.html",
@@ -975,9 +975,9 @@
   {
     "objectID": "emp_methods_workshop/samples_answers.html",
     "href": "emp_methods_workshop/samples_answers.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "Sampling Task",
     "section": "",
-    "text": "For each case, identify the kind of sampling employed.\n\nA researcher walks into a music library with a question: Are sharp keys more common than flat keys? Wandering through the stacks, she blindly grabs volumes off the shelves and allows each volume to open spontaneously to some page. She takes note of the key signature.\nSimple random sampling.\nA professional music marketer is interested in carrying out a detailed survey of musical tastes in Britain. The marketer decides to use the ACORN geodemographic profile. British households will be sampled in proportion to the second-level ACORN categories: wealthy executives (8.6 percent of the population), affluent greys (7.7%), flourishing families (8.8%), prosperous professionals (2.2%), educated urbanites (4.6%), aspiring singles (3.9%), starting out (2.5%), secured families (15.5%), settled surburbia (6.0%), prudent pensioners (2.6%), asian communities (1.6%), post-industrial families (4.8%), blue collar roots (8.0%), struggling families (14.1%), burdened singles (4.5%), high rise hardship (1.6%), and inner city adversity (2.1%).\nQuota sampling.\nA researcher is interested in assembling a random sample of “classical” keyboard music. She has determined that she needs roughly 20 pieces for her study. In order to maximize data independence, she wants each piece to be written by a different composer. Using Wikipedia, she finds an alphabetical list of “classical composers.” For each letter of the alphabet, she selects the first composer who she knows has written for piano: Isaac Albéniz, Carl Philipp Emanuel Bach, Alfredo Casella, Claude Debussy, Edward Elgar, Manuel de Falla, etc.\nSystematic sampling.\nIn piloting an experiment, a graduate student recruits her graduate student colleagues as experimental participants.\nConvenience sampling.\nA team of researchers is interested in emotional expression in Hindustani film music. Indian participants are asked to characterize the emotional tenor of various film scenes. Using the descriptions, the researchers then classify the scenes into 14 categories — such as romantic, humorous, physical conflict, emotional tension, etc. The researchers then select four scenes for each of the 14 categories and analyse the associated background music. Their goal is to identify musical features in Hindustani culture that signal romance, humor, etc.\nStratified sampling.\nA medievalist thinks that the Dorian mode was more likely to have been heard as comparatively “happy” whereas the Phrygian mode was more likely to have been heard as comparative “sad” for medieval listeners. In order to test this notion, the scholar examines all of the Glorias (nominally “happy” text) and Kyries (nominally “sad” text) in the Liber Usualis. The prediction is that Dorian will predominate for Glorias while Phrygian will be more likely to occur for Kyries.\nConvenience sample.\nA researcher is interested in changing harmonic patterns in the masses of Palestrina. The researcher makes us of the Humdrum database of the scores for the complete 103 masses assembled by musicologist John Miller.\nIf the database is considered complete, and if the study really is intended to focus on the masses of Palestrina, then no sampling is involved. The researcher is studying the population rather than a sample.\nPaul von Hippel and David Huron carried out a study to test the idea that melodies tend to change direction following a leap, and that this pattern is ubiquitous in musical melodies around the world. In order to test this idea, they made use of two musical samples. The first sample selected music spanning five centuries. The second sample selected music spanning five continents: Africa, Asia, Europe, North and South America.\nThis study involves two forms of stratefied samples: by geographical area and by historical period.\nUnsure of the contents of a box, an archivist reaches in and grabs a couple of documents, which he then examines.\nSimple random sample.\nA researcher wants to know whether there is anything Italian, French or German about augmented sixth chords. Using large computer databases, the researcher uses Humdrum to isolate 900 sonorities in which the lowered sixth and raised fourth appear concurrently (including enharmonic spellings): 300 each written by Italian, French and German composers. Each of the sonorities is then classified as either Italian, French, German or Other.\nStratified sampling. The researcher is attempting to create equal sampled sonorities for the three different nationalities.\n\n\nReferences:\nPaul von Hippel & David Huron (2000). Why do skips precede reversals? The effect of tessitura on melodic structure. Music Perception, Vol. 18, No. 1, pp. 59-85."
+    "text": "For each case, identify the kind of sampling employed.\n\nA researcher walks into a music library with a question: Are sharp keys more common than flat keys? Wandering through the stacks, she blindly grabs volumes off the shelves and allows each volume to open spontaneously to some page. She takes note of the key signature.\nSimple random sampling.\nA professional music marketer is interested in carrying out a detailed survey of musical tastes in Britain. The marketer decides to use the ACORN geodemographic profile. British households will be sampled in proportion to the second-level ACORN categories: wealthy executives (8.6 percent of the population), affluent greys (7.7%), flourishing families (8.8%), prosperous professionals (2.2%), educated urbanites (4.6%), aspiring singles (3.9%), starting out (2.5%), secured families (15.5%), settled surburbia (6.0%), prudent pensioners (2.6%), asian communities (1.6%), post-industrial families (4.8%), blue collar roots (8.0%), struggling families (14.1%), burdened singles (4.5%), high rise hardship (1.6%), and inner city adversity (2.1%).\nQuota sampling.\nA researcher is interested in assembling a random sample of “classical” keyboard music. She has determined that she needs roughly 20 pieces for her study. In order to maximize data independence, she wants each piece to be written by a different composer. Using Wikipedia, she finds an alphabetical list of “classical composers.” For each letter of the alphabet, she selects the first composer who she knows has written for piano: Isaac Albéniz, Carl Philipp Emanuel Bach, Alfredo Casella, Claude Debussy, Edward Elgar, Manuel de Falla, etc.\nSystematic sampling.\nIn piloting an experiment, a graduate student recruits her graduate student colleagues as experimental participants.\nConvenience sampling.\nA team of researchers is interested in emotional expression in Hindustani film music. Indian participants are asked to characterize the emotional tenor of various film scenes. Using the descriptions, the researchers then classify the scenes into 14 categories — such as romantic, humorous, physical conflict, emotional tension, etc. The researchers then select four scenes for each of the 14 categories and analyse the associated background music. Their goal is to identify musical features in Hindustani culture that signal romance, humor, etc.\nStratified sampling.\nA medievalist thinks that the Dorian mode was more likely to have been heard as comparatively “happy” whereas the Phrygian mode was more likely to have been heard as comparative “sad” for medieval listeners. In order to test this notion, the scholar examines all of the Glorias (nominally “happy” text) and Kyries (nominally “sad” text) in the Liber Usualis. The prediction is that Dorian will predominate for Glorias while Phrygian will be more likely to occur for Kyries.\nConvenience sample.\nA researcher is interested in changing harmonic patterns in the masses of Palestrina. The researcher makes us of the Humdrum database of the scores for the complete 103 masses assembled by musicologist John Miller.\nIf the database is considered complete, and if the study really is intended to focus on the masses of Palestrina, then no sampling is involved. The researcher is studying the population rather than a sample.\nPaul von Hippel and David Huron carried out a study to test the idea that melodies tend to change direction following a leap, and that this pattern is ubiquitous in musical melodies around the world. In order to test this idea, they made use of two musical samples. The first sample selected music spanning five centuries. The second sample selected music spanning five continents: Africa, Asia, Europe, North and South America.\nThis study involves two forms of stratefied samples: by geographical area and by historical period.\nUnsure of the contents of a box, an archivist reaches in and grabs a couple of documents, which he then examines.\nSimple random sample.\nA researcher wants to know whether there is anything Italian, French or German about augmented sixth chords. Using large computer databases, the researcher uses Humdrum to isolate 900 sonorities in which the lowered sixth and raised fourth appear concurrently (including enharmonic spellings): 300 each written by Italian, French and German composers. Each of the sonorities is then classified as either Italian, French, German or Other.\nStratified sampling. The researcher is attempting to create equal sampled sonorities for the three different nationalities.\n\n\n\nPaul von Hippel & David Huron (2000). Why do skips precede reversals? The effect of tessitura on melodic structure. Music Perception, Vol. 18, No. 1, pp. 59-85."
   },
   {
     "objectID": "emp_methods_workshop/hindsight_task1.html",
@@ -1171,9 +1171,9 @@
   {
     "objectID": "emp_methods_workshop/samples.html",
     "href": "emp_methods_workshop/samples.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "Sampling Exercise",
     "section": "",
-    "text": "For each case, identify the kind of sampling employed.\n\nA researcher walks into a music library with a question: Are sharp keys more common than flat keys? Wandering through the stacks, she blindly grabs volumes off the shelves and allows each volume to open spontaneously to some page. She takes note of the key signature.\nA professional music marketer is interested in carrying out a detailed survey of musical tastes in Britain. The marketer decides to use the ACORN geodemographic profile. British households will be sampled in proportion to the second-level ACORN categories: wealthy executives (8.6 percent of the population), affluent greys (7.7%), flourishing families (8.8%), prosperous professionals (2.2%), educated urbanites (4.6%), aspiring singles (3.9%), starting out (2.5%), secured families (15.5%), settled surburbia (6.0%), prudent pensioners (2.6%), asian communities (1.6%), post-industrial families (4.8%), blue collar roots (8.0%), struggling families (14.1%), burdened singles (4.5%), high rise hardship (1.6%), and inner city adversity (2.1%).\nA researcher is interested in assembling a random sample of “classical” keyboard music. She has determined that she needs roughly 20 pieces for her study. In order to maximize data independence, she wants each piece to be written by a different composer. Using Wikipedia, she finds an alphabetical list of “classical composers.” For each letter of the alphabet, she selects the first composer who she knows has written for piano: Isaac Albéniz, Carl Philipp Emanuel Bach, Alfredo Casella, Claude Debussy, Edward Elgar, Manuel de Falla, etc.\nIn piloting an experiment, a graduate student recruits her graduate student colleagues as experimental participants.\nA team of researchers is interested in emotional expression in Hindustani film music. Indian participants are asked to characterize the emotional tenor of various film scenes. Using the descriptions, the researchers then classify the scenes into 14 categories — such as romantic, humorous, physical conflict, emotional tension, etc. The researchers then select four scenes for each of the 14 categories and analyse the associated background music. Their goal is to identify musical features in Hindustani culture that signal romance, humor, etc.\nA medievalist thinks that the Dorian mode was more likely to have been heard as comparatively “happy” whereas the Phrygian mode was more likely to have been heard as comparative “sad” for medieval listeners. In order to test this notion, the scholar examines all of the Glorias (nominally “happy” text) and Kyries (nominally “sad” text) in the Liber Usualis. The prediction is that Dorian will predominate for Glorias while Phrygian will be more likely to occur for Kyries.\nA researcher is interested in changing harmonic patterns in the masses of Palestrina. The researcher makes us of the Humdrum database of the scores for the complete 103 masses assembled by musicologist John Miller.\nPaul von Hippel and David Huron (2000) carried out a study to test the idea that melodies tend to change direction following a leap, and that this pattern is ubiquitous in musical melodies around the world. In order to test this idea, they made use of two musical samples. The first sample selected music spanning five centuries. The second sample selected music spanning five continents: Africa, Asia, Europe, North and South America.\nUnsure of the contents of a box, an archivist reaches in and grabs a couple of documents, which he then examines.\nA researcher wants to know whether there is anything Italian, French or German about augmented sixth chords. Using large computer databases, the researcher uses Humdrum to isolate 900 sonorities in which the lowered sixth and raised fourth appear concurrently (including enharmonic spellings): 300 each written by Italian, French and German composers. Each of the sonorities is then classified as either Italian, French, German or Other.\n\n\nReferences:\nPaul von Hippel & David Huron (2000). Why do skips precede reversals? The effect of tessitura on melodic structure. Music Perception, Vol. 18, No. 1, pp. 59-85."
+    "text": "For each case, identify the kind of sampling employed.\n\nA researcher walks into a music library with a question: Are sharp keys more common than flat keys? Wandering through the stacks, she blindly grabs volumes off the shelves and allows each volume to open spontaneously to some page. She takes note of the key signature.\nA professional music marketer is interested in carrying out a detailed survey of musical tastes in Britain. The marketer decides to use the ACORN geodemographic profile. British households will be sampled in proportion to the second-level ACORN categories: wealthy executives (8.6 percent of the population), affluent greys (7.7%), flourishing families (8.8%), prosperous professionals (2.2%), educated urbanites (4.6%), aspiring singles (3.9%), starting out (2.5%), secured families (15.5%), settled surburbia (6.0%), prudent pensioners (2.6%), asian communities (1.6%), post-industrial families (4.8%), blue collar roots (8.0%), struggling families (14.1%), burdened singles (4.5%), high rise hardship (1.6%), and inner city adversity (2.1%).\nA researcher is interested in assembling a random sample of “classical” keyboard music. She has determined that she needs roughly 20 pieces for her study. In order to maximize data independence, she wants each piece to be written by a different composer. Using Wikipedia, she finds an alphabetical list of “classical composers.” For each letter of the alphabet, she selects the first composer who she knows has written for piano: Isaac Albéniz, Carl Philipp Emanuel Bach, Alfredo Casella, Claude Debussy, Edward Elgar, Manuel de Falla, etc.\nIn piloting an experiment, a graduate student recruits her graduate student colleagues as experimental participants.\nA team of researchers is interested in emotional expression in Hindustani film music. Indian participants are asked to characterize the emotional tenor of various film scenes. Using the descriptions, the researchers then classify the scenes into 14 categories — such as romantic, humorous, physical conflict, emotional tension, etc. The researchers then select four scenes for each of the 14 categories and analyse the associated background music. Their goal is to identify musical features in Hindustani culture that signal romance, humor, etc.\nA medievalist thinks that the Dorian mode was more likely to have been heard as comparatively “happy” whereas the Phrygian mode was more likely to have been heard as comparative “sad” for medieval listeners. In order to test this notion, the scholar examines all of the Glorias (nominally “happy” text) and Kyries (nominally “sad” text) in the Liber Usualis. The prediction is that Dorian will predominate for Glorias while Phrygian will be more likely to occur for Kyries.\nA researcher is interested in changing harmonic patterns in the masses of Palestrina. The researcher makes us of the Humdrum database of the scores for the complete 103 masses assembled by musicologist John Miller.\nPaul von Hippel and David Huron (2000) carried out a study to test the idea that melodies tend to change direction following a leap, and that this pattern is ubiquitous in musical melodies around the world. In order to test this idea, they made use of two musical samples. The first sample selected music spanning five centuries. The second sample selected music spanning five continents: Africa, Asia, Europe, North and South America.\nUnsure of the contents of a box, an archivist reaches in and grabs a couple of documents, which he then examines.\nA researcher wants to know whether there is anything Italian, French or German about augmented sixth chords. Using large computer databases, the researcher uses Humdrum to isolate 900 sonorities in which the lowered sixth and raised fourth appear concurrently (including enharmonic spellings): 300 each written by Italian, French and German composers. Each of the sonorities is then classified as either Italian, French, German or Other.\n\n\n\nPaul von Hippel & David Huron (2000). Why do skips precede reversals? The effect of tessitura on melodic structure. Music Perception, Vol. 18, No. 1, pp. 59-85."
   },
   {
     "objectID": "emp_methods_workshop/regression_to_mean.html#regression-to-the-mean",
@@ -1636,6 +1636,174 @@
     "title": "Types of Studies, Controls, Demand Characteristics",
     "section": "Front Door and Causality",
     "text": "Front Door and Causality\np(cancer|smoking)"
+  },
+  {
+    "objectID": "slides/week3.html#midterms",
+    "href": "slides/week3.html#midterms",
+    "title": "Sampling and Randomization",
+    "section": "Midterms",
+    "text": "Midterms\n\nDue January 31 (two weeks from now!).\n5-7 pages.\nconstruct a literature review of the topic you’re interested in writing about, culminating in a hypothesis section.\nFeel free to meet with me if you have any questions."
+  },
+  {
+    "objectID": "slides/week3.html#midterms-1",
+    "href": "slides/week3.html#midterms-1",
+    "title": "Sampling and Randomization",
+    "section": "Midterms",
+    "text": "Midterms\n\nBe sure to include an overview of previous research related to the topic. This should include both empirical and non-empirical work. So if you’re focusing on the memory for jazz licks, for example, research on improvisational styles should be included alongside work on memory for musical ideas. It need not be all-encompassing, but it should try to cover as much ground as possible."
+  },
+  {
+    "objectID": "slides/week3.html#midterms-2",
+    "href": "slides/week3.html#midterms-2",
+    "title": "Sampling and Randomization",
+    "section": "Midterms",
+    "text": "Midterms\nAddress a gap in the current literature, or that between theory and research. End with a discussion of your study, and how it hopes to fill in these gaps."
+  },
+  {
+    "objectID": "slides/week3.html#populations",
+    "href": "slides/week3.html#populations",
+    "title": "Sampling and Randomization",
+    "section": "Populations",
+    "text": "Populations\n\nA population is everything or everyone that you’re interested in.\ne.g. all the world’s people\nall the world’s people including living and deceased\nall Western-enculturated people\nall people who enjoy listening to music\nall clarinet players"
+  },
+  {
+    "objectID": "slides/week3.html#populations-continued",
+    "href": "slides/week3.html#populations-continued",
+    "title": "Sampling and Randomization",
+    "section": "Populations (continued)",
+    "text": "Populations (continued)\nA “population” does not refer only to people: Other examples:\n\nall of the music written by Vivaldi\nall solo flute music (both with and without accompaniment)\nall music in the minor mode\nall of the jazz scores available in the New York Public Library\nall performances of Rachmaninov’s 2nd piano concerto"
+  },
+  {
+    "objectID": "slides/week3.html#sample",
+    "href": "slides/week3.html#sample",
+    "title": "Sampling and Randomization",
+    "section": "Sample",
+    "text": "Sample\n\nSample: a subset of the population that you hope closely resembles the population as a whole."
+  },
+  {
+    "objectID": "slides/week3.html#sample-continued",
+    "href": "slides/week3.html#sample-continued",
+    "title": "Sampling and Randomization",
+    "section": "Sample (Continued)",
+    "text": "Sample (Continued)\n\nA sample is said to be representative when the property of interest is identical in both the sample and the population."
+  },
+  {
+    "objectID": "slides/week3.html#bias",
+    "href": "slides/week3.html#bias",
+    "title": "Sampling and Randomization",
+    "section": "Bias",
+    "text": "Bias\n\nA sample is said to be biased when the property of interest differs between the sample and the population."
+  },
+  {
+    "objectID": "slides/week3.html#weird",
+    "href": "slides/week3.html#weird",
+    "title": "Sampling and Randomization",
+    "section": "WEIRD",
+    "text": "WEIRD\n\nWestern\nEducated\nIndustrialized\nRich\nDemocratic\n\nsee Henrich’s Work on this"
+  },
+  {
+    "objectID": "slides/week3.html#defining-your-population",
+    "href": "slides/week3.html#defining-your-population",
+    "title": "Sampling and Randomization",
+    "section": "Defining Your Population",
+    "text": "Defining Your Population\n\nYou can’t sample a population unless you have a clear idea of what constitutes the population of interest.\nSuppose, for example, that you are a political pollster. Your aim is to predict the likely election results for a national election in Denmark. What, precisely, is the population you are interested in?"
+  },
+  {
+    "objectID": "slides/week3.html#defining-your-population-continued",
+    "href": "slides/week3.html#defining-your-population-continued",
+    "title": "Sampling and Randomization",
+    "section": "Defining Your Population (continued)",
+    "text": "Defining Your Population (continued)\n\nAll Danish citizens?\nAll people living in Denmark?\nAll people living in Denmark eligible to vote?\nAll people eligible to vote in Danish elections?\nAll people likely to vote in Danish elections?"
+  },
+  {
+    "objectID": "slides/week3.html#sampling-method",
+    "href": "slides/week3.html#sampling-method",
+    "title": "Sampling and Randomization",
+    "section": "Sampling Method",
+    "text": "Sampling Method\n\nSampling method: the way you recruit or assemble your sample. When your population consists of people, sampling methods might include soliciting information by telephone (telephone sampling), street sampling, mail sampling, web sampling, classroom sampling, concert sampling, etc."
+  },
+  {
+    "objectID": "slides/week3.html#sampling-bias",
+    "href": "slides/week3.html#sampling-bias",
+    "title": "Sampling and Randomization",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\n\nSampling bias: when the sampling method introduces differences that cause the sample not to be representative. We try to avoid or minimize sampling bias."
+  },
+  {
+    "objectID": "slides/week3.html#sampling-bias-continued",
+    "href": "slides/week3.html#sampling-bias-continued",
+    "title": "Sampling and Randomization",
+    "section": "Sampling Bias (continued)",
+    "text": "Sampling Bias (continued)\n\nWhen conducting a telephone survey, a pollster may be tempted to ask to speak to a respondent’s spouse. However, spouses are likely to share many things in common (such as political views) so the sampling method will introduce a bias."
+  },
+  {
+    "objectID": "slides/week3.html#simple-random-sampling",
+    "href": "slides/week3.html#simple-random-sampling",
+    "title": "Sampling and Randomization",
+    "section": "Simple Random Sampling",
+    "text": "Simple Random Sampling\n\nSimple Random Sampling. Suppose we want to know about musical instrument sales in the City of Nashville. We could use the phone book to identify all of the shops within the city boundaries that sell musical instruments. Perhaps we discover that there are 131 retailers. From this list, we might randomly select 25 retailers in order to carry out our survey."
+  },
+  {
+    "objectID": "slides/week3.html#systematic-sampling",
+    "href": "slides/week3.html#systematic-sampling",
+    "title": "Sampling and Randomization",
+    "section": "Systematic Sampling",
+    "text": "Systematic Sampling\nSuppose that we have a questionnaire we want to distribute to people who attended a concert. There might be 500 audience members, but we have only 50 surveys to distribute. One approach would be to distribute the questionnaires to the first 50 people leaving the concert hall."
+  },
+  {
+    "objectID": "slides/week3.html#matched-random-sampling",
+    "href": "slides/week3.html#matched-random-sampling",
+    "title": "Sampling and Randomization",
+    "section": "Matched Random Sampling",
+    "text": "Matched Random Sampling\n\nA way of linking members from two or more samples. For example, a study might involve matching each professional musician with an amateur musician who plays the same instrument."
+  },
+  {
+    "objectID": "slides/week3.html#convenience-sampling",
+    "href": "slides/week3.html#convenience-sampling",
+    "title": "Sampling and Randomization",
+    "section": "Convenience Sampling",
+    "text": "Convenience Sampling\n\nConvenience Sampling. A convenience sample simply takes advantage of whatever might be available. For example, a sample of organ music by Gabriel Fauré might simply consist of all of the scores available in a music library. Similarly, we might stand on a street corner and ask whoever passes by to answer questions on a survey."
+  },
+  {
+    "objectID": "slides/week3.html#stratified-sampling",
+    "href": "slides/week3.html#stratified-sampling",
+    "title": "Sampling and Randomization",
+    "section": "Stratified Sampling",
+    "text": "Stratified Sampling\n\nWhen we have reason to suspect that difference in sub-populations might influence the results, it is common to sample in such a way to ensure that each of the main sub-populations are represented."
+  },
+  {
+    "objectID": "slides/week3.html#stratified-sampling-continued",
+    "href": "slides/week3.html#stratified-sampling-continued",
+    "title": "Sampling and Randomization",
+    "section": "Stratified Sampling (Continued)",
+    "text": "Stratified Sampling (Continued)\n\nPost and Huron (2009) were interested in common-practice era tonal classical music. So we decided to use a stratified sample consisting of music from three periods: Baroque, Classical and Romantic. Our overall sample consisted of equivalent numbers of works from each of these historical eras."
+  },
+  {
+    "objectID": "slides/week3.html#quota-sampling",
+    "href": "slides/week3.html#quota-sampling",
+    "title": "Sampling and Randomization",
+    "section": "Quota Sampling",
+    "text": "Quota Sampling\n\nA type of stratified sampling in which sub-samples are weighted according to their prevalence in the population."
+  },
+  {
+    "objectID": "slides/week3.html#quota-sampling-1",
+    "href": "slides/week3.html#quota-sampling-1",
+    "title": "Sampling and Randomization",
+    "section": "Quota Sampling",
+    "text": "Quota Sampling\n\nSuppose that we find that 52% of instrumentalists are most accomplished on guitar, 33% are most accomplished on keyboards, 12% on flute, 9% on trumpet, 8% on violin, etc. In quota sampling, we would aim to sample the same proportions for each instrument."
+  },
+  {
+    "objectID": "slides/week3.html#exercise",
+    "href": "slides/week3.html#exercise",
+    "title": "Sampling and Randomization",
+    "section": "Exercise",
+    "text": "Exercise\nGroup Exercise"
+  },
+  {
+    "objectID": "slides/week3.html#exercise-answers",
+    "href": "slides/week3.html#exercise-answers",
+    "title": "Sampling and Randomization",
+    "section": "Exercise (Answers)",
+    "text": "Exercise (Answers)\nGroup Exercise (Answers)"
   },
   {
     "objectID": "descriptive_stats.html",

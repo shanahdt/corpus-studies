@@ -106,8 +106,7 @@
     is a scholar who is never wrong. Post hoc theorists don't allow
     the world to tell them when their ideas are problematic.
 
-16. ***From Question to Theory to Conjecture to Hypothesis to
-    Protocol.***
+16. ***From Question to Theory to Conjecture to Hypothesis to Protocol.***
 
     Start with a *question*, propose an explanatory *theory*, derive a
     *conjecture*, refine the conjecture into a *hypothesis*, then
@@ -155,8 +154,7 @@
     (false positive) error. Repeating an experiment also increases the
     probability of a Type I error.
 
-23. ***If you torture the data long enough it will confess to
-    anything.***
+23. ***If you torture the data long enough it will confess to anything.***
 
     It's not true that "statistics can prove anything," but it is
     possible to manipulate data in ways that deceive yourself and

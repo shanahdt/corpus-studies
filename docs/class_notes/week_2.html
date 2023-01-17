@@ -583,18 +583,18 @@ lm(formula = clarinet_tempi ~ accuracy)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--40.873  -9.952  -0.857   9.556  43.268 
+-49.763  -9.052   0.076   9.862  42.533 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  117.252      3.628   32.32   &lt;2e-16 ***
-accuracy       5.644      7.051    0.80    0.424    
+(Intercept)  127.318      3.239  39.303   &lt;2e-16 ***
+accuracy     -13.457      6.281  -2.142   0.0326 *  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 14.78 on 498 degrees of freedom
-Multiple R-squared:  0.001285,  Adjusted R-squared:  -0.0007204 
-F-statistic: 0.6408 on 1 and 498 DF,  p-value: 0.4238</code></pre>
+Residual standard error: 14.36 on 498 degrees of freedom
+Multiple R-squared:  0.009133,  Adjusted R-squared:  0.007143 
+F-statistic:  4.59 on 1 and 498 DF,  p-value: 0.03264</code></pre>
 </div>
 </div>
 <p>Here is a second example, using tempo and decibels.</p>
@@ -625,25 +625,25 @@ F-statistic: 0.6408 on 1 and 498 DF,  p-value: 0.4238</code></pre>
     Welch Two Sample t-test
 
 data:  cortot_tempi and gould_tempi
-t = 109.05, df = 197.85, p-value &lt; 2.2e-16
+t = 98.301, df = 192.25, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- 29.44850 30.53314
+ 29.45903 30.66542
 sample estimates:
 mean of x mean of y 
-119.99065  89.99983 </code></pre>
+119.96950  89.90728 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 119.9906</code></pre>
+<pre><code>[1] 119.9695</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 120.1622</code></pre>
+<pre><code>[1] 119.7554</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.971528</code></pre>
+<pre><code>[1] 1.966596</code></pre>
 </div>
 </div>
 <p>In Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics.</p>
