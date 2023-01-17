@@ -317,16 +317,11 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <meta property="og:title" content="Empirical and Critical Methods in Musicology - Types of Studies, Controls, Demand Characteristics">
 <meta property="og:site-name" content="Empirical and Critical Methods in Musicology">
 <meta name="twitter:title" content="Empirical and Critical Methods in Musicology - Types of Studies, Controls, Demand Characteristics">
-<meta name="twitter:image" content="https://shanahdt.github.io/emp-musicology/images/twitter-card.png">
+<meta name="twitter:image" content="https://shanahdt.github.io/emp-musicology/slides/images/twitter-card.png">
 <meta name="twitter:creator" content="@danielshanahan">
-<meta name="twitter:image-height" content="418">
-<meta name="twitter:image-width" content="800">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body class="quarto-light">
@@ -533,84 +528,24 @@
 <li class="fragment">Demand Characteristics: when an experiment becomes invalid because of what participants <em>believe</em> is the purpose of the experiment, right or wrong</li>
 </ul>
 </section>
+<section id="pearls-ladder-of-causality" class="slide level2">
+<h2>Pearl’s Ladder of Causality</h2>
+
+<img data-src="../emp_methods_workshop/images/pearl_ladder_of_causality.jpeg" class="r-stretch quarto-figure-center"><p class="caption">Confounding</p></section>
 <section id="controls" class="slide level2">
 <h2>Controls</h2>
 </section>
 <section id="confounding" class="slide level2">
 <h2>Confounding</h2>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart TD
-  X --&gt; Y
-  Z --&gt; X 
-  Z --&gt; Y
 
-</pre>
-<div id="mermaid-tooltip-1" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
-</section>
+<img data-src="../emp_methods_workshop/images/pearl-confounding.png" class="r-stretch quarto-figure-center"><p class="caption">Confounding</p></section>
 <section id="third-variables" class="slide level2">
 <h2>Third Variables</h2>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-2">flowchart TD
-  A{Smoking Gene} --&gt; B[Cancer]
-  A --&gt; C[Smoking]
-</pre>
-<div id="mermaid-tooltip-2" class="mermaidTooltip">
 
-</div>
-<p></p>
-</div>
-</div>
-</div>
-</section>
+<img data-src="../emp_methods_workshop/images/pearl-smoking-gene.png" class="r-stretch quarto-figure-center"><p class="caption">Smoking</p></section>
 <section id="front-door-and-causality" class="slide level2">
 <h2>Front Door and Causality</h2>
-<p>p(cancer|smoking)</p>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-3">flowchart LR
-  A{Smoking Gene} --&gt; B[Cancer]
-  A --&gt; C[Smoking]
-  C --&gt; D[Tar] --&gt; B
-</pre>
-<div id="mermaid-tooltip-3" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
-</section>
-<section id="front-door-and-causality-1" class="slide level2">
-<h2>Front Door and Causality</h2>
-<div class="cell" data-reveal="true">
-<div class="cell-output-display">
-<div>
-<p>
-</p><pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-4">flowchart LR
-
-  C[Smoking] --&gt; D[Tar] --&gt; B[Cancer]
-</pre>
-<div id="mermaid-tooltip-4" class="mermaidTooltip">
-
-</div>
-<p></p>
-</div>
-</div>
-</div>
+<p>p(cancer|smoking) <img data-src="../emp_methods_workshop/images/pearl-tar-front-door.png" alt="Confounding"></p>
 
 <div class="footer footer-default">
 

@@ -157,40 +157,22 @@ can be even more tuned-in than a horse in reading body language.
 
 - Demand Characteristics: when an experiment becomes invalid because of what participants *believe* is the purpose of the experiment, right or wrong
 
+## Pearl's Ladder of Causality
+
+![Confounding](../emp_methods_workshop/images/pearl_ladder_of_causality.jpeg)
 
 ## Controls
 
 ## Confounding
 
-```{mermaid}
-flowchart TD
-  X --> Y
-  Z --> X 
-  Z --> Y
+![Confounding](../emp_methods_workshop/images/pearl-confounding.png)
 
-```
+
 ## Third Variables
-```{mermaid}
-flowchart TD
-  A{Smoking Gene} --> B[Cancer]
-  A --> C[Smoking]
-```
+
+![Smoking](../emp_methods_workshop/images/pearl-smoking-gene.png)
 
 ## Front Door and Causality
 
 p(cancer|smoking)
-```{mermaid}
-flowchart LR
-  A{Smoking Gene} --> B[Cancer]
-  A --> C[Smoking]
-  C --> D[Tar] --> B
-```
-
-## Front Door and Causality
-
-
-```{mermaid}
-flowchart LR
-
-  C[Smoking] --> D[Tar] --> B[Cancer]
-```
+![Confounding](../emp_methods_workshop/images/pearl-tar-front-door.png)

@@ -1,6 +1,5 @@
 ---
-title: "Week 2"
-author: Daniel Shanahan
+title: "Week 2 Notes"
 ---
 
 # Week 2
@@ -9,7 +8,236 @@ author: Daniel Shanahan
 
 In this week, we will be discussing the various types of studies in empirical work, and spending time talking about controls and demand characteristics. 
 
+# Tuesday
 
-## Summary
+## Types of Studies (continued from last week)
+
+In general, it is helpful to classify studies according to four
+criteria:
+
+1.  Does the researcher simply describe and observe? Or does the
+    researcher offer an interpretation or *explanation*? (That is,
+    does the study offer an explanatory theory?)
+2.  Does the researcher make a *prediction*? (That is, does the method
+    invite failure?)
+3.  Does the researcher *manipulate* the world? (That is, does the
+    method allow the researcher to infer causality?) And
+4.  Does the researcher count or measure something? (That is, is the
+    research qualitative or *quantitative*?)
+
+### Types of Studies, Causality, Hypotheses, etc.
+
+The following table looks at some of the types of studies, whether or not they can offer an exploratory theory, whether an hypotehsis is being tested, whether one can infer causality (see also Pearl's ladder of causality below), and whether or not it is a quantitative study. 
 
 
+                                   **Explanatory Theory**   **Hypothesis Tested**   **Infer Causality**   **Quantitative**
+  ------------------------------- ------------------------ ----------------------- --------------------- ------------------
+  **Reconnaisance**                                                                                      
+  **Descriptive**                      ***post hoc***                                                    
+  **Measurement**                                                                                              **✓**
+  **Correlational**                    ***a priori***               **✓**                                      **✓**
+  **Exploratory Correlational**        ***post hoc***                                                          **✓**
+  **Exploratory Experimental**         ***post hoc***                                      **✓**               **✓**
+  **(True) Experimental**              ***a priori***               **✓**                  **✓**               **✓**
+  **Meta-Study**                       ***a priori***               **(✓)**                 **(✓)**              **✓**
+
+Judea Pearl provides a nice visualization of the types of explanatory power that different studies might be able to make use of. Notice that causation requires intervention.
+
+![Confounding](../emp_methods_workshop/images/pearl_ladder_of_causality.jpeg)
+
+
+
+### Measurement Studies
+
+- The measurement study is a type of exploratory study. 
+
+- It differs from the reconnaissance and descriptive studies insofar as some sort of measurement is involved. 
+
+- It differs from the exploratory correlational study insofar as the researcher doesn't attempt to determine whether there are relationships between any of the measurements.
+
+
+### Measuring Syncopation
+
+> In order to measure syncopation, we had to make an operational
+> definition. In metrically organized music, each moment can be regarded
+> as occupying a particular point in the metric hierarchy. The highest
+> point (labelled "1") might be defined as coinciding with the
+> downbeat. The second highest point ("2") coincides with the third
+> beat in 4/4 meter. Other points in the metric hierarchy can be
+> similarly labelled as shown in Figure 1. 
+
+See this Huron and Ommen study: ([emp_methods_workshop](syncopation.qmd))
+
+
+### Correlational Study
+
+- Correlational studies aim to identify linkages or relationships between things. We say two things are correlated when there is some sort of connection or association between them. 
+
+- For example, music with a fast tempo tends to be louder than music with a slow tempo. Although there are exceptions to this, in general, there is a correlation between tempo and dynamic level.
+
+### Correlational  Study
+
+1.  Correlational studies may or may not be hypothesis-driven. When
+    there is no *a priori* hypothesis, the study is said to be an
+    exploratory correlational study.
+2.  Correlational studies always involve at least two sets of
+    measurements.
+3.  A common type of correlational study is the survey or
+    questionnaire.
+
+### Experimental Study
+
+- What distinguishes an experiment from all other kinds of studies is that the experimenter *manipulates* the world. Rather than being just a passive observer, the experimenter intentionally makes some change and then observes the effect of the change.
+
+### Experimental Study
+
+- The variable manipulated by the experimenter is called the *independent variable* (or independent measure). The variable observed by the experimenter is called the *dependent variable* (or dependent measure).
+
+
+### Exploratory Experiment
+
+- An *Exploratory Experiment* involves manipulation and measurement, but the manipulation is not motivated by some prior theory, hypothesis or conjecture. 
+
+    - For example, a researcher might play traditional Japanese and Andean pop music to naive Western listeners while making a series of measurements, such as heart-rate, respiration, body temperature, and observable behavior, etc. The researcher may have no idea what to expect. That is, no prediction was made. 
+
+### Meta-Study
+
+- A meta-study is a "study of studies." 
+
+    - It is typically done when a large number of studies have been carried out related to some problem.
+
+### Modeling Study
+
+-  Theories can often be implemented as models. An example of a *physical model* is a large model of San Francisco Bay built by the U.S. Army Corps of Engineers (see photo).
+
+![SF Bay](../emp_methods_workshop/images/bay_model2.jpg)
+
+### Pilot Study
+
+- A pilot study is carried out simply as a way of testing the research procedure. Pilot studies usually involve relatively small numbers of participants or small sample sizes.
+
+### Mixed Methods
+
+> The research might begin by reporting a descriptive
+> study. The results from the descripive study may inspire the authors
+> to formulate a theory, from which a hypothesis is generated. The
+> article might then go on to report a correlational study or an
+> experiment whose purpose is to explicitly test the hypothesis.
+
+### Natural Experiments
+
+- A special kind of experiment is the so-called *natural experiment.* A natural experiment relies on a manipulation of the real world that occurs without the intervention of the researcher.
+
+    - In March of 2020, climate scientists studied the lessening of air pollution during lockdown. 
+
+    - There *is* a manipulation being made of sorts and a control condition, but it really is only possible at a grand scale because of an uncontrollable global event.
+
+## Demand Characteristics
+### Clever Hans
+
+
+![Clever Hans](../emp_methods_workshop/images/clever_hans.jpg)
+
+> [From Wikipedia:] "Hans was a horse owned by Wilhelm von Osten,
+> who was a mathematics teacher, an amateur horse trainer,
+> phrenologist, and something of a mystic. Hans was said to have been
+> taught to add, subtract, multiply, divide, work with fractions, tell
+> time, keep track of the calendar, differentiate musical tones, and
+> read, spell, and understand German. Von Osten would ask Hans, "If
+> the eighth day of the month comes on a Tuesday, what is the date of
+> the following Friday?" Hans would answer by tapping his hoof.
+> Questions could be asked both orally, and in written form. Von Osten
+> exhibited Hans throughout Germany, and never charged admission."
+
+Clever Hans was able to do math, write and read German, and many other tasks. But Clever Hans is perhaps one of the best examples of what happens when one doesn't account for demand characteristics: he was reading the audience and the experimenter, and not solving any problems independently. 
+
+**Clever Hans Effect:** An experimenter may inadvertently provide
+non-verbal (or verbal) cues as to what they hope will happen. People
+can be even more tuned-in than a horse in reading body language.
+
+## Demand Characteristics
+
+- **Demand Characteristics**: when an experiment becomes invalid because of what participants *believe* is the purpose of the experiment, right or wrong
+
+## Confounding and Controls
+
+
+![Confounding](../emp_methods_workshop/images/pearl-confounding.png)
+
+## Third Variables
+
+There was once an argument that there was a smoking gene, which could be causing cancer--the argument (often made by tobacco companies) was that we could never truly know that smoking was causing cancer because there was no experimental study, and it was all correlational. 
+
+![Smoking](../emp_methods_workshop/images/pearl-smoking-gene.png)
+
+However, we are able to say that tar causes cancer by isolating that variable. So we might think about how to approach the causality problem through isolating certain variables, and thinking about paths of possible confounds.
+
+p(cancer|smoking)
+![Confounding](../emp_methods_workshop/images/pearl-tar-front-door.png)
+
+## Thursday
+
+On Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:
+
+- mean
+- median
+- mode
+- normal distributions
+- bimodal distributions
+- kurtosis
+
+Our first study looked at how the central tendency with a normal distribution (see also [this discussion of it here](../descriptive_stats.qmd#central-tendency)). We started with a small dataset, and then put it into a ```function```, which allowed us to us an ```argument``` to test what happened with the distribution as we increased the number. Some things to look for in this code.
+
+1. Note how it creates fake data by randomly generating a random distribution with ```rnorm```. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two ```variables``` (clarinet_tempi and accuracy) using this method.)
+2. We then plotted the data.
+3. (as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like ```p-values``` and R^2).
+5. By putting it inside a function, we can run it with many numbers.
+
+
+
+```{r}
+#### coming up with my data
+
+my_model <- function(number = 100){
+  clarinet_tempi <- rnorm(number, 120, 15)
+  accuracy <- rnorm(number, .5, .1)
+
+  plot(clarinet_tempi, accuracy)
+  model <- lm(clarinet_tempi ~ accuracy)
+  return(summary(model))
+}
+
+my_model(500)
+```
+
+Here is a second example, using tempo and decibels.
+```{r}
+#### tempi and volume
+my_model <- function(){
+  tempo <- rnorm(100, 120, 15)
+  decibels <- rnorm(100, 90, 15)
+  
+  plot(tempo, decibels)
+  model <- lm(tempo ~ decibels)
+  return(summary(model))
+}
+
+```
+
+### Are two distributions the same or different?
+
+Here, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it's fake data, it's quite easy for us to get significant results...).
+
+```{r}
+cortot_tempi <- as.numeric(rnorm(100, 120, 2))
+gould_tempi <- as.numeric(rnorm(100, 90, 2))
+boxplot(cortot_tempi, gould_tempi)
+
+t.test(cortot_tempi, gould_tempi)
+
+mean(cortot_tempi)
+median(cortot_tempi)
+sd(cortot_tempi)
+```
+
+In Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics.

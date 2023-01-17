@@ -1,14 +1,11 @@
+---
+author: David Huron
+title: The Chi-Square Test
+---
 
 
-------------------------------------------------------------------------
+# Brahms's Hemiolas
 
-### The Chi-Square Test
-
-------------------------------------------------------------------------
-
-[]{#Brahms's Hemiolas}
-
-#### Brahms's Hemiolas
 
 A common statistical tests is the chi-square test. This test takes
 its name from the Greek letter *X* (pronounced "Kye" --- rhymes with
