@@ -40,6 +40,7 @@ website:
         contents: 
           - slides/week1.qmd
           - slides/week2.qmd
+          - slides/week3.qmd
         collapse-level: 1
       - section: "Class Notes"
         contents:

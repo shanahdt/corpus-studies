@@ -205,6 +205,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../slides/week2.html" class="sidebar-item-text sidebar-link">Types of Studies, Controls, Demand Characteristics</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/week3.html" class="sidebar-item-text sidebar-link">Sampling and Randomization</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -583,18 +588,18 @@ lm(formula = clarinet_tempi ~ accuracy)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--49.763  -9.052   0.076   9.862  42.533 
+-53.594  -9.901   0.089  10.069  46.016 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  127.318      3.239  39.303   &lt;2e-16 ***
-accuracy     -13.457      6.281  -2.142   0.0326 *  
+(Intercept) 120.1820     3.5064  34.275   &lt;2e-16 ***
+accuracy     -0.3189     6.8212  -0.047    0.963    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 14.36 on 498 degrees of freedom
-Multiple R-squared:  0.009133,  Adjusted R-squared:  0.007143 
-F-statistic:  4.59 on 1 and 498 DF,  p-value: 0.03264</code></pre>
+Residual standard error: 15.4 on 498 degrees of freedom
+Multiple R-squared:  4.39e-06,  Adjusted R-squared:  -0.002004 
+F-statistic: 0.002186 on 1 and 498 DF,  p-value: 0.9627</code></pre>
 </div>
 </div>
 <p>Here is a second example, using tempo and decibels.</p>
@@ -625,25 +630,25 @@ F-statistic:  4.59 on 1 and 498 DF,  p-value: 0.03264</code></pre>
     Welch Two Sample t-test
 
 data:  cortot_tempi and gould_tempi
-t = 98.301, df = 192.25, p-value &lt; 2.2e-16
+t = 107.19, df = 193.17, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- 29.45903 30.66542
+ 29.50296 30.60905
 sample estimates:
 mean of x mean of y 
-119.96950  89.90728 </code></pre>
+120.08995  90.03394 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 119.9695</code></pre>
+<pre><code>[1] 120.0899</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 119.7554</code></pre>
+<pre><code>[1] 119.9427</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.966596</code></pre>
+<pre><code>[1] 1.819155</code></pre>
 </div>
 </div>
 <p>In Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics.</p>
