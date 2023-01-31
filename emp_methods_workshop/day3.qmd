@@ -1,280 +1,70 @@
-
-**Materials Copyright © 2018 by David Huron**
-
-
-# Methods in Empirical Music Research A Workshop for Music Scholars
-
-
-
-------------------------------------------------------------------------
-
-**DAY 1**
-
-------------------------------------------------------------------------
-
--   [Title page](title_workshop.html)
-
-1.  **Welcome & Introduction**
-    -   +[Introduction](lecture01.html)
-2.  **Generals Aims & Preview**
-    -   [Day 1 Program](program1.html)
-    -   [Learning objectives](goals.html)
-3.  **Empirical Research**
-    -   [Preamble: An Arts and Humanities Approach to Empirical
-        Method](preamble.html)
-        +(Philosophical [continental phenomenological or formal logic
-        approach to content;
-        +Science [procedural orientation; norms of scientific
-        method]
-        +Humanities approach [I approach it from a rhetorical and
-        ethical perspective]
-        +Please read for homework.)
-    -   [Types of knowledge](empirical.html) [(powerpoint presentation
-        #1)](01_knowledge_types.pdf)
-    -   [Seven big ideas](big_ideas.html)
-        1.  *Motivated by truth, with no hope of proof.*
-        2.  *The best research invites failure.*
-        3.  *We invite failure by testing predictions.*
-    -   [A line in the sand](big_ideas.html#Line%20in%20the%20Sand)
-        4.  *We recognize failure by drawing a line in the sand.*
-    -   [Refutation is easier than
-        confirmation](big_ideas.html#Refutation)
-        5.  *Aim not to be right, but to be not not right.*
-    -   [Operationalizing](big_ideas.html#Operationalizing)
-        6.  *Test hypotheses by operationalizing terms.*
-        7.  *Operationalize, but don't essentialize.*
-    -   [Comparison](big_ideas.html#Compare)
-        8.  *Compare, compare, compare.* [Randomized Control Studies -
-            The Case of Microfinance](compare.html)
-            *Counterfactuals* [(powerpoint presentation
-            #2)](02_counterfact.pdf)
-    -   [The rhetoric of science](prophecy.html)
-        ([video](http://vimeo.com/63377111) - 8 minutes)
-        9.  *The rhetoric of science is the rhetoric of prophecy.*
-            "Science is a narrative activity, conducted by a
-            community of scholars who hold each other to a
-            methodological commitment to making and testing
-            predictions."
-    -   Review the first 9 slogans: [Quiz #1](quiz1.html)
-    -   **Group Task #1:** [What's worth knowing? An audience with
-        God](god_questions.html)
-    -   [Questions, conjectures, hypotheses and
-        theories](hypotheses.html)
-    -   **Group Task #2:** [Question, theory or
-        hypothesis?](theory_hypothesis.html)
-        [(Answers)](theory_hypothesis_answers.html)
-    -   [Grandmother research](grandmother.html)
-    -   [The quantitative/measurement obsession](quantitative.html)
-    -   **Group Task #3a:** [Obvious theories - Part
-        1](hindsight_task1.html)
-    -   **Group Task #3b:** [Obvious theories - Part
-        2](hindsight_task2.html)
-    -   [(Group Task #3 Debriefing) Obvious theories: Hindsight
-        bias](hindsight_task3.html)
-        10. *Hindsight is 20/20.*
-    -   [Grandmother research revisited](grandmother2.html)
-    -   [Two forms of reductionism](reductionism.html)
-        11. *In research, reductionism is a method, not a belief.*
-        12. *Don't try to explain the whole world at once.*
-    -   [Epistephobia](epistephobia.html)
-    -   [Types of failure](truth.html) [(powerpoint presentation
-        #3)](03_failure_types.pdf)
-    -   [Review (first 12) slogans](slogans12.html)
-4.  **Types of Empirical Studies**
-    -   [Types of empirical studies](empirical2.html) [(powerpoint
-        presentation #5)](05_empirical_studies.pdf)
-    -   **Group Task #4:** [Types of studies](types.html)
-        [(Answers/Discussion)](types_answers.html)
-    -   [Generalizing versus universalizing](generalize.html)
-        ([video](http://vimeo.com/66280977) - 10 minutes)
-        13. *Generalize, but don't universalize.*
-    -   [Exploratory studies](exploratory.html)
-    -   [Measurement studies](measurement.html)
-    -   [Hypothesislessness](hypothesisless.html)
-        14. *Avoid chronic hypothesislessness.*
-    -   **Group Task #5:** [Operationalize the following
-        hypotheses](operationalize_this.html)
-    -   [Syncopation: From question to hypothesis](syncopation.html)
-        (powerpoint presentation #8)
-    -   [Opinions as
-        operationalizations](operationalize_opinions.html)
-    -   [Double use data](double_use.html)
-        15. *Beware of the post hoc theory.*
-    -   [Exploratory & Confirmatory: Contexts of discovery and
-        legitimation (lecture)](origins.html)
-    -   [Explore-then-test Approach](explore_then_test.html)
-    -   [Explore-then-test example - Part 1](explore_then_test1.html)
-        (Have a participant read the text aloud. What kind of study is
-        this? What should happen next?)
-    -   [Explore-then-test example - Part 2](explore_then_test2.html)
-        (Have another participant read the text aloud. Why make use of
-        a robot rather than a human?)
-    -   From question ... to protocol.
-        16. *From question to theory to conjecture to hypothesis to
-            protocol*
-    -   [Quiz #2](quiz2.html) [(Answers)](quiz2_answers.html)
-    -   [Review (first 16) slogans](slogans16.html)
-    -   [Feedback Day 1](feedback1.html)
-5.  **Homework**
-    -   *Homework 1:* [Reading: Preamble: An Arts and Humanities
-        Approach to Empirical Method](preamble.html) *Homework 2:*
-        [Reading Guide #1: Lancashire & Hirst (2009)](reading01.html)
-    -   [Reading #1: Lancashire &
-        Hirst (2009)](Agatha_Christie2009.pdf)
-    -   *Homework 3:*
-        **Individual Task #6:** [From question to
-        theory](question2theory.html)
-
-------------------------------------------------------------------------
-
-**DAY 2**
-
-------------------------------------------------------------------------
-
-6.  **Review and Elaborations**
-    -   **Welcome**; encourage mix-up seating/groups
-    -   [Day 2 Program](program2.html)
-    -   [Review slogans (first 16)](slogans16.html)
-    -   **Group Task #7:** [From theory to
-        conjecture](theory2conjecture.html)
-    -   [Multiple operationalizations](09_gauvin.pdf)
-    -   [Formal observation: The taxi protocol](protocol.html)
-    -   [The Experiment](experiment.html)
-    -   [The Correlational Study](correlational_study2.html)
-    -   [Correlation and causation](causality.html)
-    -   The third variable problem
-        17. *No causation without manipulation.*
-7.  **Sampling**
-    -   [Sampling](sampling.html)
-    -   **Group Task #8:** [Sampling Approaches](samples.html)
-        [(Answers)](samples_answers.html)
-    -   WEIRD sampling (Western, Educated, Industrialized, Rich,
-        Democratic)
-    -   [Data Independence](data_independence.html)
-        18. *Avoid sticky data.*
-    -   [Biased Sampling: Listening to Edith
-        Boyd](sampling_haphazard.html)
-    -   **Group Task #9:** [Sampling Issues](sampling_problems.html)
-        [(Discussion)](sampling_problems_answers.html)
-    -   **Group Task #10:** [What is Random?](random.html)
-    -   **Homework review:** [Review questions and answers for
-        Lancashire & Hirst (2009)](Readings/reading01.html)
-    -   [Sampling - A Practical Problem](sampling2.html) [omit?]
-    -   [Sample Size: Law of Big Numbers](big_numbers.html)
-    -   [Sample Size: Law of Small Numbers](small_numbers.html)
-        19. *The law of large numbers does not apply to small
-            numbers.*
-    -   [Effect Size](effect_size.html)
-    -   [Regression-to-the-Mean](regression_to_mean.html)
-    -   [Regression-to-the-Mean in Music](regression_in_music.html)
-    -   [Review (first 19) slogans](slogans19.html)
-    -   **Group Task #11:** [Are dynamics
-        asymmetrical?](dynamics.html) [Data sheet](dynamics2.html)
-8.  **Behavioral Data**
-    -   Dependent and independent measures
-    -   [Types of behaviors (summary)](behaviors_brief.html) The full
-        text (or video) are left as homework. [Types of behaviors
-        (full)](behaviors.html) ([video](http://vimeo.com/65008608) -
-        32 minutes)
-    -   Implicit vs. explicit responses
-    -   [Reactivity](reactivity.html)
-    -   [Demand characteristics](demand_characteristics.html) [Clever
-        Hans](cleverHans.html)
-        20. *Always debrief.*
-    -   [Measurement scales](scales.html)
-    -   **Group Task #12:** [What kind of measurement
-        scale?](measurement_scales.html)
-        [(Answers)](measurement_answers.html)
-    -   [Designing questionnaires](questionnaires.html) (powerpoint
-        presentation #17)
-    -   **Group Task #13:** [Questionnaire
-        Design](questionnaire_task.html)
-    -   [Review (first 20) slogans](slogans20.html)
-    -   [Feedback Day 2](feedback2.html)
-9.  **Homework**
-    -   [Reading Guide #2: Perttu (2007)](Readings/reading02.html)
-    -   [Reading #2: Perttu (2007)](Readings/perttu.pdf)
-
-------------------------------------------------------------------------
+---
+title: Day 3
+author: David Huron
+---
 
 **DAY 3**
 
-------------------------------------------------------------------------
-
 10. **Introduction to Statistics**
-    -   [Day 3 Program](program3.html)
-    -   [Outline (lecture)](stats_day_outline.html)
-    -   [Why measure? How to measure anything](measure_anything.html)
+    -   [Day 3 Program](program3.qmd)
+    -   [Outline (lecture)](stats_day_outline.qmd)
+    -   [Why measure? How to measure anything](measure_anything.qmd)
         *Measurement* (powerpoint presentation #18)
     -   Fermi Questions: Are there a half a billion windows in New
         York City? Are there 500 piano tuners in Chicago? [You may be
         better than you think you are at estimating some values.]
-    -   [Descriptive Statistics](stats_descr.html)
-    -   [Measures of Central Tendency](average.html) [powerpoint
+    -   [Descriptive Statistics](stats_descr.qmd)
+    -   [Measures of Central Tendency](average.qmd) [powerpoint
         presentation](19_desc_stats.pdf)
     -   **Group Task #15:** [Descriptive
-        Statistics](desc_stats_task.html)
-    -   [Inferential Statistics](stats_infer.html)
-    -   [Inferential Statistics](20_inferential_stats.pdf) (including
-        [Probability](probability.html), [The null
-        hypothesis](null_hypothesis.html), Confidence and significance
+        Statistics](desc_stats_task.qmd)
+    -   [Inferential Statistics](stats_infer.qmd)
+        [Probability](probability.qmd), [The null
+        hypothesis](null_hypothesis.qmd), Confidence and significance
         levels, Statistical tests)
     -   [Confidence level and Confidence
-        Interval](confidence_level.html)
+        Interval](confidence_level.qmd)
     -   [Calculating confidence interval from confidence
         level](http://www.surveysystem.com/sscalc.htm) (web tool)
-    -   [Statistical Significance](significance.html)
-    -   [Chi-square test](chi_test.html) (powerpoint presentation #22)
+    -   [Statistical Significance](significance.qmd)
+    -   [Chi-square test](chi_test.qmd) (powerpoint presentation #22)
     -   [Table of critical values for chi-square
-        (short)](chi_table_short.html) [(long table - 5
-        pages)](chi_table.html)
+        (short)](chi_table_short.qmd) [(long table - 5
+        pages)](chi_table.qmd)
     -   **Group Task #16:** [Chi-square
-        tests](chi_square_problems.html);
-        [(Answers)](chi_square_answers.html)
+        tests](chi_square_problems.qmd);
+        [(Answers)](chi_square_answers.qmd)
     -   **Group Task #17:** [Funeral marches in F minor:
-        Hypothesis](funeral_marches.html)
-        [(Answer)](funeral_answers.html)
-    -   Correlation demonstration [Pearson's r
-        Table](PearsonRtable.pdf);
+        Hypothesis](funeral_marches.qmd)
+        [(Answer)](funeral_answers.qmd)
     -   Spurioius correlations - see
         <http://www.tylervigen.com/spurious-correlations
     -   [Interpreting *p*; "Highly" and "marginally"
-        significant](highly_significant.html)
-    -   [Multiple Tests and Related Topics](multiple_tests.html):
+        significant](highly_significant.qmd)
+    -   [Multiple Tests and Related Topics](multiple_tests.qmd):
         Bonferroni Correction; File Drawer Effect
         22. *Correct for multiple tests.*
-    -   Positive results bias. The case of Ego Depletion (video - 9
-        minutes)
-    -   Concept of "research registry"
     -   [Publishing practice](23_reporting.pdf)
-    -   [Statistical tests - General remarks](stats_conclude.html)
+    -   [Statistical tests - General remarks](stats_conclude.qmd)
         21. *Make friends with a statistician.*
 11. **Applied Statistics**
-    -   Heroes and villains in opera (simplified analysis using
+    -   Heroes and villains win opera (simplified analysis using
         chi-square test)
     -   Population density and tempo (demonstrating Pearson's r)
-    -   German vs. Chinese folksongs (regression analysis)
 12. **Some Advanced Analytic Techniques**
     -   [Advanced Analytic Techniques](25_advanced_stats.pdf)
-    -   [Cluster analysis: Orchestration](orchestration.html)
+    -   [Cluster analysis: Orchestration](orchestration.qmd)
         [Cluster analysis: From Classical to
-        Romantic](romanticism.html)
-    -   [Multi-dimensional scaling (MDS)](mds.html)
-    -   [Modeling - B-flat trumpet](modeling.html)
+        Romantic](romanticism.qmd)
+    -   [Multi-dimensional scaling (MDS)](mds.qmd)
+    -   [Modeling - B-flat trumpet](modeling.qmd)
         23. *If you torture the data long enough, it will confess to
             anything.*
     -   Foote Novelty (powerpoint presentation #26)
     -   **Homework review:** [Review questions and answers for
-        Perttu (2007)](perttu.html)
-    -   [Review (first 23) slogans](slogans23.html)
-    -   [Feedback Day 3](feedback3.html)
-13. **Homework**
-    -   [Reading Guide #3: Shanahan & Huron (2014)](reading03.html)
-    -   [Reading #3: Shanahan & Huron (2014)](heroes_villains.pdf)
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+        Perttu (2007)](perttu.qmd)
+    -   [Review (first 23) slogans](slogans23.qmd)
+    -   [Feedback Day 3](feedback3.qmd)
 
 
 

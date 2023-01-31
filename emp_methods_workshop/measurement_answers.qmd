@@ -1,6 +1,7 @@
-
-
-[GROUP TASK #12:]{.small} Measurement Scales - ANSWERS
+---
+title: Measurement Task Answers
+author: David Huron
+---
 
 For each case, identify the kind of measurement scale implied ---
 either *nominal, ordinal, interval,* or *ratio.*

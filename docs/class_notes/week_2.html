@@ -93,7 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../emp_methods_workshop/slogans.html" rel="next">
+<link href="../class_notes/week_3.html" rel="next">
 <link href="../class_notes/week_1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -210,6 +210,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../slides/week3.html" class="sidebar-item-text sidebar-link">Sampling and Randomization</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/week5.html" class="sidebar-item-text sidebar-link">Bias, Power, and More on Confounds</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -230,6 +235,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../class_notes/week_2.html" class="sidebar-item-text sidebar-link active">Week 2</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_3.html" class="sidebar-item-text sidebar-link">Week 3</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -248,6 +258,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../emp_methods_workshop/day1.html" class="sidebar-item-text sidebar-link">Day 1</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../emp_methods_workshop/day2.html" class="sidebar-item-text sidebar-link">Day 2</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../emp_methods_workshop/day3.html" class="sidebar-item-text sidebar-link">Day 3</a>
   </div>
 </li>
       </ul>
@@ -588,18 +608,18 @@ lm(formula = clarinet_tempi ~ accuracy)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--46.283 -10.154   0.193  10.674  41.810 
+-46.549  -9.656  -0.248  10.016  45.727 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  117.772      3.777  31.182   &lt;2e-16 ***
-accuracy       4.124      7.527   0.548    0.584    
+(Intercept)  117.797      3.733  31.552   &lt;2e-16 ***
+accuracy       4.346      7.324   0.593    0.553    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 15.67 on 498 degrees of freedom
-Multiple R-squared:  0.0006026, Adjusted R-squared:  -0.001404 
-F-statistic: 0.3003 on 1 and 498 DF,  p-value: 0.584</code></pre>
+Residual standard error: 15.33 on 498 degrees of freedom
+Multiple R-squared:  0.0007065, Adjusted R-squared:  -0.0013 
+F-statistic: 0.3521 on 1 and 498 DF,  p-value: 0.5532</code></pre>
 </div>
 </div>
 <p>Here is a second example, using tempo and decibels.</p>
@@ -630,25 +650,25 @@ F-statistic: 0.3003 on 1 and 498 DF,  p-value: 0.584</code></pre>
     Welch Two Sample t-test
 
 data:  cortot_tempi and gould_tempi
-t = 103.77, df = 194.07, p-value &lt; 2.2e-16
+t = 105.99, df = 196.76, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- 29.25283 30.38629
+ 29.61105 30.73388
 sample estimates:
 mean of x mean of y 
-120.28979  90.47023 </code></pre>
+120.15952  89.98706 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 120.2898</code></pre>
+<pre><code>[1] 120.1595</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 120.2617</code></pre>
+<pre><code>[1] 120.2344</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.171571</code></pre>
+<pre><code>[1] 2.091316</code></pre>
 </div>
 </div>
 <p>In Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics.</p>
@@ -877,8 +897,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../emp_methods_workshop/slogans.html" class="pagination-link">
-        <span class="nav-page-text">Huron’s Research Slogans</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../class_notes/week_3.html" class="pagination-link">
+        <span class="nav-page-text">Week 3</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

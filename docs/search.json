@@ -46,7 +46,140 @@
     "href": "class_notes/week_2.html#thursday",
     "title": "Week 2",
     "section": "Thursday",
-    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-46.283 -10.154   0.193  10.674  41.810 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  117.772      3.777  31.182   <2e-16 ***\naccuracy       4.124      7.527   0.548    0.584    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.67 on 498 degrees of freedom\nMultiple R-squared:  0.0006026, Adjusted R-squared:  -0.001404 \nF-statistic: 0.3003 on 1 and 498 DF,  p-value: 0.584\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 103.77, df = 194.07, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.25283 30.38629\nsample estimates:\nmean of x mean of y \n120.28979  90.47023 \n\nmean(cortot_tempi)\n\n[1] 120.2898\n\nmedian(cortot_tempi)\n\n[1] 120.2617\n\nsd(cortot_tempi)\n\n[1] 2.171571\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
+    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-46.549  -9.656  -0.248  10.016  45.727 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  117.797      3.733  31.552   <2e-16 ***\naccuracy       4.346      7.324   0.593    0.553    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.33 on 498 degrees of freedom\nMultiple R-squared:  0.0007065, Adjusted R-squared:  -0.0013 \nF-statistic: 0.3521 on 1 and 498 DF,  p-value: 0.5532\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 105.99, df = 196.76, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.61105 30.73388\nsample estimates:\nmean of x mean of y \n120.15952  89.98706 \n\nmean(cortot_tempi)\n\n[1] 120.1595\n\nmedian(cortot_tempi)\n\n[1] 120.2344\n\nsd(cortot_tempi)\n\n[1] 2.091316\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
+  },
+  {
+    "objectID": "class_notes/week_3.html",
+    "href": "class_notes/week_3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "This week, we discussed the midterm project, sampling, and had a visit from Professor Chris White (UMass, Amherst), in which we talked about entropy and meaning.\nSee the notes below."
+  },
+  {
+    "objectID": "class_notes/week_3.html#midterms",
+    "href": "class_notes/week_3.html#midterms",
+    "title": "Week 3",
+    "section": "Midterms",
+    "text": "Midterms\n\nDue January 31.\n5-7 pages.\nconstruct a literature review of the topic you’re interested in writing about, culminating in a hypothesis section.\nFeel free to meet with me if you have any questions."
+  },
+  {
+    "objectID": "class_notes/week_3.html#midterms-1",
+    "href": "class_notes/week_3.html#midterms-1",
+    "title": "Week 3",
+    "section": "Midterms",
+    "text": "Midterms\n\nBe sure to include an overview of previous research related to the topic. This should include both empirical and non-empirical work. So if you’re focusing on the memory for jazz licks, for example, research on improvisational styles should be included alongside work on memory for musical ideas. It need not be all-encompassing, but it should try to cover as much ground as possible.\nAddress a gap in the current literature, or that between theory and research. End with a discussion of your study, and how it hopes to fill in these gaps."
+  },
+  {
+    "objectID": "class_notes/week_3.html#populations",
+    "href": "class_notes/week_3.html#populations",
+    "title": "Week 3",
+    "section": "Populations",
+    "text": "Populations\n\nA population is everything or everyone that you’re interested in.\ne.g. all the world’s people\nall the world’s people including living and deceased\nall Western-enculturated people\nall people who enjoy listening to music\nall clarinet players\n\nA “population” does not refer only to people: Other examples:\n\nall of the music written by Vivaldi\nall solo flute music (both with and without accompaniment)\nall music in the minor mode\nall of the jazz scores available in the New York Public Library\nall performances of Rachmaninov’s 2nd piano concerto"
+  },
+  {
+    "objectID": "class_notes/week_3.html#sample",
+    "href": "class_notes/week_3.html#sample",
+    "title": "Week 3",
+    "section": "Sample",
+    "text": "Sample\n\nSample: a subset of the population that you hope closely resembles the population as a whole.\nA sample is said to be representative when the property of interest is identical in both the sample and the population."
+  },
+  {
+    "objectID": "class_notes/week_3.html#bias",
+    "href": "class_notes/week_3.html#bias",
+    "title": "Week 3",
+    "section": "Bias",
+    "text": "Bias\n\nA sample is said to be biased when the property of interest differs between the sample and the population."
+  },
+  {
+    "objectID": "class_notes/week_3.html#weird",
+    "href": "class_notes/week_3.html#weird",
+    "title": "Week 3",
+    "section": "WEIRD",
+    "text": "WEIRD\n\nWestern\nEducated\nIndustrialized\nRich\nDemocratic\n\nsee Henrich’s Work on this"
+  },
+  {
+    "objectID": "class_notes/week_3.html#defining-your-population",
+    "href": "class_notes/week_3.html#defining-your-population",
+    "title": "Week 3",
+    "section": "Defining Your Population",
+    "text": "Defining Your Population\n\nYou can’t sample a population unless you have a clear idea of what constitutes the population of interest.\n\nSuppose, for example, that you are a political pollster. Your aim is to predict the likely election results for a national election in Denmark. What, precisely, is the population you are interested in?"
+  },
+  {
+    "objectID": "class_notes/week_3.html#defining-your-population-continued",
+    "href": "class_notes/week_3.html#defining-your-population-continued",
+    "title": "Week 3",
+    "section": "Defining Your Population (continued)",
+    "text": "Defining Your Population (continued)\n\nAll Danish citizens?\nAll people living in Denmark?\nAll people living in Denmark eligible to vote?\nAll people eligible to vote in Danish elections?\nAll people likely to vote in Danish elections?"
+  },
+  {
+    "objectID": "class_notes/week_3.html#sampling-method",
+    "href": "class_notes/week_3.html#sampling-method",
+    "title": "Week 3",
+    "section": "Sampling Method",
+    "text": "Sampling Method\n\nSampling method: the way you recruit or assemble your sample. When your population consists of people, sampling methods might include soliciting information by telephone (telephone sampling), street sampling, mail sampling, web sampling, classroom sampling, concert sampling, etc."
+  },
+  {
+    "objectID": "class_notes/week_3.html#sampling-bias",
+    "href": "class_notes/week_3.html#sampling-bias",
+    "title": "Week 3",
+    "section": "Sampling Bias",
+    "text": "Sampling Bias\n\nSampling bias: when the sampling method introduces differences that cause the sample not to be representative. We try to avoid or minimize sampling bias.\nWhen conducting a telephone survey, a pollster may be tempted to ask to speak to a respondent’s spouse. However, spouses are likely to share many things in common (such as political views) so the sampling method will introduce a bias."
+  },
+  {
+    "objectID": "class_notes/week_3.html#simple-random-sampling",
+    "href": "class_notes/week_3.html#simple-random-sampling",
+    "title": "Week 3",
+    "section": "Simple Random Sampling",
+    "text": "Simple Random Sampling\n\nSimple Random Sampling. Suppose we want to know about musical instrument sales in the City of Nashville. We could use the phone book to identify all of the shops within the city boundaries that sell musical instruments. Perhaps we discover that there are 131 retailers. From this list, we might randomly select 25 retailers in order to carry out our survey."
+  },
+  {
+    "objectID": "class_notes/week_3.html#systematic-sampling",
+    "href": "class_notes/week_3.html#systematic-sampling",
+    "title": "Week 3",
+    "section": "Systematic Sampling",
+    "text": "Systematic Sampling\nSuppose that we have a questionnaire we want to distribute to people who attended a concert. There might be 500 audience members, but we have only 50 surveys to distribute. One approach would be to distribute the questionnaires to the first 50 people leaving the concert hall."
+  },
+  {
+    "objectID": "class_notes/week_3.html#matched-random-sampling",
+    "href": "class_notes/week_3.html#matched-random-sampling",
+    "title": "Week 3",
+    "section": "Matched Random Sampling",
+    "text": "Matched Random Sampling\n\nA way of linking members from two or more samples. For example, a study might involve matching each professional musician with an amateur musician who plays the same instrument."
+  },
+  {
+    "objectID": "class_notes/week_3.html#convenience-sampling",
+    "href": "class_notes/week_3.html#convenience-sampling",
+    "title": "Week 3",
+    "section": "Convenience Sampling",
+    "text": "Convenience Sampling\n\nConvenience Sampling. A convenience sample simply takes advantage of whatever might be available. For example, a sample of organ music by Gabriel Fauré might simply consist of all of the scores available in a music library. Similarly, we might stand on a street corner and ask whoever passes by to answer questions on a survey."
+  },
+  {
+    "objectID": "class_notes/week_3.html#stratified-sampling",
+    "href": "class_notes/week_3.html#stratified-sampling",
+    "title": "Week 3",
+    "section": "Stratified Sampling",
+    "text": "Stratified Sampling\n\nWhen we have reason to suspect that difference in sub-populations might influence the results, it is common to sample in such a way to ensure that each of the main sub-populations are represented.\nPost and Huron (2009) were interested in common-practice era tonal classical music. So we decided to use a stratified sample consisting of music from three periods: Baroque, Classical and Romantic. Our overall sample consisted of equivalent numbers of works from each of these historical eras."
+  },
+  {
+    "objectID": "class_notes/week_3.html#quota-sampling",
+    "href": "class_notes/week_3.html#quota-sampling",
+    "title": "Week 3",
+    "section": "Quota Sampling",
+    "text": "Quota Sampling\n\nA type of stratified sampling in which sub-samples are weighted according to their prevalence in the population.\nSuppose that we find that 52% of instrumentalists are most accomplished on guitar, 33% are most accomplished on keyboards, 12% on flute, 9% on trumpet, 8% on violin, etc. In quota sampling, we would aim to sample the same proportions for each instrument."
+  },
+  {
+    "objectID": "class_notes/week_3.html#exercise",
+    "href": "class_notes/week_3.html#exercise",
+    "title": "Week 3",
+    "section": "Exercise",
+    "text": "Exercise\nGroup Exercise"
+  },
+  {
+    "objectID": "class_notes/week_3.html#exercise-answers",
+    "href": "class_notes/week_3.html#exercise-answers",
+    "title": "Week 3",
+    "section": "Exercise (Answers)",
+    "text": "Exercise (Answers)\nGroup Exercise (Answers)"
   },
   {
     "objectID": "class_notes/week_1.html",
@@ -212,9 +345,9 @@
   {
     "objectID": "emp_methods_workshop/measurement_answers.html",
     "href": "emp_methods_workshop/measurement_answers.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "Measurement Task Answers",
     "section": "",
-    "text": "For each case, identify the kind of measurement scale implied — either nominal, ordinal, interval, or ratio.\n\nWorks categorized as either ragtime, stride bass, big band, bebop, Dixieland, free jazz or other.\nNominal: These are named categories.\nThe age of audience members.\nRatio: Zero is meaningful. A doubling of age (from 20 to 40) is a true doubling.\nYear of birth for audience members.\nInterval: The year “0” has no special meaning; The year 1000 A.D. is not half as old as 2000 A.D.\nThe participant’s sex, coded as male or female.\nNominal: These are named categories.\nInterval size in semitones.\nRatio: Zero has meaning, namely a unison distance. Twelve semitones is twice six semitones.\nYear of composition.\nInterval: The year “0” has no special meaning; The year 1000 A.D. is not half as old as 2000 A.D.\nEither: medieval, renaissance, baroque, classical, romantic, or modern.\nOrdinal: There is a rank ordering in terms of history, but the distances between successive items is not the same.\nDynamic level, according to the scale: ppp, pp, p, mp, mf, f, ff, or fff.\nOrdinal: There is a rank order, but the distances between successive items is not necessarily the same.\nThe skin temperature of listeners in Fahrenheit.\nInterval: Recall that zero degrees has no special meaning. One hundred degrees is not twice as warm as fifty degrees.\nWatts of power produced by an amplifier.\nRatio: Zero watts means there is no power at all.\nA list of instruments.\nNominal: These are named categories.\nA list of instruments from brightest to darkest timbres.\nOrdinal: There is a rank order from brightest to darkest, but the distance between neighboring instruments on the list is not constant.\nMIDI key numbers (e.g., middle C = 60).\nInterval: notice that MIDI key “0” has no special meaning and that MIDI key “60” (C4) is not “twice as much or twice as high” as MIDI key “30” (F#2).\nCoded S, A, T or B.\nOrdinal: There is a rank order in terms of pitch height. However, the distance in tessitura is not necessarily the same. For example, the distance between the bass and the tenor might well be larger than the distance between the soprano and the alto.\nNumber of hours of practice.\nRatio: Zero has meaning (no practice at all); 2 hours of practice is twice as much as 4 hours of practice.\nIQ.\nInterval: Zero has no special meaning. Instead “100” has a special meaning, namely the average intelligence. A person who has an IQ of “200” is not twice as smart as the average person.\nNumber of instruments.\nRatio: Zero has a special meaning. Four instruments is half of eight instruments.\nReaction times in milliseconds.\nRatio: Zero has a special meaning; 50 milliseconds is half 100 milliseconds.\nThree categories: (1) Obviously major, (2) obviously minor, or (3) not obviously major or minor.\nNominal: These are named categories.\nThe amount of money a busker makes per hour.\nRatio: Zero has meaning; $6/hr is twice as much as $3/hr.\nLength of hairpin markings in centimeters.\nRatio: Zero means no distance at all. Six centimeters is twice the distance of three centimeters.\nThe notated key of a passage.\nNominal: These are named categories, like F major or B-flat minor.\nThe loudness of each instrument, measured in decibels.\nInterval: This is really a trick question that requires special knowledge. Most people don’t know that zero decibels doesn’t mean the absence of sound. It means a sound of 0.0002 dynes per square centimeter, which is considered the quietest sound that a normal person can just hear. The total absence of sound is undefined in the decibel scale, making the scale an interval scale rather than a ratio scale.\nThe number of sharps (positive) or flats (negative) in a key signature. (E.g., F# & C# = +2; Bb = -1.)\nRatio or interval: A difficult question. If one is thinking purely in terms of the notational symbols, then zero has a special meaning — i.e., no sharp or flat symbols. This would make the scale a ratio scale. However, it is likely that the researcher is thinking in terms of the circle of fifths. One might argue that there is nothing special about C major/A minor compared with other keys. D major might have twice the number of sharps as G major, but does G major have infinitely more sharps than C major? If the researcher is thinking in terms of the circle of fifths, then no sharps or flats is not special, and therefore the measurement would be considered an interval scale.\nResponses: never, rarely, sometimes, frequently, always.\nOrdinal: We can’t say that the distance between never and rarely is the same as the distance between sometimes and frequently.\nMusical preference on a 7-point scale:\n\n\n\n\n\n\n\n\n\n\n\n\nlike\n◉\n◉\n◉\n◉\n◉\ndislike\n\n\n\nInterval: respondents tend to treat the points as positions along a hypothetical line; although there is no meaningful “zero” position, one can interpret the distances between successvie points as meaningful."
+    "text": "Works categorized as either ragtime, stride bass, big band, bebop, Dixieland, free jazz or other.\nNominal: These are named categories.\nThe age of audience members.\nRatio: Zero is meaningful. A doubling of age (from 20 to 40) is a true doubling.\nYear of birth for audience members.\nInterval: The year “0” has no special meaning; The year 1000 A.D. is not half as old as 2000 A.D.\nThe participant’s sex, coded as male or female.\nNominal: These are named categories.\nInterval size in semitones.\nRatio: Zero has meaning, namely a unison distance. Twelve semitones is twice six semitones.\nYear of composition.\nInterval: The year “0” has no special meaning; The year 1000 A.D. is not half as old as 2000 A.D.\nEither: medieval, renaissance, baroque, classical, romantic, or modern.\nOrdinal: There is a rank ordering in terms of history, but the distances between successive items is not the same.\nDynamic level, according to the scale: ppp, pp, p, mp, mf, f, ff, or fff.\nOrdinal: There is a rank order, but the distances between successive items is not necessarily the same.\nThe skin temperature of listeners in Fahrenheit.\nInterval: Recall that zero degrees has no special meaning. One hundred degrees is not twice as warm as fifty degrees.\nWatts of power produced by an amplifier.\nRatio: Zero watts means there is no power at all.\nA list of instruments.\nNominal: These are named categories.\nA list of instruments from brightest to darkest timbres.\nOrdinal: There is a rank order from brightest to darkest, but the distance between neighboring instruments on the list is not constant.\nMIDI key numbers (e.g., middle C = 60).\nInterval: notice that MIDI key “0” has no special meaning and that MIDI key “60” (C4) is not “twice as much or twice as high” as MIDI key “30” (F#2).\nCoded S, A, T or B.\nOrdinal: There is a rank order in terms of pitch height. However, the distance in tessitura is not necessarily the same. For example, the distance between the bass and the tenor might well be larger than the distance between the soprano and the alto.\nNumber of hours of practice.\nRatio: Zero has meaning (no practice at all); 2 hours of practice is twice as much as 4 hours of practice.\nIQ.\nInterval: Zero has no special meaning. Instead “100” has a special meaning, namely the average intelligence. A person who has an IQ of “200” is not twice as smart as the average person.\nNumber of instruments.\nRatio: Zero has a special meaning. Four instruments is half of eight instruments.\nReaction times in milliseconds.\nRatio: Zero has a special meaning; 50 milliseconds is half 100 milliseconds.\nThree categories: (1) Obviously major, (2) obviously minor, or (3) not obviously major or minor.\nNominal: These are named categories.\nThe amount of money a busker makes per hour.\nRatio: Zero has meaning; $6/hr is twice as much as $3/hr.\nLength of hairpin markings in centimeters.\nRatio: Zero means no distance at all. Six centimeters is twice the distance of three centimeters.\nThe notated key of a passage.\nNominal: These are named categories, like F major or B-flat minor.\nThe loudness of each instrument, measured in decibels.\nInterval: This is really a trick question that requires special knowledge. Most people don’t know that zero decibels doesn’t mean the absence of sound. It means a sound of 0.0002 dynes per square centimeter, which is considered the quietest sound that a normal person can just hear. The total absence of sound is undefined in the decibel scale, making the scale an interval scale rather than a ratio scale.\nThe number of sharps (positive) or flats (negative) in a key signature. (E.g., F# & C# = +2; Bb = -1.)\nRatio or interval: A difficult question. If one is thinking purely in terms of the notational symbols, then zero has a special meaning — i.e., no sharp or flat symbols. This would make the scale a ratio scale. However, it is likely that the researcher is thinking in terms of the circle of fifths. One might argue that there is nothing special about C major/A minor compared with other keys. D major might have twice the number of sharps as G major, but does G major have infinitely more sharps than C major? If the researcher is thinking in terms of the circle of fifths, then no sharps or flats is not special, and therefore the measurement would be considered an interval scale.\nResponses: never, rarely, sometimes, frequently, always.\nOrdinal: We can’t say that the distance between never and rarely is the same as the distance between sometimes and frequently.\nMusical preference on a 7-point scale:\n\n\n\n\n\n\n\n\n\n\n\n\nlike\n◉\n◉\n◉\n◉\n◉\ndislike\n\n\n\nInterval: respondents tend to treat the points as positions along a hypothetical line; although there is no meaningful “zero” position, one can interpret the distances between successvie points as meaningful."
   },
   {
     "objectID": "emp_methods_workshop/chi_square_problems.html",
@@ -1152,7 +1285,7 @@
     "href": "emp_methods_workshop/day2.html",
     "title": "Day 2",
     "section": "",
-    "text": "DAY 2\n\nReview and Elaborations\n\nWelcome; encourage mix-up seating/groups\nDay 2 Program\nReview slogans (first 16)\nGroup Task #7: From theory to conjecture\nMultiple operationalizations\nFormal observation: The taxi protocol\nThe Experiment\nThe Correlational Study\nCorrelation and causation\nThe third variable problem\n\nNo causation without manipulation.\n\n\nSampling\n\nSampling\nGroup Task #8: Sampling Approaches (Answers)\nWEIRD sampling (Western, Educated, Industrialized, Rich, Democratic)\nData Independence\n\nAvoid sticky data.\n\nBiased Sampling: Listening to Edith Boyd\nGroup Task #9: Sampling Issues (Discussion)\nGroup Task #10: What is Random?\nHomework review: Review questions and answers for Lancashire & Hirst (2009)\nSampling - A Practical Problem [omit?]\nSample Size: Law of Big Numbers\nSample Size: Law of Small Numbers\n\nThe law of large numbers does not apply to small numbers.\n\nEffect Size\nRegression-to-the-Mean\nRegression-to-the-Mean in Music\nReview (first 19) slogans\nGroup Task #11: Are dynamics asymmetrical? Data sheet\n\nBehavioral Data\n\nDependent and independent measures\nTypes of behaviors (summary) The full text (or video) are left as homework. Types of behaviors (full) (video - 32 minutes)\nImplicit vs. explicit responses\nReactivity\nDemand characteristics Clever Hans\n\nAlways debrief.\n\nMeasurement scales\nGroup Task #12: What kind of measurement scale? (Answers)\nDesigning questionnaires (powerpoint presentation #17)\nGroup Task #13: Questionnaire Design\nReview (first 20) slogans"
+    "text": "DAY 2\n\nReview and Elaborations\n\nWelcome; encourage mix-up seating/groups\nDay 2 Program\nReview slogans (first 16)\nGroup Task #7: From theory to conjecture\nFormal observation: The taxi protocol\nThe Experiment\nThe Correlational Study\nCorrelation and causation\nThe third variable problem\n\nNo causation without manipulation.\n\n\nSampling\n\nSampling\nGroup Task #8: Sampling Approaches (Answers)\nWEIRD sampling (Western, Educated, Industrialized, Rich, Democratic)\nData Independence\n\nAvoid sticky data.\n\nBiased Sampling: Listening to Edith Boyd\nGroup Task #9: Sampling Issues (Discussion)\nGroup Task #10: What is Random?\nHomework review: Review questions and answers for Lancashire & Hirst (2009)\nSampling - A Practical Problem [omit?]\nSample Size: Law of Big Numbers\nSample Size: Law of Small Numbers\n\nThe law of large numbers does not apply to small numbers.\n\nEffect Size\nRegression-to-the-Mean\nRegression-to-the-Mean in Music\nReview (first 19) slogans\nGroup Task #11: Are dynamics asymmetrical? Data sheet\n\nBehavioral Data\n\nDependent and independent measures\nTypes of behaviors (summary) The full text (or video) are left as homework. Types of behaviors (full) (video - 32 minutes)\nImplicit vs. explicit responses\nReactivity\nDemand characteristics Clever Hans\n\nAlways debrief.\n\nMeasurement scales\nGroup Task #12: What kind of measurement scale? (Answers)\nDesigning questionnaires (powerpoint presentation #17)\nGroup Task #13: Questionnaire Design\nReview (first 20) slogans"
   },
   {
     "objectID": "emp_methods_workshop/sampling2.html",
@@ -1185,9 +1318,9 @@
   {
     "objectID": "emp_methods_workshop/day3.html",
     "href": "emp_methods_workshop/day3.html",
-    "title": "Empirical and Critical Methods in Musicology",
+    "title": "Day 3",
     "section": "",
-    "text": "Methods in Empirical Music Research A Workshop for Music Scholars\n\nDAY 1\n\n\nTitle page\n\n\nWelcome & Introduction\n\n+Introduction\n\nGenerals Aims & Preview\n\nDay 1 Program\nLearning objectives\n\nEmpirical Research\n\nPreamble: An Arts and Humanities Approach to Empirical Method +(Philosophical [continental phenomenological or formal logic approach to content; +Science [procedural orientation; norms of scientific method] +Humanities approach [I approach it from a rhetorical and ethical perspective] +Please read for homework.)\nTypes of knowledge (powerpoint presentation #1)\nSeven big ideas\n\nMotivated by truth, with no hope of proof.\nThe best research invites failure.\nWe invite failure by testing predictions.\n\nA line in the sand\n\nWe recognize failure by drawing a line in the sand.\n\nRefutation is easier than confirmation\n\nAim not to be right, but to be not not right.\n\nOperationalizing\n\nTest hypotheses by operationalizing terms.\nOperationalize, but don’t essentialize.\n\nComparison\n\nCompare, compare, compare. Randomized Control Studies - The Case of Microfinance Counterfactuals (powerpoint presentation #2)\n\nThe rhetoric of science (video - 8 minutes)\n\nThe rhetoric of science is the rhetoric of prophecy. “Science is a narrative activity, conducted by a community of scholars who hold each other to a methodological commitment to making and testing predictions.”\n\nReview the first 9 slogans: Quiz #1\nGroup Task #1: What’s worth knowing? An audience with God\nQuestions, conjectures, hypotheses and theories\nGroup Task #2: Question, theory or hypothesis? (Answers)\nGrandmother research\nThe quantitative/measurement obsession\nGroup Task #3a: Obvious theories - Part 1\nGroup Task #3b: Obvious theories - Part 2\n(Group Task #3 Debriefing) Obvious theories: Hindsight bias\n\nHindsight is 20/20.\n\nGrandmother research revisited\nTwo forms of reductionism\n\nIn research, reductionism is a method, not a belief.\nDon’t try to explain the whole world at once.\n\nEpistephobia\nTypes of failure (powerpoint presentation #3)\nReview (first 12) slogans\n\nTypes of Empirical Studies\n\nTypes of empirical studies (powerpoint presentation #5)\nGroup Task #4: Types of studies (Answers/Discussion)\nGeneralizing versus universalizing (video - 10 minutes)\n\nGeneralize, but don’t universalize.\n\nExploratory studies\nMeasurement studies\nHypothesislessness\n\nAvoid chronic hypothesislessness.\n\nGroup Task #5: Operationalize the following hypotheses\nSyncopation: From question to hypothesis (powerpoint presentation #8)\nOpinions as operationalizations\nDouble use data\n\nBeware of the post hoc theory.\n\nExploratory & Confirmatory: Contexts of discovery and legitimation (lecture)\nExplore-then-test Approach\nExplore-then-test example - Part 1 (Have a participant read the text aloud. What kind of study is this? What should happen next?)\nExplore-then-test example - Part 2 (Have another participant read the text aloud. Why make use of a robot rather than a human?)\nFrom question … to protocol.\n\nFrom question to theory to conjecture to hypothesis to protocol\n\nQuiz #2 (Answers)\nReview (first 16) slogans\nFeedback Day 1\n\nHomework\n\nHomework 1: Reading: Preamble: An Arts and Humanities Approach to Empirical Method Homework 2: Reading Guide #1: Lancashire & Hirst (2009)\nReading #1: Lancashire & Hirst (2009)\nHomework 3: Individual Task #6: From question to theory\n\n\n\nDAY 2\n\n\nReview and Elaborations\n\nWelcome; encourage mix-up seating/groups\nDay 2 Program\nReview slogans (first 16)\nGroup Task #7: From theory to conjecture\nMultiple operationalizations\nFormal observation: The taxi protocol\nThe Experiment\nThe Correlational Study\nCorrelation and causation\nThe third variable problem\n\nNo causation without manipulation.\n\n\nSampling\n\nSampling\nGroup Task #8: Sampling Approaches (Answers)\nWEIRD sampling (Western, Educated, Industrialized, Rich, Democratic)\nData Independence\n\nAvoid sticky data.\n\nBiased Sampling: Listening to Edith Boyd\nGroup Task #9: Sampling Issues (Discussion)\nGroup Task #10: What is Random?\nHomework review: Review questions and answers for Lancashire & Hirst (2009)\nSampling - A Practical Problem [omit?]\nSample Size: Law of Big Numbers\nSample Size: Law of Small Numbers\n\nThe law of large numbers does not apply to small numbers.\n\nEffect Size\nRegression-to-the-Mean\nRegression-to-the-Mean in Music\nReview (first 19) slogans\nGroup Task #11: Are dynamics asymmetrical? Data sheet\n\nBehavioral Data\n\nDependent and independent measures\nTypes of behaviors (summary) The full text (or video) are left as homework. Types of behaviors (full) (video - 32 minutes)\nImplicit vs. explicit responses\nReactivity\nDemand characteristics Clever Hans\n\nAlways debrief.\n\nMeasurement scales\nGroup Task #12: What kind of measurement scale? (Answers)\nDesigning questionnaires (powerpoint presentation #17)\nGroup Task #13: Questionnaire Design\nReview (first 20) slogans\nFeedback Day 2\n\nHomework\n\nReading Guide #2: Perttu (2007)\nReading #2: Perttu (2007)\n\n\n\nDAY 3\n\n\nIntroduction to Statistics\n\nDay 3 Program\nOutline (lecture)\nWhy measure? How to measure anything Measurement (powerpoint presentation #18)\nFermi Questions: Are there a half a billion windows in New York City? Are there 500 piano tuners in Chicago? [You may be better than you think you are at estimating some values.]\nDescriptive Statistics\nMeasures of Central Tendency powerpoint presentation\nGroup Task #15: Descriptive Statistics\nInferential Statistics\nInferential Statistics (including Probability, The null hypothesis, Confidence and significance levels, Statistical tests)\nConfidence level and Confidence Interval\nCalculating confidence interval from confidence level (web tool)\nStatistical Significance\nChi-square test (powerpoint presentation #22)\nTable of critical values for chi-square (short) (long table - 5 pages)\nGroup Task #16: Chi-square tests; (Answers)\nGroup Task #17: Funeral marches in F minor: Hypothesis (Answer)\nCorrelation demonstration Pearson’s r Table;\nSpurioius correlations - see <http://www.tylervigen.com/spurious-correlations\nInterpreting p; “Highly” and “marginally” significant\nMultiple Tests and Related Topics: Bonferroni Correction; File Drawer Effect\n\nCorrect for multiple tests.\n\nPositive results bias. The case of Ego Depletion (video - 9 minutes)\nConcept of “research registry”\nPublishing practice\nStatistical tests - General remarks\n\nMake friends with a statistician.\n\n\nApplied Statistics\n\nHeroes and villains in opera (simplified analysis using chi-square test)\nPopulation density and tempo (demonstrating Pearson’s r)\nGerman vs. Chinese folksongs (regression analysis)\n\nSome Advanced Analytic Techniques\n\nAdvanced Analytic Techniques\nCluster analysis: Orchestration Cluster analysis: From Classical to Romantic\nMulti-dimensional scaling (MDS)\nModeling - B-flat trumpet\n\nIf you torture the data long enough, it will confess to anything.\n\nFoote Novelty (powerpoint presentation #26)\nHomework review: Review questions and answers for Perttu (2007)\nReview (first 23) slogans\nFeedback Day 3\n\nHomework\n\nReading Guide #3: Shanahan & Huron (2014)\nReading #3: Shanahan & Huron (2014)"
+    "text": "Introduction to Statistics\n\nDay 3 Program\nOutline (lecture)\nWhy measure? How to measure anything Measurement (powerpoint presentation #18)\nFermi Questions: Are there a half a billion windows in New York City? Are there 500 piano tuners in Chicago? [You may be better than you think you are at estimating some values.]\nDescriptive Statistics\nMeasures of Central Tendency powerpoint presentation\nGroup Task #15: Descriptive Statistics\nInferential Statistics Probability, The null hypothesis, Confidence and significance levels, Statistical tests)\nConfidence level and Confidence Interval\nCalculating confidence interval from confidence level (web tool)\nStatistical Significance\nChi-square test (powerpoint presentation #22)\nTable of critical values for chi-square (short) (long table - 5 pages)\nGroup Task #16: Chi-square tests; (Answers)\nGroup Task #17: Funeral marches in F minor: Hypothesis (Answer)\nSpurioius correlations - see <http://www.tylervigen.com/spurious-correlations\nInterpreting p; “Highly” and “marginally” significant\nMultiple Tests and Related Topics: Bonferroni Correction; File Drawer Effect\n\nCorrect for multiple tests.\n\nPublishing practice\nStatistical tests - General remarks\n\nMake friends with a statistician.\n\n\nApplied Statistics\n\nHeroes and villains win opera (simplified analysis using chi-square test)\nPopulation density and tempo (demonstrating Pearson’s r)\n\nSome Advanced Analytic Techniques\n\nAdvanced Analytic Techniques\nCluster analysis: Orchestration Cluster analysis: From Classical to Romantic\nMulti-dimensional scaling (MDS)\nModeling - B-flat trumpet\n\nIf you torture the data long enough, it will confess to anything.\n\nFoote Novelty (powerpoint presentation #26)\nHomework review: Review questions and answers for Perttu (2007)\nReview (first 23) slogans\nFeedback Day 3"
   },
   {
     "objectID": "emp_methods_workshop/funeral_marches.html",
@@ -1806,6 +1939,174 @@
     "text": "Exercise (Answers)\nGroup Exercise (Answers)"
   },
   {
+    "objectID": "slides/week5.html#what-do-we-mean-by-bias",
+    "href": "slides/week5.html#what-do-we-mean-by-bias",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "What do we mean by bias?",
+    "text": "What do we mean by bias?\nFor our purposes, let’s define it as:\n\nconsistent and system deviation from the expected norm based stemming from a flaw in the design of study."
+  },
+  {
+    "objectID": "slides/week5.html#order-effects",
+    "href": "slides/week5.html#order-effects",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Order Effects",
+    "text": "Order Effects\n“The order of presenting the treatments affects the dependent variable.” (Cozby, 137)\n(sometimes called sequence effects)"
+  },
+  {
+    "objectID": "slides/week5.html#recency-bias",
+    "href": "slides/week5.html#recency-bias",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Recency Bias",
+    "text": "Recency Bias\nPeople treat the most recently presented things differently from the others."
+  },
+  {
+    "objectID": "slides/week5.html#primacy-bias",
+    "href": "slides/week5.html#primacy-bias",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Primacy Bias",
+    "text": "Primacy Bias\nPeople treat the things presented first differently than they would the others."
+  },
+  {
+    "objectID": "slides/week5.html#how-can-we-avoid-this",
+    "href": "slides/week5.html#how-can-we-avoid-this",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "How can we avoid this?",
+    "text": "How can we avoid this?\n\nRANDOMIZE, RANDOMIZE, RANDOMIZE."
+  },
+  {
+    "objectID": "slides/week5.html#other-options",
+    "href": "slides/week5.html#other-options",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Other options?",
+    "text": "Other options?\nSometimes simple randomization won’t work. Maybe there are repeated measures and you don’t want them to be presented back-to-back, for example. Or maybe the order is an effect that you’re actually interested in."
+  },
+  {
+    "objectID": "slides/week5.html#other-options-1",
+    "href": "slides/week5.html#other-options-1",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Other options?",
+    "text": "Other options?\nA latin square design is sometimes a good way to go.\n\n\n\nFirst\nSecond\nThird\nFourth\n\n\n\n\nA\nB\nC\nD\n\n\nB\nC\nD\nA\n\n\nC\nD\nA\nB"
+  },
+  {
+    "objectID": "slides/week5.html#how-many-x-do-i-need",
+    "href": "slides/week5.html#how-many-x-do-i-need",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "How many [X] do I need?",
+    "text": "How many [X] do I need?\nThis is probably the most commonly asked question. First we should cover a few preliminaries:\n\nTypes of errors\nEffect Size\nPower"
+  },
+  {
+    "objectID": "slides/week5.html#consider-the-following",
+    "href": "slides/week5.html#consider-the-following",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Consider the following",
+    "text": "Consider the following\nFrom Pollard and Richardson (1987):\n\n“If aa person is American then they are probably not a member of Congress; this person is a member of Congree; therefore this person is probably not an American.”"
+  },
+  {
+    "objectID": "slides/week5.html#sensitivity",
+    "href": "slides/week5.html#sensitivity",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Sensitivity",
+    "text": "Sensitivity\n\n“Whenever you find a null result and it is interesting to you that the result is null, you should always indicate the sensitivity of your analysis.” (Dienes, p.68)\nPower\nConfidence Intervals\nFinding an effect significantly different from another reference point."
+  },
+  {
+    "objectID": "slides/week5.html#stopping-rules",
+    "href": "slides/week5.html#stopping-rules",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Stopping Rules",
+    "text": "Stopping Rules\n-Neyman and Pearson would argue that you need to adequately define the conditions under which you will stop collecting data a priori.\n\nBelieve it or not, anything can be “significant” if you just keep collecting data forever."
+  },
+  {
+    "objectID": "slides/week5.html#types-of-errors",
+    "href": "slides/week5.html#types-of-errors",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\nType I Error: Wrongly claiming something to be true, useful or knowable.\nType II Error: Wrongly claiming something to be false, useless or unknowable."
+  },
+  {
+    "objectID": "slides/week5.html#types-of-errors-1",
+    "href": "slides/week5.html#types-of-errors-1",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\nType I error is when the null is true and we reject it.\nType II error is when the null is false and we accept it."
+  },
+  {
+    "objectID": "slides/week5.html#alpha-and-beta",
+    "href": "slides/week5.html#alpha-and-beta",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Alpha and Beta",
+    "text": "Alpha and Beta\n\n\\(\\alpha\\) = The part of a distribution that is so extreme that we can reject the likelihood of it happening (usually in alignment with our maximum accepted p-value.)\n\nAnother way of thinking about it is that \\(\\alpha\\) is the long-term error rate for a specific type of error: saying that the null is false when it is true (see Dienes, p.62)\n\n\\(\\beta\\) = When the null is false, \\(\\beta\\) is the proportion of times that we accept it, even though it’s false."
+  },
+  {
+    "objectID": "slides/week5.html#types-of-errors-2",
+    "href": "slides/week5.html#types-of-errors-2",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\ntypes of errors"
+  },
+  {
+    "objectID": "slides/week5.html#put-another-way",
+    "href": "slides/week5.html#put-another-way",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "put another way…",
+    "text": "put another way…\n\n\\(\\alpha\\) = \\(P(rejecting H_0 \\mid H_0)\\)\n\\(\\beta\\) = \\(P(accepting H_0 \\mid H_0 false)\\)"
+  },
+  {
+    "objectID": "slides/week5.html#an-example",
+    "href": "slides/week5.html#an-example",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "An example",
+    "text": "An example\n(from Dienes, p.63)\n\n\n\nDecision\n\\(\\ H_0\\) true\n\\(\\ H_0\\) false\n\n\n\n\nAccept \\(\\ H_0\\)\n3800\n500\n\n\nReject \\(\\ H_0\\)\n200\n500\n\n\nTotals\n4000\n1000\n\n\n\n\nproportion of Type I errors shown when the null is true is 200/5000 (.05)\nBut what if we define a type I error as ’the probability of a Type I error _when we have rejected the null’?"
+  },
+  {
+    "objectID": "slides/week5.html#an-example-1",
+    "href": "slides/week5.html#an-example-1",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "An Example",
+    "text": "An Example\n\nThis means we consider only the cases when we have rejected the null. (200/700, or 29%)\nThe point: Using only a significance level of 5% does not guarantee that only 5% of all published significant results are an error."
+  },
+  {
+    "objectID": "slides/week5.html#alpha-and-beta-1",
+    "href": "slides/week5.html#alpha-and-beta-1",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "\\(\\alpha\\) and \\(\\beta\\)",
+    "text": "\\(\\alpha\\) and \\(\\beta\\)\n\nNotice how \\(\\beta\\) can be very different from \\(\\alpha\\).\nControlling one does not mean you have controlled the other.\nPower is defined as 1-\\(\\beta\\).\nPut another way, power is:\n\n\\(P(rejecting H_0 \\mid H_0 false)\\)"
+  },
+  {
+    "objectID": "slides/week5.html#ethics",
+    "href": "slides/week5.html#ethics",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Ethics?",
+    "text": "Ethics?\n\nthe question for you is, is a Type II error as important as a Type I?\nIf so, you could set both \\(\\alpha\\) and \\(\\beta\\) at .05 (power would be .95).\nIf you think that type II errors are not quite as important, one could set the \\(\\beta\\) higher, at something like .1, for example."
+  },
+  {
+    "objectID": "slides/week5.html#steps-for-beta",
+    "href": "slides/week5.html#steps-for-beta",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Steps for \\(\\beta\\)",
+    "text": "Steps for \\(\\beta\\)\n\nEstimate the size of effect that you think is interesting, given that your theory is true.\nEstimate the amount of noise that your data will have.\n\n“The probability of detecting an effect depends not just on how big the effect is, but how much noise there is through which you are trying to detect the effect.” (Dienes, p.64)"
+  },
+  {
+    "objectID": "slides/week5.html#whats-your-stopping-rule",
+    "href": "slides/week5.html#whats-your-stopping-rule",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "What’s your stopping rule?",
+    "text": "What’s your stopping rule?\n\nCan you run as many participants as you’d like until you get a significant result?"
+  },
+  {
+    "objectID": "slides/week5.html#what-if-youd-like-to-add-tests-or-conditions",
+    "href": "slides/week5.html#what-if-youd-like-to-add-tests-or-conditions",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "What if you’d like to add tests or conditions?",
+    "text": "What if you’d like to add tests or conditions?\n\nIf you plan it ahead of time, then you can stick with your original $alpha$.\nif you would like to test other things, as you go, you need to correct for multiple tests.\n\nA standard (and conservative) approach to this is the Bonferroni correction, in which you divide $alpha$ by the number of tests. (so .05/2 for two tests, .05/3 for three tests, etc.)."
+  },
+  {
+    "objectID": "slides/week5.html#criticisms-of-neyman-pearson",
+    "href": "slides/week5.html#criticisms-of-neyman-pearson",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "Criticisms of Neyman-Pearson",
+    "text": "Criticisms of Neyman-Pearson\n(taken from Dienes, p.76)\n\nInference consists of simple acceptance and rejection\nNull hypothesis testing encourages weak theorizing\nIn the Neyman-Pearson approach it is important to know the reference class–we must know what endless series of trials but never did."
+  },
+  {
     "objectID": "descriptive_stats.html",
     "href": "descriptive_stats.html",
     "title": "Descriptive Statistics",
@@ -1817,7 +2118,7 @@
     "href": "descriptive_stats.html#statistics",
     "title": "Descriptive Statistics",
     "section": "Statistics",
-    "text": "Statistics\nDescriptive statistics: Measures that describe a set of data.\nStatistic: Some value derived from a sample, such as the sample average or mean.\nInferential statistics: The process by which population parameters are inferred from sample statistics.\nParameter: A true population value, such as the population mean (μ).\nVariable-statistic-parameter: We infer a population parameter on the basis of a statistic which we calculate from measured variables.\n\nDistributions\nBar graph: A graph that uses a nominal scale on the X (horizontal) axis. (That is, a frequency-of-occurrence graph that distinguishes discrete categories, such as gender, or instrument played.) In a bar graph, bars are separated by spaces in order to emphasize that neighboring bars are not contiguous cateogires.\n\n### importing a library\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──\n\n\n✔ ggplot2 3.4.0     ✔ purrr   0.3.4\n✔ tibble  3.1.8     ✔ dplyr   1.0.9\n✔ tidyr   1.2.0     ✔ stringr 1.4.0\n✔ readr   2.1.2     ✔ forcats 0.5.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n### setting a working directory\nsetwd(\".\")\n\n### importing your data\ndf <- read.csv(\"data/chorale_keys.csv\", header=F)\n\n### cleaning up your data\ndf$keys <- df$V2\ndf$V2 <- NULL\n\nbarplot(table(df))\n\n\n\n\nWe could clean it up a bit.\n\n### getting counts of keys\nkeys <- as.data.frame(table(df$keys))\n\n###plotting it as a barplot.\nggplot(data=keys, aes(x=Var1, y=Freq)) +\n  geom_bar(stat=\"identity\") +\n  theme(axis.text.x = element_text(angle = 90)) +\n  theme_bw()\n\n\n\n\nHistogram: A frequency-of-occurrence graph that uses an ordinal, interval, or ratio scale on the X (horizontal) axis. (In other words, a graph that does not use a nominal scale.) In a histogram, bars are not separated by spaces in order to emphasize that neighboring bars represent contiguous categories.\nHere is a histogram of a random normal distribution of numbers, binning the numbers.\n\nhist(rnorm(50, 40,2))\n\n\n\n\nCumulative Distribution: A distribution (graph) that plots cumulative frequencies for successive bins on the X axis.\n\n# create sample data\nsample_Data = rnorm(100)\n  \n# calculate cumulative distribution\nCDF <- ecdf(sample_Data )\n  \n# plot it\nplot(CDF)\n\n\n\n\nBack-to-back Histograms: Histogram-pairs that are plotted back-to-back, such as the gender/age histograms commonly used to plot population demographics.\n\nsurvey <- data.frame(player=rep(c(\"Coltrane\", \"Miles\"),each=6),\n                     ensemble=rep(c(\"Trios\", \"Quartets\", \"Quintets\", \"Duets\", \"Solo\", \"Large Ensemble\"),2),\n                     counts=c(22, 10, 15, 23, 12, 18, 18, 5, 15, 27, 8, 17))\n\n\n### grouped bar plot (see https://www.learnbyexample.org/r-bar-plot-ggplot2/)\nggplot(survey, aes(x=ensemble, y=counts, fill=player)) + \n  geom_bar(stat=\"identity\", position=position_dodge())\n\n\n\n\nStacked barplots can also be quite useful for this type of information.\n\nggplot(survey, aes(x=ensemble, y=counts, fill=player)) + \n  geom_bar(stat=\"identity\")\n\n\n\n\nSkewness: The tendency of a distribution to lean to the left or right.\nPositive skew: Where the tail of the distribution extends to the right (higher values).\n\n### from: https://www.r-bloggers.com/2020/11/skewness-and-kurtosis-in-statistics/\nx = rexp(1000,1)\nhist(x, main=\"Exponential: Positive Skew\", freq=FALSE)\n\n\n\n\nNegative skew: Where the tail of the distribution extends to the left (lower values).\n\nx= rbeta(10000,5,2)\nhist(x, main=\"Beta: Negative Skew\", freq=FALSE)\n\n\n\n\nKurtosis: The degree to which a distribution is either flat or peaked. A relatively flat distribution is called platykurtic. A highly peaked distribution is said to be leptokurtic. A distribution that is neither flat nor especially peaked is deemed mesokurtic.\nKurtosis can be described for both continuous distributions and discrete distributions. The discrete distributions below illustrate platykurtic (below)\n\nu_dist <- runif(200, 55, 89)\nhist(u_dist)\n\n\n\n\nand leptokurtic (right) kurtosis (skinny with tall peaks).\nSymmetry: The property of a distribution that exists when the distribution has the same shape on either side of the center.\nModality: The number of major peaks in a distribution. Where a distribution has only a single peak it is said to be unimodal. Where a distribution has two peaks it is said to be bimodal.\nUnimodel: A distribution containing a single peak.\nBimodal: A distribution containing two peaks. Again, bimodal distributions may be continuous (upper illustration) or discrete (lower illustration).\nDistribution Descriptors: Distributions can be generally described according to three properties: skewness, kurtosis, and modality (unimodal, bimodal, etc.).\n\nCentral Tendency\nIt is often useful to be able to summarize a distribution. Suppose someone is thinking of moving to Columbus, and asks How much does it cost to rent an apartment in Columbus? We could respond by giving them a list of all apartments in the city and their associated rents. That is, we could present them with a complete distribution. However, this would be too much information. The questioner is hoping we will give them a more general answer. An example of a summary generalization is the average (what statisticians called the mean). The average rent is likely to convey the gist of what the person wants to know.\nThe average or mean is just one example of a measure of ‘middleness’ or ‘centrality’ in a distribution. In statistics, these are referred to as measures of central tendency. There are three classic measures of central tendency: mode, median, and mean. The mode is simply the most frequentlly occurring score or value in a distribution. For bimodal distributions, we report the mode for both peaks.\nThe median is the middle-most score—that is, half the values are above the median, and half the values are below the median. The mean is the average score, which is the sum of all values, divided by the number of values.\nBy way of example, for the values: 1, 2, 2, 5, 10, 20, 30 — the mode is 2 (2 is the most common value), the median is 5 (3 values above and 3 below), and the mean (or average) is 10.\nIn statistics, it is useful to distinguish the mean (average) of the sample, from the mean of the population. The sample mean is represented mathematically by the letter x with a bar drawn above (x̄ - spoken “X-bar”). By contrast, the population mean is represented by the Greek letter mu (μ).\nEach measure of central tendency (mean, median and mode) has unique advantages and disadvantages. The principal advantage of the mode is that it conveys a “typical” or “common” value. Another advantage of the mode is that it can be calculated for nominal data. For example, a distribution might convey the number of performers playing various instruments. We cannot calculate an “average instrument,” nor can we determine the “median instrument.” However, we can identify the “modal instrument”—it is simply the most commonly played instrument. A problem with the mode is that it may be quite far away from the majority of values in some data set. Another disadvantage of the mode is that for continuous data, no two values may be equivalent. In these cases, the mode is undefined.\nThe mean is an admirable measure of central tendency that has a number of advantages—the most important of which we’ll discuss shortly. However, the mean also has some problems. First, the mean is especially influenced by extreme scores. The average of the values 1, 1, 1, 1, 1, 100 is 17.5—which is quite far away from the majority of the values in the set. This effect is commonly observed when calculating average house prices. Most house prices are moderate. However, occasionally someone sells a multimillion-dollar mansion. So the average cost of a house in a given city is apt to fluctuate wildly from month-to-month, depending on whether any mansions were sold. (This is the reason why real estate professionals report the median house price, not the average house price.) A second problem with means is that the value may not actually exist in the data. Both the median and mode report a value that is present in the data set. For example, we may find that the average symphony orchestra performance involves 53.7 musicians. Of course, no actually performance finds .7 of a musician on stage. Finally, the mean can be calculated only for interval and ratio scales. We cannot calculate an average for ordinal scales.\nIf we want to calculate central tendency for ordinal data, then it is appropriate to calculate the median. This is an important advantage for using the median. In addition, the sum of deviations for all data is least for the median; no other point has less cumulative deviation to all data points.\nThe principal advantage of the mean is rather technical. Apart from central tendency, another consideration in summarizing a distribution is the variability or dispersion of the data. It turns out that the mean has a special mathematical relationship to the best measure of data variability. Statisticians have demonstrated that squared deviation is a much better measure of ‘goodness’ than the unsquared deviation (see below). It turns out that the sum of squares for deviation for all data is least for the mean; no other point has less cumulative squared deviation to all data points. This means that the mean has a favorable relationship with the standard deviation (see below). The mean and standard deviation make an excellent mathematical pair.\nFortunately, for many distributions, the mode, median, and mean values are very similar. In fact, for data that is normally distributed, the mode, median and mean values are equivalent. Much (though not all) data in the world is normally distributed."
+    "text": "Statistics\nDescriptive statistics: Measures that describe a set of data.\nStatistic: Some value derived from a sample, such as the sample average or mean.\nInferential statistics: The process by which population parameters are inferred from sample statistics.\nParameter: A true population value, such as the population mean (μ).\nVariable-statistic-parameter: We infer a population parameter on the basis of a statistic which we calculate from measured variables.\n\nDistributions\nBar graph: A graph that uses a nominal scale on the X (horizontal) axis. (That is, a frequency-of-occurrence graph that distinguishes discrete categories, such as gender, or instrument played.) In a bar graph, bars are separated by spaces in order to emphasize that neighboring bars are not contiguous cateogires.\n\n### importing a library\nlibrary(tidyverse)\n\n── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──\n✔ ggplot2 3.4.0      ✔ purrr   1.0.1 \n✔ tibble  3.1.8      ✔ dplyr   1.0.10\n✔ tidyr   1.3.0      ✔ stringr 1.5.0 \n✔ readr   2.1.3      ✔ forcats 0.5.2 \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n\n### setting a working directory\nsetwd(\".\")\n\n### importing your data\ndf <- read.csv(\"data/chorale_keys.csv\", header=F)\n\n### cleaning up your data\ndf$keys <- df$V2\ndf$V2 <- NULL\n\nbarplot(table(df))\n\n\n\n\nWe could clean it up a bit.\n\n### getting counts of keys\nkeys <- as.data.frame(table(df$keys))\n\n###plotting it as a barplot.\nggplot(data=keys, aes(x=Var1, y=Freq)) +\n  geom_bar(stat=\"identity\") +\n  theme(axis.text.x = element_text(angle = 90)) +\n  theme_bw()\n\n\n\n\nHistogram: A frequency-of-occurrence graph that uses an ordinal, interval, or ratio scale on the X (horizontal) axis. (In other words, a graph that does not use a nominal scale.) In a histogram, bars are not separated by spaces in order to emphasize that neighboring bars represent contiguous categories.\nHere is a histogram of a random normal distribution of numbers, binning the numbers.\n\nhist(rnorm(50, 40,2))\n\n\n\n\nCumulative Distribution: A distribution (graph) that plots cumulative frequencies for successive bins on the X axis.\n\n# create sample data\nsample_Data = rnorm(100)\n  \n# calculate cumulative distribution\nCDF <- ecdf(sample_Data )\n  \n# plot it\nplot(CDF)\n\n\n\n\nBack-to-back Histograms: Histogram-pairs that are plotted back-to-back, such as the gender/age histograms commonly used to plot population demographics.\n\nsurvey <- data.frame(player=rep(c(\"Coltrane\", \"Miles\"),each=6),\n                     ensemble=rep(c(\"Trios\", \"Quartets\", \"Quintets\", \"Duets\", \"Solo\", \"Large Ensemble\"),2),\n                     counts=c(22, 10, 15, 23, 12, 18, 18, 5, 15, 27, 8, 17))\n\n\n### grouped bar plot (see https://www.learnbyexample.org/r-bar-plot-ggplot2/)\nggplot(survey, aes(x=ensemble, y=counts, fill=player)) + \n  geom_bar(stat=\"identity\", position=position_dodge())\n\n\n\n\nStacked barplots can also be quite useful for this type of information.\n\nggplot(survey, aes(x=ensemble, y=counts, fill=player)) + \n  geom_bar(stat=\"identity\")\n\n\n\n\nSkewness: The tendency of a distribution to lean to the left or right.\nPositive skew: Where the tail of the distribution extends to the right (higher values).\n\n### from: https://www.r-bloggers.com/2020/11/skewness-and-kurtosis-in-statistics/\nx = rexp(1000,1)\nhist(x, main=\"Exponential: Positive Skew\", freq=FALSE)\n\n\n\n\nNegative skew: Where the tail of the distribution extends to the left (lower values).\n\nx= rbeta(10000,5,2)\nhist(x, main=\"Beta: Negative Skew\", freq=FALSE)\n\n\n\n\nKurtosis: The degree to which a distribution is either flat or peaked. A relatively flat distribution is called platykurtic. A highly peaked distribution is said to be leptokurtic. A distribution that is neither flat nor especially peaked is deemed mesokurtic.\nKurtosis can be described for both continuous distributions and discrete distributions. The discrete distributions below illustrate platykurtic (below)\n\nu_dist <- runif(200, 55, 89)\nhist(u_dist)\n\n\n\n\nand leptokurtic (right) kurtosis (skinny with tall peaks).\nSymmetry: The property of a distribution that exists when the distribution has the same shape on either side of the center.\nModality: The number of major peaks in a distribution. Where a distribution has only a single peak it is said to be unimodal. Where a distribution has two peaks it is said to be bimodal.\nUnimodel: A distribution containing a single peak.\nBimodal: A distribution containing two peaks. Again, bimodal distributions may be continuous (upper illustration) or discrete (lower illustration).\nDistribution Descriptors: Distributions can be generally described according to three properties: skewness, kurtosis, and modality (unimodal, bimodal, etc.).\n\nCentral Tendency\nIt is often useful to be able to summarize a distribution. Suppose someone is thinking of moving to Columbus, and asks How much does it cost to rent an apartment in Columbus? We could respond by giving them a list of all apartments in the city and their associated rents. That is, we could present them with a complete distribution. However, this would be too much information. The questioner is hoping we will give them a more general answer. An example of a summary generalization is the average (what statisticians called the mean). The average rent is likely to convey the gist of what the person wants to know.\nThe average or mean is just one example of a measure of ‘middleness’ or ‘centrality’ in a distribution. In statistics, these are referred to as measures of central tendency. There are three classic measures of central tendency: mode, median, and mean. The mode is simply the most frequentlly occurring score or value in a distribution. For bimodal distributions, we report the mode for both peaks.\nThe median is the middle-most score—that is, half the values are above the median, and half the values are below the median. The mean is the average score, which is the sum of all values, divided by the number of values.\nBy way of example, for the values: 1, 2, 2, 5, 10, 20, 30 — the mode is 2 (2 is the most common value), the median is 5 (3 values above and 3 below), and the mean (or average) is 10.\nIn statistics, it is useful to distinguish the mean (average) of the sample, from the mean of the population. The sample mean is represented mathematically by the letter x with a bar drawn above (x̄ - spoken “X-bar”). By contrast, the population mean is represented by the Greek letter mu (μ).\nEach measure of central tendency (mean, median and mode) has unique advantages and disadvantages. The principal advantage of the mode is that it conveys a “typical” or “common” value. Another advantage of the mode is that it can be calculated for nominal data. For example, a distribution might convey the number of performers playing various instruments. We cannot calculate an “average instrument,” nor can we determine the “median instrument.” However, we can identify the “modal instrument”—it is simply the most commonly played instrument. A problem with the mode is that it may be quite far away from the majority of values in some data set. Another disadvantage of the mode is that for continuous data, no two values may be equivalent. In these cases, the mode is undefined.\nThe mean is an admirable measure of central tendency that has a number of advantages—the most important of which we’ll discuss shortly. However, the mean also has some problems. First, the mean is especially influenced by extreme scores. The average of the values 1, 1, 1, 1, 1, 100 is 17.5—which is quite far away from the majority of the values in the set. This effect is commonly observed when calculating average house prices. Most house prices are moderate. However, occasionally someone sells a multimillion-dollar mansion. So the average cost of a house in a given city is apt to fluctuate wildly from month-to-month, depending on whether any mansions were sold. (This is the reason why real estate professionals report the median house price, not the average house price.) A second problem with means is that the value may not actually exist in the data. Both the median and mode report a value that is present in the data set. For example, we may find that the average symphony orchestra performance involves 53.7 musicians. Of course, no actually performance finds .7 of a musician on stage. Finally, the mean can be calculated only for interval and ratio scales. We cannot calculate an average for ordinal scales.\nIf we want to calculate central tendency for ordinal data, then it is appropriate to calculate the median. This is an important advantage for using the median. In addition, the sum of deviations for all data is least for the median; no other point has less cumulative deviation to all data points.\nThe principal advantage of the mean is rather technical. Apart from central tendency, another consideration in summarizing a distribution is the variability or dispersion of the data. It turns out that the mean has a special mathematical relationship to the best measure of data variability. Statisticians have demonstrated that squared deviation is a much better measure of ‘goodness’ than the unsquared deviation (see below). It turns out that the sum of squares for deviation for all data is least for the mean; no other point has less cumulative squared deviation to all data points. This means that the mean has a favorable relationship with the standard deviation (see below). The mean and standard deviation make an excellent mathematical pair.\nFortunately, for many distributions, the mode, median, and mean values are very similar. In fact, for data that is normally distributed, the mode, median and mean values are equivalent. Much (though not all) data in the world is normally distributed."
   },
   {
     "objectID": "descriptive_stats.html#variability",

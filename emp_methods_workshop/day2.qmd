@@ -10,64 +10,63 @@ author: David Huron
 
 6.  **Review and Elaborations**
     -   **Welcome**; encourage mix-up seating/groups
-    -   [Day 2 Program](program2.html)
-    -   [Review slogans (first 16)](slogans16.html)
+    -   [Day 2 Program](program2.qmd)
+    -   [Review slogans (first 16)](slogans16.qmd)
     -   **Group Task #7:** [From theory to
-        conjecture](theory2conjecture.html)
-    -   [Multiple operationalizations](09_gauvin.pdf)
-    -   [Formal observation: The taxi protocol](protocol.html)
-    -   [The Experiment](experiment.html)
-    -   [The Correlational Study](correlational_study2.html)
-    -   [Correlation and causation](causality.html)
+        conjecture](theory2conjecture.qmd)
+    -   [Formal observation: The taxi protocol](protocol.qmd)
+    -   [The Experiment](experiment.qmd)
+    -   [The Correlational Study](correlational_study2.qmd)
+    -   [Correlation and causation](causality.qmd)
     -   The third variable problem
         17. *No causation without manipulation.*
 7.  **Sampling**
-    -   [Sampling](sampling.html)
-    -   **Group Task #8:** [Sampling Approaches](samples.html)
-        [(Answers)](samples_answers.html)
+    -   [Sampling](sampling.qmd)
+    -   **Group Task #8:** [Sampling Approaches](samples.qmd)
+        [(Answers)](samples_answers.qmd)
     -   WEIRD sampling (Western, Educated, Industrialized, Rich,
         Democratic)
-    -   [Data Independence](data_independence.html)
+    -   [Data Independence](data_independence.qmd)
         18. *Avoid sticky data.*
     -   [Biased Sampling: Listening to Edith
-        Boyd](sampling_haphazard.html)
-    -   **Group Task #9:** [Sampling Issues](sampling_problems.html)
-        [(Discussion)](sampling_problems_answers.html)
-    -   **Group Task #10:** [What is Random?](random.html)
+        Boyd](sampling_haphazard.qmd)
+    -   **Group Task #9:** [Sampling Issues](sampling_problems.qmd)
+        [(Discussion)](sampling_problems_answers.qmd)
+    -   **Group Task #10:** [What is Random?](random.qmd)
     -   **Homework review:** [Review questions and answers for
-        Lancashire & Hirst (2009)](Readings/reading01.html)
-    -   [Sampling - A Practical Problem](sampling2.html) [omit?]
-    -   [Sample Size: Law of Big Numbers](big_numbers.html)
-    -   [Sample Size: Law of Small Numbers](small_numbers.html)
+        Lancashire & Hirst (2009)](Readings/reading01.qmd)
+    -   [Sampling - A Practical Problem](sampling2.qmd) [omit?]
+    -   [Sample Size: Law of Big Numbers](big_numbers.qmd)
+    -   [Sample Size: Law of Small Numbers](small_numbers.qmd)
         19. *The law of large numbers does not apply to small
             numbers.*
-    -   [Effect Size](effect_size.html)
-    -   [Regression-to-the-Mean](regression_to_mean.html)
-    -   [Regression-to-the-Mean in Music](regression_in_music.html)
-    -   [Review (first 19) slogans](slogans19.html)
+    -   [Effect Size](effect_size.qmd)
+    -   [Regression-to-the-Mean](regression_to_mean.qmd)
+    -   [Regression-to-the-Mean in Music](regression_in_music.qmd)
+    -   [Review (first 19) slogans](slogans19.qmd)
     -   **Group Task #11:** [Are dynamics
-        asymmetrical?](dynamics.html) [Data sheet](dynamics2.html)
+        asymmetrical?](dynamics.qmd) [Data sheet](dynamics2.qmd)
 8.  **Behavioral Data**
     -   Dependent and independent measures
-    -   [Types of behaviors (summary)](behaviors_brief.html) The full
+    -   [Types of behaviors (summary)](behaviors_brief.qmd) The full
         text (or video) are left as homework. [Types of behaviors
-        (full)](behaviors.html) ([video](http://vimeo.com/65008608) -
+        (full)](behaviors.qmd) ([video](http://vimeo.com/65008608) -
         32 minutes)
     -   Implicit vs. explicit responses
-    -   [Reactivity](reactivity.html)
-    -   [Demand characteristics](demand_characteristics.html) [Clever
-        Hans](cleverHans.html)
+    -   [Reactivity](reactivity.qmd)
+    -   [Demand characteristics](demand_characteristics.qmd) [Clever
+        Hans](cleverHans.qmd)
         20. *Always debrief.*
-    -   [Measurement scales](scales.html)
+    -   [Measurement scales](scales.qmd)
     -   **Group Task #12:** [What kind of measurement
-        scale?](measurement_scales.html)
-        [(Answers)](measurement_answers.html)
-    -   [Designing questionnaires](questionnaires.html) (powerpoint
+        scale?](measurement_scales.qmd)
+        [(Answers)](measurement_answers.qmd)
+    -   [Designing questionnaires](questionnaires.qmd) (powerpoint
         presentation #17)
     -   **Group Task #13:** [Questionnaire
-        Design](questionnaire_task.html)
-    -   [Review (first 20) slogans](slogans20.html)
-9.  
+        Design](questionnaire_task.qmd)
+    -   [Review (first 20) slogans](slogans20.qmd)
+
     
     
 
