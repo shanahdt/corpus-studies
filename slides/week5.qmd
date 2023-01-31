@@ -12,7 +12,7 @@ format:
 
 For our purposes, let's define it as: 
 
-> consistent and system deviation from the expected norm based stemming from a flaw in the design of study.
+> consistent and systematic deviation from the expected norm stemming from a flaw in the design of study.
 
 ## Order Effects
 
@@ -59,7 +59,7 @@ This is probably the most commonly asked question. First we should cover a few p
 
 From Pollard and Richardson (1987):
 
-- "If aa person is American then they are probably not a member of Congress; this person is a member of Congree; therefore this person is probably not an American."
+- "If a person is American then they are probably not a member of Congress; this person is a member of Congress; therefore this person is probably not an American."
 
 ## Sensitivity
 
@@ -153,10 +153,10 @@ useless or unknowable.*
 
 ## What if you'd like to add tests or conditions?
 
-- If you plan it ahead of time, then you can stick with your original \$alpha$.
+- If you plan it ahead of time, then you can stick with your original $\alpha$.
 
 - if you would like to test other things, as you go, you need to *correct for multiple tests*.
-    - A standard (and conservative) approach to this is the *Bonferroni correction*, in which you divide \$alpha$ by the number of tests. (so .05/2 for two tests, .05/3 for three tests, _etc._).
+    - A standard (and conservative) approach to this is the *Bonferroni correction*, in which you divide $\alpha$ by the number of tests. (so .05/2 for two tests, .05/3 for three tests, _etc._).
 
 
 ## Criticisms of Neyman-Pearson
