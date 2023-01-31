@@ -1943,7 +1943,7 @@
     "href": "slides/week5.html#what-do-we-mean-by-bias",
     "title": "Bias, Power, and More on Confounds",
     "section": "What do we mean by bias?",
-    "text": "What do we mean by bias?\nFor our purposes, let’s define it as:\n\nconsistent and system deviation from the expected norm based stemming from a flaw in the design of study."
+    "text": "What do we mean by bias?\nFor our purposes, let’s define it as:\n\nconsistent and systematic deviation from the expected norm stemming from a flaw in the design of study."
   },
   {
     "objectID": "slides/week5.html#order-effects",
@@ -1999,7 +1999,7 @@
     "href": "slides/week5.html#consider-the-following",
     "title": "Bias, Power, and More on Confounds",
     "section": "Consider the following",
-    "text": "Consider the following\nFrom Pollard and Richardson (1987):\n\n“If aa person is American then they are probably not a member of Congress; this person is a member of Congree; therefore this person is probably not an American.”"
+    "text": "Consider the following\nFrom Pollard and Richardson (1987):\n\n“If a person is American then they are probably not a member of Congress; this person is a member of Congress; therefore this person is probably not an American.”"
   },
   {
     "objectID": "slides/week5.html#sensitivity",
@@ -2097,7 +2097,7 @@
     "href": "slides/week5.html#what-if-youd-like-to-add-tests-or-conditions",
     "title": "Bias, Power, and More on Confounds",
     "section": "What if you’d like to add tests or conditions?",
-    "text": "What if you’d like to add tests or conditions?\n\nIf you plan it ahead of time, then you can stick with your original $alpha$.\nif you would like to test other things, as you go, you need to correct for multiple tests.\n\nA standard (and conservative) approach to this is the Bonferroni correction, in which you divide $alpha$ by the number of tests. (so .05/2 for two tests, .05/3 for three tests, etc.)."
+    "text": "What if you’d like to add tests or conditions?\n\nIf you plan it ahead of time, then you can stick with your original \\(\\alpha\\).\nif you would like to test other things, as you go, you need to correct for multiple tests.\n\nA standard (and conservative) approach to this is the Bonferroni correction, in which you divide \\(\\alpha\\) by the number of tests. (so .05/2 for two tests, .05/3 for three tests, etc.)."
   },
   {
     "objectID": "slides/week5.html#criticisms-of-neyman-pearson",
@@ -2203,5 +2203,12 @@
     "title": "Syllabus",
     "section": "Grading",
     "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nWeekly Assignments (x8)\n50%\n\n\nMidterm Topic Review Paper\n15%\n\n\nFinal Project (First Draft)\n10%\n\n\nFinal Project (Peer Review)\n5%\n\n\nPresentation\n5%\n\n\nFinal Project (Paper)\n15%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA\n>= 93\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
+  },
+  {
+    "objectID": "slides/week5.html",
+    "href": "slides/week5.html",
+    "title": "Bias, Power, and More on Confounds",
+    "section": "",
+    "text": "For our purposes, let’s define it as:\n\nconsistent and systematic deviation from the expected norm stemming from a flaw in the design of study."
   }
 ]
