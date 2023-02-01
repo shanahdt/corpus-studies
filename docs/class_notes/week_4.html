@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Empirical and Critical Methods in Musicology - Bias, Power, and More on Confounds</title>
+<title>Empirical and Critical Methods in Musicology - Week 4</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -30,8 +93,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../class_notes/week_1.html" rel="next">
-<link href="../slides/week3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -63,14 +124,11 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<meta property="og:title" content="Empirical and Critical Methods in Musicology - Bias, Power, and More on Confounds">
-<meta property="og:description" content="For our purposes, let’s define it as:">
+<meta property="og:title" content="Empirical and Critical Methods in Musicology - Week 4">
 <meta property="og:site-name" content="Empirical and Critical Methods in Musicology">
-<meta name="twitter:title" content="Empirical and Critical Methods in Musicology - Bias, Power, and More on Confounds">
-<meta name="twitter:description" content="For our purposes, let’s define it as:">
-<meta name="twitter:image" content="https://shanahdt.github.io/emp-musicology/slides/images/twitter-card.png">
+<meta name="twitter:title" content="Empirical and Critical Methods in Musicology - Week 4">
+<meta name="twitter:image" content="https://shanahdt.github.io/emp-musicology/class_notes/images/twitter-card.png">
 <meta name="twitter:creator" content="@danielshanahan">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -81,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Bias, Power, and More on Confounds</h1>
+      <h1 class="quarto-secondary-nav-title">Week 4</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -152,7 +210,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../slides/week5.html" class="sidebar-item-text sidebar-link active">Bias, Power, and More on Confounds</a>
+  <a href="../slides/week5.html" class="sidebar-item-text sidebar-link">Bias, Power, and More on Confounds</a>
   </div>
 </li>
       </ul>
@@ -221,39 +279,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-do-we-mean-by-bias" id="toc-what-do-we-mean-by-bias" class="nav-link active" data-scroll-target="#what-do-we-mean-by-bias">What do we mean by bias?</a></li>
-  <li><a href="#order-effects" id="toc-order-effects" class="nav-link" data-scroll-target="#order-effects">Order Effects</a></li>
-  <li><a href="#recency-bias" id="toc-recency-bias" class="nav-link" data-scroll-target="#recency-bias">Recency Bias</a></li>
-  <li><a href="#primacy-bias" id="toc-primacy-bias" class="nav-link" data-scroll-target="#primacy-bias">Primacy Bias</a></li>
-  <li><a href="#how-can-we-avoid-this" id="toc-how-can-we-avoid-this" class="nav-link" data-scroll-target="#how-can-we-avoid-this">How can we avoid this?</a></li>
-  <li><a href="#other-options" id="toc-other-options" class="nav-link" data-scroll-target="#other-options">Other options?</a></li>
-  <li><a href="#other-options-1" id="toc-other-options-1" class="nav-link" data-scroll-target="#other-options-1">Other options?</a></li>
-  <li><a href="#how-many-x-do-i-need" id="toc-how-many-x-do-i-need" class="nav-link" data-scroll-target="#how-many-x-do-i-need">How many [X] do I need?</a></li>
-  <li><a href="#consider-the-following" id="toc-consider-the-following" class="nav-link" data-scroll-target="#consider-the-following">Consider the following</a></li>
-  <li><a href="#sensitivity" id="toc-sensitivity" class="nav-link" data-scroll-target="#sensitivity">Sensitivity</a></li>
-  <li><a href="#stopping-rules" id="toc-stopping-rules" class="nav-link" data-scroll-target="#stopping-rules">Stopping Rules</a></li>
-  <li><a href="#types-of-errors" id="toc-types-of-errors" class="nav-link" data-scroll-target="#types-of-errors">Types of Errors</a></li>
-  <li><a href="#types-of-errors-1" id="toc-types-of-errors-1" class="nav-link" data-scroll-target="#types-of-errors-1">Types of Errors</a></li>
-  <li><a href="#alpha-and-beta" id="toc-alpha-and-beta" class="nav-link" data-scroll-target="#alpha-and-beta">Alpha and Beta</a></li>
-  <li><a href="#types-of-errors-2" id="toc-types-of-errors-2" class="nav-link" data-scroll-target="#types-of-errors-2">Types of Errors</a></li>
-  <li><a href="#put-another-way" id="toc-put-another-way" class="nav-link" data-scroll-target="#put-another-way">put another way…</a></li>
-  <li><a href="#an-example" id="toc-an-example" class="nav-link" data-scroll-target="#an-example">An example</a></li>
-  <li><a href="#an-example-1" id="toc-an-example-1" class="nav-link" data-scroll-target="#an-example-1">An Example</a></li>
-  <li><a href="#alpha-and-beta-1" id="toc-alpha-and-beta-1" class="nav-link" data-scroll-target="#alpha-and-beta-1"><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></a></li>
-  <li><a href="#ethics" id="toc-ethics" class="nav-link" data-scroll-target="#ethics">Ethics?</a></li>
-  <li><a href="#steps-for-beta" id="toc-steps-for-beta" class="nav-link" data-scroll-target="#steps-for-beta">Steps for <span class="math inline">\(\beta\)</span></a></li>
-  <li><a href="#whats-your-stopping-rule" id="toc-whats-your-stopping-rule" class="nav-link" data-scroll-target="#whats-your-stopping-rule">What’s your stopping rule?</a></li>
-  <li><a href="#what-if-youd-like-to-add-tests-or-conditions" id="toc-what-if-youd-like-to-add-tests-or-conditions" class="nav-link" data-scroll-target="#what-if-youd-like-to-add-tests-or-conditions">What if you’d like to add tests or conditions?</a></li>
-  <li><a href="#criticisms-of-neyman-pearson" id="toc-criticisms-of-neyman-pearson" class="nav-link" data-scroll-target="#criticisms-of-neyman-pearson">Criticisms of Neyman-Pearson</a></li>
+  <li><a href="#week-layout" id="toc-week-layout" class="nav-link active" data-scroll-target="#week-layout">Week Layout</a>
+  <ul class="collapse">
+  <li><a href="#tuesday" id="toc-tuesday" class="nav-link" data-scroll-target="#tuesday">Tuesday</a></li>
+  <li><a href="#thursday" id="toc-thursday" class="nav-link" data-scroll-target="#thursday">Thursday</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/emp-musicology/edit/main/slides/week5.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/emp-musicology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/emp-musicology/edit/main/class_notes/week_4.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/emp-musicology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Bias, Power, and More on Confounds</h1>
+<h1 class="title d-none d-lg-block">Week 4</h1>
 </div>
 
 
@@ -261,251 +300,77 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<section id="what-do-we-mean-by-bias" class="level2">
-<h2 class="anchored" data-anchor-id="what-do-we-mean-by-bias">What do we mean by bias?</h2>
-<p>For our purposes, let’s define it as:</p>
-<blockquote class="blockquote">
-<p>consistent and systematic deviation from the expected norm stemming from a flaw in the design of study.</p>
-</blockquote>
+<section id="week-layout" class="level2">
+<h2 class="anchored" data-anchor-id="week-layout">Week Layout</h2>
+<section id="tuesday" class="level3">
+<h3 class="anchored" data-anchor-id="tuesday">Tuesday</h3>
+<p>On Tuesday we focused primarily on the Chi-Square test. There are a number of resources on this website to walk you through that process, but the main point is that the test is a way of looking at whether the counts of data that you’re looking at are significantly different from what you expected.</p>
+<p>A discussion of it from David Huron’s Empirical Methods workshop can be found <a href="../emp_methods_workshop/chi_test.html">here</a>.</p>
 </section>
-<section id="order-effects" class="level2">
-<h2 class="anchored" data-anchor-id="order-effects">Order Effects</h2>
-<p>“The order of presenting the treatments affects the dependent variable.” (Cozby, 137)</p>
-<p>(sometimes called <em>sequence effects</em>)</p>
-</section>
-<section id="recency-bias" class="level2">
-<h2 class="anchored" data-anchor-id="recency-bias">Recency Bias</h2>
-<p>People treat the most recently presented things differently from the others.</p>
-</section>
-<section id="primacy-bias" class="level2">
-<h2 class="anchored" data-anchor-id="primacy-bias">Primacy Bias</h2>
-<p>People treat the things presented first differently than they would the others.</p>
-</section>
-<section id="how-can-we-avoid-this" class="level2">
-<h2 class="anchored" data-anchor-id="how-can-we-avoid-this">How can we avoid this?</h2>
+<section id="thursday" class="level3">
+<h3 class="anchored" data-anchor-id="thursday">Thursday</h3>
+<p>On Thursday we spent time with R looking at correlation and regression. There were a couple of goals here:</p>
 <ol type="1">
-<li>RANDOMIZE, RANDOMIZE, RANDOMIZE.</li>
+<li>To look at how one calculates Pearson’s correlation coefficient.</li>
+<li>To look at correlation, and then regression through R.</li>
+<li>To build functions in R.</li>
 </ol>
-</section>
-<section id="other-options" class="level2">
-<h2 class="anchored" data-anchor-id="other-options">Other options?</h2>
-<p>Sometimes simple randomization won’t work. Maybe there are repeated measures and you don’t want them to be presented back-to-back, for example. Or maybe the order is an effect that you’re actually interested in.</p>
-</section>
-<section id="other-options-1" class="level2">
-<h2 class="anchored" data-anchor-id="other-options-1">Other options?</h2>
-<p>A latin square design is sometimes a good way to go.</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>First</th>
-<th style="text-align: left;">Second</th>
-<th style="text-align: right;">Third</th>
-<th style="text-align: center;">Fourth</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>A</td>
-<td style="text-align: left;">B</td>
-<td style="text-align: right;">C</td>
-<td style="text-align: center;">D</td>
-</tr>
-<tr class="even">
-<td>B</td>
-<td style="text-align: left;">C</td>
-<td style="text-align: right;">D</td>
-<td style="text-align: center;">A</td>
-</tr>
-<tr class="odd">
-<td>C</td>
-<td style="text-align: left;">D</td>
-<td style="text-align: right;">A</td>
-<td style="text-align: center;">B</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="how-many-x-do-i-need" class="level2">
-<h2 class="anchored" data-anchor-id="how-many-x-do-i-need">How many [X] do I need?</h2>
-<p>This is probably the most commonly asked question. First we should cover a few preliminaries:</p>
-<ul>
-<li>Types of errors</li>
-<li>Effect Size</li>
-<li>Power</li>
-</ul>
-</section>
-<section id="consider-the-following" class="level2">
-<h2 class="anchored" data-anchor-id="consider-the-following">Consider the following</h2>
-<p>From Pollard and Richardson (1987):</p>
-<ul>
-<li>“If a person is American then they are probably not a member of Congress; this person is a member of Congress; therefore this person is probably not an American.”</li>
-</ul>
-</section>
-<section id="sensitivity" class="level2">
-<h2 class="anchored" data-anchor-id="sensitivity">Sensitivity</h2>
-<ul>
-<li><p>“Whenever you find a null result and it is interesting to you that the result is null, you should always indicate the sensitivity of your analysis.” (Dienes, p.68)</p></li>
-<li><p>Power</p></li>
-<li><p>Confidence Intervals</p></li>
-<li><p>Finding an effect significantly different from another reference point.</p></li>
-</ul>
-</section>
-<section id="stopping-rules" class="level2">
-<h2 class="anchored" data-anchor-id="stopping-rules">Stopping Rules</h2>
-<p>-Neyman and Pearson would argue that you need to adequately define the conditions under which you will stop collecting data <em>a priori</em>.</p>
-<ul>
-<li>Believe it or not, anything can be “significant” if you just keep collecting data forever.</li>
-</ul>
-</section>
-<section id="types-of-errors" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-errors">Types of Errors</h2>
-<ul>
-<li><p>Type I Error: <em>Wrongly claiming something to be true, useful or knowable.</em></p></li>
-<li><p>Type II Error: <em>Wrongly claiming something to be false, useless or unknowable.</em></p></li>
-</ul>
-</section>
-<section id="types-of-errors-1" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-errors-1">Types of Errors</h2>
-<ul>
-<li>Type I error is when the null is true and we reject it.</li>
-<li>Type II error is when the null is false and we accept it.</li>
-</ul>
-</section>
-<section id="alpha-and-beta" class="level2">
-<h2 class="anchored" data-anchor-id="alpha-and-beta">Alpha and Beta</h2>
-<ul>
-<li><p><span class="math inline">\(\alpha\)</span> = The part of a distribution that is so extreme that we can reject the likelihood of it happening (usually in alignment with our maximum accepted <em>p-value.</em>)</p>
-<ul>
-<li>Another way of thinking about it is that <span class="math inline">\(\alpha\)</span> is the long-term error rate for a specific type of error: saying that the null is false when it is true (see Dienes, p.62)</li>
-</ul></li>
-<li><p><span class="math inline">\(\beta\)</span> = When the null is false, <span class="math inline">\(\beta\)</span> is the proportion of times that we accept it, even though it’s false.</p></li>
-</ul>
-</section>
-<section id="types-of-errors-2" class="level2">
-<h2 class="anchored" data-anchor-id="types-of-errors-2">Types of Errors</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="../images/types_of_errors.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">types of errors</figcaption><p></p>
-</figure>
+<p>We did this with data scraped with the Spotify API. The code of this is below.</p>
+<p>First, we load our libraries, and use the <code>select</code> function from the <code>tidyverse</code> package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(corrplot)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="do">### read the data</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>beyonce <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"beyonce.csv"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> beyonce <span class="sc">%&gt;%</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">c</span>(<span class="st">"acousticness"</span>, <span class="st">"liveness"</span>, <span class="st">"danceability"</span>, <span class="st">"loudness"</span>, <span class="st">"speechiness"</span>, <span class="st">"valence"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="put-another-way" class="level2">
-<h2 class="anchored" data-anchor-id="put-another-way">put another way…</h2>
-<ul>
-<li><span class="math inline">\(\alpha\)</span> = <span class="math inline">\(P(rejecting H_0 \mid H_0)\)</span></li>
-<li><span class="math inline">\(\beta\)</span> = <span class="math inline">\(P(accepting H_0 \mid H_0 false)\)</span></li>
-</ul>
-</section>
-<section id="an-example" class="level2">
-<h2 class="anchored" data-anchor-id="an-example">An example</h2>
-<p>(from Dienes, p.63)</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Decision</th>
-<th style="text-align: left;"><span class="math inline">\(\ H_0\)</span> true</th>
-<th style="text-align: right;"><span class="math inline">\(\ H_0\)</span> false</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Accept <span class="math inline">\(\ H_0\)</span></td>
-<td style="text-align: left;">3800</td>
-<td style="text-align: right;">500</td>
-</tr>
-<tr class="even">
-<td>Reject <span class="math inline">\(\ H_0\)</span></td>
-<td style="text-align: left;">200</td>
-<td style="text-align: right;">500</td>
-</tr>
-<tr class="odd">
-<td>Totals</td>
-<td style="text-align: left;">4000</td>
-<td style="text-align: right;">1000</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>proportion of Type I errors shown when the null is true is 200/5000 (.05)</li>
-<li>But what if we define a type I error as ’the probability of a Type I error _when we have rejected the null’?</li>
-</ul>
-</section>
-<section id="an-example-1" class="level2">
-<h2 class="anchored" data-anchor-id="an-example-1">An Example</h2>
-<ul>
-<li><p>This means we consider only the cases when we have rejected the null. (200/700, or 29%)</p></li>
-<li><p><em>The point</em>: Using only a significance level of 5% does not guarantee that only 5% of all published significant results are an error.</p></li>
-</ul>
-</section>
-<section id="alpha-and-beta-1" class="level2">
-<h2 class="anchored" data-anchor-id="alpha-and-beta-1"><span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span></h2>
-<ul>
-<li>Notice how <span class="math inline">\(\beta\)</span> can be very different from <span class="math inline">\(\alpha\)</span>.</li>
-<li>Controlling one does not mean you have controlled the other.</li>
-<li><em>Power</em> is defined as 1-<span class="math inline">\(\beta\)</span>.</li>
-<li>Put another way, power is:
-<ul>
-<li><span class="math inline">\(P(rejecting H_0 \mid H_0 false)\)</span></li>
-</ul></li>
-</ul>
-</section>
-<section id="ethics" class="level2">
-<h2 class="anchored" data-anchor-id="ethics">Ethics?</h2>
-<ul>
-<li>the question for you is, is a Type II error as important as a Type I?</li>
-<li>If so, you could set both <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> at .05 (power would be .95).</li>
-<li>If you think that type II errors are not quite as important, one could set the <span class="math inline">\(\beta\)</span> higher, at something like .1, for example.</li>
-</ul>
-</section>
-<section id="steps-for-beta" class="level2">
-<h2 class="anchored" data-anchor-id="steps-for-beta">Steps for <span class="math inline">\(\beta\)</span></h2>
-<ol type="1">
-<li><p>Estimate the size of effect that you think is interesting, given that your theory is true.</p></li>
-<li><p>Estimate the amount of noise that your data will have.</p>
-<ul>
-<li>“The probability of detecting an effect depends not just on how big the effect is, but how much noise there is through which you are trying to detect the effect.” (Dienes, p.64)</li>
-</ul></li>
-</ol>
-</section>
-<section id="whats-your-stopping-rule" class="level2">
-<h2 class="anchored" data-anchor-id="whats-your-stopping-rule">What’s your stopping rule?</h2>
-<ul>
-<li>Can you run as many participants as you’d like until you get a significant result?</li>
-</ul>
-</section>
-<section id="what-if-youd-like-to-add-tests-or-conditions" class="level2">
-<h2 class="anchored" data-anchor-id="what-if-youd-like-to-add-tests-or-conditions">What if you’d like to add tests or conditions?</h2>
-<ul>
-<li><p>If you plan it ahead of time, then you can stick with your original <span class="math inline">\(\alpha\)</span>.</p></li>
-<li><p>if you would like to test other things, as you go, you need to <em>correct for multiple tests</em>.</p>
-<ul>
-<li>A standard (and conservative) approach to this is the <em>Bonferroni correction</em>, in which you divide <span class="math inline">\(\alpha\)</span> by the number of tests. (so .05/2 for two tests, .05/3 for three tests, <em>etc.</em>).</li>
-</ul></li>
-</ul>
-</section>
-<section id="criticisms-of-neyman-pearson" class="level2">
-<h2 class="anchored" data-anchor-id="criticisms-of-neyman-pearson">Criticisms of Neyman-Pearson</h2>
-<p>(taken from Dienes, p.76)</p>
-<ul>
-<li>Inference consists of simple acceptance and rejection</li>
-<li>Null hypothesis testing encourages weak theorizing</li>
-<li>In the Neyman-Pearson approach it is important to know the reference class–we must know what endless series of trials but never did.</li>
-</ul>
+<p>Then we run the <code>cor</code> function to look at correlations, and plot it with a pie graph demonstrating the correlation coefficient of each pair of variables.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">cor</span>(df)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(x, <span class="dv">2</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">corrplot</span>(x, <span class="at">method=</span><span class="st">"pie"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The goal at this point was to load data and write a function that would look at correlations between the spotify variables in any artist. The following reads the file in.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>file_reader <span class="ot">&lt;-</span> <span class="cf">function</span>(filename){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  file <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(filename, <span class="st">".csv"</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(file)}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we wrote a combined function that read everything in, and ran the correlation inside the function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>artist_data <span class="ot">&lt;-</span> <span class="cf">function</span>(artist){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  artist <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="fu">paste0</span>(artist, <span class="st">".csv"</span>))</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> artist <span class="sc">%&gt;%</span> </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(<span class="fu">c</span>(<span class="st">"acousticness"</span>, <span class="st">"liveness"</span>, <span class="st">"danceability"</span>, <span class="st">"loudness"</span>, <span class="st">"speechiness"</span>, <span class="st">"valence"</span>))</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">cor</span>(df)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(x, <span class="dv">2</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">corrplot</span>(x, <span class="at">method=</span><span class="st">"pie"</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At this point, we just played around with some regression models, and discussed what the output meant.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(valence <span class="sc">~</span> loudness, <span class="at">data=</span>beyonce))</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(valence <span class="sc">~</span> loudness <span class="sc">+</span> acousticness, <span class="at">data=</span>beyonce))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">lm</span>(valence <span class="sc">~</span> danceability, <span class="at">data=</span>beyonce))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">### is the data normal?</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="fu">qqnorm</span>(beyonce<span class="sc">$</span>danceability)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(beyonce<span class="sc">$</span>danceability)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(beyonce<span class="sc">$</span>danceability)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ks.test</span>(beyonce<span class="sc">$</span>danceability, <span class="st">"pnorm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -720,18 +585,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../slides/week3.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sampling and Randomization</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../class_notes/week_1.html" class="pagination-link">
-        <span class="nav-page-text">Week 1</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -48,6 +48,7 @@ website:
           - class_notes/week_1.qmd
           - class_notes/week_2.qmd
           - class_notes/week_3.qmd
+          - class_notes/week_4.qmd
         collapse-level: 1
       - section: "Workshop Materials"
         contents: 

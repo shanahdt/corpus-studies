@@ -1,10 +1,8 @@
+---
+title: Statistical Tests - General Remarks
+author: David Huron
+---
 
-
-------------------------------------------------------------------------
-
-### Statistical Tests - General Remarks
-
-------------------------------------------------------------------------
 
 Statistics can be used for lots of purposes. As we have seen, a
 distinction can be made between *descriptive statistics* and

@@ -1,0 +1,76 @@
+---
+title: Week 4
+---
+
+## Week Layout
+
+### Tuesday
+
+On Tuesday we focused primarily on the Chi-Square test. There are a number of resources on this website to walk you through that process, but the main point is that the test is a way of looking at whether the counts of data that you're looking at are significantly different from what you expected. 
+
+A discussion of it from David Huron's Empirical Methods workshop can be found [here](../emp_methods_workshop/chi_test.qmd).
+
+### Thursday
+
+On Thursday we spent time with R looking at correlation and regression. There were a couple of goals here:
+
+1. To look at how one calculates Pearson's correlation coefficient. 
+2. To look at correlation, and then regression through R.
+3. To build functions in R.
+
+We did this with data scraped with the Spotify API. The code of this is below.
+
+First, we load our libraries, and use the `select` function from the `tidyverse` package.
+```{r, eval=FALSE}
+library(tidyverse)
+library(corrplot)
+
+### read the data
+beyonce <- read.csv("beyonce.csv")
+
+df <- beyonce %>% 
+  select(c("acousticness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+
+```
+
+Then we run the `cor` function to look at correlations, and plot it with a pie graph demonstrating the correlation coefficient of each pair of variables.
+
+```{r, eval=FALSE}
+x <- cor(df)
+round(x, 2)
+corrplot(x, method="pie")
+```
+
+The goal at this point was to load data and write a function that would look at correlations between the spotify variables in any artist. The following reads the file in.
+
+```{r, eval=FALSE}
+file_reader <- function(filename){
+  file <- read.csv(file = paste0(filename, ".csv"))
+  return(file)}
+```
+
+Then we wrote a combined function that read everything in, and ran the correlation inside the function.
+```{r, eval=FALSE}
+artist_data <- function(artist){
+  artist <- read.csv(file = paste0(artist, ".csv"))
+  df <- artist %>% 
+    select(c("acousticness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+  x <- cor(df)
+  round(x, 2)
+  corrplot(x, method="pie")
+}
+```
+
+At this point, we just played around with some regression models, and discussed what the output meant.
+```{r, eval=FALSE}
+summary(lm(valence ~ loudness, data=beyonce))
+summary(lm(valence ~ loudness + acousticness, data=beyonce))
+summary(lm(valence ~ danceability, data=beyonce))
+
+### is the data normal?
+qqnorm(beyonce$danceability)
+hist(beyonce$danceability)
+shapiro.test(beyonce$danceability)
+ks.test(beyonce$danceability, "pnorm")
+```
+
