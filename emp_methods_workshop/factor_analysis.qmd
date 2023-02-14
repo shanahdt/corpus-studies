@@ -1,10 +1,7 @@
-
-
-------------------------------------------------------------------------
-
-### Factor Analysis
-
-------------------------------------------------------------------------
+---
+title: Factor Analysis
+author: David Huron
+---
 
 Factor analysis is a statistical method that can be used to reduce
 or distill many variables into a smaller number of variables (called

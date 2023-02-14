@@ -1,0 +1,133 @@
+---
+title: "Bayes" 
+date: "February 14th, 2023"
+format: 
+  revealjs:
+    incremental: true
+    theme: league
+    slide-number: true
+---
+
+## UFOs 
+
+(example taken from Kurt, 2019)
+
+- You are awakened by a bright light at your window. 
+- You get out of bed and see a saucer-shaped object in the sky.
+- Although you don't believe in aliens, you think to yourself "could this be a UFO?"
+
+## UFOs 
+
+1. You observed data
+2. You formed a hypothesis
+3. You updated your beliefs based on the data.
+
+
+(example taken from Kurt, 2019)
+
+## UFOs
+
+- "The probability of observing bright lights outside the window and a saucer-shaped object in the sky is very low." Or:
+  - $P$(bright light outside your window, saucer-shaped object in the sky) = very low
+
+## UFOs
+
+- The probability of observing bright lights and a saucer-shapd object in the sky, _given_ our experience on Earth, is very low. Or:
+  - $P$(bright light outside your window, saucer-shaped object in the sky | our experience on earth) = very low
+
+- This is called a _conditional probability_; are _conditioning_ the probabiltiy of one event occurring on something else.
+
+## UFOs
+
+- Probability of hypothesis, given experience:
+  - $P(H_1 \mid X)$ = very, very low.
+
+- But what if $H_2$ = a film is being made outside your window?
+  - $P(H_1 \mid X)$ = very low.
+
+(example taken from Kurt, 2019)
+
+## UFOs
+
+Perhaps we have a new hypothesis?
+
+- $P(D_{updated} \mid H_2, X) >> P(D_{updated} \mid H_1, X)$
+- The probability of the data, given the second hypothesis, is much greater than the first.
+
+
+## UFOs
+
+We can express the comparison of these two hypotheses as a ratio:
+
+$\frac{P(D_{updated} \mid H_2, X)}{P(D_{updated} \mid H_1, X)}$
+
+If this is a large number (like 1000), it means that $H_2$ explains the data 1,000 times better than $H_1$
+
+(example taken from Kurt, 2019)
+
+
+## Converting Odds to Probability
+
+- $P(H) = \frac{O{H}}{1 + O(H)}$
+
+- You give your friend 6:1 odds that Northwestern will beat Purdue in basketball. You'll give your friend $30 if Purdue wins, he will only pay you $5 if Northwestern wins.
+
+- $P(NU Win) = \frac{O(NU Win)}{1 + O(NU Win)} = \frac{6}{7} = .857$
+
+- You are giving NU about an 86% chance of winning.
+
+## Inverse Probability
+
+![Spiegelhalter Coin Flip](../images/spiegelhalter-coin.png)
+
+## Inverse Probability
+
+![Spiegelhalter Doping](../images/spiegelhalter-doping1.png)
+
+## Inverse Probability
+
+![Spiegelhalter Doping](../images/spiegelhalter-doping2.png)
+
+
+## Richard III (see Spiegelhalter, p.317)
+
+- Richard III, who Shakespeare characterized as an evil hunchback, was said to have been buried in Greyfriars Priory in Leicester.
+
+## Richard III (see Spiegelhalter, p.317)
+
+We might assume that a skeleton found were the remains of Richard the III if _all_ of the following were true:
+
+- he had really been buried in Greyfriars
+- his body had not been dug up and moved or scattered in the intervening 527 years
+- the first skeleton found happened to be him. 
+
+## Richard III (see Spiegelhalter, p.317)
+
+- Let's say 50% chance the stories of his burial were true
+- Let's say 50% chance that his skeleton is still where he was originally buried in Greyfriars
+- Imagine that up to 100 other bodies were also buried in this location.
+- 1/2 * 1/2 * 10/100 = 1/400.
+
+
+## Richard III (see Spiegelhalter, p.318)
+
+![Spiegelhalter Richard III](../images/spiegelhalter-richard3.png)
+
+
+## Richard III (see Spiegelhalter, p.320)
+
+![Spiegelhalter Richard III](../images/spiegelhalter-likelihood-ratios.png)
+
+
+## The Posterior
+
+- The probability of a hypothesis given the data is called the _posterior_.
+
+- the posterior is proportional to the likelihood times the prior.
+
+- $P(H \mid D)$ is proportional to $P(D|H) x P(H)$
+
+## Comparison
+
+![Dienes comparing methods](../images/dienes-bayes-np.png)
+
