@@ -22,7 +22,6 @@ format:
 2. You formed a hypothesis
 3. You updated your beliefs based on the data.
 
-
 (example taken from Kurt, 2019)
 
 ## UFOs
