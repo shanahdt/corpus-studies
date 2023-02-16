@@ -6,8 +6,8 @@ website:
   page-navigation: true
   title: "Empirical and Critical Methods in Musicology"
   description: "Homepage for MUS-THRY 345/445, Northwestern University, Winter 2023 ."
-  site-url: "https://shanahdt.github.io/emp-musicology/"
-  repo-url: https://github.com/shanahdt/emp-musicology
+  site-url: "https://shanahdt.github.io/mus-345-445/"
+  repo-url: "https://github.com/shanahdt/mus-345-445"
   repo-actions: [edit, issue]
   # navbar:
   #   left:
