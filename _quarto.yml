@@ -42,7 +42,7 @@ website:
           - slides/week2.qmd
           - slides/week3.qmd
           - slides/week5.qmd
-          - slides/week7.qmd
+          - slides/week7.qmd  
         collapse-level: 1
       - section: "Class Notes"
         contents:
