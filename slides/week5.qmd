@@ -1,6 +1,5 @@
 ---
 title: "Bias, Power, and More on Confounds " 
-date: "Tuesday, January 31st, 2023"
 format: 
   revealjs:
     incremental: true

@@ -1,6 +1,5 @@
 ---
 title: "Bayes" 
-date: "February 14th, 2023"
 format: 
   revealjs:
     incremental: true
