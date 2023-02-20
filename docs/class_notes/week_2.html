@@ -130,7 +130,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <meta property="og:title" content="Empirical and Critical Methods in Musicology - Week 2">
 <meta property="og:site-name" content="Empirical and Critical Methods in Musicology">
 <meta name="twitter:title" content="Empirical and Critical Methods in Musicology - Week 2">
-<meta name="twitter:image" content="https://shanahdt.github.io/emp-musicology/class_notes/images/twitter-card.png">
+<meta name="twitter:image" content="https://shanahdt.github.io/mus-345-445/class_notes/images/twitter-card.png">
 <meta name="twitter:creator" content="@danielshanahan">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -215,6 +215,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../slides/week5.html" class="sidebar-item-text sidebar-link">Bias, Power, and More on Confounds</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../slides/week7.html" class="sidebar-item-text sidebar-link">Bayes</a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -238,6 +243,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../class_notes/week_3.html" class="sidebar-item-text sidebar-link">Week 3</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_4.html" class="sidebar-item-text sidebar-link">Week 4</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_5.html" class="sidebar-item-text sidebar-link">Week 5</a>
   </div>
 </li>
       </ul>
@@ -316,7 +331,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/emp-musicology/edit/main/class_notes/week_2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/emp-musicology/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/mus-345-445/edit/main/class_notes/week_2.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/mus-345-445/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -608,18 +623,18 @@ lm(formula = clarinet_tempi ~ accuracy)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--46.549  -9.656  -0.248  10.016  45.727 
+-43.518 -10.429   0.822   9.669  42.284 
 
 Coefficients:
             Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept)  117.797      3.733  31.552   &lt;2e-16 ***
-accuracy       4.346      7.324   0.593    0.553    
+(Intercept)  122.498      3.309  37.023   &lt;2e-16 ***
+accuracy      -3.734      6.619  -0.564    0.573    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 15.33 on 498 degrees of freedom
-Multiple R-squared:  0.0007065, Adjusted R-squared:  -0.0013 
-F-statistic: 0.3521 on 1 and 498 DF,  p-value: 0.5532</code></pre>
+Residual standard error: 14.53 on 498 degrees of freedom
+Multiple R-squared:  0.0006386, Adjusted R-squared:  -0.001368 
+F-statistic: 0.3182 on 1 and 498 DF,  p-value: 0.5729</code></pre>
 </div>
 </div>
 <p>Here is a second example, using tempo and decibels.</p>
@@ -650,25 +665,25 @@ F-statistic: 0.3521 on 1 and 498 DF,  p-value: 0.5532</code></pre>
     Welch Two Sample t-test
 
 data:  cortot_tempi and gould_tempi
-t = 105.99, df = 196.76, p-value &lt; 2.2e-16
+t = 104.82, df = 197.29, p-value &lt; 2.2e-16
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- 29.61105 30.73388
+ 29.67507 30.81311
 sample estimates:
 mean of x mean of y 
-120.15952  89.98706 </code></pre>
+120.14097  89.89688 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 120.1595</code></pre>
+<pre><code>[1] 120.141</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 120.2344</code></pre>
+<pre><code>[1] 120.1846</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(cortot_tempi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2.091316</code></pre>
+<pre><code>[1] 1.978048</code></pre>
 </div>
 </div>
 <p>In Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics.</p>

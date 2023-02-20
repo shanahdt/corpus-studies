@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "class_notes/week_4.html",
+    "href": "class_notes/week_4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "On Tuesday we focused primarily on the Chi-Square test. There are a number of resources on this website to walk you through that process, but the main point is that the test is a way of looking at whether the counts of data that you’re looking at are significantly different from what you expected.\nA discussion of it from David Huron’s Empirical Methods workshop can be found here.\n\n\n\nOn Thursday we spent time with R looking at correlation and regression. There were a couple of goals here:\n\nTo look at how one calculates Pearson’s correlation coefficient.\nTo look at correlation, and then regression through R.\nTo build functions in R.\n\nWe did this with data scraped with the Spotify API. The code of this is below.\nFirst, we load our libraries, and use the select function from the tidyverse package.\n\nlibrary(tidyverse)\nlibrary(corrplot)\n\n### read the data\nbeyonce <- read.csv(\"beyonce.csv\")\n\ndf <- beyonce %>% \n  select(c(\"acousticness\", \"liveness\", \"danceability\", \"loudness\", \"speechiness\", \"valence\"))\n\nThen we run the cor function to look at correlations, and plot it with a pie graph demonstrating the correlation coefficient of each pair of variables.\n\nx <- cor(df)\nround(x, 2)\ncorrplot(x, method=\"pie\")\n\nThe goal at this point was to load data and write a function that would look at correlations between the spotify variables in any artist. The following reads the file in.\n\nfile_reader <- function(filename){\n  file <- read.csv(file = paste0(filename, \".csv\"))\n  return(file)}\n\nThen we wrote a combined function that read everything in, and ran the correlation inside the function.\n\nartist_data <- function(artist){\n  artist <- read.csv(file = paste0(artist, \".csv\"))\n  df <- artist %>% \n    select(c(\"acousticness\", \"liveness\", \"danceability\", \"loudness\", \"speechiness\", \"valence\"))\n  x <- cor(df)\n  round(x, 2)\n  corrplot(x, method=\"pie\")\n}\n\nAt this point, we just played around with some regression models, and discussed what the output meant.\n\nsummary(lm(valence ~ loudness, data=beyonce))\nsummary(lm(valence ~ loudness + acousticness, data=beyonce))\nsummary(lm(valence ~ danceability, data=beyonce))\n\n### is the data normal?\nqqnorm(beyonce$danceability)\nhist(beyonce$danceability)\nshapiro.test(beyonce$danceability)\nks.test(beyonce$danceability, \"pnorm\")"
+  },
+  {
+    "objectID": "class_notes/week_5.html",
+    "href": "class_notes/week_5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Thursday\nOn Thursday, we looked at regression modeling and fits. We began by looking at Beyonce’s Spotify data again:\n\nlibrary(tidyverse)\nlibrary(caret)\ndf <- read.csv(\"beyonce.csv\")\nplot(danceability ~ album_release_year, data=df)\nabline(lm(danceability ~ album_release_year, data=df), col=\"red\")\n\nsummary(lm(danceability ~ album_release_year, data=df))\nabline(lm(acousticness ~ album_release_year, data=df), col=\"blue\")\nabline(lm(speechiness ~ album_release_year, data=df), col=\"green\")\n\nWhat would a more explanatory model look like? We could look at different models, predicting danceability, acousticness, speechiness, valance, or perhaps danceability, but with more predictor variables.\n\nsummary(lm(danceability ~ album_release_year + acousticness + speechiness, data=df))\ndance_model <- lm(danceability ~ album_release_year, data=df)\nacoustic_model <- lm(acousticness ~ album_release_year, data=df)\nspeech_model <- lm(speechiness ~ album_release_year, data=df)\nvalence_model <- lm(valence ~ album_release_year, data=df)\ncombined_model <- lm(danceability ~ album_release_year + acousticness + speechiness + valence, data=df)\n\nBut how can we tell which of these is more predictable? For this, we looked at Akaike’s ‘An Information Criterion’ (or AIC).\n\nAIC(dance_model, \n    acoustic_model, \n    speech_model, \n    valence_model, \n    combined_model)\n\nThere are other similar tools, such as BIC or SBC (Schwarz’s Bayesian criterion) (or BIC):\n\nBIC(dance_model, \n    acoustic_model, \n    speech_model, \n    valence_model,\n    combined_model)\n\nWe looked at some other possibilities for regression, including stepwise (forward and backward), which can be employed in times when collinearity is high.\n\nstep(lm(danceability ~ \n          album_release_year + acousticness + \n          speechiness + valence, data=df), \n          direction=\"backward\")\n\nstep(lm(danceability ~ \n          album_release_year + acousticness + \n          speechiness + valence, data=df), \n     direction=\"forward\")\n\nWe then looked at Debussy performance practice over time, examining whether pieces slowed down, and what the nature of tempo flexibility might look like:\n\n### load the data\ndebussy_data <- read.csv(\"debussy_performance_data.csv\", header=TRUE)\ndebussy_data$performer <- as.factor(debussy_data$performer)\ndebussy_data$tempo <- as.numeric(debussy_data$tempo)\ndebussy_data$year <- as.numeric(debussy_data$year)\n\n### get averages.\nby_performer <- debussy_data %>% group_by(piece, performer)\ntempi <- summarise(by_performer,\n                  flex = sd(tempo, na.rm = TRUE),\n                  tempo = mean(tempo, na.rm = TRUE),\n                  year = mean(year, na.rm= TRUE))\n\nbook_2 <- debussy_data %>% filter(str_detect(piece, \"^2\"))\n\n\n## plot the data and see what the overall trend is.\nplot(tempo ~ year, data = tempi)\nabline(lm(tempo ~ year, data = tempi), col=\"red\")\ntext(tempi$year, tempi$tempo-1, labels=tempi$performer)\nsummary(lm(tempo ~ year, data = tempi))\ndes_pas <- tempi %>% filter(piece == \"1.6\")\nplot(tempo ~ year, data = des_pas)\nabline(lm(tempo ~ year, data = des_pas), col=\"red\")\nsummary(lm(tempo ~ year + flex, data = des_pas))\n\nWe can look at whether tempo is predicted by year, and by flexibility:\n\nyear <- lm(tempo ~ year, data = des_pas)\nyear_flex <- lm(tempo ~ year + flex, data = des_pas)\nflex <- lm(tempo ~ flex, data = des_pas)\nAIC(\n  year,\n  flex,\n  year_flex\n)\n\nAnd then comparing linear and polynomial models.\n\nplot(lm(tempo ~ year + I(year^2), data = tempi))\nggplot(des_pas, aes(year, tempo) ) + geom_point() +\n  stat_smooth(method = lm, formula = y ~ poly(x, 2, raw = TRUE))\n\nlinear <- lm(tempo ~ year, data = tempi)\npoly_2 <- lm(tempo ~ year + I(year^2), data = tempi)\npoly_3 <- lm(tempo ~ year + I(year^3), data = tempi)\nAIC(linear, \n    poly_2, \n    poly_3)"
+  },
+  {
     "objectID": "class_notes/week_2.html",
     "href": "class_notes/week_2.html",
     "title": "Week 2",
@@ -46,7 +60,7 @@
     "href": "class_notes/week_2.html#thursday",
     "title": "Week 2",
     "section": "Thursday",
-    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-46.549  -9.656  -0.248  10.016  45.727 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  117.797      3.733  31.552   <2e-16 ***\naccuracy       4.346      7.324   0.593    0.553    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15.33 on 498 degrees of freedom\nMultiple R-squared:  0.0007065, Adjusted R-squared:  -0.0013 \nF-statistic: 0.3521 on 1 and 498 DF,  p-value: 0.5532\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 105.99, df = 196.76, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.61105 30.73388\nsample estimates:\nmean of x mean of y \n120.15952  89.98706 \n\nmean(cortot_tempi)\n\n[1] 120.1595\n\nmedian(cortot_tempi)\n\n[1] 120.2344\n\nsd(cortot_tempi)\n\n[1] 2.091316\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
+    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-43.518 -10.429   0.822   9.669  42.284 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  122.498      3.309  37.023   <2e-16 ***\naccuracy      -3.734      6.619  -0.564    0.573    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 14.53 on 498 degrees of freedom\nMultiple R-squared:  0.0006386, Adjusted R-squared:  -0.001368 \nF-statistic: 0.3182 on 1 and 498 DF,  p-value: 0.5729\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 104.82, df = 197.29, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.67507 30.81311\nsample estimates:\nmean of x mean of y \n120.14097  89.89688 \n\nmean(cortot_tempi)\n\n[1] 120.141\n\nmedian(cortot_tempi)\n\n[1] 120.1846\n\nsd(cortot_tempi)\n\n[1] 1.978048\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
   },
   {
     "objectID": "class_notes/week_3.html",
@@ -1939,6 +1953,132 @@
     "text": "Exercise (Answers)\nGroup Exercise (Answers)"
   },
   {
+    "objectID": "slides/week7.html#ufos",
+    "href": "slides/week7.html#ufos",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\n(example taken from Kurt, 2019)\n\nYou are awakened by a bright light at your window.\nYou get out of bed and see a saucer-shaped object in the sky.\nAlthough you don’t believe in aliens, you think to yourself “could this be a UFO?”"
+  },
+  {
+    "objectID": "slides/week7.html#ufos-1",
+    "href": "slides/week7.html#ufos-1",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\n\nYou observed data\nYou formed a hypothesis\nYou updated your beliefs based on the data.\n\n(example taken from Kurt, 2019)"
+  },
+  {
+    "objectID": "slides/week7.html#ufos-2",
+    "href": "slides/week7.html#ufos-2",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\n\n“The probability of observing bright lights outside the window and a saucer-shaped object in the sky is very low.” Or:\n\n\\(P\\)(bright light outside your window, saucer-shaped object in the sky) = very low"
+  },
+  {
+    "objectID": "slides/week7.html#ufos-3",
+    "href": "slides/week7.html#ufos-3",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\n\nThe probability of observing bright lights and a saucer-shapd object in the sky, given our experience on Earth, is very low. Or:\n\n\\(P\\)(bright light outside your window, saucer-shaped object in the sky | our experience on earth) = very low\n\nThis is called a conditional probability; are conditioning the probabiltiy of one event occurring on something else."
+  },
+  {
+    "objectID": "slides/week7.html#ufos-4",
+    "href": "slides/week7.html#ufos-4",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\n\nProbability of hypothesis, given experience:\n\n\\(P(H_1 \\mid X)\\) = very, very low.\n\nBut what if \\(H_2\\) = a film is being made outside your window?\n\n\\(P(H_1 \\mid X)\\) = very low.\n\n\n(example taken from Kurt, 2019)"
+  },
+  {
+    "objectID": "slides/week7.html#ufos-5",
+    "href": "slides/week7.html#ufos-5",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\nPerhaps we have a new hypothesis?\n\n\\(P(D_{updated} \\mid H_2, X) >> P(D_{updated} \\mid H_1, X)\\)\nThe probability of the data, given the second hypothesis, is much greater than the first."
+  },
+  {
+    "objectID": "slides/week7.html#ufos-6",
+    "href": "slides/week7.html#ufos-6",
+    "title": "Bayes",
+    "section": "UFOs",
+    "text": "UFOs\nWe can express the comparison of these two hypotheses as a ratio:\n\\(\\frac{P(D_{updated} \\mid H_2, X)}{P(D_{updated} \\mid H_1, X)}\\)\nIf this is a large number (like 1000), it means that \\(H_2\\) explains the data 1,000 times better than \\(H_1\\)\n(example taken from Kurt, 2019)"
+  },
+  {
+    "objectID": "slides/week7.html#converting-odds-to-probability",
+    "href": "slides/week7.html#converting-odds-to-probability",
+    "title": "Bayes",
+    "section": "Converting Odds to Probability",
+    "text": "Converting Odds to Probability\n\n\\(P(H) = \\frac{O{H}}{1 + O(H)}\\)\nYou give your friend 6:1 odds that Northwestern will beat Purdue in basketball. You’ll give your friend $30 if Purdue wins, he will only pay you $5 if Northwestern wins.\n\\(P(NU Win) = \\frac{O(NU Win)}{1 + O(NU Win)} = \\frac{6}{7} = .857\\)\nYou are giving NU about an 86% chance of winning."
+  },
+  {
+    "objectID": "slides/week7.html#inverse-probability",
+    "href": "slides/week7.html#inverse-probability",
+    "title": "Bayes",
+    "section": "Inverse Probability",
+    "text": "Inverse Probability\n\nSpiegelhalter Coin Flip"
+  },
+  {
+    "objectID": "slides/week7.html#inverse-probability-1",
+    "href": "slides/week7.html#inverse-probability-1",
+    "title": "Bayes",
+    "section": "Inverse Probability",
+    "text": "Inverse Probability\n\nSpiegelhalter Doping"
+  },
+  {
+    "objectID": "slides/week7.html#inverse-probability-2",
+    "href": "slides/week7.html#inverse-probability-2",
+    "title": "Bayes",
+    "section": "Inverse Probability",
+    "text": "Inverse Probability\n\nSpiegelhalter Doping"
+  },
+  {
+    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.317",
+    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.317",
+    "title": "Bayes",
+    "section": "Richard III (see Spiegelhalter, p.317)",
+    "text": "Richard III (see Spiegelhalter, p.317)\n\nRichard III, who Shakespeare characterized as an evil hunchback, was said to have been buried in Greyfriars Priory in Leicester."
+  },
+  {
+    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-1",
+    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-1",
+    "title": "Bayes",
+    "section": "Richard III (see Spiegelhalter, p.317)",
+    "text": "Richard III (see Spiegelhalter, p.317)\nWe might assume that a skeleton found were the remains of Richard the III if all of the following were true:\n\nhe had really been buried in Greyfriars\nhis body had not been dug up and moved or scattered in the intervening 527 years\nthe first skeleton found happened to be him."
+  },
+  {
+    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-2",
+    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-2",
+    "title": "Bayes",
+    "section": "Richard III (see Spiegelhalter, p.317)",
+    "text": "Richard III (see Spiegelhalter, p.317)\n\nLet’s say 50% chance the stories of his burial were true\nLet’s say 50% chance that his skeleton is still where he was originally buried in Greyfriars\nImagine that up to 100 other bodies were also buried in this location.\n1/2 * 1/2 * 10/100 = 1/400."
+  },
+  {
+    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.318",
+    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.318",
+    "title": "Bayes",
+    "section": "Richard III (see Spiegelhalter, p.318)",
+    "text": "Richard III (see Spiegelhalter, p.318)\n\nSpiegelhalter Richard III"
+  },
+  {
+    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.320",
+    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.320",
+    "title": "Bayes",
+    "section": "Richard III (see Spiegelhalter, p.320)",
+    "text": "Richard III (see Spiegelhalter, p.320)\n\nSpiegelhalter Richard III"
+  },
+  {
+    "objectID": "slides/week7.html#the-posterior",
+    "href": "slides/week7.html#the-posterior",
+    "title": "Bayes",
+    "section": "The Posterior",
+    "text": "The Posterior\n\nThe probability of a hypothesis given the data is called the posterior.\nthe posterior is proportional to the likelihood times the prior.\n\\(P(H \\mid D)\\) is proportional to \\(P(D|H) x P(H)\\)"
+  },
+  {
+    "objectID": "slides/week7.html#comparison",
+    "href": "slides/week7.html#comparison",
+    "title": "Bayes",
+    "section": "Comparison",
+    "text": "Comparison\n\n\nDienes comparing methods"
+  },
+  {
     "objectID": "slides/week5.html#what-do-we-mean-by-bias",
     "href": "slides/week5.html#what-do-we-mean-by-bias",
     "title": "Bias, Power, and More on Confounds",
@@ -2041,7 +2181,7 @@
     "href": "slides/week5.html#types-of-errors-2",
     "title": "Bias, Power, and More on Confounds",
     "section": "Types of Errors",
-    "text": "Types of Errors\n\n\n\ntypes of errors"
+    "text": "Types of Errors\n\ntypes of errors"
   },
   {
     "objectID": "slides/week5.html#put-another-way",
@@ -2203,166 +2343,5 @@
     "title": "Syllabus",
     "section": "Grading",
     "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nWeekly Assignments (x8)\n50%\n\n\nMidterm Topic Review Paper\n15%\n\n\nFinal Project (First Draft)\n10%\n\n\nFinal Project (Peer Review)\n5%\n\n\nPresentation\n5%\n\n\nFinal Project (Paper)\n15%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA\n>= 93\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
-  },
-  {
-    "objectID": "slides/week5.html",
-    "href": "slides/week5.html",
-    "title": "Bias, Power, and More on Confounds",
-    "section": "",
-    "text": "For our purposes, let’s define it as:\n\nconsistent and systematic deviation from the expected norm stemming from a flaw in the design of study."
-  },
-  {
-    "objectID": "class_notes/week_4.html",
-    "href": "class_notes/week_4.html",
-    "title": "Week 4",
-    "section": "",
-    "text": "On Tuesday we focused primarily on the Chi-Square test. There are a number of resources on this website to walk you through that process, but the main point is that the test is a way of looking at whether the counts of data that you’re looking at are significantly different from what you expected.\nA discussion of it from David Huron’s Empirical Methods workshop can be found here.\n\n\n\nOn Thursday we spent time with R looking at correlation and regression. There were a couple of goals here:\n\nTo look at how one calculates Pearson’s correlation coefficient.\nTo look at correlation, and then regression through R.\nTo build functions in R.\n\nWe did this with data scraped with the Spotify API. The code of this is below.\nFirst, we load our libraries, and use the select function from the tidyverse package.\n\nlibrary(tidyverse)\nlibrary(corrplot)\n\n### read the data\nbeyonce <- read.csv(\"beyonce.csv\")\n\ndf <- beyonce %>% \n  select(c(\"acousticness\", \"liveness\", \"danceability\", \"loudness\", \"speechiness\", \"valence\"))\n\nThen we run the cor function to look at correlations, and plot it with a pie graph demonstrating the correlation coefficient of each pair of variables.\n\nx <- cor(df)\nround(x, 2)\ncorrplot(x, method=\"pie\")\n\nThe goal at this point was to load data and write a function that would look at correlations between the spotify variables in any artist. The following reads the file in.\n\nfile_reader <- function(filename){\n  file <- read.csv(file = paste0(filename, \".csv\"))\n  return(file)}\n\nThen we wrote a combined function that read everything in, and ran the correlation inside the function.\n\nartist_data <- function(artist){\n  artist <- read.csv(file = paste0(artist, \".csv\"))\n  df <- artist %>% \n    select(c(\"acousticness\", \"liveness\", \"danceability\", \"loudness\", \"speechiness\", \"valence\"))\n  x <- cor(df)\n  round(x, 2)\n  corrplot(x, method=\"pie\")\n}\n\nAt this point, we just played around with some regression models, and discussed what the output meant.\n\nsummary(lm(valence ~ loudness, data=beyonce))\nsummary(lm(valence ~ loudness + acousticness, data=beyonce))\nsummary(lm(valence ~ danceability, data=beyonce))\n\n### is the data normal?\nqqnorm(beyonce$danceability)\nhist(beyonce$danceability)\nshapiro.test(beyonce$danceability)\nks.test(beyonce$danceability, \"pnorm\")"
-  },
-  {
-    "objectID": "class_notes/week_5.html",
-    "href": "class_notes/week_5.html",
-    "title": "Week 5",
-    "section": "",
-    "text": "Thursday\nOn Thursday, we looked at regression modeling and fits. We began by looking at Beyonce’s Spotify data again:\n\nlibrary(tidyverse)\nlibrary(caret)\ndf <- read.csv(\"beyonce.csv\")\nplot(danceability ~ album_release_year, data=df)\nabline(lm(danceability ~ album_release_year, data=df), col=\"red\")\n\nsummary(lm(danceability ~ album_release_year, data=df))\nabline(lm(acousticness ~ album_release_year, data=df), col=\"blue\")\nabline(lm(speechiness ~ album_release_year, data=df), col=\"green\")\n\nWhat would a more explanatory model look like? We could look at different models, predicting danceability, acousticness, speechiness, valance, or perhaps danceability, but with more predictor variables.\n\nsummary(lm(danceability ~ album_release_year + acousticness + speechiness, data=df))\ndance_model <- lm(danceability ~ album_release_year, data=df)\nacoustic_model <- lm(acousticness ~ album_release_year, data=df)\nspeech_model <- lm(speechiness ~ album_release_year, data=df)\nvalence_model <- lm(valence ~ album_release_year, data=df)\ncombined_model <- lm(danceability ~ album_release_year + acousticness + speechiness + valence, data=df)\n\nBut how can we tell which of these is more predictable? For this, we looked at Akaike’s ‘An Information Criterion’ (or AIC).\n\nAIC(dance_model, \n    acoustic_model, \n    speech_model, \n    valence_model, \n    combined_model)\n\nThere are other similar tools, such as BIC or SBC (Schwarz’s Bayesian criterion) (or BIC):\n\nBIC(dance_model, \n    acoustic_model, \n    speech_model, \n    valence_model,\n    combined_model)\n\nWe looked at some other possibilities for regression, including stepwise (forward and backward), which can be employed in times when collinearity is high.\n\nstep(lm(danceability ~ \n          album_release_year + acousticness + \n          speechiness + valence, data=df), \n          direction=\"backward\")\n\nstep(lm(danceability ~ \n          album_release_year + acousticness + \n          speechiness + valence, data=df), \n     direction=\"forward\")\n\nWe then looked at Debussy performance practice over time, examining whether pieces slowed down, and what the nature of tempo flexibility might look like:\n\n### load the data\ndebussy_data <- read.csv(\"debussy_performance_data.csv\", header=TRUE)\ndebussy_data$performer <- as.factor(debussy_data$performer)\ndebussy_data$tempo <- as.numeric(debussy_data$tempo)\ndebussy_data$year <- as.numeric(debussy_data$year)\n\n### get averages.\nby_performer <- debussy_data %>% group_by(piece, performer)\ntempi <- summarise(by_performer,\n                  flex = sd(tempo, na.rm = TRUE),\n                  tempo = mean(tempo, na.rm = TRUE),\n                  year = mean(year, na.rm= TRUE))\n\nbook_2 <- debussy_data %>% filter(str_detect(piece, \"^2\"))\n\n\n## plot the data and see what the overall trend is.\nplot(tempo ~ year, data = tempi)\nabline(lm(tempo ~ year, data = tempi), col=\"red\")\ntext(tempi$year, tempi$tempo-1, labels=tempi$performer)\nsummary(lm(tempo ~ year, data = tempi))\ndes_pas <- tempi %>% filter(piece == \"1.6\")\nplot(tempo ~ year, data = des_pas)\nabline(lm(tempo ~ year, data = des_pas), col=\"red\")\nsummary(lm(tempo ~ year + flex, data = des_pas))\n\nWe can look at whether tempo is predicted by year, and by flexibility:\n\nyear <- lm(tempo ~ year, data = des_pas)\nyear_flex <- lm(tempo ~ year + flex, data = des_pas)\nflex <- lm(tempo ~ flex, data = des_pas)\nAIC(\n  year,\n  flex,\n  year_flex\n)\n\nAnd then comparing linear and polynomial models.\n\nplot(lm(tempo ~ year + I(year^2), data = tempi))\nggplot(des_pas, aes(year, tempo) ) + geom_point() +\n  stat_smooth(method = lm, formula = y ~ poly(x, 2, raw = TRUE))\n\nlinear <- lm(tempo ~ year, data = tempi)\npoly_2 <- lm(tempo ~ year + I(year^2), data = tempi)\npoly_3 <- lm(tempo ~ year + I(year^3), data = tempi)\nAIC(linear, \n    poly_2, \n    poly_3)"
-  },
-  {
-    "objectID": "slides/week7.html",
-    "href": "slides/week7.html",
-    "title": "Bayes",
-    "section": "",
-    "text": "(example taken from Kurt, 2019)\n\nYou are awakened by a bright light at your window.\nYou get out of bed and see a saucer-shaped object in the sky.\nAlthough you don’t believe in aliens, you think to yourself “could this be a UFO?”"
-  },
-  {
-    "objectID": "slides/week7.html#ufos-1",
-    "href": "slides/week7.html#ufos-1",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\n\nYou observed data\nYou formed a hypothesis\nYou updated your beliefs based on the data.\n\n(example taken from Kurt, 2019)"
-  },
-  {
-    "objectID": "slides/week7.html#ufos-2",
-    "href": "slides/week7.html#ufos-2",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\n\n“The probability of observing bright lights outside the window and a saucer-shaped object in the sky is very low.” Or:\n\n\\(P\\)(bright light outside your window, saucer-shaped object in the sky) = very low"
-  },
-  {
-    "objectID": "slides/week1.html",
-    "href": "slides/week1.html",
-    "title": "Welcome!",
-    "section": "",
-    "text": "Today we will be covering…\n\nIntroductions\nThe plan for the quarter\nWhat is empirical musicology?\nWhat is science?\n\nHow does knowledge grow?"
-  },
-  {
-    "objectID": "slides/week7.html#ufos",
-    "href": "slides/week7.html#ufos",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\n(example taken from Kurt, 2019)\n\nYou are awakened by a bright light at your window.\nYou get out of bed and see a saucer-shaped object in the sky.\nAlthough you don’t believe in aliens, you think to yourself “could this be a UFO?”"
-  },
-  {
-    "objectID": "slides/week7.html#ufos-3",
-    "href": "slides/week7.html#ufos-3",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\n\nThe probability of observing bright lights and a saucer-shapd object in the sky, given our experience on Earth, is very low. Or:\n\n\\(P\\)(bright light outside your window, saucer-shaped object in the sky | our experience on earth) = very low\n\nThis is called a conditional probability; are conditioning the probabiltiy of one event occurring on something else."
-  },
-  {
-    "objectID": "slides/week7.html#ufos-4",
-    "href": "slides/week7.html#ufos-4",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\n\nProbability of hypothesis, given experience:\n\n\\(P(H_1 \\mid X)\\) = very, very low.\n\nBut what if \\(H_2\\) = a film is being made outside your window?\n\n\\(P(H_1 \\mid X)\\) = very low.\n\n\n(example taken from Kurt, 2019)"
-  },
-  {
-    "objectID": "slides/week7.html#ufos-5",
-    "href": "slides/week7.html#ufos-5",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\nPerhaps we have a new hypothesis?\n\n\\(P(D_{updated} \\mid H_2, X) >> P(D_{updated} \\mid H_1, X)\\)\nThe probability of the data, given the second hypothesis, is much greater than the first."
-  },
-  {
-    "objectID": "slides/week7.html#ufos-6",
-    "href": "slides/week7.html#ufos-6",
-    "title": "Bayes",
-    "section": "UFOs",
-    "text": "UFOs\nWe can express the comparison of these two hypotheses as a ratio:\n\\(\\frac{P(D_{updated} \\mid H_2, X)}{P(D_{updated} \\mid H_1, X)}\\)\nIf this is a large number (like 1000), it means that \\(H_2\\) explains the data 1,000 times better than \\(H_1\\)\n(example taken from Kurt, 2019)"
-  },
-  {
-    "objectID": "slides/week7.html#converting-odds-to-probability",
-    "href": "slides/week7.html#converting-odds-to-probability",
-    "title": "Bayes",
-    "section": "Converting Odds to Probability",
-    "text": "Converting Odds to Probability\n\n\\(P(H) = \\frac{O{H}}{1 + O(H)}\\)\nYou give your friend 6:1 odds that Northwestern will beat Purdue in basketball. You’ll give your friend $30 if Purdue wins, he will only pay you $5 if Northwestern wins.\n\\(P(NU Win) = \\frac{O(NU Win)}{1 + O(NU Win)} = \\frac{6}{7} = .857\\)\nYou are giving NU about an 86% chance of winning."
-  },
-  {
-    "objectID": "slides/week7.html#inverse-probability",
-    "href": "slides/week7.html#inverse-probability",
-    "title": "Bayes",
-    "section": "Inverse Probability",
-    "text": "Inverse Probability\n\nSpiegelhalter Coin Flip"
-  },
-  {
-    "objectID": "slides/week7.html#inverse-probability-1",
-    "href": "slides/week7.html#inverse-probability-1",
-    "title": "Bayes",
-    "section": "Inverse Probability",
-    "text": "Inverse Probability\n\nSpiegelhalter Doping"
-  },
-  {
-    "objectID": "slides/week7.html#inverse-probability-2",
-    "href": "slides/week7.html#inverse-probability-2",
-    "title": "Bayes",
-    "section": "Inverse Probability",
-    "text": "Inverse Probability\n\nSpiegelhalter Doping"
-  },
-  {
-    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.317",
-    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.317",
-    "title": "Bayes",
-    "section": "Richard III (see Spiegelhalter, p.317)",
-    "text": "Richard III (see Spiegelhalter, p.317)\n\nRichard III, who Shakespeare characterized as an evil hunchback, was said to have been buried in Greyfriars Priory in Leicester."
-  },
-  {
-    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-1",
-    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-1",
-    "title": "Bayes",
-    "section": "Richard III (see Spiegelhalter, p.317)",
-    "text": "Richard III (see Spiegelhalter, p.317)\nWe might assume that a skeleton found were the remains of Richard the III if all of the following were true:\n\nhe had really been buried in Greyfriars\nhis body had not been dug up and moved or scattered in the intervening 527 years\nthe first skeleton found happened to be him."
-  },
-  {
-    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-2",
-    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.317-2",
-    "title": "Bayes",
-    "section": "Richard III (see Spiegelhalter, p.317)",
-    "text": "Richard III (see Spiegelhalter, p.317)\n\nLet’s say 50% chance the stories of his burial were true\nLet’s say 50% chance that his skeleton is still where he was originally buried in Greyfriars\nImagine that up to 100 other bodies were also buried in this location.\n1/2 * 1/2 * 10/100 = 1/400."
-  },
-  {
-    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.318",
-    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.318",
-    "title": "Bayes",
-    "section": "Richard III (see Spiegelhalter, p.318)",
-    "text": "Richard III (see Spiegelhalter, p.318)\n\nSpiegelhalter Richard III"
-  },
-  {
-    "objectID": "slides/week7.html#richard-iii-see-spiegelhalter-p.320",
-    "href": "slides/week7.html#richard-iii-see-spiegelhalter-p.320",
-    "title": "Bayes",
-    "section": "Richard III (see Spiegelhalter, p.320)",
-    "text": "Richard III (see Spiegelhalter, p.320)\n\nSpiegelhalter Richard III"
-  },
-  {
-    "objectID": "slides/week7.html#the-posterior",
-    "href": "slides/week7.html#the-posterior",
-    "title": "Bayes",
-    "section": "The Posterior",
-    "text": "The Posterior\n\nThe probability of a hypothesis given the data is called the posterior.\nthe posterior is proportional to the likelihood times the prior.\n\\(P(H \\mid D)\\) is proportional to \\(P(D|H) x P(H)\\)"
-  },
-  {
-    "objectID": "slides/week7.html#comparison",
-    "href": "slides/week7.html#comparison",
-    "title": "Bayes",
-    "section": "Comparison",
-    "text": "Comparison\n\n\nDienes comparing methods"
   }
 ]
