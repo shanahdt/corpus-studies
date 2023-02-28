@@ -60,7 +60,7 @@
     "href": "class_notes/week_2.html#thursday",
     "title": "Week 2",
     "section": "Thursday",
-    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-43.518 -10.429   0.822   9.669  42.284 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  122.498      3.309  37.023   <2e-16 ***\naccuracy      -3.734      6.619  -0.564    0.573    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 14.53 on 498 degrees of freedom\nMultiple R-squared:  0.0006386, Adjusted R-squared:  -0.001368 \nF-statistic: 0.3182 on 1 and 498 DF,  p-value: 0.5729\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 104.82, df = 197.29, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.67507 30.81311\nsample estimates:\nmean of x mean of y \n120.14097  89.89688 \n\nmean(cortot_tempi)\n\n[1] 120.141\n\nmedian(cortot_tempi)\n\n[1] 120.1846\n\nsd(cortot_tempi)\n\n[1] 1.978048\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
+    "text": "Thursday\nOn Thursday, we dove into working with R a bit, and talked about some terms related to desriptive statistics, including:\n\nmean\nmedian\nmode\nnormal distributions\nbimodal distributions\nkurtosis\n\nOur first study looked at how the central tendency with a normal distribution (see also this discussion of it here). We started with a small dataset, and then put it into a function, which allowed us to us an argument to test what happened with the distribution as we increased the number. Some things to look for in this code.\n\nNote how it creates fake data by randomly generating a random distribution with rnorm. The arguments for this function are the amount of numbers you want, the mean, and the standard deviation. (We defined two variables (clarinet_tempi and accuracy) using this method.)\nWe then plotted the data.\n(as an extra step) we looked at a linear model to see relationships between clarinet tempi and accuracy, and returned the results of this model (this gives us things like p-values and R^2).\nBy putting it inside a function, we can run it with many numbers.\n\n\n#### coming up with my data\n\nmy_model <- function(number = 100){\n  clarinet_tempi <- rnorm(number, 120, 15)\n  accuracy <- rnorm(number, .5, .1)\n\n  plot(clarinet_tempi, accuracy)\n  model <- lm(clarinet_tempi ~ accuracy)\n  return(summary(model))\n}\n\nmy_model(500)\n\n\n\n\n\nCall:\nlm(formula = clarinet_tempi ~ accuracy)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-48.424 -10.443  -0.792  10.416  40.843 \n\nCoefficients:\n            Estimate Std. Error t value Pr(>|t|)    \n(Intercept)  118.719      3.205  37.038   <2e-16 ***\naccuracy       2.335      6.225   0.375    0.708    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 15 on 498 degrees of freedom\nMultiple R-squared:  0.0002825, Adjusted R-squared:  -0.001725 \nF-statistic: 0.1407 on 1 and 498 DF,  p-value: 0.7077\n\n\nHere is a second example, using tempo and decibels.\n\n#### tempi and volume\nmy_model <- function(){\n  tempo <- rnorm(100, 120, 15)\n  decibels <- rnorm(100, 90, 15)\n  \n  plot(tempo, decibels)\n  model <- lm(tempo ~ decibels)\n  return(summary(model))\n}\n\n\nAre two distributions the same or different?\nHere, we ran a t-test with fake data, looking at whether the distributions of tempi between Cortot and Gould overlapped (as it’s fake data, it’s quite easy for us to get significant results…).\n\ncortot_tempi <- as.numeric(rnorm(100, 120, 2))\ngould_tempi <- as.numeric(rnorm(100, 90, 2))\nboxplot(cortot_tempi, gould_tempi)\n\n\n\nt.test(cortot_tempi, gould_tempi)\n\n\n    Welch Two Sample t-test\n\ndata:  cortot_tempi and gould_tempi\nt = 103.64, df = 196.18, p-value < 2.2e-16\nalternative hypothesis: true difference in means is not equal to 0\n95 percent confidence interval:\n 29.20183 30.33472\nsample estimates:\nmean of x mean of y \n120.02017  90.25189 \n\nmean(cortot_tempi)\n\n[1] 120.0202\n\nmedian(cortot_tempi)\n\n[1] 120.14\n\nsd(cortot_tempi)\n\n[1] 2.126452\n\n\nIn Week 3 we will dive into sampling and more about hypothesis testing with inferential statistics."
   },
   {
     "objectID": "class_notes/week_3.html",
@@ -1475,6 +1475,139 @@
     "title": "Empirical and Critical Methods",
     "section": "",
     "text": "Welcome to Empirical Methods in Music Research! This course website will serve as a central repository for examples, slides, and code. Readings will still be available on Canvas, and links to specific pages on this site can be found there, as well."
+  },
+  {
+    "objectID": "slides/week9.html#conditional-probabilities",
+    "href": "slides/week9.html#conditional-probabilities",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Conditional Probabilities",
+    "text": "Conditional Probabilities\n\nLet’s say we are looking at the likelihood that someone knows R in the Bienen School of Music.\nWe know there are about 700 people in Bienen School of Music, and it’s safe to say that maybe 10 know R."
+  },
+  {
+    "objectID": "slides/week9.html#conditional-probabilities-1",
+    "href": "slides/week9.html#conditional-probabilities-1",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Conditional Probabilities",
+    "text": "Conditional Probabilities\n\n\\(P(knowingR) = \\frac{8}{700}\\)\n\nThe probability of knowing R in Bienen is 8 out of 700.\n\n\\(P(knowingR|thisClass) = \\frac{13}{700}\\)\n\nThe probability of knowing R in a quarter in which this class is offered, is 13 out of 700.\n\n\\(\\frac{P(knowingR|thisClass)}{P(knowingR)} = 1.625\\)\n\nWhat does this tell us? In a quarter that this class is being offered, you’re 62.5% more likely to find someone who knows R."
+  },
+  {
+    "objectID": "slides/week9.html#conditional-probabilities-2",
+    "href": "slides/week9.html#conditional-probabilities-2",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Conditional Probabilities",
+    "text": "Conditional Probabilities\n\nOn the individual level, it’s still quite rare to know R, but at the population level, it goes up quite a bit.\n\n\n“Conditional probabilities are an essential part of statistics because they allow us to demonstrate how information changes our beliefs.” (Will Kurt)"
+  },
+  {
+    "objectID": "slides/week9.html#dependence-and-the-revised-rules-of-probability-taken-from-kurt",
+    "href": "slides/week9.html#dependence-and-the-revised-rules-of-probability-taken-from-kurt",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Dependence and the Revised Rules of Probability (taken from Kurt)",
+    "text": "Dependence and the Revised Rules of Probability (taken from Kurt)\n\n\\(P(colorBlind) = .0425\\)\n\\(P(colorBlind|female) = .005\\)\n\\(P(colorBlind|male) = .08\\)\nIf we pick someone at random, what are the odds that they are male and color blind?"
+  },
+  {
+    "objectID": "slides/week9.html#dependence-and-the-revised-rules-of-probability-taken-from-kurt-1",
+    "href": "slides/week9.html#dependence-and-the-revised-rules-of-probability-taken-from-kurt-1",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Dependence and the Revised Rules of Probability (taken from Kurt)",
+    "text": "Dependence and the Revised Rules of Probability (taken from Kurt)\n\nThis would be the basic population equation:\n\n\\(P(male, colorBlind) = P(male) * P(colorBlind)\\) =\n\n.5 * .0425 = .02125\n\nBut this doesn’t really answer the full question.\n\nThese are dependent probabilities.\n\nThe true probability of finding a male who is color blind is the probability of picking a male multiplied by the probability that he is color blind.\n\\(P(male, colorBlind) = P(male) * P(colorBlind | male)\\)\n.5 * .08 = .04\n\\(P(A,B) = P(A) * P(B|A)\\)"
+  },
+  {
+    "objectID": "slides/week9.html#dependence-and-the-revised-rules-of-probability-taken-from-kurt-2",
+    "href": "slides/week9.html#dependence-and-the-revised-rules-of-probability-taken-from-kurt-2",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Dependence and the Revised Rules of Probability (taken from Kurt)",
+    "text": "Dependence and the Revised Rules of Probability (taken from Kurt)\nHow can we determine the \\(P(male|colorBlind)\\)?\n\n\\(P(male|colorBlind) = \\frac{P(male) * P(colorBlind|male)}{P(colorBlind)}\\)\n= \\(\\frac{.5 * .08}{.0425}\\)\n= .941"
+  },
+  {
+    "objectID": "slides/week9.html#bayes-theorem",
+    "href": "slides/week9.html#bayes-theorem",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\n\\(P(A|B) = \\frac{P(A) * P(B|A)}{P(B)}\\)\nAllows us to look at the likelihood of what we’ve seen given what we believe.\n\\(P(observed|belief)\\) as well as \\(P(belief|observed)\\)"
+  },
+  {
+    "objectID": "slides/week9.html#bayes-theorem-1",
+    "href": "slides/week9.html#bayes-theorem-1",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Bayes’ Theorem",
+    "text": "Bayes’ Theorem\n\nKurt figure 8.1"
+  },
+  {
+    "objectID": "slides/week9.html#weve-been-robbed-taken-from-kurt-again",
+    "href": "slides/week9.html#weve-been-robbed-taken-from-kurt-again",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "We’ve been robbed (taken from Kurt again)",
+    "text": "We’ve been robbed (taken from Kurt again)\n\nP(robbed | broken window, open front door, missing laptop)\nWhat are the odds that, if you were robbed, you’d come home and find this evidence? 3 out of 10?\n\\(P(robbed) = \\frac{1}{1000}\\)\n\\(P(robbed) * P(brokenWindow, openDoor, missingLaptop|robbed)\\)\n\n= \\(\\frac{\\frac{1}{1000} * \\frac{3}{10}}{P(D)}\\)"
+  },
+  {
+    "objectID": "slides/week9.html#weve-been-robbed-taken-from-kurt-again-1",
+    "href": "slides/week9.html#weve-been-robbed-taken-from-kurt-again-1",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "We’ve been robbed (taken from Kurt again)",
+    "text": "We’ve been robbed (taken from Kurt again)\n\nThe problem is, we don’t really know P(D)\nBut perhaps we can compare hypotheses?"
+  },
+  {
+    "objectID": "slides/week9.html#weve-been-robbed-taken-from-kurt-again-2",
+    "href": "slides/week9.html#weve-been-robbed-taken-from-kurt-again-2",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "We’ve been robbed (taken from Kurt again)",
+    "text": "We’ve been robbed (taken from Kurt again)\n\nKid hit a baseball through the front window\nI accidentally left the door unlocked.\nForgot that I brought the laptop to work and it’s still there."
+  },
+  {
+    "objectID": "slides/week9.html#weve-been-robbed-taken-from-kurt-again-3",
+    "href": "slides/week9.html#weve-been-robbed-taken-from-kurt-again-3",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "We’ve been robbed (taken from Kurt again)",
+    "text": "We’ve been robbed (taken from Kurt again)\n\nP(kid) = 1/2000\nP(door) = 1/30\nP(laptop) = 1/365\n\\(P(H_2) = \\frac{1}{2000} * \\frac{1}{30} * \\frac{1}{365}\\)\n\n= 1 out of 21,9000,000."
+  },
+  {
+    "objectID": "slides/week9.html#comparing-hypotheses",
+    "href": "slides/week9.html#comparing-hypotheses",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Comparing Hypotheses",
+    "text": "Comparing Hypotheses\n\n\\(\\frac{P(H_1) x P(D | H_1)}{P(H_2) x P(D | H_2)}\\)\n\\(\\frac{\\frac{3}{1000}}{\\frac{1}{21,900,000}}\\)\n= 6,570\n\\(H_1\\) explains what we observed 6,750 times better than \\(H_2\\).\nOur original hypothesis explains the data much, much better than the second hypothesis."
+  },
+  {
+    "objectID": "slides/week9.html#the-beta-distribution",
+    "href": "slides/week9.html#the-beta-distribution",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "The beta distribution",
+    "text": "The beta distribution\n\nLet’s say that I need to get students at NU to do an experiment.\nI ask 10,000 people.\nI get 50 people to say yes."
+  },
+  {
+    "objectID": "slides/week9.html#the-beta-distribution-1",
+    "href": "slides/week9.html#the-beta-distribution-1",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "The beta distribution",
+    "text": "The beta distribution"
+  },
+  {
+    "objectID": "slides/week9.html#schemata-or-not",
+    "href": "slides/week9.html#schemata-or-not",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Schemata or Not",
+    "text": "Schemata or Not\n\n\n\n\nFound Schema\nDidn’t Find Schema\nAccuracy Rate\n\n\n\n\nOrchestral\n36\n114\n.24\n\n\nPiano\n50\n100\n.33"
+  },
+  {
+    "objectID": "slides/week9.html#schemata-or-not-1",
+    "href": "slides/week9.html#schemata-or-not-1",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Schemata or Not",
+    "text": "Schemata or Not"
+  },
+  {
+    "objectID": "slides/week9.html#another-distribution",
+    "href": "slides/week9.html#another-distribution",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "another distribution",
+    "text": "another distribution"
+  },
+  {
+    "objectID": "slides/week9.html#monte-carlo-simulation",
+    "href": "slides/week9.html#monte-carlo-simulation",
+    "title": "Conditional Probabilities and Bayes",
+    "section": "Monte Carlo Simulation",
+    "text": "Monte Carlo Simulation\n\n\n[1] 0.95875"
   },
   {
     "objectID": "slides/week1.html#hello",
