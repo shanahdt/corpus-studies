@@ -1,5 +1,5 @@
 ---
-title: Syllabus
+title: Corpus Studies (Music 348/448) Syllabus
 output: html
 ---
 
@@ -9,34 +9,24 @@ Instructor: Dr. Daniel Shanahan
 
 Contact: [daniel.shanahan\@northwestern.edu](mailto:daniel.shanahan@northwestern.edu)
 
-Meeting times:
-
 ## Overview
 
-Empirical methods in music research have been used to study aspects of musical style, performance practice, authorship, musical behaviors and auditory perception, among other topics. In this class, we will explore what it means to study music with the assistance of empirical methods, including philosophical debates that surround such approaches. Additionally, it will provide a foundation and overview of empirical methods used in musicological and music-theoretic research, equipping students with the tools needed to critically engage with the literature in the field, while designing their own empirically-based music research studies and engaging with the analysis of the data of musical behavior.
+Corpus studies, or distant readings of multiple musical works, are often employed as a way of better understanding issues such as the relationships between pieces, authorship, trends over time, or differences and similarities between genres. In this class, we will explore the techniques, history, and philosophy of such approaches, and will construct and analyze our own corpora. For the most part, this class will deal with notated scores, and students will be encouraged to ask their own research questions of the music that they are most interested in.
 
 ## Course info
 
-|                | Day        | Time                            | Location   |
-|----------------|:-----------|:--------------------------------|:-----------|
-| Meeting Times: | Tue & Thu  | 12:30pm - 1:50 pm               | RCMA 1-164 |
-| Office Hours   | Mon & Weds | 10am--11am (and by appointment) | RCMA 4-181 |
+|                | Day                      | Time                     | Location   |
+|----------------|:---------------|:------------------------|:---------------|
+| Meeting Times: | Mon & Weds               | 12:30pm - 1:50 pm        | RCMA 1-164 |
+| Office Hours   | TBD (and by appointment) | TBD (and by appointment) | RCMA 4-181 |
 
 ## Learning objectives
 
-By the end of the quarter, you will be able to...
+By the end of the quarter, you will...
 
--   discuss the basic fundamental assumptions of empirical musical research, including sampling methods, hypothesis testing, descriptive statistics, and introductory inferential statistics
-
--   discuss some of the basic experimental paradigms of experimental music research
-
--   discuss the basic differences between frequentist and Bayesian statistics
-
--   analyze data derived from corpus studies, surveys, and listening experiments
-
--   engage critically with published empirical music research
-
--   have a working introductory knowledge of the [R programming language](https://www.r-project.org/about.html)
+-   have an understanding of how music has been examined through distant readings of scores and recordings
+-   be able to explore how the concepts of concordances, schemata, key-finding, clustering, and introductory machine learning approaches can be applied to music analysis
+-   have a working introductory knowledge of the [R programming language](https://www.r-project.org/about.html) and the [HumDrumR package](https://github.com/Computational-Cognitive-Musicology-Lab/humdrumR).
 
 ## Course Policies
 
@@ -46,7 +36,7 @@ Students in this course are required to comply with the policies found in the bo
 
 ### Accesibility
 
-Northwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university's established accommodation process (e: accessiblenu\@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.
+Northwestern University is committed to providing the most accessible learning environment as possible for students with disabilities. Should you anticipate or experience disability-related barriers in the academic setting, please contact AccessibleNU to move forward with the university's established accommodation process (email: accessiblenu\@northwestern.edu; p: 847-467-5530). If you already have established accommodations with AccessibleNU, please let me know as soon as possible, preferably within the first two weeks of the term, so we can work together to implement your disability accommodations. Disability information, including academic accommodations, is confidential under the Family Educational Rights and Privacy Act.
 
 ### COVID-19 Classroom Expectations
 
@@ -60,8 +50,6 @@ If a student fails to comply with the [COVID-19 Expectations for Students](https
 
 Maintaining the health of the community remains our priority. If you are experiencing any symptoms of COVID **do not attend class**. Follow the steps outlined on the NU sites for testing, isolation and reporting a positive case. Next, contact me as soon as possible to arrange to complete coursework.
 
-Students who experience other personal emergencies should contact me as soon as possible to arrange to complete coursework.
-
 Should public health recommendations prevent in-person class from being held on a given day, I or the university will notify students.
 
 ### Diversity, Equity, and Inclusion
@@ -70,13 +58,16 @@ This course strives to be an inclusive learning community, respecting those of d
 
 ## Textbooks
 
-There is no textbook for this course, and most of the materials will be available on Canvas or the course website (or both).
+There is no textbook for this course, and most of the materials will be available on Canvas or the course website (or both). Many of the readings will be taken from the forthcoming [*Oxford Handbook of Music and Corpus Studies*](https://academic.oup.com/edited-volume/41992), edited by Daniel Shanahan, Ashley Burgoyne, and Ian Quinn.
 
 Having said that, you should sign up for a free account for [Posit Cloud (formerly RStudio Cloud)](https://posit.cloud/), where many of the class notebooks will be held.I would also recommend downloading [R](https://www.r-project.org/about.html) and [RStudio](https://posit.co/download/rstudio-desktop/) onto your personal machine, if possible.
 
 Although not required, I would highly recommend having a look at:
 
 -   [R for Data Science](https://r4ds.had.co.nz/) by Garret Grolemund and Hadley Wickham
+-   [The Humdrum User Guide](https://www.humdrum.org/guide/)
+-   [The music21 documentation](http://web.mit.edu/music21/)
+-   [*The Oxford Handbook of Music and Corpus Studies*](https://academic.oup.com/edited-volume/41992)
 
 ## Support for Wellness and Mental Health
 
@@ -92,34 +83,34 @@ Northwestern University is committed to supporting the wellness of our students.
 
 There will be regular assignments in which you will be asked to respond to do one of the following:
 
--   Critically engage with a study design
+-   Critically reflect upon a reading about the history, methods, and dilemmas commonly found in corpus studies.
 
--   Analyze data (sometimes real, sometimes artificial)
+-   Write code that addresses a musical question (e.g. what's the most common pitch transition in this group of pieces?)
 
--   Respond to prompts about methodological dilemmas.
+-   Analyze a given collection of musical data.
+
+Typically, we will have reading reflections due on Mondays, and code-related questions relevant to those readings due on Wednesdays.
 
 ### Midterm Project
 
-The midterm project will consist of a literature review and critical evaluation of a specific topic in the field of empirical musicology. You will discuss any methodological issues that might be present in the research questions at hand.
-
-An example: We tend to exclude outliers when looking at data, but Debussy's performances of his own pieces are statistical outliers when compared to other performances of his pieces. To what extent can we view performance data through such a lens, and how would you go about addressing the question?
+The goal of this class is for you to both understand corpus studies as a method with a long history, and for you to be able to incorporate these methods in your own research. There will be a midterm project that is primarily used a stepping stone into your final project, and it will consist of presenting a literature review in which you situate your own research question within the existing literature and propose a study that examines this question. You may use existing data, but you might find it more relevant to you if you use your own dataset. Therefore, this would be a good time to have a bulk of your data encoded, so that you are aware of the time needed to construct your corpus.
 
 ### Final Project
 
-The final project will be focused on a research quetsion of your choosing, and will be broken up into several a peer-reviewed first draft, a presentation, and a final paper.
+The final project will be focused on a research question of your choosing, and will be broken up into several a peer-reviewed first draft, a presentation, and a final paper.
 
 ## Grading
 
 The final course grade will be calculated as follows:
 
-| Category                    | Percentage |
-|:----------------------------|:-----------|
-| Weekly Assignments (x8)     | 50%        |
-| Midterm Topic Review Paper  | 15%        |
-| Final Project (First Draft) | 10%        |
-| Final Project (Peer Review) | 5%         |
-| Presentation                | 5%         |
-| Final Project (Paper)       | 15%        |
+| Category                     | Percentage |
+|:-----------------------------|:-----------|
+| Reading Reflection Questions | 20%        |
+| Code-focused assignments     | 30%        |
+| Midterm Literature Review    | 15%        |
+| Final Project (First Draft)  | 10%        |
+| Presentation                 | 10%        |
+| Final Project (Final draft)  | 15%        |
 
 The final letter grade will be determined based on the following thresholds:
 
@@ -138,3 +129,27 @@ The final letter grade will be determined based on the following thresholds:
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
 
+## Schedule
+
+| Unit                                                     | Week | Date (Date)                   | Topic                                                         |
+|---------------|:--------|:-----------------|:-----------------|
+| Representing, Searching, and Counting with Symbolic Data | 1    | T (3/28; Northwestern Monday) | Introductions; a history of corpus-based approaches to music. |
+|                                                          | 1    | W (3/29)                      | Representing musical data (kern, MIDI, XML, MEI)              |
+|                                                          | 2    | M (4/3)                       | Pitches, melodic intervals and scale degrees                  |
+|                                                          | 2    | W (4/5)                       | Representing Harmony                                          |
+|                                                          | 3    | M (4/10)                      | Representing Rhythm and Meter                                 |
+|                                                          | 3    | W (4/12)                      | Characteristic Features and TF-IDF                            |
+|                                                          | 4    | M (4/17)                      | n-grams and Transition Probabilities                          |
+|                                                          | 4    | W (4/19)                      | Finding patterns                                              |
+| Conceptual Debates                                       | 5    | M (4/24)                      | Measurements of Similarity                                    |
+|                                                          | 5    | W (4/26)                      | Entropy and Variability                                       |
+|                                                          | 6    | M (5/1)                       | Key-Finding Algorithms                                        |
+|                                                          | 6    | W (5/3)                       | Key-Finding Algorithms (*continued*)                          |
+|                                                          | 7    | M (5/8)                       | Fast Fourier Transforms                                       |
+|                                                          | 7    | W (5/10)                      | Clustering and Authorship                                     |
+| Audio Data                                               | 8    | M (5/15)                      | Performance Data/the Mazurka Project                          |
+|                                                          | 8    | W (5/17)                      | Tempo flexibility, and other performance data                 |
+|                                                          | 9    | M (5/22)                      | The Spotify API                                               |
+|                                                          | 9    | W (5/24)                      | The Spotify API (*continued*)                                 |
+|                                                          | 10   | M (5/29)                      | No Classes (Memorial Day)                                     |
+|                                                          | 10   | W (5/31)                      | Final Presentations                                           |

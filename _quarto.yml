@@ -4,8 +4,8 @@ project:
 
 website:
   page-navigation: true
-  title: "Empirical and Critical Methods in Musicology"
-  description: "Homepage for MUS-THRY 345/445, Northwestern University, Winter 2023 ."
+  title: "Empirical and Corpus Studies in Music"
+  description: "Homepage for Corpus Studies, Spring 2023 ."
   site-url: "https://shanahdt.github.io/mus-345-445/"
   repo-url: "https://github.com/shanahdt/mus-345-445"
   repo-actions: [edit, issue]
@@ -35,34 +35,13 @@ website:
         contents:
           - course-syllabus.qmd
           - course-schedule.qmd
-        collapse-level: 1
-      - section: "Presentations"
-        contents: 
-          - slides/week1.qmd
-          - slides/week2.qmd
-          - slides/week3.qmd
-          - slides/week5.qmd
-          - slides/week7.qmd  
-          - slides/week9.qmd  
-        collapse-level: 1
+        collapse-level: 1 
       - section: "Class Notes"
         contents:
           - class_notes/week_1.qmd
           - class_notes/week_2.qmd
           - class_notes/week_3.qmd
-          - class_notes/week_4.qmd
-          - class_notes/week_5.qmd
         collapse-level: 1
-      - section: "Workshop Materials"
-        contents: 
-          - emp_methods_workshop/slogans.qmd
-          - emp_methods_workshop/day1.qmd
-          - emp_methods_workshop/day2.qmd
-          - emp_methods_workshop/day3.qmd
-        collapse-level: 1
-  
-         
-
           
 
   page-footer:

@@ -2,8 +2,5 @@
 title: "About"
 ---
 
-About this site
+This is the class site for _Corpus Studies in Music_.
 
-```{r}
-1 + 1
-```
