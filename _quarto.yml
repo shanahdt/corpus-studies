@@ -4,10 +4,10 @@ project:
 
 website:
   page-navigation: true
-  title: "Empirical and Corpus Studies in Music"
+  title: "Corpus Studies in Music"
   description: "Homepage for Corpus Studies, Spring 2023 ."
-  site-url: "https://shanahdt.github.io/mus-345-445/"
-  repo-url: "https://github.com/shanahdt/mus-345-445"
+  site-url: "https://shanahdt.github.io/corpus-studies/"
+  repo-url: "https://github.com/shanahdt/corpus-studies"
   repo-actions: [edit, issue]
   # navbar:
   #   left:
@@ -18,10 +18,6 @@ website:
   #     
 
   open-graph: true
-
-  twitter-card:
-    creator: "@danielshanahan"
-    image: "images/twitter-card.png"
     
 
   sidebar:
