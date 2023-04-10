@@ -2,7 +2,7 @@
 title: "Week 3: Time"
 ---
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 library(spotifyr)
 library(compmus)
 library(tidyverse)
