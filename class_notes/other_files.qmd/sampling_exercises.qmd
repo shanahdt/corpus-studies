@@ -1,0 +1,108 @@
+---
+title: Sampling Exercise
+author: David Huron
+---
+
+## Sampling Approaches
+
+For each case, identify the kind of sampling employed.
+
+1.  A researcher walks into a music library with a question: *Are
+    sharp keys more common than flat keys?* Wandering through the
+    stacks, she blindly grabs volumes off the shelves and allows each
+    volume to open spontaneously to some page. She takes note of the
+    key signature.
+    
+    
+2.  A professional music marketer is interested in carrying out a
+    detailed survey of musical tastes in Britain. The marketer decides
+    to use the ACORN geodemographic profile. British households will
+    be sampled in proportion to the second-level ACORN categories:
+    *wealthy executives* (8.6 percent of the population), *affluent
+    greys* (7.7%), *flourishing families* (8.8%), *prosperous
+    professionals* (2.2%), *educated urbanites* (4.6%), *aspiring
+    singles* (3.9%), *starting out* (2.5%), *secured families*
+    (15.5%), *settled surburbia* (6.0%), *prudent pensioners* (2.6%),
+    *asian communities* (1.6%), *post-industrial families* (4.8%),
+    *blue collar roots* (8.0%), *struggling families* (14.1%),
+    *burdened singles* (4.5%), *high rise hardship* (1.6%), and *inner
+    city adversity* (2.1%).
+    
+    
+    
+3.  A researcher is interested in assembling a random sample of
+    "classical" keyboard music. She has determined that she needs
+    roughly 20 pieces for her study. In order to maximize data
+    independence, she wants each piece to be written by a different
+    composer. Using Wikipedia, she finds an alphabetical list of
+    "classical composers." For each letter of the alphabet, she
+    selects the first composer who she knows has written for piano:
+    Isaac Albéniz, Carl Philipp Emanuel Bach, Alfredo Casella, Claude
+    Debussy, Edward Elgar, Manuel de Falla, etc.
+    
+    
+    
+4.  In piloting an experiment, a graduate student recruits her
+    graduate student colleagues as experimental participants.
+    
+    
+    
+5.  A team of researchers is interested in emotional expression in
+    Hindustani film music. Indian participants are asked to
+    characterize the emotional tenor of various film scenes. Using the
+    descriptions, the researchers then classify the scenes into 14
+    categories --- such as *romantic, humorous, physical conflict,
+    emotional tension,* etc. The researchers then select four scenes
+    for each of the 14 categories and analyse the associated
+    background music. Their goal is to identify musical features in
+    Hindustani culture that signal *romance, humor,* etc.
+    
+    
+    
+6.  A medievalist thinks that the Dorian mode was more likely to have
+    been heard as comparatively "happy" whereas the Phrygian mode was
+    more likely to have been heard as comparative "sad" for medieval
+    listeners. In order to test this notion, the scholar examines all
+    of the *Glorias* (nominally "happy" text) and *Kyries* (nominally
+    "sad" text) in the *Liber Usualis.* The prediction is that Dorian
+    will predominate for *Glorias* while Phrygian will be more likely
+    to occur for *Kyries.*
+    
+    
+    
+7.  A researcher is interested in changing harmonic patterns in the
+    masses of Palestrina. The researcher makes us of the Humdrum
+    database of the scores for the complete 103 masses assembled by
+    musicologist John Miller.
+    
+    
+    
+8.  Paul von Hippel and David Huron (2000) carried out a study to test
+    the idea that melodies tend to change direction following a leap,
+    and that this pattern is ubiquitous in musical melodies around the
+    world. In order to test this idea, they made use of two musical
+    samples. The first sample selected music spanning five centuries.
+    The second sample selected music spanning five continents: Africa,
+    Asia, Europe, North and South America.
+    
+    
+    
+9.  Unsure of the contents of a box, an archivist reaches in and grabs a couple of documents, which he then examines.
+    
+    
+    
+10. A researcher wants to know whether there is anything Italian,
+    French or German about augmented sixth chords. Using large
+    computer databases, the researcher uses Humdrum to isolate 900
+    sonorities in which the lowered sixth and raised fourth appear
+    concurrently (including enharmonic spellings): 300 each written by Italian, French and German composers. Each of the sonorities is then classified as either Italian, French, German or Other.
+
+#### References:
+
+Paul von Hippel & David Huron (2000). Why do skips precede
+reversals? The effect of tessitura on melodic structure. *Music
+Perception,* Vol. 18, No. 1, pp. 59-85.
+
+
+
+

@@ -1,4 +1,90 @@
 ---
 title: "Week 1: Representing Musical Data"
-
 ---
+
+# Overview 
+
+In the first week, we worked through 
+basic introductions for the class, and went through the [syllabus](course-syllabus.qmd) and the [course structure](course-outline.qmd).
+
+## HumdrumR
+
+Here, we install the necessary library. As you can see, you will need to install `devtools`, which will allow you to install packages that aren't on CRAN from github. 
+
+Then, we install the package (you can uncomment these installation lines as necessary for you).
+```{r, warning=FALSE, message=FALSE}
+### installing everything as needed
+# library(devtools)
+# devtools::install_github("Computational-Cognitive-Musicology-Lab/humdrumR", build_vignettes = TRUE)
+library(humdrumR)
+```
+
+In the code below, you can see how we load all of the Chopin files into a `preludes` variable with the `readHumdrum` function. 
+
+Then we subset it by _spines_. We are interested in various ways of calculating pitch, so we looked at `pc` (pitch class), as well as `solfa` and `deg`, which gave us solfege syllables and scale degrees, respectively. 
+
+We then plot this data in a barplot. Note the `|>` or "pipe" that we are using. The older tidyverse-style pipe (`%>%`) will also work here.
+
+```{r, warning=FALSE, message=FALSE}
+### Load in Chopin preludes, grab the left hand and see all the scale degrees.
+preludes <- readHumdrum("~/gitcloud/corpora/humdrum_scores/Chopin/Preludes/*.krn")
+left_hand <- subset(preludes, Spine == 1)
+###solfa, deg, pc
+table_data <- with(left_hand, pc(Token,simple=TRUE)) |> table() 
+barplot(table_data)
+```
+
+You can use a similar `with` syntax to get rhythm variables, as seen below:
+```{r}
+## rhythminterval
+rhythms <- with(preludes[2], duration(Token))
+
+#### group exercise:
+#### using a repertoire in the Humdrum scores collection, 
+#### print a table of most common musical events.
+
+```
+
+## Playing with Spotify
+
+We can start by loading our `spotifyr` library, and `tidyverse` for good measure:
+```{r}
+library(spotifyr)
+library(tidyverse)
+```
+
+You will need your own spotify client ID and client secret. You can get them by filling out the brief online form [here](https://developer.spotify.com/dashboard).
+
+```{r, eval=FALSE}
+### setting up spotify
+Sys.setenv(SPOTIFY_CLIENT_ID = YOUR SPOTIFY CLIENT ID)
+Sys.setenv(SPOTIFY_CLIENT_SECRET = YOUR SPOTIFY CLIENT SECRET)
+access_token <- get_spotify_access_token()
+```
+
+```{r, echo=FALSE}
+### setting up spotify
+Sys.setenv(SPOTIFY_CLIENT_ID = '05af946589794553974d293435950a5d')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
+access_token <- get_spotify_access_token()
+```
+
+For the most part, in this class we will be looking at global features data (the "danceability" of a song), and track-level analysis features, such as chroma vectors.
+
+Here we see how you might grab artist features for Ryan Adams and Taylor Swift, comparing the performances of each of their **1989** albums.
+```{r}
+###getting artist level data
+ryan_adams <- get_artist_audio_features('ryan adams')
+taylor_swift <- get_artist_audio_features('taylor swift')
+
+### cleaning up the data
+adams_swift <- rbind(ryan_adams, taylor_swift)
+adams_swift_1989 <- adams_swift %>% filter(album_name == "1989") 
+adams_swift_1989$track_name <- tolower(adams_swift_1989$track_name)
+
+## comparing energy
+ggplot(adams_swift_1989, aes(x=track_name, y=energy, group=artist_name)) +
+  geom_line(aes(linetype=artist_name, color=artist_name))+
+  geom_point(aes(color=artist_name))+
+  theme(legend.position="top", axis.text.x = element_text(angle = 90, hjust = 1))
+```
