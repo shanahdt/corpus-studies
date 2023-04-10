@@ -23,13 +23,9 @@ access_token <- get_spotify_access_token()
 - Due April 28th
 - 1-3 pages long.
 - construct a literature review of the topic you're interested in writing about. This could culminate in a hypothesis, and a discussion of how your work fills the current gaps in the literature.
-- Feel free to meet with me if you have any questions.
-
-
-## Midterms
-
 - Be sure to include an overview of previous research related to the topic. This should include both empirical and non-empirical work. So if you're focusing on the memory for jazz licks, for example, research on improvisational styles should be included alongside work on memory for musical ideas. It need not be all-encompassing, but it should try to cover as much ground as possible.
 - Address a gap in the current literature, or that between theory and research. End with a discussion of your study, and how it hopes to fill in these gaps.
+- Feel free to meet with me if you have any questions.
 
 # Sampling 
 (borrowed from David Huron's class on this).
