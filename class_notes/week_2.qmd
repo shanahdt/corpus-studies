@@ -52,8 +52,6 @@ shake_it_off <-
 The following code allows you to turn it all into a list, and then a matrix, which will allow you to look at pitch-to-pitch transitions (of the most likely choice for pitch in the chroma vector):
 
 ```{r}
-shake_it_off$pitches
-
 chroma_names <- c("C", "C#|Db","D", "D#|Eb", "E", "F", "F#|Gb","G", "G#|Ab","A", "A#|Bb","B" )
 long_shake_it <- unnest(shake_it_off, cols = pitches)
 long_shake_it$chroma <- rep(chroma_names, nrow(long_shake_it)/12)

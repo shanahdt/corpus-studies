@@ -256,8 +256,8 @@ Now we take this variable and plot it using ggplot.
 The process below is as follows:
 
 1. take the table above with summarized section information and unnest it (this takes the sections list of information and turns it into rows and columns).
-2. Pipe that into ggplot, with the aesthetics function plotting the tempo on the x-axis, the standard deviation on the y-axis, the colour being which genre we used (eighties or not). The color saturation is set to the loudness variable.
-3. We then tell ggplot that we want this to be a scatterplot with the `geom_point` function, and that the size of each point should be the duration of the piece (divided by 60 as spotify just gives it in seconds).
+2. Pipe that into ggplot, with the aesthetics function plotting the tempo on the x-axis, the standard deviation on the y-axis, the color being which genre we used (eighties or not). The color saturation is set to the loudness variable.
+3. We then tell ggplot that we want this to be a scatterplot with the `geom_point` function, and that the size of each point should be the duration of the piece (divided by 60 as Spotify just gives it in seconds).
 4. We then add a _rug_ plot which gives the ticks on both axes to show the distribution of events.
 5. We then add a black and white theme because nobody likes default graphics.
 6. We then add the size of the graph and the axis labels.
@@ -292,3 +292,50 @@ In-class exercises:
 
  
 1. How is tempo treated differently across the albums of the Beatles? 
+
+
+## Wednesday
+
+Plan for the day:
+
+1. Talk about your homework a bit.
+2. Look at some tap data, and what we might actually be able to do with it. 
+3. Talk about how Spotify (might) calculate tempo.
+
+
+How might we look at tempo across pieces? 
+
+One way to get this is to just tap the tempo, and then align it to the onsets. But how do we find onsets?
+
+This is where a **novelty function** comes in. (see Müller on Fourier Tempograms). Put (extremely) succinctly, a novelty function detects changes in the energy or the spectrum of the signal. So looking for energy peaks might be a good marker for "peaks in energy".
+
+![Müller's Onset Detection Example (p.311)](../images/onset-detection.png)
+
+After finding these onsets, it then examines a correlation between various sinusoids and picks the most likely one. There are many different ways of approaching this.
+
+One issue is the presence of so-called "tempo octaves". That is, it finds tempos at twice the beat, half the beat, *etc.*. 
+
+Here's a graph of AJR's "World's Smallest Violin":
+
+```{r}
+get_tidy_audio_analysis("3jHBgKdLCf46aP3HRI0WYv") %>%
+  tempogram(window_size = 8, hop_size = 2) %>%
+   ggplot(aes(x = time, y = bpm, fill = power)) + 
+    geom_raster() + 
+    scale_fill_viridis_c(guide = 'none') +
+    labs(x = 'Time (s)', y = 'Tempo (BPM)') +
+    theme_classic()
+```
+
+This seems quite strange, though. It's not really a great indicator of tempo...
+
+Müller points out that the Fourier-based method tends to struggle with these tempo-octaves, and a cyclic model, which look at "subharmonics" rather than harmonics, and are a bit better for mid-level tempo finding. The example below seems to work a bit better. Notice how the `cyclic` option has been switched to **TRUE.**
+```{r}
+get_tidy_audio_analysis("3jHBgKdLCf46aP3HRI0WYv") %>%
+  tempogram(window_size = 8, hop_size = 2, cyclic=TRUE) %>%
+   ggplot(aes(x = time, y = bpm, fill = power)) + 
+    geom_raster() + 
+    scale_fill_viridis_c(guide = 'none') +
+    labs(x = 'Time (s)', y = 'Tempo (BPM)') +
+    theme_classic()
+```

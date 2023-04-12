@@ -243,6 +243,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#tempo-average" id="toc-tempo-average" class="nav-link" data-scroll-target="#tempo-average">Tempo Average</a></li>
   <li><a href="#other-aspects-of-tempo" id="toc-other-aspects-of-tempo" class="nav-link" data-scroll-target="#other-aspects-of-tempo">Other aspects of tempo:</a></li>
+  <li><a href="#wednesday" id="toc-wednesday" class="nav-link" data-scroll-target="#wednesday">Wednesday</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/corpus-studies/edit/main/class_notes/week_3.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/corpus-studies/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -508,8 +509,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The process below is as follows:</p>
 <ol type="1">
 <li>take the table above with summarized section information and unnest it (this takes the sections list of information and turns it into rows and columns).</li>
-<li>Pipe that into ggplot, with the aesthetics function plotting the tempo on the x-axis, the standard deviation on the y-axis, the colour being which genre we used (eighties or not). The color saturation is set to the loudness variable.</li>
-<li>We then tell ggplot that we want this to be a scatterplot with the <code>geom_point</code> function, and that the size of each point should be the duration of the piece (divided by 60 as spotify just gives it in seconds).</li>
+<li>Pipe that into ggplot, with the aesthetics function plotting the tempo on the x-axis, the standard deviation on the y-axis, the color being which genre we used (eighties or not). The color saturation is set to the loudness variable.</li>
+<li>We then tell ggplot that we want this to be a scatterplot with the <code>geom_point</code> function, and that the size of each point should be the duration of the piece (divided by 60 as Spotify just gives it in seconds).</li>
 <li>We then add a <em>rug</em> plot which gives the ticks on both axes to show the distribution of events.</li>
 <li>We then add a black and white theme because nobody likes default graphics.</li>
 <li>We then add the size of the graph and the axis labels.</li>
@@ -547,6 +548,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol type="1">
 <li>How is tempo treated differently across the albums of the Beatles?</li>
 </ol>
+</section>
+<section id="wednesday" class="level2">
+<h2 class="anchored" data-anchor-id="wednesday">Wednesday</h2>
+<p>Plan for the day:</p>
+<ol type="1">
+<li>Talk about your homework a bit.</li>
+<li>Look at some tap data, and what we might actually be able to do with it.</li>
+<li>Talk about how Spotify (might) calculate tempo.</li>
+</ol>
+<p>How might we look at tempo across pieces?</p>
+<p>One way to get this is to just tap the tempo, and then align it to the onsets. But how do we find onsets?</p>
+<p>This is where a <strong>novelty function</strong> comes in. (see Müller on Fourier Tempograms). Put (extremely) succinctly, a novelty function detects changes in the energy or the spectrum of the signal. So looking for energy peaks might be a good marker for “peaks in energy”.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/onset-detection.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Müller’s Onset Detection Example (p.311)</figcaption><p></p>
+</figure>
+</div>
+<p>After finding these onsets, it then examines a correlation between various sinusoids and picks the most likely one. There are many different ways of approaching this.</p>
+<p>One issue is the presence of so-called “tempo octaves”. That is, it finds tempos at twice the beat, half the beat, <em>etc.</em>.</p>
+<p>Here’s a graph of AJR’s “World’s Smallest Violin”:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_tidy_audio_analysis</span>(<span class="st">"3jHBgKdLCf46aP3HRI0WYv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tempogram</span>(<span class="at">window_size =</span> <span class="dv">8</span>, <span class="at">hop_size =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> bpm, <span class="at">fill =</span> power)) <span class="sc">+</span> </span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_raster</span>() <span class="sc">+</span> </span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_viridis_c</span>(<span class="at">guide =</span> <span class="st">'none'</span>) <span class="sc">+</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Time (s)'</span>, <span class="at">y =</span> <span class="st">'Tempo (BPM)'</span>) <span class="sc">+</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="week_3_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This seems quite strange, though. It’s not really a great indicator of tempo…</p>
+<p>Müller points out that the Fourier-based method tends to struggle with these tempo-octaves, and a cyclic model, which look at “subharmonics” rather than harmonics, and are a bit better for mid-level tempo finding. The example below seems to work a bit better. Notice how the <code>cyclic</code> option has been switched to <strong>TRUE.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_tidy_audio_analysis</span>(<span class="st">"3jHBgKdLCf46aP3HRI0WYv"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tempogram</span>(<span class="at">window_size =</span> <span class="dv">8</span>, <span class="at">hop_size =</span> <span class="dv">2</span>, <span class="at">cyclic=</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> bpm, <span class="at">fill =</span> power)) <span class="sc">+</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_raster</span>() <span class="sc">+</span> </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_viridis_c</span>(<span class="at">guide =</span> <span class="st">'none'</span>) <span class="sc">+</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">'Time (s)'</span>, <span class="at">y =</span> <span class="st">'Tempo (BPM)'</span>) <span class="sc">+</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="week_3_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>
