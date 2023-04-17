@@ -15,65 +15,8 @@ library(tidyverse)
 
 When we hear this ringtone, it sounds as though it's in C, but why?
 
-```{=html}
-<head>
-<script src="http://verovio-script.humdrum.org/scripts/verovio-toolkit-wasm.js"></script>
-</head>
-<body>
+![Nokia](../images/nokia.png)
 
-<h2> The Nokia Theme (originally from Tarrega's "Grand Valse"-1902)</h2>
-<div style="padding-bottom:30px" id="notation-nokia"></div>
-
-
-<script id="humdrum-nokia" type="text/x-humdrum">
-**kern
-*clefG2
-*M3/4
-=1
-L8gg
-8ffJ
-4a
-4b
-=2
-L8ee
-8ddJ
-4f
-4g
-=3
-L8dd
-8ccJ
-4e
-4g
-=4
-2.cc;
-==
-*-
-</script>
-
-<script>
-
-document.addEventListener("DOMContentLoaded", (event) => {
-   Module.onRuntimeInitialized = async _ => {
-      let tk = new verovio.toolkit();
-
-      let humdrumTwinkle = document.querySelector("#humdrum-nokia").textContent.replace(/^\s+/, "");
-      let verovioOptions = {
-         scale:           40,
-         pageWidth:     1500,
-         pageHeight:   60000,
-         pageMarginTop:    0,
-         adjustPageHeight: 1
-      };
-      let svgTwinkle = tk.renderData(humdrumTwinkle, verovioOptions);
-      let elementTwinkle = document.querySelector("#notation-nokia");
-      elementTwinkle.innerHTML = svgTwinkle;
-   }
-});
-
-</script>
-
-</body>
-```
 -   It doesn't begin with C, it begins with G.
 
 -   C isn't the most common note--in fact, it only occurs once before the final bar, and it's on the "and" of 2 in the third measure (a pretty weak position metrically).
