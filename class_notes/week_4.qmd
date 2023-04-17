@@ -301,7 +301,7 @@ They each perform a bit differently on different types of tasks.
 ![Comparing key-finding algorithms in major, minor, and overall (from Albrecht and Shanahan, 2013)](../images/albrecht-shanahan-keyfinding-performance.png)
 
 
-```{r}
+```{r, echo=FALSE, warnings=FALSE}
 Sys.setenv(SPOTIFY_CLIENT_ID = '05af946589794553974d293435950a5d')
 Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
 

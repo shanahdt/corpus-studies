@@ -4,7 +4,7 @@ title: "Week 2: Pitch"
 
 
 
-```{r}
+```{r, echo=FALSE, message=FALSE}
 library(spotifyr)
 library(tidyverse)
 #remotes::install_github('jaburgoyne/compmus')
