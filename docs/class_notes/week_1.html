@@ -207,6 +207,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <a href="../class_notes/week_3.html" class="sidebar-item-text sidebar-link">Week 3: Time</a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_4.html" class="sidebar-item-text sidebar-link">Week 4: Conceptual Debates: Key-Finding</a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -399,18 +404,23 @@ Warning in is.na(x) || is.na(y): 'length(x) = 5 &gt; 1' in coercion to
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">###getting artist level data</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ryan_adams <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'ryan adams'</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>taylor_swift <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'taylor swift'</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="do">### cleaning up the data</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>adams_swift <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ryan_adams, taylor_swift)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>adams_swift_1989 <span class="ot">&lt;-</span> adams_swift <span class="sc">%&gt;%</span> <span class="fu">filter</span>(album_name <span class="sc">==</span> <span class="st">"1989"</span>) </span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>adams_swift_1989<span class="sc">$</span>track_name <span class="ot">&lt;-</span> <span class="fu">tolower</span>(adams_swift_1989<span class="sc">$</span>track_name)</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="do">## comparing energy</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(adams_swift_1989, <span class="fu">aes</span>(<span class="at">x=</span>track_name, <span class="at">y=</span>energy, <span class="at">group=</span>artist_name)) <span class="sc">+</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">linetype=</span>artist_name, <span class="at">color=</span>artist_name))<span class="sc">+</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>artist_name))<span class="sc">+</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"top"</span>, <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>taylor_swift <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'taylor swift'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Request failed [404]. Retrying in 1.5 seconds...</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Request failed [404]. Retrying in 1 seconds...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="do">### cleaning up the data</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>adams_swift <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ryan_adams, taylor_swift)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>adams_swift_1989 <span class="ot">&lt;-</span> adams_swift <span class="sc">%&gt;%</span> <span class="fu">filter</span>(album_name <span class="sc">==</span> <span class="st">"1989"</span>) </span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>adams_swift_1989<span class="sc">$</span>track_name <span class="ot">&lt;-</span> <span class="fu">tolower</span>(adams_swift_1989<span class="sc">$</span>track_name)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="do">## comparing energy</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(adams_swift_1989, <span class="fu">aes</span>(<span class="at">x=</span>track_name, <span class="at">y=</span>energy, <span class="at">group=</span>artist_name)) <span class="sc">+</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">linetype=</span>artist_name, <span class="at">color=</span>artist_name))<span class="sc">+</span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>artist_name))<span class="sc">+</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"top"</span>, <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="week_1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>
