@@ -294,9 +294,9 @@ In-class exercises:
 1. How is tempo treated differently across the albums of the Beatles? 
 
 
-## Wednesday
+# Wednesday
 
-Plan for the day:
+## Plan for the day:
 
 1. Talk about your homework a bit.
 2. Look at some tap data, and what we might actually be able to do with it. 

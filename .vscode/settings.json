@@ -4,6 +4,11 @@
             "language": "quarto",
             "scheme": "file",
             "pattern": "class_notes/week_3.qmd"
+        },
+        {
+            "language": "quarto",
+            "scheme": "file",
+            "pattern": "class_notes/week_4.qmd"
         }
     ]
 }
