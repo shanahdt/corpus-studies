@@ -434,6 +434,7 @@ barplot(indie_pop$mean_value)
 ```
 So we can look at other genres pretty easily. Here is me looking at Spotify's "EDM 2023" playlist:
 
+## What's the Key Profile for EDM?
 ```{r}
 edm <- get_key_profile_broad("37i9dQZF1DX1kCIzMYtzum")
 edm
@@ -451,7 +452,7 @@ barplot(edm$mean_value)
 
 ## Getting separate major and minor key-profiles
 
-We could break this into a few parts for our own comfort. Let's start by just creating a function that grabs the data. As that's the one that's a time intensive, and calls to the API, let's try to run it only once.
+We could break this into a few parts for our own comfort. Let's start by just creating a function that grabs the data. As that's the one that's quite time-intensive, and calls to the API, let's try to run it only once.
 ```{r}
 grab_playlist_info <- function(uri){
    get_playlist_audio_features("", uri) |>
@@ -494,7 +495,7 @@ major_key <- get_pitch_list(major)
 and then of course we can use these to inform our own key mapping.
 
 
-We can start by putting this all into a super quick and ineffcient function like this (hoping to improve it as we go along):
+We can start by putting this all into a super quick and inefficient function like this (hoping to improve it as we go along):
 
 ```{r}
 key_plotter <- function(uri, major, minor){
@@ -592,6 +593,13 @@ indie_major <- get_pitch_list(indie_major)
  indie_minor_key <- c(0.273, 0.161, 0.227, 0.257, 0.159, 0.227, 0.165, 0.270, 0.246, 0.185, 0.238, 0.179)
 ```
 
+And then we put these weightings into the plotter:
+
 ```{r}
-key_plotter("1yYlpGuBiRRf33e1gY61bN", indie_major_key, indie_minor_key)
+key_plotter("1z6WtY7X4HQJvzxC4UgkSf", ks_major_key, ks_minor_key)
 ```
+
+## Exercise: 
+
+1. Pick one piece and construct a genre-specific key-profile that might be used to explain it's tonal make-up.
+   1. Explain this musically.

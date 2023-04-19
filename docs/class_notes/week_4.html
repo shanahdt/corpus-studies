@@ -239,12 +239,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#wednesday" id="toc-wednesday" class="nav-link" data-scroll-target="#wednesday">Wednesday</a>
   <ul class="collapse">
-  <li><a href="#whats-the-key-profile-for-indie-pop" id="toc-whats-the-key-profile-for-indie-pop" class="nav-link" data-scroll-target="#whats-the-key-profile-for-indie-pop">What’s the Key-Profile for “Indie-Pop”</a>
+  <li><a href="#whats-the-key-profile-for-indie-pop" id="toc-whats-the-key-profile-for-indie-pop" class="nav-link" data-scroll-target="#whats-the-key-profile-for-indie-pop">What’s the Key-Profile for “Indie-Pop”</a></li>
+  <li><a href="#whats-the-key-profile-for-edm" id="toc-whats-the-key-profile-for-edm" class="nav-link" data-scroll-target="#whats-the-key-profile-for-edm">What’s the Key Profile for EDM?</a>
   <ul class="collapse">
   <li><a href="#some-points-of-interest" id="toc-some-points-of-interest" class="nav-link" data-scroll-target="#some-points-of-interest">Some points of interest</a></li>
   </ul></li>
   <li><a href="#getting-separate-major-and-minor-key-profiles" id="toc-getting-separate-major-and-minor-key-profiles" class="nav-link" data-scroll-target="#getting-separate-major-and-minor-key-profiles">Getting separate major and minor key-profiles</a></li>
   <li><a href="#one-piece-and-many-key-profiles" id="toc-one-piece-and-many-key-profiles" class="nav-link" data-scroll-target="#one-piece-and-many-key-profiles">One Piece and Many Key Profiles</a></li>
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise:</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/corpus-studies/edit/main/class_notes/week_4.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/corpus-studies/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -714,6 +716,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>So we can look at other genres pretty easily. Here is me looking at Spotify’s “EDM 2023” playlist:</p>
+</section>
+<section id="whats-the-key-profile-for-edm" class="level2">
+<h2 class="anchored" data-anchor-id="whats-the-key-profile-for-edm">What’s the Key Profile for EDM?</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>edm <span class="ot">&lt;-</span> <span class="fu">get_key_profile_broad</span>(<span class="st">"37i9dQZF1DX1kCIzMYtzum"</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>edm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -752,7 +757,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="getting-separate-major-and-minor-key-profiles" class="level2">
 <h2 class="anchored" data-anchor-id="getting-separate-major-and-minor-key-profiles">Getting separate major and minor key-profiles</h2>
-<p>We could break this into a few parts for our own comfort. Let’s start by just creating a function that grabs the data. As that’s the one that’s a time intensive, and calls to the API, let’s try to run it only once.</p>
+<p>We could break this into a few parts for our own comfort. Let’s start by just creating a function that grabs the data. As that’s the one that’s quite time-intensive, and calls to the API, let’s try to run it only once.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>grab_playlist_info <span class="ot">&lt;-</span> <span class="cf">function</span>(uri){</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">get_playlist_audio_features</span>(<span class="st">""</span>, uri) <span class="sc">|&gt;</span></span>
@@ -786,7 +791,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>major_key <span class="ot">&lt;-</span> <span class="fu">get_pitch_list</span>(major)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and then of course we can use these to inform our own key mapping.</p>
-<p>We can start by putting this all into a super quick and ineffcient function like this (hoping to improve it as we go along):</p>
+<p>We can start by putting this all into a super quick and inefficient function like this (hoping to improve it as we go along):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>key_plotter <span class="ot">&lt;-</span> <span class="cf">function</span>(uri, major, minor){</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>   major_key <span class="ot">&lt;-</span> major</span>
@@ -879,12 +884,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 
 </div>
+<p>And then we put these weightings into the plotter:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">key_plotter</span>(<span class="st">"1yYlpGuBiRRf33e1gY61bN"</span>, indie_major_key, indie_minor_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">key_plotter</span>(<span class="st">"1z6WtY7X4HQJvzxC4UgkSf"</span>, ks_major_key, ks_minor_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="week_4_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+</section>
+<section id="exercise" class="level2">
+<h2 class="anchored" data-anchor-id="exercise">Exercise:</h2>
+<ol type="1">
+<li>Pick one piece and construct a genre-specific key-profile that might be used to explain it’s tonal make-up.
+<ol type="1">
+<li>Explain this musically.</li>
+</ol></li>
+</ol>
 
 
 </section>
