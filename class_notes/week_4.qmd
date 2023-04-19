@@ -46,7 +46,7 @@ Carol Krumhansl and Mark Schmuckler (Krumhansl, 1990) would devise an algorithm 
 We might think of this as a _correlational approach_. We tally up all of the pitches in a corpus, and then run a correlation on this key-profile. We run this over all of the keys, and the one that best fits is then labeled as "the key".
 
 ```{r}
-major_key <-
+ks_major_key <-
   c(6.35, 
    2.23, 
    3.48, 
@@ -60,7 +60,7 @@ major_key <-
    2.29, 
    2.88)
 
-minor_key <-
+ks_minor_key <-
   c(6.33, 
   2.68, 
   3.52, 
@@ -147,7 +147,7 @@ minor <- c(0.712,
 
 ### Aarden's Folk Song Key-Profiles
 
-Bret Aarden (2003) argued that folk music would be a better fit than those generated from clasical music. He used the Essen Folksong collection (consisting of thousands of folksongs throughout Europe, although with an uneven balance toward German folksong), to come up with the weightings below.
+Bret Aarden (2003) argued that folk music would be a better fit than those generated from classical music. He used the Essen Folksong collection (consisting of thousands of folksongs throughout Europe, although with an uneven balance toward German folksong), to come up with the weightings below.
 
 ```{r}
 major <- c(17.7661, 
@@ -358,3 +358,240 @@ Let's do some exercises:
 1. Visualize a song with all of these weightings.
    1. How do the algorithms differ?
 2. Can you write a function that would call each weighting as an argument? What would that look like?
+
+
+# Wednesday
+
+As we saw on Monday, there are many different ways of calculating key, and what constitutes "tonality" can change quite a bit depending on how you approach it. If using a set of pitches from a corpus to define a key-profile, the question becomes "which corpus?" 
+
+Today, we are going to look at what it means to generate a key-profile for more appropriate key-finding algorithms. We are going to break the class into a few separate sections:
+
+1. Looking at getting a broad key-profile from a playlist.
+2. Breaking that into a major and minor key-profile (and discussing the issues and implications with this)
+3. Working on an in-class exercise that generates a key-profile from a corpus and then looks at 
+
+## What's the Key-Profile for "Indie-Pop"
+
+The basic code for getting a key-profile from a playlist is below. The process is as follows:
+
+1. Get the audio features from a playlist, and add the audio analysis onto the datafame.
+2. We then create a "segments" column by using a map function from the `tidyverse`. Map functions basically apply a function over each element in a list. Here, we are saying "apply the `compmus_c_transpose` function to the key and segments lists from the `add_audio_analysis` function."
+   1. What does the `compmus_c_transpose` function do? It takes all of the chroma vectors and transposes them to the key of C, so that we can construct a single set of weightings from pieces in different keys.
+3. We then only grab this transposed segments column and turn it into a more readable list with the `unnest` function.
+   1. We then grab the start, duration, and pitches info.
+4. We then create a "pitches" column, and normalize these raw pitch counts. There are a few ways to do this, and there are different options for this.
+5. We then used the `compmus_gather_chroma` function to take all of those chroma vectors and turn them into a list.
+6. We then use the `group_by` and `summarise` functions from `tidyverse`, and get the mean count of each pitch class in the distribution. 
+
+```{r}
+### grabs the key-profile of the indie-pop playlist.
+indie_pop_key_profile <- get_playlist_audio_features("", "37i9dQZF1DWWEcRhUVtL8n") |>
+  add_audio_analysis() |>
+  ## transpose all the chroma vectors to C.
+  mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+  ## grab the segments data and unnest it, then only grabbing the start, duration, and pitches info.
+  select(segments) |>
+  unnest(segments) |> 
+  select(start, duration, pitches) |> 
+  mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+  compmus_gather_chroma() |>
+  group_by(pitch_class) |>
+  summarise(mean_value = mean(value)) 
+
+indie_pop_key_profile
+```
+
+Ideally, we'd be able to turn this into a more reusable function. Below we've just turned made the playlist URI an argument:
+
+```{r}
+get_key_profile_broad <- function(uri){
+   get_playlist_audio_features("", uri) |>
+   add_audio_analysis() |>
+   ## transpose all the chroma vectors to C. (have I mentioned how great Burgoyne's library is??)
+   mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+   ## grab the segments data and unnest it, then only grabbing the start, duration, and pitches info.
+   select(segments) |>
+   unnest(segments) |> 
+   select(start, duration, pitches) |> 
+   mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+   compmus_gather_chroma() |>
+   group_by(pitch_class) |>
+   summarise(mean_value = mean(value)) 
+}
+```
+
+And now we can just run the function like so:
+
+```{r}
+indie_pop <- get_key_profile_broad("37i9dQZF1DWWEcRhUVtL8n")
+indie_pop
+```
+
+and we can plot it in a pretty straightforward way:
+
+```{r}
+barplot(indie_pop$mean_value)
+```
+So we can look at other genres pretty easily. Here is me looking at Spotify's "EDM 2023" playlist:
+
+```{r}
+edm <- get_key_profile_broad("37i9dQZF1DX1kCIzMYtzum")
+edm
+```
+
+and once again we can plot it:
+```{r}
+barplot(edm$mean_value)
+```
+
+### Some points of interest
+
+1. For both of these distributions, we see a strong showing for scale degrees 1 and 5 (they aren't really labeled in these quickie plots, but it would be the first and seventh column, respectively).
+2. With the "Indie Pop" plot, we see a strong showing of scale degrees 1 and 5, and are followed by the diatonic pitches, but with the "EDM" list, scale degrees 2, flat 3, and 3 occur with pretty much the same frequency. It might be worth splitting the major and minor pieces up a bit?
+
+## Getting separate major and minor key-profiles
+
+We could break this into a few parts for our own comfort. Let's start by just creating a function that grabs the data. As that's the one that's a time intensive, and calls to the API, let's try to run it only once.
+```{r}
+grab_playlist_info <- function(uri){
+   get_playlist_audio_features("", uri) |>
+   add_audio_analysis() 
+}
+```
+
+Once we have that in place, we can create a variable, and then subset it from there. Here, I'm saving the full list, and then creating a major and a minor variable.
+```{r}
+playlist <- grab_playlist_info("37i9dQZF1DX1kCIzMYtzum")  
+minor <- playlist |> filter(mode == 0)
+major <- playlist |> filter(mode == 1)
+```
+
+
+```{r}
+get_pitch_list <- function(input){
+   input |>     
+   ## transpose all the chroma vectors to C. (have I mentioned how great Burgoyne's library is??)
+   mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+   ## grab the segments data and unnest it, then only grabbing the start, duration, and pitches info.
+   select(segments) |>
+   unnest(segments) |> 
+   select(start, duration, pitches) |> 
+   mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+   compmus_gather_chroma() |>
+   group_by(pitch_class) |>
+   summarise(mean_value = mean(value))
+}
+```
+
+
+And now we can get separate pitch lists for major and minor:
+
+```{r}
+minor_key <- get_pitch_list(minor)
+major_key <- get_pitch_list(major)
+```
+
+and then of course we can use these to inform our own key mapping.
+
+
+We can start by putting this all into a super quick and ineffcient function like this (hoping to improve it as we go along):
+
+```{r}
+key_plotter <- function(uri, major, minor){
+   major_key <- major
+   minor_key <- minor
+   key_templates <-
+   tribble(
+      ~name, ~template,
+      "Gb:maj", circshift(major_key, 6),
+      "Bb:min", circshift(minor_key, 10),
+      "Db:maj", circshift(major_key, 1),
+      "F:min", circshift(minor_key, 5),
+      "Ab:maj", circshift(major_key, 8),
+      "C:min", circshift(minor_key, 0),
+      "Eb:maj", circshift(major_key, 3),
+      "G:min", circshift(minor_key, 7),
+      "Bb:maj", circshift(major_key, 10),
+      "D:min", circshift(minor_key, 2),
+      "F:maj", circshift(major_key, 5),
+      "A:min", circshift(minor_key, 9),
+      "C:maj", circshift(major_key, 0),
+      "E:min", circshift(minor_key, 4),
+      "G:maj", circshift(major_key, 7),
+      "B:min", circshift(minor_key, 11),
+      "D:maj", circshift(major_key, 2),
+      "F#:min", circshift(minor_key, 6),
+      "A:maj", circshift(major_key, 9),
+      "C#:min", circshift(minor_key, 1),
+      "E:maj", circshift(major_key, 4),
+      "G#:min", circshift(minor_key, 8),
+      "B:maj", circshift(major_key, 11),
+      "D#:min", circshift(minor_key, 3)
+  )
+
+tune <-
+  get_tidy_audio_analysis(uri) %>%
+  compmus_align(sections, segments) %>%
+  select(sections) %>%
+  unnest(sections) %>%
+  mutate(
+    pitches =
+      map(segments,
+          compmus_summarise, pitches,
+          method = "mean", norm = "manhattan"
+      )
+  ) 
+
+tune |> compmus_match_pitch_template(
+    key_templates,         # Change to chord_templates if descired
+    method = "euclidean",  # Try different distance metrics
+    norm = "manhattan"     # Try different norms
+  ) %>%
+  ggplot(
+    aes(x = start + duration / 2, width = duration, y = name, fill = d)
+  ) +
+  geom_tile() +
+  scale_fill_viridis_c(guide = "none") +
+  theme_minimal() +
+  labs(x = "Time (s)", y = "")
+
+}
+```
+
+
+
+## One Piece and Many Key Profiles
+Looking at Lucy Dacus's "Night Shift" with EDM Key Profiles:
+
+```{r}
+edm_major_key <- c(0.2949827,0.1842662, 0.2249348, 0.1796559, 0.2532545, 0.2391564, 0.2028676, 0.2607747, 0.1765553, 0.2105823, 0.1806760, 0.2562869)
+# 
+edm_minor_key <- c(0.3247214, 0.1767437, 0.2066454, 0.2482824, 0.1811887, 0.2263670, 0.1830838, 0.2662832, 0.2340293, 0.1888321, 0.2203257, 0.2047107)
+key_plotter("1yYlpGuBiRRf33e1gY61bN", edm_major_key, edm_minor_key)
+```
+
+
+And here is the piece with the more traditional Krumhansl-Schmuckler key profiles:
+```{r}
+key_plotter("1yYlpGuBiRRf33e1gY61bN", ks_major_key, ks_minor_key)
+```
+
+We can load our "indie pop" but now in major and minor:
+
+```{r}
+playlist <- grab_playlist_info("37i9dQZF1DWWEcRhUVtL8n")  
+indie_minor <- playlist |> filter(mode == 0)
+indie_major <- playlist |> filter(mode == 1)
+indie_minor <- get_pitch_list(indie_minor)
+indie_major <- get_pitch_list(indie_major)
+```
+
+
+```{r, echo=FALSE}
+ indie_major_key <- c(0.333, 0.179, 0.245, 0.163, 0.249, 0.226, 0.167, 0.273, 0.146, 0.194, 0.144, 0.228)
+ indie_minor_key <- c(0.273, 0.161, 0.227, 0.257, 0.159, 0.227, 0.165, 0.270, 0.246, 0.185, 0.238, 0.179)
+```
+
+```{r}
+key_plotter("1yYlpGuBiRRf33e1gY61bN", indie_major_key, indie_minor_key)
+```

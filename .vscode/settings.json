@@ -10,5 +10,14 @@
             "scheme": "file",
             "pattern": "class_notes/week_4.qmd"
         }
+    ],
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "quarto"
     ]
 }
