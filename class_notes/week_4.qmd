@@ -386,6 +386,7 @@ The basic code for getting a key-profile from a playlist is below. The process i
 ```{r}
 ### grabs the key-profile of the indie-pop playlist.
 indie_pop_key_profile <- get_playlist_audio_features("", "37i9dQZF1DWWEcRhUVtL8n") |>
+  
   add_audio_analysis() |>
   ## transpose all the chroma vectors to C.
   mutate(segments = map2(segments, key, compmus_c_transpose)) |>
@@ -452,7 +453,7 @@ barplot(edm$mean_value)
 
 ## Getting separate major and minor key-profiles
 
-We could break this into a few parts for our own comfort. Let's start by just creating a function that grabs the data. As that's the one that's quite time-intensive, and calls to the API, let's try to run it only once.
+We could break this into a few parts for our own comfort. Let's start by just creating a function that grabs the data. As that's the one that's quite time intensive, and calls to the API, let's try to run it only once.
 ```{r}
 grab_playlist_info <- function(uri){
    get_playlist_audio_features("", uri) |>
@@ -596,10 +597,12 @@ indie_major <- get_pitch_list(indie_major)
 And then we put these weightings into the plotter:
 
 ```{r}
-key_plotter("1z6WtY7X4HQJvzxC4UgkSf", ks_major_key, ks_minor_key)
+key_plotter("1yYlpGuBiRRf33e1gY61bN", ks_major_key, ks_minor_key)
 ```
 
 ## Exercise: 
 
-1. Pick one piece and construct a genre-specific key-profile that might be used to explain it's tonal make-up.
+1. Pick one piece and construct a genre-specific key-profile that might be used to explain its tonal make-up.
    1. Explain this musically.
+
+

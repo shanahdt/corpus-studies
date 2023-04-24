@@ -1,0 +1,203 @@
+---
+title: "Week 5: Testing Hypotheses with Spotify"
+---
+
+```{r, echo=FALSE, message=FALSE}
+library(spotifyr)
+library(compmus)
+library(tidyverse)
+Sys.setenv(SPOTIFY_CLIENT_ID = '05af946589794553974d293435950a5d')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
+access_token <- get_spotify_access_token()
+```
+
+# Plan for the Week
+
+This week, we will be going over:
+
+- basics for your mid-term literature review
+- testing some basic hypotheses of continuous data with linear regression
+- testing some basic hypotheses of categorical data with logistic regressions
+- evaluating model fits
+
+# Literature Reviews
+
+- Be sure to include an overview of previous research related to the topic. If you're interested in how tempo changes over time in hip-hop, for example, you should include sources on tempo change, hip-hop styles, and changing performance practice within the genre.
+  - It need not be all-encompassing, but it should try to cover as much ground as possible.
+- Address a gap in the current literature, or that between theory and research. End with a discussion of your study, and how it hopes to fill in these gaps.
+- There is a rubric online.
+- Purdue's writing lab has a good page about it [here](https://owl.purdue.edu/owl/research_and_citation/conducting_research/writing_a_literature_review.html).
+
+# Testing a Hypothesis with Continuous Data
+
+Although we've spent a fair bit of time going over the mechanics of the Spotify data, and how to extract information from it, we haven't spent much time actually discussing testing hypotheses with your data. As many of you are doing hypothesis-based work for your final project, it might be a good time to step back and look some approaches to this.
+
+# Hypothesis 1: Do Jay-Z's Songs Get Slower Over Time?
+
+I think that Kanye West's songs are getting slower over time. Let's test it.
+
+We'll start by grabbing our data:
+```{r}
+jayz <- get_artist_audio_features('Jay-Z')
+```
+
+## Looking at tempo over time
+We can start by eyeballing the data. Here is how we'd do it with base R (no ggplot/tidyverse):
+
+```{r}
+plot(tempo ~ album_release_year, data=jayz)
+abline(lm(tempo ~ album_release_year, data=jayz), col="red")
+```
+
+If we'd like to use `ggplot` it can give us some confidence bars (the default here is a 95% confidence interval):
+
+```{r}
+ggplot(jayz, aes(album_release_year, tempo) ) + geom_point() +
+  stat_smooth(method = lm) +
+  theme_bw()
+```
+
+So it looks promising. We can run a linear regression with a simple `lm` command. Here we can get a `summary` of the model pretty easily, as well.
+
+```{r}
+summary(lm(tempo ~ album_release_year, data=jayz))
+```
+
+So, as we can see from the results here, it's significant (p < .001), but it really doesn't account for much of the variance (an adjusted R-squared of .037).
+
+### Post-Hoc Analyses
+
+Perhaps we can look at how other variables might be predictive of the year of the recording. 
+
+Let's look at how tempo, danceability, valence, speechiness, and energy might improve the model. 
+
+```{r}
+summary(lm(album_release_year ~ tempo + danceability + valence + speechiness + energy, data=jayz))
+```
+
+So we have a more predictive model, with an adjusted R-squared of about .20. 
+
+There are some remaining questions, however. Firstly, is there covariance at play?
+
+We can use the variance inflation factor (VIF) to look at this. Typically, each variable should be less than 5. 
+
+```{r}
+library(car)
+jayz_model <- lm(album_release_year ~ tempo + danceability + valence + speechiness + energy, data=jayz)
+vif(jayz_model)
+```
+
+A correlation plot can help us to visualize this a bit more.
+
+```{r}
+library(corrplot)
+
+jz <- jayz %>% 
+    select(c("acousticness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+  x <- as.matrix(cor(jz))
+  round(x, 2)
+  corrplot(x, method="pie")
+```
+
+## Sidenote: Is/Are the data normal?
+
+We can test to see if the tempo data is normally distributed:
+```{r}
+qqnorm(jayz$tempo)
+hist(jayz$tempo)
+shapiro.test(jayz$tempo)
+ks.test(jayz$tempo, "pnorm")
+```
+
+At the moment, it doesn't seem to be...
+
+## Stepwise Entry Regression
+
+```{r}
+summary(step(lm(album_release_year ~ danceability + 
+          tempo + acousticness + 
+          speechiness + valence, data=jayz), 
+     direction="backward"))
+
+summary(step(lm(album_release_year ~ danceability + 
+          tempo + acousticness + 
+          speechiness + valence, data=jayz), 
+     direction="forward"))
+
+```
+
+## Comparing Fits:
+We could construct a few models
+But how can we tell which of these is more predictable? For this, we can look at **Akaike's ‘An Information Criterion’**(or AIC). The lower number is better, and any difference of more than 2 is considered a statistically significant difference fit.
+
+```{r}
+dance_model <- lm(danceability ~ album_release_year, data=jayz)
+acoustic_model <- lm(acousticness ~ album_release_year, data=jayz)
+speech_model <- lm(speechiness ~ album_release_year, data=jayz)
+valence_model <- lm(valence ~ album_release_year, data=jayz)
+tempo_model <- lm(tempo ~ album_release_year, data=jayz)
+combined_model <- lm(album_release_year ~ tempo + acousticness + speechiness + valence, data=jayz)
+
+
+AIC(dance_model, 
+    acoustic_model, 
+    tempo_model,
+    speech_model, 
+    valence_model, 
+    combined_model)
+```
+
+The combined model doesn't seem to do terribly well here, which seems to muddy the question up a bit.
+
+## Is a linear model the best approach?
+
+We can adjust how we are viewing this data (linear or polynomial fit) a bit with the code below. Here we can plot our data as a line:
+```{r}
+
+ggplot(jayz, aes(album_release_year, tempo) ) + geom_point() +
+  stat_smooth(method = lm, formula = y ~ poly(x, 1, raw = TRUE)) +
+  theme_bw()
+```
+
+And here we have it as a second order polynomial:
+```{r}
+ggplot(jayz, aes(album_release_year, tempo) ) + geom_point() +
+  stat_smooth(method = lm, formula = y ~ poly(x, 2, raw = TRUE)) +
+  theme_bw()
+```
+
+
+And we can compare fits here:
+```{r}
+linear <- lm(album_release_year ~ tempo, data = jayz)
+poly_2 <- lm(album_release_year ~ tempo + I(album_release_year^2), data = jayz)
+
+AIC(linear, 
+    poly_2)
+```
+
+
+## Predicting a categorical variable
+
+What does it look like to predict a categorical variable in R? We might explore this question by hypothesizing that musical features might be predictive of mode (labeled in Spotify as major or minor: 1 or 0).
+
+Here is what a binomial logistic regression would look like:
+```{r}
+jayz.log <- glm(mode ~ tempo + danceability + valence +
+                     speechiness + acousticness, family = binomial, data = jayz)
+```
+
+And it looks like "speechiness" is the most predictive of mode here.
+```{r}
+summary(jayz.log)
+```
+
+We can plot the log odds ratios as well:
+```{r}
+CI <- exp(confint(jayz.log))[-1,]
+sjPlot::plot_model(jayz.log,
+                   axis.lim = c(min(CI), max(CI)),
+                   auto.label = F,
+                   show.values = T) +
+                   theme_bw()
+```

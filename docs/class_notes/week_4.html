@@ -93,6 +93,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../class_notes/week_5.html" rel="next">
 <link href="../class_notes/week_3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -209,6 +210,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../class_notes/week_4.html" class="sidebar-item-text sidebar-link active">Week 4: Conceptual Debates: Key-Finding</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_5.html" class="sidebar-item-text sidebar-link">Week 5: Testing Hypotheses with Spotify</a>
   </div>
 </li>
       </ul>
@@ -638,35 +644,36 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="do">### grabs the key-profile of the indie-pop playlist.</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>indie_pop_key_profile <span class="ot">&lt;-</span> <span class="fu">get_playlist_audio_features</span>(<span class="st">""</span>, <span class="st">"37i9dQZF1DWWEcRhUVtL8n"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_audio_analysis</span>() <span class="sc">|&gt;</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="do">## transpose all the chroma vectors to C.</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">segments =</span> <span class="fu">map2</span>(segments, key, compmus_c_transpose)) <span class="sc">|&gt;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="do">## grab the segments data and unnest it, then only grabbing the start, duration, and pitches info.</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(segments) <span class="sc">|&gt;</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(segments) <span class="sc">|&gt;</span> </span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(start, duration, pitches) <span class="sc">|&gt;</span> </span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pitches =</span> <span class="fu">map</span>(pitches, compmus_normalise, <span class="st">"euclidean"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compmus_gather_chroma</span>() <span class="sc">|&gt;</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pitch_class) <span class="sc">|&gt;</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_value =</span> <span class="fu">mean</span>(value)) </span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>indie_pop_key_profile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_audio_analysis</span>() <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="do">## transpose all the chroma vectors to C.</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">segments =</span> <span class="fu">map2</span>(segments, key, compmus_c_transpose)) <span class="sc">|&gt;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="do">## grab the segments data and unnest it, then only grabbing the start, duration, and pitches info.</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(segments) <span class="sc">|&gt;</span> </span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(start, duration, pitches) <span class="sc">|&gt;</span> </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pitches =</span> <span class="fu">map</span>(pitches, compmus_normalise, <span class="st">"euclidean"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compmus_gather_chroma</span>() <span class="sc">|&gt;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(pitch_class) <span class="sc">|&gt;</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean_value =</span> <span class="fu">mean</span>(value)) </span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>indie_pop_key_profile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 2
    pitch_class mean_value
    &lt;fct&gt;            &lt;dbl&gt;
- 1 C                0.320
- 2 C#|Db            0.175
+ 1 C                0.312
+ 2 C#|Db            0.170
  3 D                0.241
- 4 D#|Eb            0.184
- 5 E                0.229
- 6 F                0.226
- 7 F#|Gb            0.166
- 8 G                0.272
- 9 G#|Ab            0.168
+ 4 D#|Eb            0.189
+ 5 E                0.226
+ 6 F                0.225
+ 7 F#|Gb            0.175
+ 8 G                0.279
+ 9 G#|Ab            0.173
 10 A                0.192
-11 A#|Bb            0.165
-12 B                0.217</code></pre>
+11 A#|Bb            0.172
+12 B                0.215</code></pre>
 </div>
 </div>
 <p>Ideally, we’d be able to turn this into a more reusable function. Below we’ve just turned made the playlist URI an argument:</p>
@@ -694,18 +701,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 12 × 2
    pitch_class mean_value
    &lt;fct&gt;            &lt;dbl&gt;
- 1 C                0.320
- 2 C#|Db            0.175
+ 1 C                0.312
+ 2 C#|Db            0.170
  3 D                0.241
- 4 D#|Eb            0.184
- 5 E                0.229
- 6 F                0.226
- 7 F#|Gb            0.166
- 8 G                0.272
- 9 G#|Ab            0.168
+ 4 D#|Eb            0.189
+ 5 E                0.226
+ 6 F                0.225
+ 7 F#|Gb            0.175
+ 8 G                0.279
+ 9 G#|Ab            0.173
 10 A                0.192
-11 A#|Bb            0.165
-12 B                0.217</code></pre>
+11 A#|Bb            0.172
+12 B                0.215</code></pre>
 </div>
 </div>
 <p>and we can plot it in a pretty straightforward way:</p>
@@ -726,18 +733,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code># A tibble: 12 × 2
    pitch_class mean_value
    &lt;fct&gt;            &lt;dbl&gt;
- 1 C                0.310
- 2 C#|Db            0.180
- 3 D                0.215
- 4 D#|Eb            0.215
- 5 E                0.216
- 6 F                0.233
- 7 F#|Gb            0.193
+ 1 C                0.311
+ 2 C#|Db            0.182
+ 3 D                0.217
+ 4 D#|Eb            0.218
+ 5 E                0.217
+ 6 F                0.231
+ 7 F#|Gb            0.194
  8 G                0.264
- 9 G#|Ab            0.206
-10 A                0.199
-11 A#|Bb            0.201
-12 B                0.229</code></pre>
+ 9 G#|Ab            0.204
+10 A                0.197
+11 A#|Bb            0.202
+12 B                0.231</code></pre>
 </div>
 </div>
 <p>and once again we can plot it:</p>
@@ -757,7 +764,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="getting-separate-major-and-minor-key-profiles" class="level2">
 <h2 class="anchored" data-anchor-id="getting-separate-major-and-minor-key-profiles">Getting separate major and minor key-profiles</h2>
-<p>We could break this into a few parts for our own comfort. Let’s start by just creating a function that grabs the data. As that’s the one that’s quite time-intensive, and calls to the API, let’s try to run it only once.</p>
+<p>We could break this into a few parts for our own comfort. Let’s start by just creating a function that grabs the data. As that’s the one that’s quite time intensive, and calls to the API, let’s try to run it only once.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>grab_playlist_info <span class="ot">&lt;-</span> <span class="cf">function</span>(uri){</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">get_playlist_audio_features</span>(<span class="st">""</span>, uri) <span class="sc">|&gt;</span></span>
@@ -886,7 +893,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>And then we put these weightings into the plotter:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">key_plotter</span>(<span class="st">"1z6WtY7X4HQJvzxC4UgkSf"</span>, ks_major_key, ks_minor_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">key_plotter</span>(<span class="st">"1yYlpGuBiRRf33e1gY61bN"</span>, ks_major_key, ks_minor_key)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="week_4_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -895,7 +902,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="exercise" class="level2">
 <h2 class="anchored" data-anchor-id="exercise">Exercise:</h2>
 <ol type="1">
-<li>Pick one piece and construct a genre-specific key-profile that might be used to explain it’s tonal make-up.
+<li>Pick one piece and construct a genre-specific key-profile that might be used to explain its tonal make-up.
 <ol type="1">
 <li>Explain this musically.</li>
 </ol></li>
@@ -1161,6 +1168,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../class_notes/week_5.html" class="pagination-link">
+        <span class="nav-page-text">Week 5: Testing Hypotheses with Spotify</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
