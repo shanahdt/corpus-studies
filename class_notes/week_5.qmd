@@ -11,6 +11,7 @@ Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
 access_token <- get_spotify_access_token()
 ```
 
+
 # Plan for the Week
 
 This week, we will be going over:
@@ -34,7 +35,7 @@ Although we've spent a fair bit of time going over the mechanics of the Spotify 
 
 # Hypothesis 1: Do Jay-Z's Songs Get Slower Over Time?
 
-I think that Kanye West's songs are getting slower over time. Let's test it.
+I think that Jay-Z's songs are getting slower over time. Let's test it.
 
 We'll start by grabbing our data:
 ```{r}
@@ -200,4 +201,271 @@ sjPlot::plot_model(jayz.log,
                    auto.label = F,
                    show.values = T) +
                    theme_bw()
+```
+
+
+# Wednesday
+
+## Clustering
+
+Cluster analysis is a form of statistical data analysis in which
+subsets (called "clusters") are formed according to some notion of
+similarity. There are many different variants of cluster analysis, but
+most are hierarchical--in which low-level clusters are successively
+joined together to make larger clusters, and so on, until everything
+is clustered into one large group. The result is a cluster tree or
+*dendrogram*.
+
+### How does the R hclust function work?
+
+The **hclust** function is part of the default package in R, and it clusters based on dissimilarities in the data. There are different algorithms it can use, but the default is [Ward's minimum variance](https://www.rdocumentation.org/packages/stats/versions/3.5.3/topics/hclust). It requires some distance to be calculated first, so the [_dist_](https://www.rdocumentation.org/packages/stats/versions/3.5.3/topics/dist) function is used on the data. Again there are many options here, but the default is to simply calculate the Euclidean distance between the values.
+
+The documentation states:
+
+> This function performs a hierarchical cluster analysis using a set of 
+> dissimilarities for the *n* objects being clustered. Initially, each object is 
+> assigned to its own cluster and then the algorithm proceeds iteratively, at each 
+> stage joining the two most similar clusters, continuing until there is just a 
+> single cluster. At each stage distances between clusters are recomputed by the 
+> Lance–Williams dissimilarity update formula according to the particular 
+> clustering method being used.
+
+
+The default is Ward's minimum variance method, which:
+
+> aims at finding compact, spherical clusters. The complete linkage method 
+> finds similar clusters. 
+
+Another method is the "single linkage method". 
+
+> The single linkage method (which is closely related to 
+> the minimal spanning tree) adopts a ‘friends of friends’ clustering strategy. 
+> The other methods can be regarded as aiming for clusters with characteristics 
+> somewhere between the single and complete link methods. Note however, that 
+> methods "median" and "centroid" are not leading to a monotone distance measure, 
+> or equivalently the resulting dendrograms can have so called inversions or 
+> reversals which are hard to interpret, but note the trichotomies in Legendre and 
+> Legendre (2012).
+
+
+```{r}
+# cluster demo modified from here: 
+### https://www.r-bloggers.com/2021/04/cluster-analysis-in-r/
+library(tidyverse)
+library(cluster)
+beyonce <- read.csv("beyonce.csv")
+taylor <- read.csv("taylor.csv")
+
+
+df <- beyonce %>% 
+  filter(album_name == "4") %>%
+  select(c("track_name", "acousticness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+```
+
+```{r}
+df <- df %>% distinct(track_name, .keep_all = TRUE)
+
+## cleaning up the data.
+z <- df[,-c(1,1)]
+
+### getting means of each category.
+means <- apply(z,2,mean)
+### getting standard deviation of each category.
+sds <- apply(z,2,sd)
+
+### scales the data in the matrix.
+scaled_data <- scale(z,center=means,scale=sds)
+distance <- dist(scaled_data)
+```
+
+And we can plot the data like this:
+```{r}
+### helps with the size of the image.
+par(mar = c(1, 1, 1, 1))
+
+### creates the cluster
+df.hclust <- hclust(distance)
+
+### plots the data but with row numbers.
+plot(df.hclust)
+```
+
+And we can add the track name like so:
+```{r}
+plot(df.hclust,labels=df$track_name,main='Default from hclust')
+```
+
+We can clean up the plot the be along a single x-axis with the `hang` argument.
+```{r}
+plot(df.hclust,hang=-1, labels=df$track_name,main='Default from hclust')
+```
+
+
+## Which track belongs to which cluster?
+It might be helpful with this analysis to look at how each of the songs fits on the tree. We can use the `cutree` function, which "cuts a tree" from the cluster based on how many groups we ask it for.
+
+The following code can tell us how many fall into each broader tree, assuming we think that the tree should be cut into three. Notice that the third branch is the most populous, with the second being the most sparsely populated.
+
+```{r}
+member <- cutree(df.hclust,3)
+table(member)
+```
+
+But how is each category being weighted? The code below shows that acousticness and danceability do a fair bit of work in separating groups 1 and 3, and valence separates 1 and 2 from one another.
+
+```{r}
+##but how are these clusters calculated?
+aggregate(scaled_data,list(member),mean)
+```
+
+A slightly more even split occurs if we break it into four groups rather than three. 
+```{r}
+member <- cutree(df.hclust,4)
+table(member)
+```
+
+And that how they're split into four is a bit different from how we might split them into three, but danceability and acousticness still playing a strong role.
+```{r}
+aggregate(scaled_data,list(member),mean)
+```
+
+
+### K-Means Clustering
+
+We can also run a simple k-means clustering on the data. With this, we are clustering the data into *k* groups. R's documentation explains it like so:
+
+>aims to partition the points into *k* groups such that the sum of squares 
+>from points to the assigned cluster centres is minimized. At the minimum, 
+>all cluster centres are at the mean of their Voronoi sets (the set of data 
+>points which are nearest to the cluster centre).
+
+There are a few algorithms to pick from. R uses the HArtigan and Wong (1979) algorithm by default.
+
+```{r}
+###split it into three groups
+set.seed(123)
+kc <- kmeans(scaled_data,3)
+
+### add labels.
+row.names(scaled_data) <- df$track_name
+
+###get the shortest distance.
+datadistshortset<-dist(scaled_data,method = "euclidean")
+```
+
+The code below will cluster it based on this k-means clustering distance, and plot them into the amount of groups listed (here 3).
+```{r}
+hc1 <- hclust(datadistshortset, method = "complete" )
+pamvshortset <- pam(datadistshortset,3, diss = FALSE)
+
+clusplot(pamvshortset, shade = FALSE,labels=2,col.clus="blue",col.p="red",span=FALSE,main="Cluster Mapping",cex=1.2)
+```
+
+
+
+## Example 1: Looking at Nirvana Albumss
+
+I'm going to get the global features from Nirvana, and specifically I'm just going to look at the _Unplugged in New York_ album. I do this in two, rather inefficient, steps: I get all of the Nirvana data and put those in a dataframe, and then I create a variable that has filtered out only the specific album I'm looking for.
+
+```{r}
+nirvana <- get_artist_audio_features('nirvana')
+unplugged <- filter(nirvana, album_name == "MTV Unplugged In New York")
+both <- filter(nirvana, album_name == "MTV Unplugged In New York"  | album_name == "Nevermind")
+```
+
+This gets lots of data, and I'm just interested in their global measures (tempo, danceability, liveness, etc.). Here, I've gone with column number rather than name, but the other version might be a bit easier/cleaner. Nevertheless, this is another way of doing it:
+
+```{r}
+###i've just picked out the columns I want.
+selected <- c(9,10,12,14,15,16,17,18,19,30)
+### This subsets the data based on only the columns I want.
+unplugged <- unplugged[,selected]
+
+### I assign the track name column (30) with the rownames, to have a labeled cluster.
+rownames(unplugged) <- unplugged$track_name
+```
+
+```{r, warnings=FALSE}
+hc <- hclust(dist(unplugged), method = "complete", members = NULL)
+```
+
+#### Plotting the cluster
+
+Technically, you could just use the plot function at this point, but there are some long title names, so I added these extra plot options to make the text smaller and increase the marins.
+```{r}
+par(cex=0.5, mar=c(5, 8, 4, 1))
+plot(hc, xlab="", ylab="", main="", sub="", axes=FALSE)
+par(cex=1)
+title(xlab="tunes", ylab="height", main="Nirvana unplugged")
+axis(2)
+```
+
+This plot is a bit strange now, as we have a pretty big negative number on the y-axis. Nevertheless, we see some cool things. The songs written by the Meat Puppets cluster together, for example.
+
+### k-means clustering
+
+Our next type of clustering analysis is be a **k-means cluster**. We will start off by using a [scree plot](https://en.wikipedia.org/wiki/Scree_plot) to see how many clusters we should use. There are a number of ways of analyzing where an "elbow" on this plot might be, but many people actually just eyeball it.
+
+```{r, warning=FALSE}
+unplugged <- filter(nirvana, album_name == "MTV Unplugged In New York" )
+titles <- unplugged$track_name
+unplugged <- unplugged[,selected]
+unplugged <- scale(unplugged[,-10]) # standardize variables
+unplugged <- as.data.frame(unplugged) # standardize variables
+
+# Determine number of clusters
+wss <- (nrow(unplugged)-1)*sum(apply(unplugged,2,var))
+for (i in 2:9) wss[i] <- sum(kmeans(unplugged, 
+                                    centers=i)$withinss)
+  plot(1:9, wss, type="b", xlab="Number of Clusters",
+    ylab="Within groups sum of squares")
+```
+
+
+And now we can look at the k-means clustering based on however many clusters we think are necessary.
+```{r, warning=FALSE}
+# K-Means Cluster Analysis
+fit <- kmeans(unplugged, 3) # 3 cluster solution
+# get cluster means 
+aggregate(unplugged,by=list(fit$cluster),FUN=mean)
+# append cluster assignment
+unplugged_appended <- data.frame(unplugged, fit$cluster)
+```
+
+
+```{r}
+rownames(unplugged_appended) = titles
+clusplot(unplugged_appended, fit$cluster, color=TRUE, shade=TRUE, 
+   labels=3, lines=0)
+```
+
+## Conditional Inference Tree with Party
+
+A conditional inference tree is basically a regression tree, and it tells you exactly how it picks apart the data in a pretty clear way. 
+
+I've always thought that Weezer was a bit derivative, so we might look at how we can separate them other (much better) bands, like Pavement...
+
+```{r, warning=FALSE}
+pavement <- get_artist_audio_features('pavement')
+weezer <- get_artist_audio_features('weezer')
+pavement_weezer <-rbind(pavement, weezer)
+```
+
+Here's a regression tree that tries to account for the variance between deciding whether a piece is from Pavement or Weezer.
+
+```{r, warning=FALSE}
+library(rpart.plot)
+
+# grow tree 
+fit <- rpart(as.factor(artist_name) ~ danceability + valence + tempo + liveness,  data=pavement_weezer)
+
+printcp(fit) # display the results 
+plotcp(fit) # visualize cross-validation results 
+summary(fit) # detailed summary of splits
+
+
+# plot tree 
+rpart.plot(fit, uniform=TRUE, 
+   main="Regression Tree for Pavement/Weezer")
+
 ```
