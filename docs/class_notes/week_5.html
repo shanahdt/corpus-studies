@@ -257,6 +257,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#k-means-clustering-1" id="toc-k-means-clustering-1" class="nav-link" data-scroll-target="#k-means-clustering-1">k-means clustering</a></li>
   </ul></li>
   <li><a href="#conditional-inference-tree-with-party" id="toc-conditional-inference-tree-with-party" class="nav-link" data-scroll-target="#conditional-inference-tree-with-party">Conditional Inference Tree with Party</a></li>
+  <li><a href="#christmas-or-not" id="toc-christmas-or-not" class="nav-link" data-scroll-target="#christmas-or-not">Christmas or Not?</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/corpus-studies/edit/main/class_notes/week_5.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/corpus-studies/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -741,7 +742,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <p>And we can plot the data like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">### helps with the size of the image.</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>))</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># par(mar = c(1, 1, 1, 1))</span></span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="do">### creates the cluster</span></span>
 <span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>df.hclust <span class="ot">&lt;-</span> <span class="fu">hclust</span>(distance)</span>
@@ -828,7 +829,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <blockquote class="blockquote">
 <p>aims to partition the points into <em>k</em> groups such that the sum of squares from points to the assigned cluster centres is minimized. At the minimum, all cluster centres are at the mean of their Voronoi sets (the set of data points which are nearest to the cluster centre).</p>
 </blockquote>
-<p>There are a few algorithms to pick from. R uses the HArtigan and Wong (1979) algorithm by default.</p>
+<p>There are a few algorithms to pick from. R uses the Hartigan and Wong (1979) algorithm by default.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="do">###split it into three groups</span></span>
 <span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
@@ -1112,6 +1113,34 @@ Node number 47: 399 observations
 <span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Regression Tree for Pavement/Weezer"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="week_5_files/figure-html/unnamed-chunk-37-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="christmas-or-not" class="level2">
+<h2 class="anchored" data-anchor-id="christmas-or-not">Christmas or Not?</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>christmas <span class="ot">&lt;-</span> <span class="fu">get_playlist_audio_features</span>(<span class="st">""</span>, <span class="st">"5OP7itTh52BMfZS1DJrdlv"</span>)</span>
+<span id="cb80-2"><a href="#cb80-2" aria-hidden="true" tabindex="-1"></a>christmas<span class="sc">$</span>christmas <span class="ot">&lt;-</span> <span class="st">"yes"</span></span>
+<span id="cb80-3"><a href="#cb80-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-4"><a href="#cb80-4" aria-hidden="true" tabindex="-1"></a>not <span class="ot">&lt;-</span> <span class="fu">get_playlist_audio_features</span>(<span class="st">""</span>, <span class="st">"6i2Qd6OpeRBAzxfscNXeWp"</span>)</span>
+<span id="cb80-5"><a href="#cb80-5" aria-hidden="true" tabindex="-1"></a>not<span class="sc">$</span>christmas <span class="ot">&lt;-</span> <span class="st">"no"</span></span>
+<span id="cb80-6"><a href="#cb80-6" aria-hidden="true" tabindex="-1"></a>christmas_not <span class="ot">&lt;-</span><span class="fu">rbind</span>(christmas, not)</span>
+<span id="cb80-7"><a href="#cb80-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-8"><a href="#cb80-8" aria-hidden="true" tabindex="-1"></a>fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(<span class="fu">as.factor</span>(christmas) <span class="sc">~</span> danceability <span class="sc">+</span> valence <span class="sc">+</span> tempo <span class="sc">+</span> liveness <span class="sc">+</span> tempo <span class="sc">+</span> mode, <span class="at">data=</span>christmas_not)</span>
+<span id="cb80-9"><a href="#cb80-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb80-10"><a href="#cb80-10" aria-hidden="true" tabindex="-1"></a><span class="co"># plot tree </span></span>
+<span id="cb80-11"><a href="#cb80-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rpart.plot</span>(fit, <span class="at">uniform=</span><span class="cn">TRUE</span>, </span>
+<span id="cb80-12"><a href="#cb80-12" aria-hidden="true" tabindex="-1"></a>   <span class="at">main=</span><span class="st">"Regression Tree for Christmas/Not"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="week_5_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(not<span class="sc">$</span>mode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ 0  1 
+33 81 </code></pre>
 </div>
 </div>
 

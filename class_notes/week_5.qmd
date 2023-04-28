@@ -281,7 +281,7 @@ distance <- dist(scaled_data)
 And we can plot the data like this:
 ```{r}
 ### helps with the size of the image.
-par(mar = c(1, 1, 1, 1))
+# par(mar = c(1, 1, 1, 1))
 
 ### creates the cluster
 df.hclust <- hclust(distance)
@@ -339,7 +339,7 @@ We can also run a simple k-means clustering on the data. With this, we are clust
 >all cluster centres are at the mean of their Voronoi sets (the set of data 
 >points which are nearest to the cluster centre).
 
-There are a few algorithms to pick from. R uses the HArtigan and Wong (1979) algorithm by default.
+There are a few algorithms to pick from. R uses the Hartigan and Wong (1979) algorithm by default.
 
 ```{r}
 ###split it into three groups
@@ -468,4 +468,26 @@ summary(fit) # detailed summary of splits
 rpart.plot(fit, uniform=TRUE, 
    main="Regression Tree for Pavement/Weezer")
 
+```
+
+## Christmas or Not?
+
+```{r}
+christmas <- get_playlist_audio_features("", "5OP7itTh52BMfZS1DJrdlv")
+christmas$christmas <- "yes"
+
+not <- get_playlist_audio_features("", "6i2Qd6OpeRBAzxfscNXeWp")
+not$christmas <- "no"
+christmas_not <-rbind(christmas, not)
+
+fit <- rpart(as.factor(christmas) ~ danceability + valence + tempo + liveness + tempo + mode, data=christmas_not)
+
+# plot tree 
+rpart.plot(fit, uniform=TRUE, 
+   main="Regression Tree for Christmas/Not")
+```
+
+
+```{r}
+table(not$mode)
 ```
