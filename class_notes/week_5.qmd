@@ -1,5 +1,5 @@
 ---
-title: "Week 5: Testing Hypotheses with Spotify"
+title: "Week 5: Regression and Clustering"
 ---
 
 ```{r, echo=FALSE, message=FALSE}
@@ -281,7 +281,7 @@ distance <- dist(scaled_data)
 And we can plot the data like this:
 ```{r}
 ### helps with the size of the image.
-# par(mar = c(1, 1, 1, 1))
+par(mar = c(5, 4, 4, 1))
 
 ### creates the cluster
 df.hclust <- hclust(distance)
@@ -297,6 +297,8 @@ plot(df.hclust,labels=df$track_name,main='Default from hclust')
 
 We can clean up the plot the be along a single x-axis with the `hang` argument.
 ```{r}
+nodePar <- list(lab.cex = 0.6, pch = c(NA, 19), 
+                cex = 0.7, col = "blue")
 plot(df.hclust,hang=-1, labels=df$track_name,main='Default from hclust')
 ```
 

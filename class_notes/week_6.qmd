@@ -1,0 +1,227 @@
+---
+title: "Week 6: Classifying"
+---
+
+# This Week's Plan
+- Look at running a principal components analysis for authorship
+- Work on some models for classifying data
+- Discuss how we might evaluate our models
+
+## Getting Started
+We will be using a of libraries today:
+```{r}
+library(spotifyr)
+library(compmus)
+library(tidyverse)
+library(caret)
+library(devtools)
+#install_github("vqv/ggbiplot")
+require(ggplot2)
+library(ggbiplot)
+library(class)
+```
+
+```{r, echo=FALSE, warnings=FALSE}
+Sys.setenv(SPOTIFY_CLIENT_ID = '05af946589794553974d293435950a5d')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
+access_token <- get_spotify_access_token()
+```
+
+## PCA and Authorship
+
+PCAs are often used for reducing dimensions when we have lots of variables but a model might be better suited from combining those variables. PCAs have also been used a fair bit to explore questions of authorship. Here we have a question of authorship using symbolic data taken from scores. We are trying to explore the music of Josquin. 
+
+Here we load the data in:
+```{r, warning=FALSE}
+
+complete_data <- read.csv("attribution_data_new.csv", na.strings=c("","NA"), header=T)
+complete_data <- complete_data[,-62]
+```
+
+Jesse Rodin's _Josquin Research Project_ has given levels of security for attribution, including pieces that we know are Josquin's, those we think might be, and those which are more questionable.
+
+```{r}
+# Josquin attribution level 1 and palestrina
+
+josquin <- complete_data[complete_data$Composer == 'Josquin des Prez',-12]
+
+josquin_secure <- josquin[josquin$Attribution.Level <= 2 ,]
+josquin_secure$Composer <- as.character(josquin_secure$Composer)
+josquin_less_secure <- josquin[ josquin$Attribution.Level >= 3,]
+
+
+####Other composers
+bach <- complete_data[complete_data$Composer == "Bach_Johann Sebastian",-12]
+larue <- complete_data[complete_data$Composer == "la Rue_Pierre de",-12]
+palestrina <- complete_data[complete_data$Composer == "Palestrina_Giovanni Perluigi da",-12]
+ockeghem <- complete_data[complete_data$Composer == "Johannes Ockeghem",-12]
+orto <- complete_data[complete_data$Composer == "de Orto_Marbrianus",-12]
+dufay <- complete_data[complete_data$Composer == "Du Fay_Guillaume",-12]
+
+josquin_bach <- rbind(josquin_secure, bach)
+josquin_palestrina <- rbind(josquin_secure, palestrina)
+josquin_larue <- rbind(josquin_secure, larue)
+
+comparison <- rbind(josquin_secure, bach)
+
+```
+  
+```{r, warnings=FALSE}
+columns_wanted <- c(5:11)  
+Matrix <- comparison[,columns_wanted]
+Matrix <- as.matrix(Matrix)
+Matrix[is.na(Matrix)] <- 0
+# log.pieces <- log(Matrix)
+log.pieces <- log(Matrix)
+composer <- comparison[,1]
+```
+
+This code runs the actual principal components analysis. 
+
+It also provides a scree plot, allowing us to see which components are the most heavily weighted. This can allow us to reduce the dimensions as we see fit.
+
+```{r}
+####principle component analysis.
+
+pieces.pca <- prcomp(Matrix,
+                 center = TRUE,
+                 scale. = TRUE) 
+plot(pieces.pca, type = "l", main="Principal Components Analysis")
+``` 
+
+It's worth taking some time to explore what each of these components actually means and how they're weighted. PCA is weighting instances of parallel motion and similar motion pretty heavily, but negatively weighting pitch entropy and oblique motion. PC2 seems to be looking at nPVI and 9-8 suspensions.
+
+```{r}
+print(pieces.pca)
+```
+
+As we can see, about 65% of the variance is accounted for with the first two principal components:
+
+```{r}
+summary(pieces.pca)
+```
+
+Plotting our two composers with the first two principal components.
+```{r}
+g <- ggbiplot(pieces.pca, obs.scale = 1, var.scale = 1, 
+              groups = composer, ellipse = TRUE, 
+              circle = TRUE)
+g <- g + scale_color_discrete(name = '')
+g <- g + theme(legend.direction = 'horizontal', 
+               legend.position = 'top') +
+               theme_bw()
+print(g)
+
+# we can change the number of components
+# seven_component_model <- data.frame(pieces.pca$x[,1:8])
+
+```
+
+We can also look at how much each of these features is being weighted within the first two components.
+```{r}
+theta <- seq(0,2*pi,length.out = 100)
+circle <- data.frame(x = cos(theta), y = sin(theta))
+p <- ggplot(circle,aes(x,y)) + geom_path()
+
+loadings <- data.frame(pieces.pca$rotation, 
+                       .names = row.names(pieces.pca$rotation))
+p + geom_text(data=loadings, 
+              mapping=aes(x = PC1, y = PC2, label = .names, colour = .names)) +
+  coord_fixed(ratio=1) +
+  labs(x = "PC1", y = "PC2") +
+  theme_bw()
+
+```
+
+## Classifiers 
+
+A classifier is a model that assigns a label to data based on the input. There are many types of classifiers, and we will be evaluating various models throughout the week. 
+
+Our goal will be to train a model on the features generally associated with a category, and then test the accuracy of that model. For now, a good starting point might be our Christmas Song question from last week.
+
+## Returning to our Christmas Song Problem
+
+First, let's get the data and add a column that tells us whether it's a Christmas song or not
+
+```{r}
+### get the data and add yes/no column.
+christmas <- get_playlist_audio_features("", "5OP7itTh52BMfZS1DJrdlv")
+christmas$christmas <- "yes"
+
+not <- get_playlist_audio_features("", "6i2Qd6OpeRBAzxfscNXeWp")
+not$christmas <- "no"
+
+## combine the two datasets and get the columns we want to use.
+christmas_subset <-rbind(christmas, not)
+christmas_subset <- christmas_subset %>% 
+    select(c("christmas", "acousticness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+```
+
+Now we can use the `createDataPartition` function from the `caret` library to create a testing and a training dataset. Here, I've chosen a 70/30 partition of training and testing, but you can adjust as you see fit.
+
+```{r}
+Train <- createDataPartition(christmas_subset$christmas, p=0.7, list=FALSE)
+training <- christmas_subset[ Train, ]
+testing <- christmas_subset[ -Train, ]
+```
+
+We can pretty easily implement something like a neural network, using our training dataset to train it:
+
+```{r, echo=FALSE}
+mod_fit <- caret::train(christmas ~ .,  
+                 data=training, method="nnet", importance = "christmas")
+```
+
+Once we've trained this model, we can test it on our testing dataset, and see how well it does:
+
+```{r}
+pred <- predict(mod_fit, testing)
+confusionMatrix(pred, as.factor(testing$christmas), positive = "yes")
+```
+
+So what does this all mean? Let's define some terms.
+
+- **Accuracy:**
+  - the accuracy rate. Just how many things it got right.
+- **95% CI:**
+  - the confidence interval of the accuracy.
+- **No information rate:**
+  - given no more information other than the overall distribution, how likely are you to be correct if you just pick the "majority class."
+  - if you have an accuracy rate of 80%, but the majority class is 80%, then your model isn't terribly useful.
+- **P-Value:**
+  -  likelihood of chance.
+- **Kappa:**
+  - measures the agreement between two raters and ratings. Here it's looking at the difference between observed accuracy and random chance given the distribution in the dataset.
+- **McNemar's Test P-Value:**
+  - this is looking at the two distributions (from a 2x2 table), and determines if they are significantly different,
+- **Sensitivity:** 
+  - given that a result is actually a thing, what is the probability that our model will predict that event's results?
+- **Specificity:**
+  - given that a result is  _not_ actually a thing, what is the probability that our model will predict that?
+- **Pos Predictive Value:**
+  - the probability that a predicted 'positive' class is actually positive.
+- **Neg Predictive Value:**
+  - the probability that a predicted 'negative' class is actually negative.
+- **Prevalence:**
+  - the prevalence of the 'positive event' 
+- **Detection Rate:**
+  - the rate of true events also predicted to be events
+- **Detection Prevalence**
+  - the prevalence of predicted events
+- **Balanced Accuracy:**
+  - the average of the proportion corrects of each class individually
+
+
+### What is the model using?
+
+We can look at which features the model is using...
+```{r}
+plot(varImp(mod_fit))
+```
+
+## Exercise 
+
+1. Use PCA to explore the works of two artists. How well do they "separate"?
+2. Run a classifier on two groups (it can be the same two artists, or two distinct groups). How well does your model do?
+
+

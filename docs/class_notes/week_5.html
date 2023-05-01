@@ -742,7 +742,7 @@ Number of Fisher Scoring iterations: 4</code></pre>
 <p>And we can plot the data like this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="do">### helps with the size of the image.</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="co"># par(mar = c(1, 1, 1, 1))</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>))</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="do">### creates the cluster</span></span>
 <span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>df.hclust <span class="ot">&lt;-</span> <span class="fu">hclust</span>(distance)</span>
@@ -762,7 +762,9 @@ Number of Fisher Scoring iterations: 4</code></pre>
 </div>
 <p>We can clean up the plot the be along a single x-axis with the <code>hang</code> argument.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df.hclust,<span class="at">hang=</span><span class="sc">-</span><span class="dv">1</span>, <span class="at">labels=</span>df<span class="sc">$</span>track_name,<span class="at">main=</span><span class="st">'Default from hclust'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>nodePar <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">lab.cex =</span> <span class="fl">0.6</span>, <span class="at">pch =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">19</span>), </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>                <span class="at">cex =</span> <span class="fl">0.7</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df.hclust,<span class="at">hang=</span><span class="sc">-</span><span class="dv">1</span>, <span class="at">labels=</span>df<span class="sc">$</span>track_name,<span class="at">main=</span><span class="st">'Default from hclust'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="week_5_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
 </div>
