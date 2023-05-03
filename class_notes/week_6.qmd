@@ -9,16 +9,18 @@ title: "Week 6: Classifying"
 
 ## Getting Started
 We will be using a of libraries today:
-```{r}
+```{r, warnings=FALSE, message=FALSE, echo=FALSE}
 library(spotifyr)
 library(compmus)
 library(tidyverse)
 library(caret)
 library(devtools)
+library(kernlab)
 #install_github("vqv/ggbiplot")
 require(ggplot2)
 library(ggbiplot)
 library(class)
+library(DT)
 ```
 
 ```{r, echo=FALSE, warnings=FALSE}
@@ -167,7 +169,7 @@ testing <- christmas_subset[ -Train, ]
 
 We can pretty easily implement something like a neural network, using our training dataset to train it:
 
-```{r, echo=FALSE}
+```{r, results=FALSE}
 mod_fit <- caret::train(christmas ~ .,  
                  data=training, method="nnet", importance = "christmas")
 ```
@@ -223,5 +225,235 @@ plot(varImp(mod_fit))
 
 1. Use PCA to explore the works of two artists. How well do they "separate"?
 2. Run a classifier on two groups (it can be the same two artists, or two distinct groups). How well does your model do?
+
+# Wednesday
+
+Today we are going to look at different models and evaluating models. Our research question will be training a model to decipher John Lennon songs from Paul McCartney songs with various classifiers.
+
+## John or Paul?
+Our research process will follow a simple trajectory:
+
+- Get songs by each artist's solo career (this can be our 'ground truth', as it were).
+- Train the model on these pieces, and evaluate the various models.
+- Apply the various models to some songs by the Beatles.
+
+### Getting the Data
+```{r}
+john <- get_artist_audio_features('john lennon')
+paul <- get_artist_audio_features('paul mccartney')
+both <- rbind(john, paul)
+```
+
+What is the balance of pieces like? It looks like we have far more McCartney than Lennon pieces. What does this mean for our model? 
+```{r}
+table(both$artist_name)
+```
+
+We then can grab only the features that we want to explore for this model.
+
+```{r}
+both_subset <- both %>% select(c("artist_name", "acousticness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+```
+
+Before running a clustering, PCA, or a classifier such as a k-nearest neighbor, it's probably good to standardize your data. This means that the data is consistent, and prevents wide ranges from dominating the results. Here we've scaled all of our data with the z-score of the data according with the rest of the data for that category.
+
+I've also (temporarily) split the data from the artist, and then brought it all back together with cbind.
+
+```{r}
+data <- both_subset[,-1]
+artists <- both_subset[,1]
+data <- data %>% mutate_all(~(scale(.) %>% as.vector))
+both_artists <- cbind(artists, data)
+
+```
+
+
+## Cross-Validation
+
+Cross-validation splits the data up into a testing and training set, and evaluates it.
+
+### K-folds cross validation:
+
+K refers to the number of groups that data is split into.
+
+- It randomizes the data
+- splits it into the specified number of groups
+- for each group, split into a training and testing set, and then evaluate
+
+```{r}
+ctrl <- trainControl(method = "repeatedcv", number = 2, savePredictions = TRUE)
+```
+
+
+```{r}
+Train <- createDataPartition(both_artists$artists, p=0.7, list=FALSE)
+training <- both_artists[ Train, ]
+testing <- both_artists[ -Train, ]
+```
+
+
+Let's look at our results with a logistic regression:
+
+```{r}
+mod_fit <- train(artists ~ .,  data=both_artists, method="glm", family="binomial",
+                 trControl = ctrl, tuneLength = 10)
+
+testing$artists <- as.factor(testing$artists)
+pred <- predict(mod_fit, newdata=testing)
+confusionMatrix(data=pred, testing$artists)
+```
+
+It looks like the accuracy is about 76%, but pay attention to the _sensitivity_ and the _specificity_ values.
+
+Recall that sensitivity is a measurement of how well the model can detect a "positive" instance, and specificity measures how well the model is finding true negatives.
+
+Sensitivity can be defined as follows:
+
+> Sensitivity = (True Positive)/(True Positive + False Negative)
+
+and specificity can be defined as follows:
+
+> Specificity = (True Negative)/(True Negative + False Positive)
+
+So this model is quite good at finding the negative class (here defined as McCartney), but not great at finding the positive class (Lennon).
+
+## Other Models
+
+Let's run the same code again, but now with a k-nearest neighbor. For our sanity, let's put it into a function.
+
+```{r}
+model_evaluation <- function(method){
+    Train <- createDataPartition(both_artists$artists, p=0.7, list=FALSE)
+    training <- both_artists[ Train, ]
+    testing <- both_artists[ -Train, ]
+    mod_fit <- train(artists ~ .,  
+                     data=training, method=method)
+    pred <- predict(mod_fit, newdata=testing)
+
+    accuracy <- table(pred, testing[,"artists"])
+    sum(diag(accuracy))/sum(accuracy)
+    testing$artists <- as.factor(testing$artists)
+    confusionMatrix(data=pred, testing$artists)
+    
+}
+model_evaluation("kknn")
+```
+
+Note that it performs quite well! It's better at finding the "John Lennon" model.
+
+Why do we think this model performed better? A comparison of models can be found [here](https://towardsdatascience.com/comparative-study-on-classic-machine-learning-algorithms-24f9ff6ab222).
+
+### Neural Net
+
+A neural net doesn't seem to do as well.
+```{r, messages=FALSE, results=FALSE}
+model_evaluation("nnet")
+```
+
+## Comparing Models
+- Logistic Regression
+- K-nearest neighbor
+- neural net
+- Learning Vector Quantization
+- gradient boosted machine
+- support vector machine
+
+We can train different models explicitly (without a function) for now.
+```{r, messages=FALSE, results=FALSE}
+set.seed(1234)
+control <- trainControl(method="repeatedcv", number=10, repeats=3)
+
+# train logistic regression
+modelglm <- train(artists ~ ., data=both_artists, method="glm", trControl=control)
+
+# train knn
+modelknn <- train(artists ~ ., data=both_artists, method="kknn", trControl=control)
+
+# train nnet
+modelnnet <- train(artists ~ ., data=both_artists, method="nnet", trControl=control)
+
+# train the LVQ model
+modelLvq <- train(artists ~ ., data=both_artists, method="lvq", trControl=control)
+
+# train the GBM model
+set.seed(7)
+modelGbm <- train(artists ~ ., data=both_artists, method="gbm", trControl=control)
+
+# train the SVM model
+set.seed(7)
+modelSvm <- train(artists ~., data=both_artists, method="svmRadial", trControl=control)
+
+# train the random forest
+randomforest <- train(artists~., data=both_artists, method="ranger", trControl=control)
+```
+
+We can actually look at the resampling of the dataset for each model, and get the results for each model:
+```{r}
+# collect resamples
+results <- resamples(list(LVQ=modelLvq, GBM=modelGbm, SVM=modelSvm,knn=modelknn, nnet=modelnnet, glm=modelglm, rf=randomforest))
+
+# summarize the distributions
+summary(results)
+```
+
+It might be better to look at the accuracy for each model. Here we have the accuracy rating as well as Cohen's Kappa, which is like accuracy but also incorporates the imbalance of the dataset.
+
+```{r}
+# boxplots of results
+bwplot(results)
+```
+
+Here's another plot:
+```{r}
+# dot plots of results
+dotplot(results)
+```
+
+
+Is it possible to use this for a research question??
+
+What if we use our neural net model but on a different dataset? How about the beatles dataset that is available on Spotify (which admittedly isn't as much as we'd like).
+
+
+### Grabbing Beatles Data
+We can start by getting the data from Spotify:
+
+```{r}
+beatles <- get_artist_audio_features('the beatles')
+beatles_subset <- beatles %>% select(c("artist_name", "acousticness", "energy", "instrumentalness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+```
+
+### Predicting
+
+Now we can use the models that we've trained, but on new data. Here we use the random forest and the k-nearest neighbor models.
+
+```{r}
+beatles_knn <- predict(modelknn, newdata=beatles_subset)
+beatles_rf <- predict(randomforest, newdata=beatles_subset)
+```
+
+Now, we are going to create a data frame of the track name, and both models.
+```{r}
+classified_data <- as.data.frame(cbind(beatles_knn, beatles_rf, beatles$track_name))
+```
+
+This returns data as either 1 or 2, so we can clean up the columns a bit. Here, if it's a 2, I label it as "Paul", otherwise, it's a "John".
+```{r}
+classified_data$beatles_knn <- if_else(classified_data$beatles_knn == 2, "Paul", "John")
+classified_data$beatles_rf<- if_else(classified_data$beatles_rf == 2, "Paul", "John")
+```
+
+With the `caret` package, we can extract the probabilities of each guess. We can also add track info here as needed:
+```{r}
+probabilities <- extractProb(list(modelnnet), unkX = beatles_subset)
+colnames(classified_data)[3] <- "track"
+probability_data <- cbind(probabilities[,1:2], classified_data)
+probability_data %>% datatable(filter ="top") 
+  
+```
+
+## Summary
+
+What I like about this is that we can take something about authorship that we know, and then use it to explore authorship of things that are a little more ambiguous. It can also teach us a fair bit about the specific models. Why do we think some performed so much better than others?
 
 
