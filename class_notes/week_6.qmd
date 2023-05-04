@@ -470,7 +470,7 @@ Steps!:
 
 
 
-```{r}
+```{r, results=FALSE}
 east_coast <- get_playlist_audio_features("", "3pu8tsqTW52aUtYFZN3g4A")
 east_coast$coast <- "east"
 west_coast <- get_playlist_audio_features("", "6lAOSVxxvGuEhPtZguaeav")
