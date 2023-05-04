@@ -452,8 +452,85 @@ probability_data %>% datatable(filter ="top")
   
 ```
 
+(Note that this table doesn't seem to be rendering correctly when pushed online).
+
 ## Summary
 
 What I like about this is that we can take something about authorship that we know, and then use it to explore authorship of things that are a little more ambiguous. It can also teach us a fair bit about the specific models. Why do we think some performed so much better than others?
 
+### Exercise: 
+Let's try to build an east/west coast rap classifier:
 
+Steps!: 
+
+- Grab data
+- partition and train model
+- compare models
+- use it to predict a new dataset.
+
+
+
+```{r}
+east_coast <- get_playlist_audio_features("", "3pu8tsqTW52aUtYFZN3g4A")
+east_coast$coast <- "east"
+west_coast <- get_playlist_audio_features("", "6lAOSVxxvGuEhPtZguaeav")
+west_coast$coast <- "west"
+both <- rbind(east_coast, west_coast)
+
+####standardize and clean a bit
+
+both <- both %>% select(c("coast", "acousticness", "energy", "instrumentalness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+
+data <- both[,-1]
+coast <- both[,1]
+data <- data %>% mutate_all(~(scale(.) %>% as.vector))
+both <- cbind(coast, data)
+
+set.seed(1234)
+control <- trainControl(method="repeatedcv", number=10, repeats=3)
+
+# train logistic regression
+modelglm <- train(coast ~ ., data=both, method="glm", trControl=control)
+
+# train knn
+modelknn <- train(coast ~ ., data=both, method="kknn", trControl=control)
+
+# train nnet
+modelnnet <- train(coast ~ ., data=both, method="nnet", trControl=control)
+
+# train the LVQ model
+modelLvq <- train(coast ~ ., data=both, method="lvq", trControl=control)
+
+# train the GBM model
+modelGbm <- train(coast ~ ., data=both, method="gbm", trControl=control)
+
+# train the SVM model
+modelSvm <- train(coast ~., data=both, method="svmRadial", trControl=control)
+
+# train the random forest
+randomforest <- train(coast~., data=both, method="ranger", trControl=control)
+
+
+# collect resamples
+results <- resamples(list(LVQ=modelLvq, GBM=modelGbm, SVM=modelSvm,knn=modelknn, nnet=modelnnet, glm=modelglm, rf=randomforest))
+
+# summarize the distributions
+summary(results)
+bwplot(results)
+```
+
+Now we can test our model on a dataset from outside of our initial training/testing stage:
+
+```{r}
+
+kendrick <- get_artist_audio_features('kendrick lamar')
+
+kendrick <- kendrick %>% select(c("acousticness", "energy", "instrumentalness", "liveness", "danceability", "loudness", "speechiness", "valence"))
+
+kendrick <- kendrick %>% mutate_all(~(scale(.) %>% as.vector))
+
+kendrick_rf <- predict(modelnnet, newdata=kendrick)
+table(kendrick_rf)
+classified_data <- as.data.frame(cbind(beatles_knn, beatles_rf, beatles$track_name))
+
+```
