@@ -10,6 +10,7 @@ title: "Week 4: Conceptual Debates: Key-Finding"
 library(spotifyr)
 library(compmus)
 library(tidyverse)
+library(purrr)
 ```
 ## Why is Key-Finding Interesting?
 
@@ -383,10 +384,9 @@ The basic code for getting a key-profile from a playlist is below. The process i
 5. We then used the `compmus_gather_chroma` function to take all of those chroma vectors and turn them into a list.
 6. We then use the `group_by` and `summarise` functions from `tidyverse`, and get the mean count of each pitch class in the distribution. 
 
-```{r}
+```{r, eval=FALSE}
 ### grabs the key-profile of the indie-pop playlist.
 indie_pop_key_profile <- get_playlist_audio_features("", "37i9dQZF1DWWEcRhUVtL8n") |>
-  
   add_audio_analysis() |>
   ## transpose all the chroma vectors to C.
   mutate(segments = map2(segments, key, compmus_c_transpose)) |>
@@ -423,14 +423,14 @@ get_key_profile_broad <- function(uri){
 
 And now we can just run the function like so:
 
-```{r}
+```{r, eval=FALSE}
 indie_pop <- get_key_profile_broad("37i9dQZF1DWWEcRhUVtL8n")
 indie_pop
 ```
 
 and we can plot it in a pretty straightforward way:
 
-```{r}
+```{r, eval=FALSE}
 barplot(indie_pop$mean_value)
 ```
 So we can look at other genres pretty easily. Here is me looking at Spotify's "EDM 2023" playlist:
@@ -580,7 +580,7 @@ key_plotter("1yYlpGuBiRRf33e1gY61bN", ks_major_key, ks_minor_key)
 
 We can load our "indie pop" but now in major and minor:
 
-```{r}
+```{r, eval=FALSE}
 playlist <- grab_playlist_info("37i9dQZF1DWWEcRhUVtL8n")  
 indie_minor <- playlist |> filter(mode == 0)
 indie_major <- playlist |> filter(mode == 1)

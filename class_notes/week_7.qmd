@@ -18,8 +18,16 @@ library(knitr)
 library(kableExtra)
 library(textdata)
 library(DT)
+library(spotifyr)
+library(compmus)
 ```
 
+
+```{r, echo=FALSE, warnings=FALSE}
+Sys.setenv(SPOTIFY_CLIENT_ID = '05af946589794553974d293435950a5d')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
+access_token <- get_spotify_access_token()
+```
 # Lyrics
 
 ## What dataset to use?
@@ -31,7 +39,7 @@ It's quite difficult to get lyrics from online sources at the moment. Many of th
 
 
 ```{r}
-taylor <- read.csv("taylor_swift_lyrics.csv")
+taylor <- read.csv("~/Downloads/taylor_swift_lyrics.csv")
 
 ```
 
@@ -173,7 +181,7 @@ top_tfidf_words_album <- tfidf_words_album %>%
   arrange(album, tf_idf) %>%
   mutate(row = row_number())  
 
-top_tfidf_words_album
+top_tfidf_words_album %>% datatable(filter="top")
 ```
 
 
@@ -192,23 +200,6 @@ top_tfidf_words_album %>%
     breaks = top_tfidf_words_album$row, # notice need to reuse data frame
     labels = top_tfidf_words_album$word) +
   coord_flip()
-```
-
-
-```{r}
-## get rid of super rare words.
-tf_idf <- tfidf_words_album %>% filter(tf_idf > .0005)
-tf_idf2 <- as.matrix(tf_idf$tf_idf)
-clustering.kmeans <- stats::kmeans(tf_idf2, centers = 2)
-
-
-
-# Visualize the clustering results using ggplot
-data <- data.frame(x = tf_idf2[,1], y = tf_idf[,6], lyric = tf_idf$word, label = clustering.kmeans$cluster)
-
-
-ggplot(data, aes(x, y, color = factor(label))) + geom_point()
-
 ```
 
 
@@ -361,7 +352,7 @@ We can also run the nrc word list, which puts words into positive or negative ca
 - trust
 
 See the "sentiment" column below in the table. To what extent do we agree with these categories? Do they seem useful to you? 
-```{r}
+```{r, warnings=FALSE}
 taylor_nrc <- taylor_words %>%
   inner_join(get_sentiments("nrc"))
 
@@ -369,7 +360,7 @@ taylor_nrc %>% datatable(filter ="top")
 ```
 
 We can clean this up by getting rid of the positive and negative emotions, if we'd like:
-```{r}
+```{r, warnings=FALSE}
 taylor_nrc_no_pos_neg <- taylor_words %>%
   inner_join(get_sentiments("nrc")) %>%
   filter(!sentiment %in% c("positive", "negative"))
@@ -379,7 +370,7 @@ taylor_nrc_no_pos_neg %>% datatable(filter ="top")
 
 
 And here we can get have only the listing of words rated as "positive" or "negative".
-```{r}
+```{r, FALSE}
 taylor_nrc_pos_neg <- taylor_words %>%
   inner_join(get_sentiments("nrc")) %>%
   filter(sentiment %in% c("positive", "negative"))
@@ -390,7 +381,7 @@ taylor_nrc_pos_neg %>% datatable(filter ="top")
 
 
 And here we can plot everything:
-```{r}
+```{r, warnings=FALSE}
 nrc_plot <- taylor_nrc %>%
   group_by(sentiment) %>%
   summarise(word_count = n()) %>%
@@ -407,24 +398,70 @@ nrc_plot + guides(fill=FALSE)
 
 We can write a function to look at the various sentiments of a tune, which we can then join with other data.
 
-```{r}
-sentiment_calculator <- function(tune){
-  song <- filter(taylor, track_title == tune)
-  song_word <- song %>% unnest_tokens(word, lyric)
-  song_sentiment <- song_word %>% 
-    inner_join(get_sentiments("nrc"), relationship = "many-to-many") %>% 
-    count(track_title, index = line %/% 100, sentiment) %>%
-    pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) 
-    return(song_sentiment)
+```{r, warnings=FALSE}
+
+calculate_sentiment <- function(df){
+  df %>%
+    group_by(track_title) %>%
+    unnest_tokens(word, lyric) %>%
+    left_join(get_sentiments("nrc"), multiple = "all") %>%
+    filter(!is.na(sentiment)) %>%
+    count(sentiment) %>%
+    pivot_wider(names_from = sentiment, values_from = n) %>%
+    mutate(sentiment = positive - negative)
 }
 
-sentiment_calculator("Bad Blood")
-# taylor %>% group_by(track_title) %>% nest() %>%
-#   map(., ~ sentiment_calculator(.))
-
-
+calculate_sentiment(taylor) 
 ```
 
+
+And we can combine it with Spotify data!
+
+Let's get the spotify data...
+```{r}
+ts <- get_artist_audio_features("Taylor Swift")
+# ts <- get_playlist_audio_fea"tures("spotify", "3dgpO6mDWzdpMhyttrVi9t?si=b4f962245cb7468a")
+```
+
+And now we can combine the data together...
+```{r}
+ts_basic_audio <- ts %>%
+  select(track_name, danceability:tempo, album_name) %>%
+  rename(track_title = track_name)
+
+joined_ts <- calculate_sentiment(taylor) %>%
+  left_join(ts_basic_audio)
+
+joined_ts %>% 
+  datatable(filter="top")
+```
+
+
+Here's the code to plot the overall positive/negative of the tune:
+
+```{r}
+ts <- get_artist_audio_features("Taylor Swift")
+
+
+ts_basic_audio <- ts %>%
+  select(track_name, danceability:tempo) %>%
+  rename(track_title = track_name) |>
+  distinct()
+
+joined_ts <- calculate_sentiment(taylor) %>%
+  left_join(ts_basic_audio, multiple = "all")
+
+joined_ts %>%
+  select(track_title, positive, negative) %>%
+  pivot_longer(cols = positive:negative, names_to = "sentiment", values_to = "value") %>%
+  ggplot(aes(x = reorder(track_title, value), y = value, color = sentiment)) +
+  geom_point() +
+  coord_flip() +
+  theme_classic() +
+  labs(title = "Taylor's Sentiments Across Tracks",
+       y = 'Sentiment Value',
+       x = "Track")
+```
 
 # Exercise
 
