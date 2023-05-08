@@ -64,7 +64,7 @@ josquin_bach <- rbind(josquin_secure, bach)
 josquin_palestrina <- rbind(josquin_secure, palestrina)
 josquin_larue <- rbind(josquin_secure, larue)
 
-comparison <- rbind(josquin_secure, bach)
+comparison <- rbind(josquin_secure, dufay)
 
 ```
   

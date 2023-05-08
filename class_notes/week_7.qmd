@@ -1,0 +1,457 @@
+---
+title: "Week 7: Text, TF-IDF, *etc.*"
+---
+
+# Plan for the Week 
+
+- Look at some ways of adding measurements with lyrics
+- No reading project due on Monday
+- Code project due on Wednesday
+- Sign up for meetings the week of 5/22.
+- **NO CLASS ON WEDNESDAY**
+
+```{r}
+## Loading some libraries
+library(tidytext)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(textdata)
+library(DT)
+```
+
+# Lyrics
+
+## What dataset to use?
+
+It's quite difficult to get lyrics from online sources at the moment. Many of the R interfaces for the Genius API seem to be quite deprecated. Kaggle does have many datasets available, including about 10GB of Genius data. For today, let's just look at a small dataset of TAylor Swift lyrics.
+
+
+## What is TF-IDF?
+
+
+```{r}
+taylor <- read.csv("taylor_swift_lyrics.csv")
+
+```
+
+There's been some interesting stuff done on lyrics already. We can modify an [existing tutorial on Ed Sheeran](https://rstudio-pubs-static.s3.amazonaws.com/409864_408b4059a6a648128c17899d44b04a82.html) for today's discussion.
+
+```{r}
+taylor_word_count <- taylor %>%
+  unnest_tokens(word, lyric) %>%
+  group_by(track_title, album) %>%
+  summarise(num_words = n()) %>%
+  arrange(desc(num_words)) 
+```
+
+
+## Filtering Words
+
+The `anti_join` function from the `tidyverse` basically joins all columns that don't match something. Here, it's the words that `tidytext` has defined has _stop words_.
+
+```{r}
+
+words_filtered <- taylor %>%
+  unnest_tokens(word, lyric) %>%
+  anti_join(stop_words) %>%
+  distinct()
+```
+
+## Plotting the most words
+```{r}
+words_filtered %>%
+  count(word, sort = TRUE) %>%
+  top_n(30) %>%
+  ungroup() %>%
+  mutate(word = reorder(word, n)) %>%
+  ggplot() +
+    geom_col(aes(word, n), fill = 'light blue') +
+    theme(legend.position = "none", 
+          plot.title = element_text(hjust = 0.5),
+          panel.grid.major = element_blank()) +
+    xlab("") + 
+    ylab("Song Count") +
+    ggtitle("Most Frequently Used Words in Lyrics") +
+    coord_flip() +
+     theme_bw()
+```
+
+## Word Counts
+```{r}
+
+taylor_word_count %>%
+  ggplot() +
+    geom_density(aes(x = num_words, fill = album), alpha = 0.5, position = 'stack') +
+    ylab("Song Density") + 
+    xlab("Word Count per Song") +
+    ggtitle("Word Count Distribution") +
+    theme(plot.title = element_text(hjust = 0.5),
+          legend.title = element_blank(),
+          panel.grid.minor.y = element_blank()) +
+          theme_bw()
+
+
+```
+
+### Words over Time
+
+Here we can see the changing word count over time in Taylor Swift's albums.
+```{r}
+words <- words_filtered %>%
+  group_by(year) %>%
+  count(word, year, sort = TRUE) %>%
+  slice(seq_len(8)) %>%
+  ungroup() %>%
+  arrange(year, n) %>%
+  mutate(row = row_number())
+
+words %>%
+  ggplot(aes(row, n, fill = year)) +
+    geom_col(show.legend = NULL) +
+    labs(x = NULL, y = "Song Count") +
+    ggtitle("Words Across the Year") + 
+    theme_bw() +  
+    facet_wrap(~year, scales = "free") +
+    scale_x_continuous(  # This handles replacement of row 
+      breaks = words$row, # notice need to reuse data frame
+      labels = words$word) +
+    coord_flip()
+```
+
+## Words by Album
+
+This basically does the same as before, but breaks it down by album and not year.
+```{r}
+words <- words_filtered %>%
+  group_by(album) %>%
+  count(word, album, sort = TRUE) %>%
+  slice(seq_len(8)) %>%
+  ungroup() %>%
+  arrange(album, n) %>%
+  mutate(row = row_number())
+
+words %>%
+  ggplot(aes(row, n, fill = album)) +
+    geom_col(show.legend = NULL) +
+    labs(x = NULL, y = "Song Count") +
+    ggtitle("Words Across the Album") + 
+    theme_bw() +  
+    facet_wrap(~album, scales = "free") +
+    scale_x_continuous(  # This handles replacement of row 
+      breaks = words$row, # notice need to reuse data frame
+      labels = words$word) +
+    coord_flip()
+```
+
+
+## TF-IDF
+
+Where it starts to get interesting is when we can begin to employ metrics of frequency in relation to other data points. The **Term Infrequency-Inverse Document Frequency (TF-IDF)** metric is a good starting point for that. 
+
+Basically, TF-IDF measures not just how often a word occurs, but how often it occurs in relation to other collections. So if there's a word that occurs everywhere (like "love"), it's not really weighted as highly. 
+
+
+```{r}
+tfidf_words_album <- taylor %>%
+  unnest_tokens(word, lyric) %>%
+  distinct() %>%
+  count(album, word, sort = TRUE) %>%
+  ungroup() %>%
+  bind_tf_idf(word, album, n) %>%
+  arrange(desc(tf_idf))
+
+```
+
+This grabs the top 10 words per album. Notice that the `tf_idf` metric is simply the product of tf (term frequency) multiplied by idf (inverse document frequency).
+
+```{r}
+top_tfidf_words_album <- tfidf_words_album %>% 
+  group_by(album) %>% 
+  slice(seq_len(10)) %>%
+  ungroup() %>%
+  arrange(album, tf_idf) %>%
+  mutate(row = row_number())  
+
+top_tfidf_words_album
+```
+
+
+We can plot the data like so:
+
+```{r}
+top_tfidf_words_album %>%
+  ggplot(aes(x = row, tf_idf, fill = album)) +
+  geom_col(show.legend = NULL) +
+  labs(x = NULL, y = "TF-IDF") + 
+  ggtitle("Important Words by Album (as measured by TF-IDF)") +
+  theme_bw() +  
+  facet_wrap(~album,
+             scales = "free") +
+  scale_x_continuous(  # this handles replacement of row 
+    breaks = top_tfidf_words_album$row, # notice need to reuse data frame
+    labels = top_tfidf_words_album$word) +
+  coord_flip()
+```
+
+
+```{r}
+## get rid of super rare words.
+tf_idf <- tfidf_words_album %>% filter(tf_idf > .0005)
+tf_idf2 <- as.matrix(tf_idf$tf_idf)
+clustering.kmeans <- stats::kmeans(tf_idf2, centers = 2)
+
+
+
+# Visualize the clustering results using ggplot
+data <- data.frame(x = tf_idf2[,1], y = tf_idf[,6], lyric = tf_idf$word, label = clustering.kmeans$cluster)
+
+
+ggplot(data, aes(x, y, color = factor(label))) + geom_point()
+
+```
+
+
+# Bigrams
+```{r}
+taylor_bigrams <- taylor %>%
+  unnest_tokens(bigram, lyric, token = "ngrams", n = 2)
+
+bigrams_separated <- taylor_bigrams %>%
+  separate(bigram, c("word1", "word2"), sep = " ")
+
+bigrams_filtered <- bigrams_separated %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word)
+```
+
+
+Here we can figure out the bigrams by decade:
+```{r}
+bigram_decade <- bigrams_filtered %>%
+#This filters out repetition, in which the bigrams are the same.
+  filter(word1 != word2) %>%
+  unite(bigram, word1, word2, sep = " ") %>%
+  inner_join(taylor) %>%
+  count(bigram, year, sort = TRUE) %>%
+  group_by(year) %>%
+  slice(seq_len(7)) %>%
+  ungroup() %>%
+  arrange(year, n) %>%
+  mutate(row = row_number())
+
+```
+
+
+Plotting bigrams by decade.
+```{r}
+bigram_decade %>%
+  ggplot(aes(row, n, fill = year)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~year, scales = "free_y") +
+  xlab(NULL) + ylab(NULL) +
+  scale_x_continuous(  # This handles replacement of row
+      breaks = bigram_decade$row, # Notice need to reuse data frame
+      labels = bigram_decade$bigram) +
+  theme_bw() +
+  theme(panel.grid.major.x = element_blank()) +
+  ggtitle("Bigrams Per Decade") +
+  coord_flip()
+
+```
+
+
+Plotting bigrams by album.
+```{r}
+bigram_album <- bigrams_filtered %>%
+  filter(word1 != word2) %>%
+  unite(bigram, word1, word2, sep = " ") %>%
+  inner_join(taylor) %>%
+  count(bigram, album, sort = TRUE) %>%
+  group_by(album) %>%
+  slice(seq_len(10)) %>%
+  ungroup() %>%
+  arrange(album, n) %>%
+  mutate(row = row_number())
+
+bigram_album %>%
+  ggplot(aes(row, n, fill = album)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~album, scales = "free_y") +
+  xlab(NULL) + ylab(NULL) +
+  scale_x_continuous(  # This handles replacement of row
+    breaks = bigram_album$row, # Notice need to reuse data frame
+    labels = bigram_album$bigram) +
+  theme_bw() +
+  theme(panel.grid.major.x = element_blank()) +
+  ggtitle("Bigrams Per Album") +
+  coord_flip()
+
+```
+
+
+We could also look at trigrams if we were so inclined. Quite frankly, the data doesn't seem to be terribly meaningful. 
+
+```{r}
+
+taylor_bigrams <- taylor %>%
+  unnest_tokens(bigram, lyric, token = "ngrams", n = 3)
+
+bigrams_separated <- taylor_bigrams %>%
+  separate(bigram, c("word1", "word2", "word3"), sep = " ")
+
+bigrams_filtered <- bigrams_separated %>%
+  filter(!word1 %in% stop_words$word) %>%
+  filter(!word2 %in% stop_words$word) %>%
+  filter(!word3 %in% stop_words$word)
+
+bigram_album <- bigrams_filtered %>%
+  filter(word1 != word2) %>%
+  unite(bigram, word1, word2, word3, sep = " ") %>%
+  inner_join(taylor) %>%
+  count(bigram, album, sort = TRUE) %>%
+  group_by(album) %>%
+  slice(seq_len(10)) %>%
+  ungroup() %>%
+  arrange(album, n) %>%
+  mutate(row = row_number())
+
+bigram_album %>%
+  ggplot(aes(row, n, fill = album)) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~album, scales = "free_y") +
+  xlab(NULL) + ylab(NULL) +
+  scale_x_continuous(  # This handles replacement of row
+    breaks = bigram_album$row, # Notice need to reuse data frame
+    labels = bigram_album$bigram) +
+  theme_bw() +
+  theme(panel.grid.major.x = element_blank()) +
+  ggtitle("Bigrams Per Album") +
+  coord_flip()
+```
+
+## Sentiment Analysis
+
+We can then run sentiment analysis on the lyrics after unnesting and getting rid of stop words.
+```{r}
+taylor_words <- taylor %>%
+  ##this breaks the lyrics up into words.
+  unnest_tokens(word, lyric) %>% 
+  ## the stop words come from tidytext.
+  anti_join(stop_words) 
+```
+
+We will start with the _bing_ classification (named after the PI of the research group, [Liu Bing](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html)). This classifies words as either positive or negative sentiment. See [this PsychStat book](https://books.psychstat.org/textmining/sentiment-analysis.html) for more on these metrics.
+
+```{r}
+taylor_bing <- taylor_words %>%
+  inner_join(get_sentiments("bing"))
+
+```
+
+We can also run the nrc word list, which puts words into positive or negative categories, but also uses 8 other emotions, including:
+
+- anger
+- anticipation
+- disgust
+- fear
+- joy
+- sadness
+- surprise
+- trust
+
+See the "sentiment" column below in the table. To what extent do we agree with these categories? Do they seem useful to you? 
+```{r}
+taylor_nrc <- taylor_words %>%
+  inner_join(get_sentiments("nrc"))
+
+taylor_nrc %>% datatable(filter ="top") 
+```
+
+We can clean this up by getting rid of the positive and negative emotions, if we'd like:
+```{r}
+taylor_nrc_no_pos_neg <- taylor_words %>%
+  inner_join(get_sentiments("nrc")) %>%
+  filter(!sentiment %in% c("positive", "negative"))
+
+taylor_nrc_no_pos_neg %>% datatable(filter ="top")
+```
+
+
+And here we can get have only the listing of words rated as "positive" or "negative".
+```{r}
+taylor_nrc_pos_neg <- taylor_words %>%
+  inner_join(get_sentiments("nrc")) %>%
+  filter(sentiment %in% c("positive", "negative"))
+
+taylor_nrc_pos_neg %>% datatable(filter ="top")
+```
+
+
+
+And here we can plot everything:
+```{r}
+nrc_plot <- taylor_nrc %>%
+  group_by(sentiment) %>%
+  summarise(word_count = n()) %>%
+  ungroup() %>%
+  mutate(sentiment = reorder(sentiment, word_count)) %>%
+  ggplot(aes(sentiment, word_count, fill = -word_count)) +
+  geom_col() +
+  theme_bw() +
+  labs(x = NULL, y = "Word Count") +
+  ggtitle("NRC Sentiment") +
+  coord_flip()
+nrc_plot + guides(fill=FALSE)
+```
+
+We can write a function to look at the various sentiments of a tune, which we can then join with other data.
+
+```{r}
+sentiment_calculator <- function(tune){
+  song <- filter(taylor, track_title == tune)
+  song_word <- song %>% unnest_tokens(word, lyric)
+  song_sentiment <- song_word %>% 
+    inner_join(get_sentiments("nrc"), relationship = "many-to-many") %>% 
+    count(track_title, index = line %/% 100, sentiment) %>%
+    pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) 
+    return(song_sentiment)
+}
+
+sentiment_calculator("Bad Blood")
+# taylor %>% group_by(track_title) %>% nest() %>%
+#   map(., ~ sentiment_calculator(.))
+
+
+```
+
+
+# Exercise
+
+Let's compare the lyrics of Blur and Oasis. Here's how we can get the data.
+
+## Blur and Oasis
+
+This data is taken from the "Million Song Dataset" from Spotify.
+```{r, eval=FALSE}
+oasis <- read.csv("oasis.csv")
+blur <- read.csv("blur.csv")
+```
+
+And we can begin getting words like this:
+```{r, eval=FALSE}
+oasis_words <- oasis %>%
+  unnest_tokens(word, text) %>%
+  anti_join(stop_words) %>%
+  distinct()
+
+```
+
+Continuing with a summary like so...
+```{r, eval=FALSE}
+full_word_count <- oasis %>%
+  unnest_tokens(word, text) %>%
+  group_by(track_title) %>%
+  summarise(num_words = n()) %>%
+  arrange(desc(num_words)) 
+```
