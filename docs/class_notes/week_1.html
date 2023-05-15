@@ -273,7 +273,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="humdrumr">HumdrumR</h2>
 <p>Here, we install the necessary library. As you can see, you will need to install <code>devtools</code>, which will allow you to install packages that aren’t on CRAN from github.</p>
 <p>Then, we install the package (you can uncomment these installation lines as necessary for you).</p>
-<div class="cell">
+<div class="cell" data-warnings="false">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">### installing everything as needed</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># library(devtools)</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># devtools::install_github("Computational-Cognitive-Musicology-Lab/humdrumR", build_vignettes = TRUE)</span></span>
@@ -294,122 +294,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 <p>You can use a similar <code>with</code> syntax to get rhythm variables, as seen below:</p>
-<div class="cell">
+<div class="cell" data-warnings="false">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## rhythminterval</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>rhythms <span class="ot">&lt;-</span> <span class="fu">with</span>(preludes[<span class="dv">2</span>], <span class="fu">duration</span>(Token))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 84 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 84 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 11 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 11 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 2 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 2 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 93 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 84 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 84 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 11 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 11 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in is.na(x) || is.na(y): 'length(x) = 5 &gt; 1' in coercion to
-'logical(1)'
-
-Warning in is.na(x) || is.na(y): 'length(x) = 5 &gt; 1' in coercion to
-'logical(1)'</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">#### group exercise:</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="do">#### using a repertoire in the Humdrum scores collection, </span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="do">#### print a table of most common musical events.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>rhythms <span class="ot">&lt;-</span> <span class="fu">with</span>(preludes[<span class="dv">2</span>], <span class="fu">duration</span>(Token))</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">#### group exercise:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="do">#### using a repertoire in the Humdrum scores collection, </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="do">#### print a table of most common musical events.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="playing-with-spotify" class="level2">
 <h2 class="anchored" data-anchor-id="playing-with-spotify">Playing with Spotify</h2>
 <p>We can start by loading our <code>spotifyr</code> library, and <code>tidyverse</code> for good measure:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spotifyr)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-warnings="false">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spotifyr)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
-✔ ggplot2 3.4.2     ✔ purrr   1.0.1
-✔ tibble  3.2.1     ✔ dplyr   1.1.2
-✔ tidyr   1.3.0     ✔ stringr 1.5.0
-✔ readr   2.1.4     ✔ forcats 1.0.0
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.2     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.2     ✔ tibble    3.2.1
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ purrr::%@%()         masks rlang::%@%()
-✖ dplyr::changes()     masks humdrumR::changes()
-✖ dplyr::count()       masks humdrumR::count()
-✖ tidyr::expand()      masks humdrumR::expand()
-✖ dplyr::filter()      masks stats::filter()
-✖ purrr::flatten()     masks rlang::flatten()
-✖ purrr::flatten_chr() masks rlang::flatten_chr()
-✖ purrr::flatten_dbl() masks rlang::flatten_dbl()
-✖ purrr::flatten_int() masks rlang::flatten_int()
-✖ purrr::flatten_lgl() masks rlang::flatten_lgl()
-✖ purrr::flatten_raw() masks rlang::flatten_raw()
-✖ humdrumR::int()      masks rlang::int()
-✖ purrr::invoke()      masks rlang::invoke()
-✖ dplyr::lag()         masks humdrumR::lag(), stats::lag()
-✖ dplyr::lead()        masks humdrumR::lead()
-✖ purrr::splice()      masks rlang::splice()
-✖ dplyr::symdiff()     masks bit::symdiff()
-✖ purrr::transpose()   masks humdrumR::transpose()</code></pre>
+✖ purrr::%@%()          masks rlang::%@%()
+✖ dplyr::changes()      masks humdrumR::changes()
+✖ dplyr::count()        masks humdrumR::count()
+✖ lubridate::duration() masks humdrumR::duration()
+✖ tidyr::expand()       masks humdrumR::expand()
+✖ dplyr::filter()       masks stats::filter()
+✖ purrr::flatten()      masks rlang::flatten()
+✖ purrr::flatten_chr()  masks rlang::flatten_chr()
+✖ purrr::flatten_dbl()  masks rlang::flatten_dbl()
+✖ purrr::flatten_int()  masks rlang::flatten_int()
+✖ purrr::flatten_lgl()  masks rlang::flatten_lgl()
+✖ purrr::flatten_raw()  masks rlang::flatten_raw()
+✖ humdrumR::int()       masks rlang::int()
+✖ lubridate::interval() masks humdrumR::interval()
+✖ purrr::invoke()       masks rlang::invoke()
+✖ dplyr::lag()          masks humdrumR::lag(), stats::lag()
+✖ dplyr::lead()         masks humdrumR::lead()
+✖ lubridate::ms()       masks humdrumR::ms()
+✖ lubridate::seconds()  masks humdrumR::seconds()
+✖ purrr::splice()       masks rlang::splice()
+✖ dplyr::symdiff()      masks bit::symdiff()
+✖ dplyr::tally()        masks humdrumR::tally()
+✖ purrr::transpose()    masks humdrumR::transpose()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div>
 <p>You will need your own spotify client ID and client secret. You can get them by filling out the brief online form <a href="https://developer.spotify.com/dashboard">here</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="do">### setting up spotify</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">SPOTIFY_CLIENT_ID =</span> YOUR SPOTIFY CLIENT ID)</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">SPOTIFY_CLIENT_SECRET =</span> YOUR SPOTIFY CLIENT SECRET)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>access_token <span class="ot">&lt;-</span> <span class="fu">get_spotify_access_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">### setting up spotify</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">SPOTIFY_CLIENT_ID =</span> YOUR SPOTIFY CLIENT ID)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setenv</span>(<span class="at">SPOTIFY_CLIENT_SECRET =</span> YOUR SPOTIFY CLIENT SECRET)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>access_token <span class="ot">&lt;-</span> <span class="fu">get_spotify_access_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 
@@ -417,20 +356,20 @@ Warning in is.na(x) || is.na(y): 'length(x) = 5 &gt; 1' in coercion to
 <p>For the most part, in this class we will be looking at global features data (the “danceability” of a song), and track-level analysis features, such as chroma vectors.</p>
 <p>Here we see how you might grab artist features for Ryan Adams and Taylor Swift, comparing the performances of each of their <strong>1989</strong> albums.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="do">###getting artist level data</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>ryan_adams <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'ryan adams'</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>taylor_swift <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'taylor swift'</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="do">### cleaning up the data</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>adams_swift <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ryan_adams, taylor_swift)</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>adams_swift_1989 <span class="ot">&lt;-</span> adams_swift <span class="sc">%&gt;%</span> <span class="fu">filter</span>(album_name <span class="sc">==</span> <span class="st">"1989"</span>) </span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>adams_swift_1989<span class="sc">$</span>track_name <span class="ot">&lt;-</span> <span class="fu">tolower</span>(adams_swift_1989<span class="sc">$</span>track_name)</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="do">## comparing energy</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(adams_swift_1989, <span class="fu">aes</span>(<span class="at">x=</span>track_name, <span class="at">y=</span>energy, <span class="at">group=</span>artist_name)) <span class="sc">+</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">linetype=</span>artist_name, <span class="at">color=</span>artist_name))<span class="sc">+</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>artist_name))<span class="sc">+</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"top"</span>, <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="do">###getting artist level data</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ryan_adams <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'ryan adams'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>taylor_swift <span class="ot">&lt;-</span> <span class="fu">get_artist_audio_features</span>(<span class="st">'taylor swift'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="do">### cleaning up the data</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>adams_swift <span class="ot">&lt;-</span> <span class="fu">rbind</span>(ryan_adams, taylor_swift)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>adams_swift_1989 <span class="ot">&lt;-</span> adams_swift <span class="sc">%&gt;%</span> <span class="fu">filter</span>(album_name <span class="sc">==</span> <span class="st">"1989"</span>) </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>adams_swift_1989<span class="sc">$</span>track_name <span class="ot">&lt;-</span> <span class="fu">tolower</span>(adams_swift_1989<span class="sc">$</span>track_name)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="do">## comparing energy</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(adams_swift_1989, <span class="fu">aes</span>(<span class="at">x=</span>track_name, <span class="at">y=</span>energy, <span class="at">group=</span>artist_name)) <span class="sc">+</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">linetype=</span>artist_name, <span class="at">color=</span>artist_name))<span class="sc">+</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>artist_name))<span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position=</span><span class="st">"top"</span>, <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="week_1_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
 </div>

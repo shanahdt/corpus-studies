@@ -12,7 +12,7 @@ basic introductions for the class, and went through the [syllabus](course-syllab
 Here, we install the necessary library. As you can see, you will need to install `devtools`, which will allow you to install packages that aren't on CRAN from github. 
 
 Then, we install the package (you can uncomment these installation lines as necessary for you).
-```{r, warning=FALSE, message=FALSE}
+```{r, warnings=FALSE, message=FALSE}
 ### installing everything as needed
 # library(devtools)
 # devtools::install_github("Computational-Cognitive-Musicology-Lab/humdrumR", build_vignettes = TRUE)
@@ -35,7 +35,7 @@ barplot(table_data)
 ```
 
 You can use a similar `with` syntax to get rhythm variables, as seen below:
-```{r}
+```{r, warnings=FALSE}
 ## rhythminterval
 rhythms <- with(preludes[2], duration(Token))
 
@@ -48,7 +48,7 @@ rhythms <- with(preludes[2], duration(Token))
 ## Playing with Spotify
 
 We can start by loading our `spotifyr` library, and `tidyverse` for good measure:
-```{r}
+```{r, warnings=FALSE}
 library(spotifyr)
 library(tidyverse)
 ```

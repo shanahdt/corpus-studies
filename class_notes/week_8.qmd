@@ -1,0 +1,218 @@
+---
+title: "Week 8: Adding Features"
+---
+```{r, message=FALSE, warnings=FALSE}
+library(spotifyr)
+library(compmus)
+library(tidyverse)
+library(circlize)
+```
+
+```{r, echo=FALSE, warnings=FALSE}
+Sys.setenv(SPOTIFY_CLIENT_ID = '05af946589794553974d293435950a5d')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = '2ad94ed8cd844667b98acd84ff65bd45')
+access_token <- get_spotify_access_token()
+```
+
+
+# This Week
+
+- Sign up for presentations (see the link on Canvas)
+- Remaining Important Dates:
+    - Today: Adding more features and discussing final project a bit.
+    - Wednesday: Timbre and Form
+    - Friday: **First draft due**
+      - This is a *complete* (roughly 10-12 page) draft.
+    - Next Monday and Tuesday: Individual meetings (first draft.)
+    - Next Wednesday: Presentation Day 1
+    - Monday (Week 10): No class; memorial day
+    - Wednesday (Week 10): Presentation Day 2
+
+# Already Available Features
+
+## Global features of interest
+
+### Metadata we've been using
+
+- artist_name
+- album_release_date
+- album_release_year
+- album_release_date_precision
+- available_markets
+- track_name
+- album_name
+
+### Continuous Variables
+
+- danceability
+- energy
+- loudness
+- speechiness
+- acousticness
+- instrumentalness
+- liveness
+- valence
+- tempo
+- duration_ms
+- key_confidence
+- mode_confidence
+- time_signature_confidence
+- tempo_confidence
+- start_of_fadeout
+- end_of_fadeout
+- duration
+
+### Continuous Variables from Lyrics
+- TF-IDF
+- Sentiment analysis ()
+
+### Categorical Variables
+
+- mode
+- explicit
+- key
+- key_name
+- mode_name
+- key_mode
+- time_signature
+
+
+# Additional Features We Might Explore
+
+- Relationship to the broader key profile
+- Transition probabilities
+- Timbral markers
+
+## Relationship to the Broader Key Profile
+
+One way of exploring a piece is by looking at how it fits within a broader key profile. For example, if we have one key profile taken from a large collection, how does a specific piece relate to that collection in terms of pitch content?
+
+Here, we can start by getting a key profile of a playlist.
+```{r}
+grab_playlist_info <- function(uri){
+   get_playlist_audio_features("", uri) |>
+   add_audio_analysis() 
+}
+playlist <- grab_playlist_info("37i9dQZF1DX1kCIzMYtzum")  
+
+```
+
+Then we can grab chroma and pitches with code from earlier in the quarter (provided by Burgoyne examples):
+
+```{r}
+get_pitch_list <- function(input){
+   ##burgoyne's comp_mus code for gathering key profiles from chroma.
+   input |>     
+   mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+   select(segments) |>
+   unnest(segments) |> 
+   select(start, duration, pitches) |> 
+   mutate(pitches = map(pitches, compmus_normalise, "euclidean")) |>
+   compmus_gather_chroma() |>
+   group_by(pitch_class) |>
+   summarise(mean_value = mean(value))
+}
+```
+
+Then we just need to grab each list, and provide a pitch correlation (here I've used a loop, which might not be the most efficient way to do it in R).
+
+```{r}
+pitch_list <- get_pitch_list(playlist)
+
+for(i in 1:nrow(playlist)){
+    pitch <- get_pitch_list(playlist[i,])
+    playlist$pitch_cor[i] <- cor(pitch$mean_value, pitch_list$mean_value)
+}
+```
+
+
+### Exercise
+
+1. Can you grab a collection, and then look at how each piece in that collection relates to the broader key profile?
+
+
+## Transition Probabilities
+
+We could also grab transition probabilities from note to note. Here we use previously used code to get chroma that go from one to another.
+
+```{r}
+
+chroma_names <- c("C", "C#|Db","D", "D#|Eb", "E", "F", "F#|Gb","G", "G#|Ab","A", "A#|Bb","B" )
+
+
+x <- playlist |>  
+    mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+    select(segments) |>
+    unnest(segments) |>
+    select(start, duration, pitches) |>
+    unnest(cols = pitches)
+x$chroma <- rep(chroma_names, nrow(x)/12)
+x <- x |>
+  filter(pitches == 1) |>
+  mutate(chroma2 = lead(chroma))
+x |> select(chroma, chroma2) |> table() |> heatmap(Rowv = NA,
+        Colv = NA)
+```
+
+We might also want to run it as proportions, rather than raw counts:
+
+```{r}
+pairs <-  x |> select(chroma, chroma2) |> table()
+prop.table(pairs) |> heatmap(Rowv = NA,
+        Colv = NA)
+```
+
+We can convert this data to rows and columns like this, and can then move toward adding it to the dataset.
+```{r}
+
+grab_pitch_pairs <- function(input){
+    x <- input |>  
+    mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+    select(segments) |>
+    unnest(segments) |>
+    select(start, duration, pitches) |>
+    unnest(cols = pitches)
+
+    x$chroma <- rep(chroma_names, nrow(x)/12)
+    x <- x |>
+      filter(pitches == 1) |>
+      mutate(chroma2 = lead(chroma))
+    pair_proportion <- prop.table(pairs)
+    pair_proportion <- as.matrix(pair_proportion)
+
+    # melt the data.frame
+    df <- reshape2::melt(pair_proportion, na.rm = TRUE)
+    df$combined <- paste0(df$chroma,"-",df$chroma2)
+    df$combined <- as.factor(df$combined)
+    df <- as_tibble(df)
+    y <- df |> select(value, combined)
+    print(y)
+}
+```
+
+This is how we'd get the transitions from each pitch:
+```{r}
+for(i in 1:100){
+n <- grab_pitch_pairs(playlist[i,]) 
+}
+```
+
+And we can pivot it to a table format with `pivot_wide`.
+```{r}
+n %>% pivot_wider(names_from = combined, values_from = value)
+
+```
+
+
+We can also use the `map` tool for adding means and standard deviations of other nested information from the audio analysis.
+### Adding a "Bar Confidence" Metric with Map
+
+```{r}
+playlist_w_bars <- playlist %>% 
+  mutate(
+    distance_btwn_bars = map_dbl(playlist$bars, ~mean(.x$confidence)),
+    bar_flex = map_dbl(playlist$bars, ~sd(.x$confidence)))
+
+playlist_w_bars
+```
+

@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Corpus Studies in Music - Week 8: Adding Features</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../class_notes/week_7.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<meta property="og:title" content="Corpus Studies in Music - Week 8: Adding Features">
+<meta property="og:site-name" content="Corpus Studies in Music">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Week 8: Adding Features</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Corpus Studies in Music</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle sidebar-tool" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Resources</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-syllabus.html" class="sidebar-item-text sidebar-link">Corpus Studies (Music 348/448) Syllabus</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../course-schedule.html" class="sidebar-item-text sidebar-link">Course Schedule</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Class Notes</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_1.html" class="sidebar-item-text sidebar-link">Week 1: Representing Musical Data</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_2.html" class="sidebar-item-text sidebar-link">Week 2: Pitch</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_3.html" class="sidebar-item-text sidebar-link">Week 3: Time</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_4.html" class="sidebar-item-text sidebar-link">Week 4: Conceptual Debates: Key-Finding</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_5.html" class="sidebar-item-text sidebar-link">Week 5: Regression and Clustering</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_6.html" class="sidebar-item-text sidebar-link">Week 6: Classifying</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_7.html" class="sidebar-item-text sidebar-link">Week 7: Text, TF-IDF, <em>etc.</em></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../class_notes/week_8.html" class="sidebar-item-text sidebar-link active">Week 8: Adding Features</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#this-week" id="toc-this-week" class="nav-link active" data-scroll-target="#this-week">This Week</a></li>
+  <li><a href="#already-available-features" id="toc-already-available-features" class="nav-link" data-scroll-target="#already-available-features">Already Available Features</a>
+  <ul class="collapse">
+  <li><a href="#global-features-of-interest" id="toc-global-features-of-interest" class="nav-link" data-scroll-target="#global-features-of-interest">Global features of interest</a>
+  <ul class="collapse">
+  <li><a href="#metadata-weve-been-using" id="toc-metadata-weve-been-using" class="nav-link" data-scroll-target="#metadata-weve-been-using">Metadata we’ve been using</a></li>
+  <li><a href="#continuous-variables" id="toc-continuous-variables" class="nav-link" data-scroll-target="#continuous-variables">Continuous Variables</a></li>
+  <li><a href="#continuous-variables-from-lyrics" id="toc-continuous-variables-from-lyrics" class="nav-link" data-scroll-target="#continuous-variables-from-lyrics">Continuous Variables from Lyrics</a></li>
+  <li><a href="#categorical-variables" id="toc-categorical-variables" class="nav-link" data-scroll-target="#categorical-variables">Categorical Variables</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#additional-features-we-might-explore" id="toc-additional-features-we-might-explore" class="nav-link" data-scroll-target="#additional-features-we-might-explore">Additional Features We Might Explore</a>
+  <ul class="collapse">
+  <li><a href="#relationship-to-the-broader-key-profile" id="toc-relationship-to-the-broader-key-profile" class="nav-link" data-scroll-target="#relationship-to-the-broader-key-profile">Relationship to the Broader Key Profile</a>
+  <ul class="collapse">
+  <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
+  </ul></li>
+  <li><a href="#transition-probabilities" id="toc-transition-probabilities" class="nav-link" data-scroll-target="#transition-probabilities">Transition Probabilities</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/corpus-studies/edit/main/class_notes/week_8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/corpus-studies/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Week 8: Adding Features</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="cell" data-warnings="false">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spotifyr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(compmus)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(circlize)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-warnings="false">
+
+</div>
+<section id="this-week" class="level1">
+<h1>This Week</h1>
+<ul>
+<li>Sign up for presentations (see the link on Canvas)</li>
+<li>Remaining Important Dates:
+<ul>
+<li>Today: Adding more features and discussing final project a bit.</li>
+<li>Wednesday: Timbre and Form</li>
+<li>Friday: <strong>First draft due</strong>
+<ul>
+<li>This is a <em>complete</em> (roughly 10-12 page) draft.</li>
+</ul></li>
+<li>Next Monday and Tuesday: Individual meetings (first draft.)</li>
+<li>Next Wednesday: Presentation Day 1</li>
+<li>Monday (Week 10): No class; memorial day</li>
+<li>Wednesday (Week 10): Presentation Day 2</li>
+</ul></li>
+</ul>
+</section>
+<section id="already-available-features" class="level1">
+<h1>Already Available Features</h1>
+<section id="global-features-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="global-features-of-interest">Global features of interest</h2>
+<section id="metadata-weve-been-using" class="level3">
+<h3 class="anchored" data-anchor-id="metadata-weve-been-using">Metadata we’ve been using</h3>
+<ul>
+<li>artist_name</li>
+<li>album_release_date</li>
+<li>album_release_year</li>
+<li>album_release_date_precision</li>
+<li>available_markets</li>
+<li>track_name</li>
+<li>album_name</li>
+</ul>
+</section>
+<section id="continuous-variables" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-variables">Continuous Variables</h3>
+<ul>
+<li>danceability</li>
+<li>energy</li>
+<li>loudness</li>
+<li>speechiness</li>
+<li>acousticness</li>
+<li>instrumentalness</li>
+<li>liveness</li>
+<li>valence</li>
+<li>tempo</li>
+<li>duration_ms</li>
+<li>key_confidence</li>
+<li>mode_confidence</li>
+<li>time_signature_confidence</li>
+<li>tempo_confidence</li>
+<li>start_of_fadeout</li>
+<li>end_of_fadeout</li>
+<li>duration</li>
+</ul>
+</section>
+<section id="continuous-variables-from-lyrics" class="level3">
+<h3 class="anchored" data-anchor-id="continuous-variables-from-lyrics">Continuous Variables from Lyrics</h3>
+<ul>
+<li>TF-IDF</li>
+<li>Sentiment analysis ()</li>
+</ul>
+</section>
+<section id="categorical-variables" class="level3">
+<h3 class="anchored" data-anchor-id="categorical-variables">Categorical Variables</h3>
+<ul>
+<li>mode</li>
+<li>explicit</li>
+<li>key</li>
+<li>key_name</li>
+<li>mode_name</li>
+<li>key_mode</li>
+<li>time_signature</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="additional-features-we-might-explore" class="level1">
+<h1>Additional Features We Might Explore</h1>
+<ul>
+<li>Relationship to the broader key profile</li>
+<li>Transition probabilities</li>
+<li>Timbral markers</li>
+</ul>
+<section id="relationship-to-the-broader-key-profile" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-to-the-broader-key-profile">Relationship to the Broader Key Profile</h2>
+<p>One way of exploring a piece is by looking at how it fits within a broader key profile. For example, if we have one key profile taken from a large collection, how does a specific piece relate to that collection in terms of pitch content?</p>
+<p>Here, we can start by getting a key profile of a playlist.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>grab_playlist_info <span class="ot">&lt;-</span> <span class="cf">function</span>(uri){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>   <span class="fu">get_playlist_audio_features</span>(<span class="st">""</span>, uri) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>   <span class="fu">add_audio_analysis</span>() </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>playlist <span class="ot">&lt;-</span> <span class="fu">grab_playlist_info</span>(<span class="st">"37i9dQZF1DX1kCIzMYtzum"</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we can grab chroma and pitches with code from earlier in the quarter (provided by Burgoyne examples):</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>get_pitch_list <span class="ot">&lt;-</span> <span class="cf">function</span>(input){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>   <span class="do">##burgoyne's comp_mus code for gathering key profiles from chroma.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>   input <span class="sc">|&gt;</span>     </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">segments =</span> <span class="fu">map2</span>(segments, key, compmus_c_transpose)) <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">unnest</span>(segments) <span class="sc">|&gt;</span> </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>   <span class="fu">select</span>(start, duration, pitches) <span class="sc">|&gt;</span> </span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>   <span class="fu">mutate</span>(<span class="at">pitches =</span> <span class="fu">map</span>(pitches, compmus_normalise, <span class="st">"euclidean"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>   <span class="fu">compmus_gather_chroma</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>   <span class="fu">group_by</span>(pitch_class) <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>   <span class="fu">summarise</span>(<span class="at">mean_value =</span> <span class="fu">mean</span>(value))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then we just need to grab each list, and provide a pitch correlation (here I’ve used a loop, which might not be the most efficient way to do it in R).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pitch_list <span class="ot">&lt;-</span> <span class="fu">get_pitch_list</span>(playlist)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(playlist)){</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    pitch <span class="ot">&lt;-</span> <span class="fu">get_pitch_list</span>(playlist[i,])</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    playlist<span class="sc">$</span>pitch_cor[i] <span class="ot">&lt;-</span> <span class="fu">cor</span>(pitch<span class="sc">$</span>mean_value, pitch_list<span class="sc">$</span>mean_value)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Unknown or uninitialised column: `pitch_cor`.</code></pre>
+</div>
+</div>
+<section id="exercise" class="level3">
+<h3 class="anchored" data-anchor-id="exercise">Exercise</h3>
+<ol type="1">
+<li>Can you grab a collection, and then look at how each piece in that collection relates to the broader key profile?</li>
+</ol>
+</section>
+</section>
+<section id="transition-probabilities" class="level2">
+<h2 class="anchored" data-anchor-id="transition-probabilities">Transition Probabilities</h2>
+<p>We could also grab transition probabilities from note to note. Here we use previously used code to get chroma that go from one to another.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>chroma_names <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"C"</span>, <span class="st">"C#|Db"</span>,<span class="st">"D"</span>, <span class="st">"D#|Eb"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>, <span class="st">"F#|Gb"</span>,<span class="st">"G"</span>, <span class="st">"G#|Ab"</span>,<span class="st">"A"</span>, <span class="st">"A#|Bb"</span>,<span class="st">"B"</span> )</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> playlist <span class="sc">|&gt;</span>  </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">segments =</span> <span class="fu">map2</span>(segments, key, compmus_c_transpose)) <span class="sc">|&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(start, duration, pitches) <span class="sc">|&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(<span class="at">cols =</span> pitches)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>chroma <span class="ot">&lt;-</span> <span class="fu">rep</span>(chroma_names, <span class="fu">nrow</span>(x)<span class="sc">/</span><span class="dv">12</span>)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pitches <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">chroma2 =</span> <span class="fu">lead</span>(chroma))</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>x <span class="sc">|&gt;</span> <span class="fu">select</span>(chroma, chroma2) <span class="sc">|&gt;</span> <span class="fu">table</span>() <span class="sc">|&gt;</span> <span class="fu">heatmap</span>(<span class="at">Rowv =</span> <span class="cn">NA</span>,</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">Colv =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="week_8_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We might also want to run it as proportions, rather than raw counts:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pairs <span class="ot">&lt;-</span>  x <span class="sc">|&gt;</span> <span class="fu">select</span>(chroma, chroma2) <span class="sc">|&gt;</span> <span class="fu">table</span>()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(pairs) <span class="sc">|&gt;</span> <span class="fu">heatmap</span>(<span class="at">Rowv =</span> <span class="cn">NA</span>,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">Colv =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="week_8_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We can convert this data to rows and columns like this, and can then move toward adding it to the dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>grab_pitch_pairs <span class="ot">&lt;-</span> <span class="cf">function</span>(input){</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> input <span class="sc">|&gt;</span>  </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">segments =</span> <span class="fu">map2</span>(segments, key, compmus_c_transpose)) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(start, duration, pitches) <span class="sc">|&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(<span class="at">cols =</span> pitches)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    x<span class="sc">$</span>chroma <span class="ot">&lt;-</span> <span class="fu">rep</span>(chroma_names, <span class="fu">nrow</span>(x)<span class="sc">/</span><span class="dv">12</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    x <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(pitches <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">mutate</span>(<span class="at">chroma2 =</span> <span class="fu">lead</span>(chroma))</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    pair_proportion <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(pairs)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    pair_proportion <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(pair_proportion)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># melt the data.frame</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> reshape2<span class="sc">::</span><span class="fu">melt</span>(pair_proportion, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>combined <span class="ot">&lt;-</span> <span class="fu">paste0</span>(df<span class="sc">$</span>chroma,<span class="st">"-"</span>,df<span class="sc">$</span>chroma2)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>combined <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>combined)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(df)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    y <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span> <span class="fu">select</span>(value, combined)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">print</span>(y)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is how we’d get the transitions from each pitch:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>){</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">grab_pitch_pairs</span>(playlist[i,]) </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows
+# A tibble: 144 × 2
+     value combined
+     &lt;dbl&gt; &lt;fct&gt;   
+ 1 0.0170  A-A     
+ 2 0.00353 A#|Bb-A 
+ 3 0.00314 B-A     
+ 4 0.00837 C-A     
+ 5 0.00108 C#|Db-A 
+ 6 0.00301 D-A     
+ 7 0.00217 D#|Eb-A 
+ 8 0.00370 E-A     
+ 9 0.00323 F-A     
+10 0.00174 F#|Gb-A 
+# ℹ 134 more rows</code></pre>
+</div>
+</div>
+<p>And we can pivot it to a table format with <code>pivot_wide</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>n <span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> combined, <span class="at">values_from =</span> value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 144
+   `A-A` `A#|Bb-A`   `B-A`   `C-A` `C#|Db-A`   `D-A` `D#|Eb-A`   `E-A`   `F-A`
+   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 0.0170   0.00353 0.00314 0.00837   0.00108 0.00301   0.00217 0.00370 0.00323
+# ℹ 135 more variables: `F#|Gb-A` &lt;dbl&gt;, `G-A` &lt;dbl&gt;, `G#|Ab-A` &lt;dbl&gt;,
+#   `A-A#|Bb` &lt;dbl&gt;, `A#|Bb-A#|Bb` &lt;dbl&gt;, `B-A#|Bb` &lt;dbl&gt;, `C-A#|Bb` &lt;dbl&gt;,
+#   `C#|Db-A#|Bb` &lt;dbl&gt;, `D-A#|Bb` &lt;dbl&gt;, `D#|Eb-A#|Bb` &lt;dbl&gt;, `E-A#|Bb` &lt;dbl&gt;,
+#   `F-A#|Bb` &lt;dbl&gt;, `F#|Gb-A#|Bb` &lt;dbl&gt;, `G-A#|Bb` &lt;dbl&gt;, `G#|Ab-A#|Bb` &lt;dbl&gt;,
+#   `A-B` &lt;dbl&gt;, `A#|Bb-B` &lt;dbl&gt;, `B-B` &lt;dbl&gt;, `C-B` &lt;dbl&gt;, `C#|Db-B` &lt;dbl&gt;,
+#   `D-B` &lt;dbl&gt;, `D#|Eb-B` &lt;dbl&gt;, `E-B` &lt;dbl&gt;, `F-B` &lt;dbl&gt;, `F#|Gb-B` &lt;dbl&gt;,
+#   `G-B` &lt;dbl&gt;, `G#|Ab-B` &lt;dbl&gt;, `A-C` &lt;dbl&gt;, `A#|Bb-C` &lt;dbl&gt;, `B-C` &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<p>We can also use the <code>map</code> tool for adding means and standard deviations of other nested information from the audio analysis. ### Adding a “Bar Confidence” Metric with Map</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>playlist_w_bars <span class="ot">&lt;-</span> playlist <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">distance_btwn_bars =</span> <span class="fu">map_dbl</span>(playlist<span class="sc">$</span>bars, <span class="sc">~</span><span class="fu">mean</span>(.x<span class="sc">$</span>confidence)),</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">bar_flex =</span> <span class="fu">map_dbl</span>(playlist<span class="sc">$</span>bars, <span class="sc">~</span><span class="fu">sd</span>(.x<span class="sc">$</span>confidence)))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>playlist_w_bars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 100 × 77
+   playlist_id  playlist_name playlist_img playlist_owner_name playlist_owner_id
+   &lt;chr&gt;        &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;            
+ 1 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 2 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 3 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 4 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 5 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 6 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 7 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 8 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+ 9 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+10 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
+# ℹ 90 more rows
+# ℹ 72 more variables: danceability &lt;dbl&gt;, energy &lt;dbl&gt;, key &lt;int&gt;,
+#   loudness &lt;dbl&gt;, mode &lt;int&gt;, speechiness &lt;dbl&gt;, acousticness &lt;dbl&gt;,
+#   instrumentalness &lt;dbl&gt;, liveness &lt;dbl&gt;, valence &lt;dbl&gt;, tempo &lt;dbl&gt;,
+#   track.id &lt;chr&gt;, analysis_url &lt;chr&gt;, time_signature &lt;int&gt;, added_at &lt;chr&gt;,
+#   is_local &lt;lgl&gt;, primary_color &lt;lgl&gt;, added_by.href &lt;chr&gt;,
+#   added_by.id &lt;chr&gt;, added_by.type &lt;chr&gt;, added_by.uri &lt;chr&gt;, …</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../class_notes/week_7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Week 7: Text, TF-IDF, <em>etc.</em></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2023, Daniel Shanahan</div>   
+    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
+
+
+
+</body></html>
