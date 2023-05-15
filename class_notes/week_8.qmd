@@ -6,6 +6,7 @@ library(spotifyr)
 library(compmus)
 library(tidyverse)
 library(circlize)
+library(DT)
 ```
 
 ```{r, echo=FALSE, warnings=FALSE}
@@ -27,6 +28,15 @@ access_token <- get_spotify_access_token()
     - Next Wednesday: Presentation Day 1
     - Monday (Week 10): No class; memorial day
     - Wednesday (Week 10): Presentation Day 2
+
+## How shall we assess ourselves?
+
+### Draft
+
+### Paper
+
+### Presentation
+
 
 # Already Available Features
 
@@ -213,6 +223,6 @@ playlist_w_bars <- playlist %>%
     distance_btwn_bars = map_dbl(playlist$bars, ~mean(.x$confidence)),
     bar_flex = map_dbl(playlist$bars, ~sd(.x$confidence)))
 
-playlist_w_bars
+playlist_w_bars %>% datatable(filter="top")
 ```
 
