@@ -241,7 +241,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#this-week" id="toc-this-week" class="nav-link active" data-scroll-target="#this-week">This Week</a></li>
+  <li><a href="#this-week" id="toc-this-week" class="nav-link active" data-scroll-target="#this-week">This Week</a>
+  <ul class="collapse">
+  <li><a href="#how-shall-we-assess-ourselves" id="toc-how-shall-we-assess-ourselves" class="nav-link" data-scroll-target="#how-shall-we-assess-ourselves">How shall we assess ourselves?</a>
+  <ul class="collapse">
+  <li><a href="#draft" id="toc-draft" class="nav-link" data-scroll-target="#draft">Draft</a></li>
+  <li><a href="#paper" id="toc-paper" class="nav-link" data-scroll-target="#paper">Paper</a></li>
+  <li><a href="#presentation" id="toc-presentation" class="nav-link" data-scroll-target="#presentation">Presentation</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#already-available-features" id="toc-already-available-features" class="nav-link" data-scroll-target="#already-available-features">Already Available Features</a>
   <ul class="collapse">
   <li><a href="#global-features-of-interest" id="toc-global-features-of-interest" class="nav-link" data-scroll-target="#global-features-of-interest">Global features of interest</a>
@@ -258,7 +266,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#exercise" id="toc-exercise" class="nav-link" data-scroll-target="#exercise">Exercise</a></li>
   </ul></li>
-  <li><a href="#transition-probabilities" id="toc-transition-probabilities" class="nav-link" data-scroll-target="#transition-probabilities">Transition Probabilities</a></li>
+  <li><a href="#transition-probabilities" id="toc-transition-probabilities" class="nav-link" data-scroll-target="#transition-probabilities">Transition Probabilities</a>
+  <ul class="collapse">
+  <li><a href="#adding-a-bar-confidence-metric-with-map" id="toc-adding-a-bar-confidence-metric-with-map" class="nav-link" data-scroll-target="#adding-a-bar-confidence-metric-with-map">Adding a “Bar Confidence” Metric with Map</a></li>
+  </ul></li>
+  <li><a href="#getting-timbre" id="toc-getting-timbre" class="nav-link" data-scroll-target="#getting-timbre">Getting timbre</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/shanahdt/corpus-studies/edit/main/class_notes/week_8.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/shanahdt/corpus-studies/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -287,7 +299,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(spotifyr)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(compmus)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(circlize)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(circlize)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DT)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-warnings="false">
 
@@ -310,6 +323,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Wednesday (Week 10): Presentation Day 2</li>
 </ul></li>
 </ul>
+<section id="how-shall-we-assess-ourselves" class="level2">
+<h2 class="anchored" data-anchor-id="how-shall-we-assess-ourselves">How shall we assess ourselves?</h2>
+<section id="draft" class="level3">
+<h3 class="anchored" data-anchor-id="draft">Draft</h3>
+</section>
+<section id="paper" class="level3">
+<h3 class="anchored" data-anchor-id="paper">Paper</h3>
+</section>
+<section id="presentation" class="level3">
+<h3 class="anchored" data-anchor-id="presentation">Presentation</h3>
+</section>
+</section>
 </section>
 <section id="already-available-features" class="level1">
 <h1>Already Available Features</h1>
@@ -491,13 +516,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -505,13 +530,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -519,13 +544,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -533,13 +558,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -547,13 +572,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -561,13 +586,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -575,13 +600,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -589,13 +614,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -603,13 +628,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -617,13 +642,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -631,13 +656,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -645,13 +670,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -659,13 +684,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -673,13 +698,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -687,13 +712,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -701,13 +726,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -715,13 +740,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -729,13 +754,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -743,13 +768,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -757,13 +782,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -771,13 +796,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -785,13 +810,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -799,13 +824,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -813,13 +838,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -827,13 +852,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -841,13 +866,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -855,13 +880,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -869,13 +894,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -883,13 +908,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -897,13 +922,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -911,13 +936,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -925,13 +950,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -939,13 +964,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -953,13 +978,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -967,13 +992,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -981,13 +1006,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -995,13 +1020,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1009,13 +1034,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1023,13 +1048,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1037,13 +1062,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1051,13 +1076,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1065,13 +1090,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1079,13 +1104,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1093,13 +1118,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1107,13 +1132,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1121,13 +1146,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1135,13 +1160,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1149,13 +1174,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1163,13 +1188,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1177,13 +1202,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1191,13 +1216,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1205,13 +1230,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1219,13 +1244,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1233,13 +1258,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1247,13 +1272,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1261,13 +1286,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1275,13 +1300,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1289,13 +1314,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1303,13 +1328,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1317,13 +1342,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1331,13 +1356,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1345,13 +1370,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1359,13 +1384,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1373,13 +1398,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1387,13 +1412,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1401,13 +1426,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1415,13 +1440,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1429,13 +1454,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1443,13 +1468,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1457,13 +1482,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1471,13 +1496,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1485,13 +1510,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1499,13 +1524,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1513,13 +1538,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1527,13 +1552,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1541,13 +1566,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1555,13 +1580,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1569,13 +1594,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1583,13 +1608,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1597,13 +1622,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1611,13 +1636,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1625,13 +1650,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1639,13 +1664,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1653,13 +1678,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1667,13 +1692,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1681,13 +1706,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1695,13 +1720,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1709,13 +1734,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1723,13 +1748,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1737,13 +1762,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1751,13 +1776,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1765,13 +1790,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1779,13 +1804,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1793,13 +1818,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1807,13 +1832,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1821,13 +1846,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1835,13 +1860,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1849,13 +1874,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1863,13 +1888,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows
 # A tibble: 144 × 2
@@ -1877,25 +1902,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
      &lt;dbl&gt; &lt;fct&gt;   
  1 0.0170  A-A     
  2 0.00353 A#|Bb-A 
- 3 0.00314 B-A     
- 4 0.00837 C-A     
+ 3 0.00315 B-A     
+ 4 0.00840 C-A     
  5 0.00108 C#|Db-A 
  6 0.00301 D-A     
- 7 0.00217 D#|Eb-A 
- 8 0.00370 E-A     
- 9 0.00323 F-A     
+ 7 0.00216 D#|Eb-A 
+ 8 0.00369 E-A     
+ 9 0.00322 F-A     
 10 0.00174 F#|Gb-A 
 # ℹ 134 more rows</code></pre>
 </div>
 </div>
 <p>And we can pivot it to a table format with <code>pivot_wide</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>n <span class="sc">%&gt;%</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> combined, <span class="at">values_from =</span> value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>n <span class="sc">|&gt;</span> <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> combined, <span class="at">values_from =</span> value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 144
    `A-A` `A#|Bb-A`   `B-A`   `C-A` `C#|Db-A`   `D-A` `D#|Eb-A`   `E-A`   `F-A`
    &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
-1 0.0170   0.00353 0.00314 0.00837   0.00108 0.00301   0.00217 0.00370 0.00323
+1 0.0170   0.00353 0.00315 0.00840   0.00108 0.00301   0.00216 0.00369 0.00322
 # ℹ 135 more variables: `F#|Gb-A` &lt;dbl&gt;, `G-A` &lt;dbl&gt;, `G#|Ab-A` &lt;dbl&gt;,
 #   `A-A#|Bb` &lt;dbl&gt;, `A#|Bb-A#|Bb` &lt;dbl&gt;, `B-A#|Bb` &lt;dbl&gt;, `C-A#|Bb` &lt;dbl&gt;,
 #   `C#|Db-A#|Bb` &lt;dbl&gt;, `D-A#|Bb` &lt;dbl&gt;, `D#|Eb-A#|Bb` &lt;dbl&gt;, `E-A#|Bb` &lt;dbl&gt;,
@@ -1905,35 +1930,111 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 #   `G-B` &lt;dbl&gt;, `G#|Ab-B` &lt;dbl&gt;, `A-C` &lt;dbl&gt;, `A#|Bb-C` &lt;dbl&gt;, `B-C` &lt;dbl&gt;, …</code></pre>
 </div>
 </div>
-<p>We can also use the <code>map</code> tool for adding means and standard deviations of other nested information from the audio analysis. ### Adding a “Bar Confidence” Metric with Map</p>
+<p>We can also use the <code>map</code> tool for adding means and standard deviations of other nested information from the audio analysis.</p>
+<section id="adding-a-bar-confidence-metric-with-map" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-bar-confidence-metric-with-map">Adding a “Bar Confidence” Metric with Map</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>playlist_w_bars <span class="ot">&lt;-</span> playlist <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>playlist_w_bars <span class="ot">&lt;-</span> playlist <span class="sc">|&gt;</span> </span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">distance_btwn_bars =</span> <span class="fu">map_dbl</span>(playlist<span class="sc">$</span>bars, <span class="sc">~</span><span class="fu">mean</span>(.x<span class="sc">$</span>confidence)),</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">bar_flex =</span> <span class="fu">map_dbl</span>(playlist<span class="sc">$</span>bars, <span class="sc">~</span><span class="fu">sd</span>(.x<span class="sc">$</span>confidence)))</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>playlist_w_bars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>playlist_w_bars<span class="sc">$</span>distance_btwn_bars</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 100 × 77
-   playlist_id  playlist_name playlist_img playlist_owner_name playlist_owner_id
-   &lt;chr&gt;        &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;               &lt;chr&gt;            
- 1 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 2 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 3 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 4 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 5 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 6 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 7 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 8 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
- 9 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
-10 37i9dQZF1DX… EDM 2023      https://i.s… Spotify             spotify          
-# ℹ 90 more rows
-# ℹ 72 more variables: danceability &lt;dbl&gt;, energy &lt;dbl&gt;, key &lt;int&gt;,
-#   loudness &lt;dbl&gt;, mode &lt;int&gt;, speechiness &lt;dbl&gt;, acousticness &lt;dbl&gt;,
-#   instrumentalness &lt;dbl&gt;, liveness &lt;dbl&gt;, valence &lt;dbl&gt;, tempo &lt;dbl&gt;,
-#   track.id &lt;chr&gt;, analysis_url &lt;chr&gt;, time_signature &lt;int&gt;, added_at &lt;chr&gt;,
-#   is_local &lt;lgl&gt;, primary_color &lt;lgl&gt;, added_by.href &lt;chr&gt;,
-#   added_by.id &lt;chr&gt;, added_by.type &lt;chr&gt;, added_by.uri &lt;chr&gt;, …</code></pre>
+<pre><code>  [1] 0.4551875 0.5563667 0.5110440 0.6204366 0.4678807 0.4994444 0.5448243
+  [8] 0.4741267 0.5224156 0.4981391 0.4973795 0.5187763 0.4481204 0.4374865
+ [15] 0.4730292 0.5083252 0.4804079 0.4663061 0.4761505 0.5101348 0.5567176
+ [22] 0.5225542 0.4767732 0.5702603 0.4763651 0.5253263 0.5291899 0.4510556
+ [29] 0.5382901 0.5818095 0.4303371 0.4324605 0.4884941 0.4298987 0.4887949
+ [36] 0.5684205 0.6130645 0.5596832 0.4799510 0.4885500 0.5918621 0.4868889
+ [43] 0.4501781 0.5043301 0.4864300 0.5266949 0.4752222 0.5283333 0.5929844
+ [50] 0.4656316 0.5364444 0.4882697 0.5117245 0.4163828 0.4781609 0.4114211
+ [57] 0.4924434 0.5039880 0.5435684 0.4321143 0.5890886 0.4906190 0.5670588
+ [64] 0.4712970 0.4896944 0.4716875 0.5467568 0.4435595 0.4750476 0.4786147
+ [71] 0.5287412 0.4958068 0.4727803 0.5707126 0.5301313 0.4611026 0.4986389
+ [78] 0.4903784 0.4640674 0.4554699 0.5224038 0.4507802 0.5243611 0.4947347
+ [85] 0.4647125 0.4694762 0.4898852 0.4892844 0.5487789 0.4332840 0.5115952
+ [92] 0.5334701 0.5179775 0.5614815 0.4767763 0.5148113 0.4659010 0.4934941
+ [99] 0.4558534 0.4646395</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> playlist <span class="sc">|&gt;</span>  </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">segments =</span> <span class="fu">map2</span>(segments, key, compmus_c_transpose)) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(segments) <span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(start, duration, pitches) <span class="sc">|&gt;</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest</span>(<span class="at">cols =</span> pitches)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>x<span class="sc">$</span>chroma <span class="ot">&lt;-</span> <span class="fu">rep</span>(chroma_names, <span class="fu">nrow</span>(x)<span class="sc">/</span><span class="dv">12</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> x <span class="sc">|&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(pitches <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">chroma2 =</span> <span class="fu">lead</span>(chroma)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="getting-timbre" class="level2">
+<h2 class="anchored" data-anchor-id="getting-timbre">Getting timbre</h2>
+<p>Timbre for “This is America”</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>this_is_america <span class="ot">&lt;-</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_tidy_audio_analysis</span>(<span class="st">"0b9oOr2ZgvyQu88wzixux9"</span>) <span class="sc">|&gt;</span>  </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compmus_align</span>(bars, segments) <span class="sc">|&gt;</span> </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(bars) <span class="sc">|&gt;</span>                                     </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest</span>(bars) <span class="sc">|&gt;</span>                                     </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">pitches =</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">map</span>(segments,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        compmus_summarise, pitches,</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">method =</span> <span class="st">"rms"</span>, <span class="at">norm =</span> <span class="st">"euclidean"</span>              </span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">timbre =</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>      <span class="fu">map</span>(segments,</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>        compmus_summarise, timbre,</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">method =</span> <span class="st">"rms"</span>, <span class="at">norm =</span> <span class="st">"euclidean"</span>            </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>      )</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here, we can use the <code>compmus_gather_timbre</code> function from <code>compmus</code> to see the value of each cepstrum over time, as well as it’s value.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>this_is_america <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compmus_gather_timbre</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,344 × 7
+   start duration confidence segments         pitches    basis value
+   &lt;dbl&gt;    &lt;dbl&gt;      &lt;dbl&gt; &lt;list&gt;           &lt;list&gt;     &lt;chr&gt; &lt;dbl&gt;
+ 1  1.04     1.52      0.768 &lt;tibble [5 × 9]&gt; &lt;dbl [12]&gt; c01   0.205
+ 2  2.56     1.99      0.69  &lt;tibble [6 × 9]&gt; &lt;dbl [12]&gt; c01   0.222
+ 3  4.55     1.98      0.28  &lt;tibble [8 × 9]&gt; &lt;dbl [12]&gt; c01   0.203
+ 4  6.53     1.99      0.66  &lt;tibble [6 × 9]&gt; &lt;dbl [12]&gt; c01   0.216
+ 5  8.52     2.00      0.575 &lt;tibble [8 × 9]&gt; &lt;dbl [12]&gt; c01   0.212
+ 6 10.5      2.01      0.172 &lt;tibble [8 × 9]&gt; &lt;dbl [12]&gt; c01   0.232
+ 7 12.5      2.00      0.204 &lt;tibble [8 × 9]&gt; &lt;dbl [12]&gt; c01   0.212
+ 8 14.5      2.00      0.77  &lt;tibble [6 × 9]&gt; &lt;dbl [12]&gt; c01   0.234
+ 9 16.5      2.00      0.592 &lt;tibble [7 × 9]&gt; &lt;dbl [12]&gt; c01   0.382
+10 18.5      2.00      0.203 &lt;tibble [5 × 9]&gt; &lt;dbl [12]&gt; c01   0.471
+# ℹ 1,334 more rows</code></pre>
+</div>
+</div>
+<p>Similar to a chromagram, we can plot the <a href="cepstrograms">https://en.wikipedia.org/wiki/Mel-frequency_cepstrum</a> to demonstrate changing timbre throughout the piece.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>this_is_america <span class="sc">%&gt;%</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">compmus_gather_timbre</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> start <span class="sc">+</span> duration <span class="sc">/</span> <span class="dv">2</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>      <span class="at">width =</span> duration,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>      <span class="at">y =</span> basis,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>      <span class="at">fill =</span> value</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>() <span class="sc">+</span></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time (s)"</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">fill =</span> <span class="st">"Magnitude"</span>) <span class="sc">+</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>() <span class="sc">+</span>                              </span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="week_8_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 

@@ -31,6 +31,9 @@ access_token <- get_spotify_access_token()
 
 ## How shall we assess ourselves?
 
+
+
+
 ### Draft
 
 ### Paper
@@ -209,20 +212,93 @@ n <- grab_pitch_pairs(playlist[i,])
 
 And we can pivot it to a table format with `pivot_wide`.
 ```{r}
-n %>% pivot_wider(names_from = combined, values_from = value)
+n |> pivot_wider(names_from = combined, values_from = value)
 
 ```
 
 
 We can also use the `map` tool for adding means and standard deviations of other nested information from the audio analysis.
+
 ### Adding a "Bar Confidence" Metric with Map
 
 ```{r}
-playlist_w_bars <- playlist %>% 
+playlist_w_bars <- playlist |> 
   mutate(
     distance_btwn_bars = map_dbl(playlist$bars, ~mean(.x$confidence)),
     bar_flex = map_dbl(playlist$bars, ~sd(.x$confidence)))
 
-playlist_w_bars %>% datatable(filter="top")
+playlist_w_bars$distance_btwn_bars
+
+```
+
+
+
+
+```{r}
+x <- playlist |>  
+    mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+    select(segments) |>
+    unnest(segments) |>
+    select(start, duration, pitches) |>
+    unnest(cols = pitches)
+x$chroma <- rep(chroma_names, nrow(x)/12)
+x <- x |>
+  filter(pitches == 1) |>
+  mutate(chroma2 = lead(chroma)) 
+
+```
+
+
+## Getting timbre
+
+Timbre for "This is America"
+```{r}
+
+this_is_america <-
+  get_tidy_audio_analysis("0b9oOr2ZgvyQu88wzixux9") |>  
+  compmus_align(bars, segments) |> 
+  select(bars) |>                                     
+  unnest(bars) |>                                     
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"            
+      )
+  )
+
+```
+
+Here, we can use the `compmus_gather_timbre` function from `compmus` to see the value of each cepstrum over time, as well as it's value.
+
+```{r}
+this_is_america %>%
+  compmus_gather_timbre()
+```
+
+Similar to a chromagram, we can plot the [https://en.wikipedia.org/wiki/Mel-frequency_cepstrum](cepstrograms) to demonstrate changing timbre throughout the piece.
+
+```{r}
+this_is_america %>%
+  compmus_gather_timbre() %>%
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = basis,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  scale_fill_viridis_c() +                              
+  theme_classic()
 ```
 
