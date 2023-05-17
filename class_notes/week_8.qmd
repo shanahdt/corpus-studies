@@ -131,7 +131,7 @@ Then we just need to grab each list, and provide a pitch correlation (here I've 
 
 ```{r}
 pitch_list <- get_pitch_list(playlist)
-
+playlist$pitch_cor <- NA
 for(i in 1:nrow(playlist)){
     pitch <- get_pitch_list(playlist[i,])
     playlist$pitch_cor[i] <- cor(pitch$mean_value, pitch_list$mean_value)
@@ -205,9 +205,9 @@ grab_pitch_pairs <- function(input){
 
 This is how we'd get the transitions from each pitch:
 ```{r}
-for(i in 1:100){
-n <- grab_pitch_pairs(playlist[i,]) 
-}
+
+n <- grab_pitch_pairs(playlist) 
+
 ```
 
 And we can pivot it to a table format with `pivot_wide`.
@@ -217,6 +217,47 @@ n |> pivot_wider(names_from = combined, values_from = value)
 ```
 
 
+We can put all of this together like so (using the `playlist` variable from before.)
+
+
+```{r}
+chroma_names <- c("C", "C#|Db","D", "D#|Eb", "E", "F", "F#|Gb","G", "G#|Ab","A", "A#|Bb","B" )
+
+
+x <- playlist |>  
+  mutate(segments = map2(segments, key, compmus_c_transpose)) |>
+  select(segments, track.name) |>
+  unnest(segments) |>
+  select(track.name, start, duration, pitches) |>
+  unnest(cols = pitches)
+
+
+x$chroma <- rep(chroma_names, nrow(x)/12)
+
+x <- x |>
+  filter(pitches == 1) |>
+  mutate(chroma2 = lead(chroma))  |>
+  select(track.name, chroma, chroma2)
+
+
+new_df <- x |>
+  group_by(track.name) |>
+  select(-track.name) |>
+  table() |>
+  prop.table() |>
+  data.frame() |>
+  tibble() |>
+  mutate(bigram = paste(chroma, "to ", chroma2)) |>
+  select(track.name, Freq, bigram) |>
+  pivot_wider(names_from = bigram, values_from = Freq)
+
+df <- cbind(playlist, new_df)
+```
+
+We can display this beast of a table like so. 
+```{r}
+df |> datatable(filter = "top")
+```
 We can also use the `map` tool for adding means and standard deviations of other nested information from the audio analysis.
 
 ### Adding a "Bar Confidence" Metric with Map
@@ -245,11 +286,19 @@ x$chroma <- rep(chroma_names, nrow(x)/12)
 x <- x |>
   filter(pitches == 1) |>
   mutate(chroma2 = lead(chroma)) 
-
+x
 ```
 
 
 ## Getting timbre
+
+Timbre is measured in Spotify with _cepstra_. This measurement was derived in speech analysis (and is a re-arrangement of the word spectrum-singular: cepstrum). An excellent overview can be found [here](https://towardsdatascience.com/build-a-mfcc-based-music-recommendation-engine-on-cloud-3bf3cfbd594b). 
+
+The Spotify API [writes that](https://developer.spotify.com/documentation/web-api/reference/get-audio-analysis) it is a "vector that includes 12 unbounded values roughly centered around 0. Those values are high level abstractions of the spectral surface, ordered by degree of importance."
+
+The first dimension is an average loudness, the second is about "brightness", the third is about "flatness", and the fourth through the twelfth roughly correspond to the strength of the attack. 
+
+![Spotify's Timbre Functions](https://developer.spotify.com/assets/audio/Timbre_basis_functions.png)
 
 Timbre for "This is America"
 ```{r}
@@ -263,31 +312,34 @@ this_is_america <-
     pitches =
       map(segments,
         compmus_summarise, pitches,
-        method = "rms", norm = "euclidean"              
+        method = "mean", norm = "euclidean"              
       )
   ) |>
   mutate(
     timbre =
       map(segments,
         compmus_summarise, timbre,
-        method = "rms", norm = "euclidean"            
+        method = "mean", norm = "euclidean"            
       )
   )
 
 ```
 
-Here, we can use the `compmus_gather_timbre` function from `compmus` to see the value of each cepstrum over time, as well as it's value.
+Here, we can use the `compmus_gather_timbre` function from `compmus`. Here we see the distribution of _cepstra_ in "This is America".
 
 ```{r}
-this_is_america %>%
-  compmus_gather_timbre()
+this_is_america |>
+  compmus_gather_timbre() |> 
+    ggplot(aes(y=value, x=basis)) + 
+    geom_violin(position="dodge", alpha=0.5) +
+    theme_bw()
 ```
 
 Similar to a chromagram, we can plot the [https://en.wikipedia.org/wiki/Mel-frequency_cepstrum](cepstrograms) to demonstrate changing timbre throughout the piece.
 
 ```{r}
-this_is_america %>%
-  compmus_gather_timbre() %>%
+this_is_america |>
+  compmus_gather_timbre() |>
   ggplot(
     aes(
       x = start + duration / 2,
@@ -302,3 +354,299 @@ this_is_america %>%
   theme_classic()
 ```
 
+## Comparing Solo Instrument Pieces
+
+Let's compare a solo trumpet [(BWV 1067, orchestral suite no.2)](https://open.spotify.com/track/6Tv19wcEeyvNBmhRGY59bY?si=8c50b269920c403f) and a flute 
+```{r}
+bwv1067_trumpet <-
+  get_tidy_audio_analysis("6Tv19wcEeyvNBmhRGY59bY") |>  
+  compmus_align(bars, segments) |> 
+  select(bars) |>                                     
+  unnest(bars) |>                                     
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "euclidean"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "mean", norm = "euclidean"            
+      )
+  )
+
+bwv1067_trumpet |>
+  compmus_gather_timbre() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = basis,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  scale_fill_viridis_c() +                              
+  theme_classic()
+
+```
+
+and flute ([this recording](https://open.spotify.com/track/2Ej8j8vN0hlRulT2DJKu52?si=603c04ffc1ef4623)).
+```{r}
+bwv1067_flute <-
+  get_tidy_audio_analysis("2Ej8j8vN0hlRulT2DJKu52") |>  
+  compmus_align(bars, segments) |> 
+  select(bars) |>                                     
+  unnest(bars) |>                                     
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "euclidean"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "mean", norm = "euclidean"            
+      )
+  )
+
+bwv1067_flute |>
+  compmus_gather_timbre() |>
+  ggplot(
+    aes(
+      x = start + duration / 2,
+      width = duration,
+      y = basis,
+      fill = value
+    )
+  ) +
+  geom_tile() +
+  labs(x = "Time (s)", y = NULL, fill = "Magnitude") +
+  scale_fill_viridis_c() +                              
+  theme_classic()
+
+```
+
+
+## Exercise:
+How might we incorporate timbre in our own research questions?
+
+I have a theory that tempo and brightness are related in our playlist. Let's see if they're related.
+```{r}
+
+timbre <- playlist |>  
+  compmus_align(bars, segments) |> 
+  select(track.name, bars) |>                                     
+  unnest(bars) |>                                     
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "mean", norm = "euclidean"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "mean", norm = "euclidean"            
+      )
+  )
+
+timbre_coeffs <- 
+  timbre |>
+  compmus_gather_timbre() |> 
+  select(track.name, basis, value) |> 
+  group_by(basis, track.name) |> 
+  mutate(mean_timbre = mean(value)) |> 
+  select(track.name, mean_timbre) |> 
+  unique() |> 
+  pivot_wider(names_from = basis, values_from = mean_timbre)
+
+new_playlist <- merge(timbre_coeffs, playlist)
+
+new_playlist |> datatable(filter="top")
+```
+
+
+I now have a dataframe that includes timbre. So let's look at how brightness (here operationalized as `c02`), might correspond with tempo.
+
+```{r}
+cor(new_playlist$c02, new_playlist$tempo)
+```
+
+It's not a terribly strong correlation, but perhaps we should plot it anyway.
+
+```{r}
+plot(c02 ~ tempo, data=new_playlist)
+abline(lm(c02 ~ tempo, data=new_playlist), col="red")
+summary(lm(c02 ~ tempo, data=new_playlist))
+```
+
+So it's significant, but not terribly useful (not accounting for much variance).
+
+
+## Self-Similarity Matrices and Form
+
+We can look at musical form through the use of _self-similarity matrices_. There are some nice technical explanations of them [here](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C4/C4S2_SSM-Synthetic.html) and [here](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C4/C4S2_SSM.html).
+
+Put succinctly, we want to compare each element of the sequence of musical events with one another.
+
+Müller writes:
+
+> The two most prominent structures in SSMs [...] 
+> are referred to as blocks and paths. If the 
+> feature sequence captures musical properties that stay somewhat 
+> constant over the duration of an entire musical part, each of the 
+> feature vectors is similar to all other feature vectors within this 
+> segment. As a result, an entire block of large values appears in the 
+> SSM. **In other words, homogeneity properties correspond to block-like 
+> structures. If the feature sequence contains two repeating 
+> subsequences (e.g., two segments corresponding to the same melody), 
+> the corresponding elements of the two subsequences are similar to 
+> each other.** As a result, a path (or stripe) of high similarity 
+> running parallel to the main diagonal becomes visible in the SSM. In 
+> other words, repetitive properties correspond to path-like 
+> structures. (from [this notebook](https://www.audiolabs-erlangen.de/resources/MIR/FMP/C4/C4S2_SSM.html))
+
+
+![From Müller](https://www.audiolabs-erlangen.de/resources/MIR/FMP/data/C4/FMP_C4_F07a.png)
+
+### Brahms's "Hungarian Dance No. 5" (performed by Isaac Stern)
+```{r}
+
+brahms_stern <-
+  get_tidy_audio_analysis("1PKtuxuLUbXeJNa05bfAOT")  |> 
+  compmus_align(bars, segments) |>                     
+  select(bars) |>                                      
+  unnest(bars) |>                                      
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "manhattan"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "manhattan"              
+      )
+  )
+
+brahms_stern |>
+  compmus_self_similarity(timbre, "cosine") |> 
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  coord_fixed() +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
+```
+
+
+### Brahms's "Hungarian Dance No. 5" (Abbado)
+
+```{r}
+
+brahms_abbado <-
+  get_tidy_audio_analysis("02TadnJNMcVjr4baY39H1p")  |> 
+  compmus_align(bars, segments) |>                     
+  select(bars) |>                                      
+  unnest(bars) |>                                      
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"              
+      )
+  )
+
+brahms_abbado |>
+  compmus_self_similarity(timbre, "cosine") |> 
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  coord_fixed() +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
+```
+
+### Bowie's Life on Mars
+Here can we see a self-similarity matrix of David Bowie's "Life on Mars". Let's listen along to it.
+```{r}
+life_on_mars <-
+  get_tidy_audio_analysis("3ZE3wv8V3w2T2f7nOCjV0N")  |> 
+  compmus_align(bars, segments) |>                     
+  select(bars) |>                                      
+  unnest(bars) |>                                      
+  mutate(
+    pitches =
+      map(segments,
+        compmus_summarise, pitches,
+        method = "rms", norm = "euclidean"              
+      )
+  ) |>
+  mutate(
+    timbre =
+      map(segments,
+        compmus_summarise, timbre,
+        method = "rms", norm = "euclidean"              
+      )
+  )
+
+```
+
+```{r}
+life_on_mars |>
+  compmus_self_similarity(timbre, "cosine") |> 
+  ggplot(
+    aes(
+      x = xstart + xduration / 2,
+      width = xduration,
+      y = ystart + yduration / 2,
+      height = yduration,
+      fill = d
+    )
+  ) +
+  geom_tile() +
+  coord_fixed() +
+  scale_fill_viridis_c(guide = "none") +
+  theme_classic() +
+  labs(x = "", y = "")
+```
+
+## Exercise:
+
+Let's look at two performances of the same piece. How do timbres change? Are there any hypotheses that might be worth looking into?
