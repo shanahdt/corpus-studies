@@ -29,16 +29,6 @@ access_token <- get_spotify_access_token()
     - Monday (Week 10): No class; memorial day
     - Wednesday (Week 10): Presentation Day 2
 
-## How shall we assess ourselves?
-
-
-
-
-### Draft
-
-### Paper
-
-### Presentation
 
 
 # Already Available Features
@@ -204,10 +194,8 @@ grab_pitch_pairs <- function(input){
 ```
 
 This is how we'd get the transitions from each pitch:
-```{r}
-
+```{r, message=FALSE}
 n <- grab_pitch_pairs(playlist) 
-
 ```
 
 And we can pivot it to a table format with `pivot_wide`.
